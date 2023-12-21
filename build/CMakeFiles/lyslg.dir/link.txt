@@ -1,0 +1,1 @@
+/opt/rh/devtoolset-8/root/usr/bin/c++ -fPIC  -rdynamic -O3 -g -std=c++11 -Wall -Werror -Wno-unused-function  -shared -Wl,-soname,liblyslg.so -o ../lib/liblyslg.so CMakeFiles/lyslg.dir/lyslg/config.cc.o CMakeFiles/lyslg.dir/lyslg/log.cc.o CMakeFiles/lyslg.dir/lyslg/util.cc.o 
