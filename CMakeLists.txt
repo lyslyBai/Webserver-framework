@@ -20,6 +20,7 @@ aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/lyslg LIB_SRC)
 #     ${PROJECT_SOURCE_DIR}/config.cc
 #     )
 
+
 add_library(lyslg SHARED ${LIB_SRC})
 
 include_directories(${PROJECT_SOURCE_DIR}/lyslg)
@@ -31,9 +32,13 @@ add_executable(my_test ${PROJECT_SOURCE_DIR}/tests/test.cc) # test 为cmake保�
 add_dependencies(my_test lyslg)  #用于添加一个目标对其他目标的依赖。
 target_link_libraries(my_test lyslg)
 
+# find_package(yaml-cpp REQUIRED)
+#include_directories(${YAML_CPP_INCLUDE_DIR})
+# message(STATUS  "message: ${PROJECT_SOURCE_DIR}")
+
 add_executable(test_config ${PROJECT_SOURCE_DIR}/tests/test_config.cc) # test 为cmake保留关键字，不能作为文件名
 add_dependencies(test_config lyslg)  #用于添加一个目标对其他目标的依赖。
-target_link_libraries(test_config lyslg)
+target_link_libraries(test_config lyslg yaml-cpp) # yaml-cpp  生成的三个动态库，包括两个符号衔接和一个
 
 
 #自动设置PROJECT_SOURCE_DIR的默认值为项目根目录的路径（CMakeLists.txt所在的路径）
