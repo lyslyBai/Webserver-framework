@@ -63,4 +63,6 @@ log.h
 /home/lyslg/lyslg_/tests/log.h
 config.h
 /home/lyslg/lyslg_/tests/config.h
+yaml-cpp/yaml.h
+/home/lyslg/lyslg_/tests/yaml-cpp/yaml.h
 
