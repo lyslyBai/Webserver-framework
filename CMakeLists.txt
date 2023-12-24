@@ -30,7 +30,7 @@ link_directories(${PROJECT_SOURCE_DIR}/lib)
 
 add_executable(my_test ${PROJECT_SOURCE_DIR}/tests/test.cc) # test 为cmake保留关键字，不能作为文件名
 add_dependencies(my_test lyslg)  #用于添加一个目标对其他目标的依赖。
-target_link_libraries(my_test lyslg)
+target_link_libraries(my_test lyslg yaml-cpp)
 
 # find_package(yaml-cpp REQUIRED)
 #include_directories(${YAML_CPP_INCLUDE_DIR})

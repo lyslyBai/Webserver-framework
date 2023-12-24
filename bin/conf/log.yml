@@ -13,3 +13,18 @@ logs:
           - type: FileLogAppender
             file: /home/lyslg/lyslg_/system.txt
           - type: StdoutLogAppender
+system:
+      port: 9900
+      value: 15
+      int_vec: [1,2,3]
+      int_list: [1,2,3]
+      int_set: [1,2,3,3,4]
+      int_unordered_set: [1,2,3,3]
+      str_int_map:
+          s: 31
+          ds: 6551
+          sda: 1652
+      str_int_umap:
+          s1: 31
+          ds1: 6551
+          sda1: 1652

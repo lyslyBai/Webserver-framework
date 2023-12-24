@@ -15,6 +15,24 @@ boost/lexical_cast.hpp
 -
 map
 -
+cctype
+-
+string
+-
+algorithm
+-
+vector
+-
+set
+-
+unordered_map
+-
+unordered_set
+-
+list
+-
+yaml-cpp/yaml.h
+-
 log.h
 ../lyslg/log.h
 

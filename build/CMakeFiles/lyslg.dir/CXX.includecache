@@ -9,6 +9,8 @@
 /home/lyslg/lyslg_/lyslg/config.cc
 config.h
 /home/lyslg/lyslg_/lyslg/config.h
+list
+-
 
 /home/lyslg/lyslg_/lyslg/config.h
 memory
@@ -18,6 +20,24 @@ sstream
 boost/lexical_cast.hpp
 -
 map
+-
+cctype
+-
+string
+-
+algorithm
+-
+vector
+-
+set
+-
+unordered_map
+-
+unordered_set
+-
+list
+-
+yaml-cpp/yaml.h
 -
 log.h
 /home/lyslg/lyslg_/lyslg/log.h
