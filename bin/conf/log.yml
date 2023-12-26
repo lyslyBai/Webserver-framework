@@ -14,7 +14,7 @@ logs:
             file: /home/lyslg/lyslg_/system.txt
           - type: StdoutLogAppender
 system:
-      port: 9900
+      port: 4578
       value: 15
       int_vec: [1,2,3]
       int_list: [1,2,3]
@@ -28,3 +28,17 @@ system:
           s1: 31
           ds1: 6551
           sda1: 1652
+class:
+      person:
+          name: lyslg
+          age: 12
+          sex: true         # sex 为布尔型，好像这里不能写1
+      map:
+        lyslg01:
+          name: lyslg
+          age: 12
+          sex: true         # sex 为布尔型，好像这里不能写1
+        lyslg02:
+          name: lyslg1
+          age: 121
+          sex: true        # sex 为布尔型，好像这里不能写1
