@@ -320,8 +320,8 @@ public:
     template<class T>
     static typename ConfigVar<T>::ptr Lookup(const std::string& name, \
             const T& default_value, const std::string& description = ""){
-        auto it = s_datas.find(name);
-        if(it != s_datas.end()){
+        auto it = GetDatas().find(name);
+        if(it != GetDatas().end()){
             auto tmp = std::dynamic_pointer_cast<ConfigVar<T> >(it->second);
             if(tmp){
                 LYSLG_LOG_INFO(LYSLG_LOG_ROOT()) << "Lookup name-" <<name << "exists";
@@ -346,14 +346,14 @@ public:
         }
 
         typename ConfigVar<T>::ptr v(new ConfigVar<T>(name,default_value, description));
-        s_datas[name] = v;
+        GetDatas()[name] = v;
         return v;
     }
 
     template <class T>
     static typename ConfigVar<T>::ptr Lookup(const std::string& name){
-        auto it = s_datas.find(name);
-        if(it == s_datas.end()){
+        auto it = GetDatas().find(name);
+        if(it == GetDatas().end()){
             return nullptr;
         }
         return std::dynamic_pointer_cast<ConfigVar<T> >(it->second);
@@ -363,7 +363,11 @@ public:
 
     static ConfigVarBase::ptr LookupBase(const std::string& name);
 private:
-    static ConfigVarMap s_datas;
+    static ConfigVarMap& GetDatas() {  // 第一次调用时，其中的静态变量初始化
+        static ConfigVarMap s_datas;
+        return s_datas;
+    }
+    
 };
 
 

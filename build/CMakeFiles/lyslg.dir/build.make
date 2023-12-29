@@ -63,15 +63,15 @@ include CMakeFiles/lyslg.dir/flags.make
 CMakeFiles/lyslg.dir/lyslg/config.cc.o: CMakeFiles/lyslg.dir/flags.make
 CMakeFiles/lyslg.dir/lyslg/config.cc.o: ../lyslg/config.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lyslg.dir/lyslg/config.cc.o"
-	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lyslg.dir/lyslg/config.cc.o -c /home/lyslg/lyslg_/lyslg/config.cc
+	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"lyslg/config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lyslg.dir/lyslg/config.cc.o -c /home/lyslg/lyslg_/lyslg/config.cc
 
 CMakeFiles/lyslg.dir/lyslg/config.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lyslg.dir/lyslg/config.cc.i"
-	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lyslg/lyslg_/lyslg/config.cc > CMakeFiles/lyslg.dir/lyslg/config.cc.i
+	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lyslg/lyslg_/lyslg/config.cc > CMakeFiles/lyslg.dir/lyslg/config.cc.i
 
 CMakeFiles/lyslg.dir/lyslg/config.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lyslg.dir/lyslg/config.cc.s"
-	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lyslg/lyslg_/lyslg/config.cc -o CMakeFiles/lyslg.dir/lyslg/config.cc.s
+	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/config.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lyslg/lyslg_/lyslg/config.cc -o CMakeFiles/lyslg.dir/lyslg/config.cc.s
 
 CMakeFiles/lyslg.dir/lyslg/config.cc.o.requires:
 
@@ -87,15 +87,15 @@ CMakeFiles/lyslg.dir/lyslg/config.cc.o.provides.build: CMakeFiles/lyslg.dir/lysl
 CMakeFiles/lyslg.dir/lyslg/log.cc.o: CMakeFiles/lyslg.dir/flags.make
 CMakeFiles/lyslg.dir/lyslg/log.cc.o: ../lyslg/log.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lyslg.dir/lyslg/log.cc.o"
-	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lyslg.dir/lyslg/log.cc.o -c /home/lyslg/lyslg_/lyslg/log.cc
+	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"lyslg/log.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lyslg.dir/lyslg/log.cc.o -c /home/lyslg/lyslg_/lyslg/log.cc
 
 CMakeFiles/lyslg.dir/lyslg/log.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lyslg.dir/lyslg/log.cc.i"
-	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lyslg/lyslg_/lyslg/log.cc > CMakeFiles/lyslg.dir/lyslg/log.cc.i
+	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/log.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lyslg/lyslg_/lyslg/log.cc > CMakeFiles/lyslg.dir/lyslg/log.cc.i
 
 CMakeFiles/lyslg.dir/lyslg/log.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lyslg.dir/lyslg/log.cc.s"
-	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lyslg/lyslg_/lyslg/log.cc -o CMakeFiles/lyslg.dir/lyslg/log.cc.s
+	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/log.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lyslg/lyslg_/lyslg/log.cc -o CMakeFiles/lyslg.dir/lyslg/log.cc.s
 
 CMakeFiles/lyslg.dir/lyslg/log.cc.o.requires:
 
@@ -111,15 +111,15 @@ CMakeFiles/lyslg.dir/lyslg/log.cc.o.provides.build: CMakeFiles/lyslg.dir/lyslg/l
 CMakeFiles/lyslg.dir/lyslg/util.cc.o: CMakeFiles/lyslg.dir/flags.make
 CMakeFiles/lyslg.dir/lyslg/util.cc.o: ../lyslg/util.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lyslg.dir/lyslg/util.cc.o"
-	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lyslg.dir/lyslg/util.cc.o -c /home/lyslg/lyslg_/lyslg/util.cc
+	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"lyslg/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lyslg.dir/lyslg/util.cc.o -c /home/lyslg/lyslg_/lyslg/util.cc
 
 CMakeFiles/lyslg.dir/lyslg/util.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lyslg.dir/lyslg/util.cc.i"
-	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lyslg/lyslg_/lyslg/util.cc > CMakeFiles/lyslg.dir/lyslg/util.cc.i
+	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lyslg/lyslg_/lyslg/util.cc > CMakeFiles/lyslg.dir/lyslg/util.cc.i
 
 CMakeFiles/lyslg.dir/lyslg/util.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lyslg.dir/lyslg/util.cc.s"
-	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lyslg/lyslg_/lyslg/util.cc -o CMakeFiles/lyslg.dir/lyslg/util.cc.s
+	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lyslg/lyslg_/lyslg/util.cc -o CMakeFiles/lyslg.dir/lyslg/util.cc.s
 
 CMakeFiles/lyslg.dir/lyslg/util.cc.o.requires:
 

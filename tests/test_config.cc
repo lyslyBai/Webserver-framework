@@ -92,7 +92,7 @@ void test_config() {
 //     XX_M(g_str_int_umap_value_config,str_int_umap,before);
 //     // XX(g_str_int_umap_int_value_config,int_vec,before);
 
-    // YAML::Node root = YAML::LoadFile("/home/lyslg/lyslg_/bin/conf/log.yml");
+    // YAML::Node root = YAML::LoadFile("/home/lyslg/lyslg_/bin/conf/test.yml");
     // lyslg::Config::LoadFromYaml(root);
 
     // LYSLG_LOG_INFO(LYSLG_LOG_ROOT()) << "after: " << g_int_value_config->getValue();
@@ -192,7 +192,7 @@ void test_class() {
     });
 
     XX_PM(g_str_person_map,"class.map before");
-    YAML::Node root = YAML::LoadFile("/home/lyslg/lyslg_/bin/conf/log.yml");
+    YAML::Node root = YAML::LoadFile("/home/lyslg/lyslg_/bin/conf/test.yml");
     lyslg::Config::LoadFromYaml(root);
 
     LYSLG_LOG_INFO(LYSLG_LOG_ROOT()) << "after: " << g_person->getValue().toString()<< " - " << g_person->toString();
@@ -201,12 +201,29 @@ void test_class() {
 }
 
 
+void test_log() {
+    lyslg::Logger::ptr system_log = LYSLG_LOG_NAME("system");
+    LYSLG_LOG_INFO(system_log) << "hello system" << std::endl;
+    std::cout << lyslg::LoggerMgr::GetInstnce()->toYamlString() << std::endl;
+    YAML::Node root = YAML::LoadFile("/home/lyslg/lyslg_/bin/conf/log.yml");
+    // print_yaml(root,0);
+    lyslg::Config::LoadFromYaml(root);
+    std::cout << "================================================" << std::endl;
+    std::cout << lyslg::LoggerMgr::GetInstnce()->toYamlString() << std::endl;
+    std::cout << "================================================" << std::endl;
+    LYSLG_LOG_INFO(system_log) << "hello system" << std::endl;
+
+    system_log->setFormatter("%d - %m%n");
+
+     std::cout << lyslg::LoggerMgr::GetInstnce()->toYamlString() << std::endl;
+    LYSLG_LOG_INFO(system_log) << "hello system" << std::endl;
+}
 
 int main()
 {
-    test_class();
+    test_log();
+    //test_class();
     // test_yaml();cd
     // test_config();
-    
     return 0;
 }

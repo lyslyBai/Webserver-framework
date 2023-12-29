@@ -63,15 +63,15 @@ include CMakeFiles/my_test.dir/flags.make
 CMakeFiles/my_test.dir/tests/test.cc.o: CMakeFiles/my_test.dir/flags.make
 CMakeFiles/my_test.dir/tests/test.cc.o: ../tests/test.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/my_test.dir/tests/test.cc.o"
-	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_test.dir/tests/test.cc.o -c /home/lyslg/lyslg_/tests/test.cc
+	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"tests/test.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/my_test.dir/tests/test.cc.o -c /home/lyslg/lyslg_/tests/test.cc
 
 CMakeFiles/my_test.dir/tests/test.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/my_test.dir/tests/test.cc.i"
-	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lyslg/lyslg_/tests/test.cc > CMakeFiles/my_test.dir/tests/test.cc.i
+	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"tests/test.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lyslg/lyslg_/tests/test.cc > CMakeFiles/my_test.dir/tests/test.cc.i
 
 CMakeFiles/my_test.dir/tests/test.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/my_test.dir/tests/test.cc.s"
-	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lyslg/lyslg_/tests/test.cc -o CMakeFiles/my_test.dir/tests/test.cc.s
+	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"tests/test.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lyslg/lyslg_/tests/test.cc -o CMakeFiles/my_test.dir/tests/test.cc.s
 
 CMakeFiles/my_test.dir/tests/test.cc.o.requires:
 
