@@ -3,29 +3,30 @@
 #include "config.h"
 #include "yaml-cpp/yaml.h"
 
-// lyslg::ConfigVar<float>::ptr g_float_value_config = 
-//     lyslg::Config::Lookup("system.value",(float)10.2f,"system value");
+/*
+lyslg::ConfigVar<float>::ptr g_float_value_config = 
+    lyslg::Config::Lookup("system.value",(float)10.2f,"system value");
 
-// lyslg::ConfigVar<std::vector<int> >::ptr g_int_vec_value_config = 
-//     lyslg::Config::Lookup("system.int_vec",std::vector<int>{1,3,2},"system int vec");
+lyslg::ConfigVar<std::vector<int> >::ptr g_int_vec_value_config = 
+    lyslg::Config::Lookup("system.int_vec",std::vector<int>{1,3,2},"system int vec");
 
-// lyslg::ConfigVar<std::list<int> >::ptr g_int_list_value_config = 
-//     lyslg::Config::Lookup("system.int_list",std::list<int>{1,3,2},"system int list");
+lyslg::ConfigVar<std::list<int> >::ptr g_int_list_value_config = 
+    lyslg::Config::Lookup("system.int_list",std::list<int>{1,3,2},"system int list");
 
-// lyslg::ConfigVar<std::set<int> >::ptr g_int_set_value_config = 
-//     lyslg::Config::Lookup("system.int_set",std::set<int>{1,3,2},"system int set");
+lyslg::ConfigVar<std::set<int> >::ptr g_int_set_value_config = 
+    lyslg::Config::Lookup("system.int_set",std::set<int>{1,3,2},"system int set");
 
-// lyslg::ConfigVar<std::unordered_set<int> >::ptr g_int_unordered_set_value_config = 
-//     lyslg::Config::Lookup("system.int_unordered_set",std::unordered_set<int>{1,3,2},"system int unordered_set");
+lyslg::ConfigVar<std::unordered_set<int> >::ptr g_int_unordered_set_value_config = 
+    lyslg::Config::Lookup("system.int_unordered_set",std::unordered_set<int>{1,3,2},"system int unordered_set");
 
-// lyslg::ConfigVar<std::map<std::string, int> >::ptr g_str_int_map_value_config = 
-//     lyslg::Config::Lookup("system.str_int_map",std::map<std::string, int>{{"s",1},{"ds",2}},"system str int map");
+lyslg::ConfigVar<std::map<std::string, int> >::ptr g_str_int_map_value_config = 
+    lyslg::Config::Lookup("system.str_int_map",std::map<std::string, int>{{"s",1},{"ds",2}},"system str int map");
 
-// lyslg::ConfigVar<std::unordered_map<std::string, int> >::ptr g_str_int_umap_value_config = 
-//     lyslg::Config::Lookup("system.str_int_umap",std::unordered_map<std::string, int>{{"s",1},{"ds",2}},"system str int umap");
+lyslg::ConfigVar<std::unordered_map<std::string, int> >::ptr g_str_int_umap_value_config = 
+    lyslg::Config::Lookup("system.str_int_umap",std::unordered_map<std::string, int>{{"s",1},{"ds",2}},"system str int umap");
 
-// lyslg::ConfigVar<int>::ptr g_str_int_umap_int_value_config = 
-//     lyslg::Config::Lookup("system.str_int_umap.s",int(233),"system str int umap int");
+lyslg::ConfigVar<int>::ptr g_str_int_umap_int_value_config = 
+    lyslg::Config::Lookup("system.str_int_umap.s",int(233),"system str int umap int");
 
 void print_yaml(YAML::Node node,int level )
 {   
@@ -200,22 +201,22 @@ void test_class() {
     XX_PM(g_str_person_map,"class.map after");
 }
 
-
+*/
 void test_log() {
     lyslg::Logger::ptr system_log = LYSLG_LOG_NAME("system");
     LYSLG_LOG_INFO(system_log) << "hello system" << std::endl;
-    std::cout << lyslg::LoggerMgr::GetInstnce()->toYamlString() << std::endl;
+    // std::cout << lyslg::LoggerMgr::GetInstnce()->toYamlString() << std::endl;
     YAML::Node root = YAML::LoadFile("/home/lyslg/lyslg_/bin/conf/log.yml");
     // print_yaml(root,0);
     lyslg::Config::LoadFromYaml(root);
-    std::cout << "================================================" << std::endl;
-    std::cout << lyslg::LoggerMgr::GetInstnce()->toYamlString() << std::endl;
-    std::cout << "================================================" << std::endl;
+    // std::cout << "================================================" << std::endl;
+    // std::cout << lyslg::LoggerMgr::GetInstnce()->toYamlString() << std::endl;
+    // std::cout << "================================================" << std::endl;
     LYSLG_LOG_INFO(system_log) << "hello system" << std::endl;
 
     system_log->setFormatter("%d - %m%n");
 
-     std::cout << lyslg::LoggerMgr::GetInstnce()->toYamlString() << std::endl;
+    // std::cout << lyslg::LoggerMgr::GetInstnce()->toYamlString() << std::endl;
     LYSLG_LOG_INFO(system_log) << "hello system" << std::endl;
 }
 

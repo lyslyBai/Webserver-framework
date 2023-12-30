@@ -462,7 +462,7 @@ void LogFormatter::init()
     XX(f,FilenameFormatItem),   // 文件名
     XX(l,LineFormatItem),    // 当前行
     XX(T,TabFormatItem),           // 制表符
-    XX(N, ThreadNameFormatItem),        //N:线程名称
+    XX(N,ThreadNameFormatItem),        //N:线程名称
 #undef XX
     };
 
@@ -569,6 +569,7 @@ struct LogAppenderDefine{
             && oth.formatter == formatter
             && oth.level == level
             && oth.file == file;
+        // return oth.name == name;
     }
 };
 
@@ -582,10 +583,16 @@ struct LogDefine{
             && oth.formatter == formatter
             && oth.level == level
             && oth.name == name;
+        // return oth.name == name;
     }
 
     bool operator<(const LogDefine& oth) const {
         return name < oth.name;
+    }
+
+    friend std::ostream& operator<<(std::ostream& ss, const LogDefine& obj) {
+        ss << " obj.name=" << obj.name << " obj.level=" << obj.level<< " obj.formatter="  << obj.formatter ;
+        return ss;
     }
 };
 
@@ -593,7 +600,12 @@ template<>
 class LexicalCast<std::string, std::set<LogDefine>> {
 public:
    std::set<LogDefine> operator()(const std::string& v){
-        YAML::Node node = YAML::Load(v);
+        YAML::Node node = YAML::Load(v);  // 这里直接获得的是logs: 后的内容，不包括logs,
+        // std::stringstream ss;         // 下面设置了一logs为name的map,所以这里直接修改logs对应的node
+        // ss << node;
+        // std::cout << "==================================" <<std::endl;
+        // std::cout << ss.str() << std::endl;
+        // std::cout << "==================================" <<std::endl;
         std::set<LogDefine> vec;
         for(size_t i = 0;i < node.size(); i++) {
             auto n = node[i];
@@ -702,12 +714,14 @@ struct LogIniter{
             // 新增
             for(auto& i:new_value){
                 auto it = old_value.find(i);
-                lyslg::Logger::ptr logger;
-                if(it == old_value.end()) {
+                // std::cout << "new_value"<< i << std::endl;
+                lyslg::Logger::ptr logger;           // 这里的逻辑还是很奇怪
+                if(it == old_value.end()) {     // 这里新增和修改其实没区别，然后这里逻辑其实去全部都是新增，因为不可能找到
                     // 新增logger
-                    logger = LYSLG_LOG_NAME(i.name);
-                    // std::cout << "新增" << logger->getName()<< std::endl;
+                    logger = LYSLG_LOG_NAME(i.name);  // 有同名，则返回logger，修改设置，也相当于是修改
+                    // std::cout << "新增" << logger->getName()<< std::endl; // 所以修改或新增是在LYSLG_LOG_NAME中解决的
                 }else {
+                    std::cout << "old_value"<<*it << std::endl;
                     if(!(i == *it)) {
                         // 修改
                         logger = LYSLG_LOG_NAME(i.name);
