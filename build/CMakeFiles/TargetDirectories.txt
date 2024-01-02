@@ -1,5 +1,6 @@
 /home/lyslg/lyslg_/build/CMakeFiles/rebuild_cache.dir
-/home/lyslg/lyslg_/build/CMakeFiles/my_test.dir
-/home/lyslg/lyslg_/build/CMakeFiles/lyslg.dir
 /home/lyslg/lyslg_/build/CMakeFiles/edit_cache.dir
+/home/lyslg/lyslg_/build/CMakeFiles/lyslg.dir
+/home/lyslg/lyslg_/build/CMakeFiles/my_test.dir
 /home/lyslg/lyslg_/build/CMakeFiles/test_config.dir
+/home/lyslg/lyslg_/build/CMakeFiles/test_thread.dir

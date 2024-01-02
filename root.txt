@@ -1,0 +1,68 @@
+2024-01-02 00:00:31	name=logs description=logs config typename=St3setIN5lyslg9LogDefineESt4lessIS1_ESaIS1_EE value=- name: root
+  level: INFO
+  m_formatter: "%d%T%m%n"
+  appenders:
+    - type: FileLogAppender
+      file: /home/lyslg/lyslg_/root.txt
+      level: UNKNOW
+    - type: StdoutLogAppender
+      level: UNKNOW
+- name: system
+  level: DEBUG
+  m_formatter: "%d%T[%p]%T%m%n"
+  appenders:
+    - type: FileLogAppender
+      file: /home/lyslg/lyslg_/system.txt
+      level: UNKNOW
+    - type: StdoutLogAppender
+      level: UNKNOW
+2024-01-02 00:11:38	name=logs description=logs config typename=St3setIN5lyslg9LogDefineESt4lessIS1_ESaIS1_EE value=- name: root
+  level: INFO
+  m_formatter: "%d%T%m%n"
+  appenders:
+    - type: FileLogAppender
+      file: /home/lyslg/lyslg_/root.txt
+      level: UNKNOW
+    - type: StdoutLogAppender
+      level: UNKNOW
+- name: system
+  level: DEBUG
+  m_formatter: "%d%T[%p]%T%m%n"
+  appenders:
+    - type: FileLogAppender
+      file: /home/lyslg/lyslg_/system.txt
+      level: UNKNOW
+    - type: StdoutLogAppender
+      level: UNKNOW
+2024-01-02 10:53:15	name=logs description=logs config typename=St3setIN5lyslg9LogDefineESt4lessIS1_ESaIS1_EE value=- name: root
+  level: INFO
+  m_formatter: "%d%T%m%n"
+  appenders:
+    - type: FileLogAppender
+      file: /home/lyslg/lyslg_/root.txt
+      level: UNKNOW
+    - type: StdoutLogAppender
+      level: UNKNOW
+- name: system
+  level: DEBUG
+  m_formatter: "%d%T[%p]%T%m%n"
+  appenders:
+    - type: FileLogAppender
+      file: /home/lyslg/lyslg_/system.txt
+      level: UNKNOW
+    - type: StdoutLogAppender
+      level: UNKNOW
+2024-01-02 10:55:11	name=logs description=logs config typename=St3setIN5lyslg9LogDefineESt4lessIS1_ESaIS1_EE value=- name: root
+  level: INFO
+  m_formatter: "%d%T%m%n"
+  appenders:
+    - type: FileLogAppender
+      file: /home/lyslg/lyslg_/root.txt
+    - type: StdoutLogAppender
+- name: system
+  level: DEBUG
+  m_formatter: "%d%T[%p]%T%m%n"
+  appenders:
+    - type: FileLogAppender
+      file: /home/lyslg/lyslg_/system.txt
+    - type: StdoutLogAppender

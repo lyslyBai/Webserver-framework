@@ -12,6 +12,7 @@
 #include <set>
 #include "singleton.h"
 #include "util.h"
+#include "mutex.h"
 
 #define LYSLG_LOG_LEVEL(logger,level) \
     if(logger->getLevel() <= level) \
@@ -143,10 +144,10 @@ class LogAppender
 friend class Logger;
 public:
     typedef std::shared_ptr<LogAppender> ptr; 
-
+    typedef Mutex MutexType;
     virtual void log(std::shared_ptr<Logger>,LogLevel::Level level,LogEvent::ptr event) = 0; // 子类重载
 
-    LogFormatter::ptr getFormatter() const {return m_formatter;}
+    LogFormatter::ptr getFormatter();
     void setFormatter(LogFormatter::ptr formatter);
 
     LogLevel::Level getLevel() const {return m_level;}
@@ -159,15 +160,17 @@ public:
 protected:   // 在子类中可能会用到，故使用protected
     LogLevel::Level m_level = LogLevel::DEBUG;
     LogFormatter::ptr m_formatter;
+    MutexType m_mutex;
     bool m_hasFormatter = false;
 };
 
-// 日志器
+// 日志器 Mutex日志写入的速度最快，我还是使用这个吧
 class Logger :public std::enable_shared_from_this<Logger> // 可以使用shared_from_this(); 获取自身的shared_ptr
 { 
 friend class  LoggerManager;
-public:
+public: 
     typedef std::shared_ptr<Logger> ptr;
+    typedef Mutex MutexType;
     Logger(const std::string& name = "root");
 
     void log(LogLevel::Level level,LogEvent::ptr event);
@@ -200,6 +203,7 @@ private:
     std::list<LogAppender::ptr> m_appenders;  // 日志输出地点，为一个列表
     LogFormatter::ptr m_formatter;
     Logger::ptr m_root;
+    MutexType m_mutex;
 };
 
 
@@ -224,11 +228,13 @@ public:
 private:
     std::string m_filename;
     std::ofstream m_filestream;
+    uint64_t m_lastTime;
 };
 
 class LoggerManager
 {
 public:
+    typedef Mutex MutexType;
     LoggerManager();
     Logger::ptr getLogger(const std::string name);
 
@@ -239,6 +245,7 @@ public:
 private:
     std::map<std::string,Logger::ptr> m_loggers;
     Logger::ptr m_root;
+    MutexType m_mutex;
 };
 
 typedef lyslg::Singleton<LoggerManager> LoggerMgr;

@@ -29,6 +29,22 @@ singleton.h
 ../lyslg/singleton.h
 util.h
 ../lyslg/util.h
+mutex.h
+../lyslg/mutex.h
+
+../lyslg/mutex.h
+thread
+-
+pthread.h
+-
+functional
+-
+memory
+-
+semaphore.h
+-
+atomic
+-
 
 ../lyslg/singleton.h
 

@@ -63,50 +63,13 @@ CMAKE_SOURCE_DIR = /home/lyslg/lyslg_
 CMAKE_BINARY_DIR = /home/lyslg/lyslg_/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/my_test.dir
-
-# All Build rule for target.
-CMakeFiles/my_test.dir/all: CMakeFiles/lyslg.dir/all
-	$(MAKE) -f CMakeFiles/my_test.dir/build.make CMakeFiles/my_test.dir/depend
-	$(MAKE) -f CMakeFiles/my_test.dir/build.make CMakeFiles/my_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=5,6 "Built target my_test"
-.PHONY : CMakeFiles/my_test.dir/all
-
-# Include target in all.
-all: CMakeFiles/my_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/my_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/lyslg_/build/CMakeFiles 6
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/my_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/lyslg_/build/CMakeFiles 0
-.PHONY : CMakeFiles/my_test.dir/rule
-
-# Convenience name for target.
-my_test: CMakeFiles/my_test.dir/rule
-
-.PHONY : my_test
-
-# clean rule for target.
-CMakeFiles/my_test.dir/clean:
-	$(MAKE) -f CMakeFiles/my_test.dir/build.make CMakeFiles/my_test.dir/clean
-.PHONY : CMakeFiles/my_test.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/my_test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/lyslg.dir
 
 # All Build rule for target.
 CMakeFiles/lyslg.dir/all:
 	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/depend
 	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=1,2,3,4 "Built target lyslg"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target lyslg"
 .PHONY : CMakeFiles/lyslg.dir/all
 
 # Include target in all.
@@ -116,7 +79,7 @@ all: CMakeFiles/lyslg.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/lyslg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/lyslg_/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/lyslg_/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/lyslg.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/lyslg_/build/CMakeFiles 0
 .PHONY : CMakeFiles/lyslg.dir/rule
@@ -137,13 +100,50 @@ clean: CMakeFiles/lyslg.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/my_test.dir
+
+# All Build rule for target.
+CMakeFiles/my_test.dir/all: CMakeFiles/lyslg.dir/all
+	$(MAKE) -f CMakeFiles/my_test.dir/build.make CMakeFiles/my_test.dir/depend
+	$(MAKE) -f CMakeFiles/my_test.dir/build.make CMakeFiles/my_test.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=7,8 "Built target my_test"
+.PHONY : CMakeFiles/my_test.dir/all
+
+# Include target in all.
+all: CMakeFiles/my_test.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/my_test.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/lyslg_/build/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/my_test.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/lyslg_/build/CMakeFiles 0
+.PHONY : CMakeFiles/my_test.dir/rule
+
+# Convenience name for target.
+my_test: CMakeFiles/my_test.dir/rule
+
+.PHONY : my_test
+
+# clean rule for target.
+CMakeFiles/my_test.dir/clean:
+	$(MAKE) -f CMakeFiles/my_test.dir/build.make CMakeFiles/my_test.dir/clean
+.PHONY : CMakeFiles/my_test.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/my_test.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/test_config.dir
 
 # All Build rule for target.
 CMakeFiles/test_config.dir/all: CMakeFiles/lyslg.dir/all
 	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/depend
 	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=7,8 "Built target test_config"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=9,10 "Built target test_config"
 .PHONY : CMakeFiles/test_config.dir/all
 
 # Include target in all.
@@ -153,7 +153,7 @@ all: CMakeFiles/test_config.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test_config.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/lyslg_/build/CMakeFiles 6
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/lyslg_/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_config.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/lyslg_/build/CMakeFiles 0
 .PHONY : CMakeFiles/test_config.dir/rule
@@ -170,6 +170,43 @@ CMakeFiles/test_config.dir/clean:
 
 # clean rule for target.
 clean: CMakeFiles/test_config.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_thread.dir
+
+# All Build rule for target.
+CMakeFiles/test_thread.dir/all: CMakeFiles/lyslg.dir/all
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/depend
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=11,12 "Built target test_thread"
+.PHONY : CMakeFiles/test_thread.dir/all
+
+# Include target in all.
+all: CMakeFiles/test_thread.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_thread.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/lyslg_/build/CMakeFiles 8
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test_thread.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/lyslg_/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_thread.dir/rule
+
+# Convenience name for target.
+test_thread: CMakeFiles/test_thread.dir/rule
+
+.PHONY : test_thread
+
+# clean rule for target.
+CMakeFiles/test_thread.dir/clean:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/clean
+.PHONY : CMakeFiles/test_thread.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/test_thread.dir/clean
 
 .PHONY : clean
 

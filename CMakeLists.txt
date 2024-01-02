@@ -13,7 +13,7 @@ include (cmake/utils.cmake)
 #  -rdynamic这个标志用于在动态链接库中启用符号调试信息，使得在调试时更容易识别函数和变量的来源。
 # $ENV{CXXFLAGS} 这是获取环境变量CXXFLAGS的值的指令。CXXFLAGS通常包含编译器用于C++代码的标志和选项。 花括号，不是圆括号
 #set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O3 -g -std=c++11 -Wall -Werror -Wno-unused-function")
-set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O3 -g -std=c++11 -Wall -Werror -Wno-unused-function -Wno-builtin-macro-redefined")
+set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O3 -g -std=c++11 -Wall -Werror -Wno-unused-function -Wno-builtin-macro-redefined -pthread")
 
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/lyslg LIB_SRC)
 # set(LIB_SRC 
@@ -40,8 +40,18 @@ force_redefine_file_macro_for_sources(my_test)
 
 add_executable(test_config ${PROJECT_SOURCE_DIR}/tests/test_config.cc) # test 为cmake保留关键字，不能作为文件名
 add_dependencies(test_config lyslg)  #用于添加一个目标对其他目标的依赖。
-target_link_libraries(test_config lyslg yaml-cpp) # yaml-cpp  生成的三个动态库，包括两个符号衔接和一个
 force_redefine_file_macro_for_sources(test_config)
+target_link_libraries(test_config lyslg yaml-cpp) # yaml-cpp  生成的三个动态库，包括两个符号衔接和一个
+
+
+find_library(PTHREAD pthread)
+message("**** afdsfsdgfdasdfagsdffffffffffffffffffffffffffffffffffffffffffffasdffffffffffff: ${PTHREAD}")
+add_executable(test_thread ${PROJECT_SOURCE_DIR}/tests/test_thread.cc) # test 为cmake保留关键字，不能作为文件名
+add_dependencies(test_thread lyslg)  #用于添加一个目标对其他目标的依赖。
+force_redefine_file_macro_for_sources(test_thread)
+target_link_libraries(test_thread ${PTHREAD} lyslg yaml-cpp ) # yaml-cpp  生成的三个动态库，包括两个符号衔接和一个
+# target_link_libraries(test_thread PRIVATE -pthread)
+
 
 #自动设置PROJECT_SOURCE_DIR的默认值为项目根目录的路径（CMakeLists.txt所在的路径）
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)

@@ -214,6 +214,13 @@ void test_log() {
     // std::cout << "================================================" << std::endl;
     LYSLG_LOG_INFO(system_log) << "hello system" << std::endl;
 
+    lyslg::Config::Visit([](lyslg::ConfigVarBase::ptr var){
+        LYSLG_LOG_INFO(LYSLG_LOG_ROOT()) << "name=" << var->getName() 
+                                         << " description=" << var->getDescription() 
+                                         << " typename=" << var->getTypeName() 
+                                         << " value=" << var->toString();
+    });
+
     system_log->setFormatter("%d - %m%n");
 
     // std::cout << lyslg::LoggerMgr::GetInstnce()->toYamlString() << std::endl;

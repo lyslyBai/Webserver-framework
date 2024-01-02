@@ -114,19 +114,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named my_test
-
-# Build rule for target.
-my_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 my_test
-.PHONY : my_test
-
-# fast build rule for target.
-my_test/fast:
-	$(MAKE) -f CMakeFiles/my_test.dir/build.make CMakeFiles/my_test.dir/build
-.PHONY : my_test/fast
-
-#=============================================================================
 # Target rules for targets named lyslg
 
 # Build rule for target.
@@ -140,6 +127,19 @@ lyslg/fast:
 .PHONY : lyslg/fast
 
 #=============================================================================
+# Target rules for targets named my_test
+
+# Build rule for target.
+my_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 my_test
+.PHONY : my_test
+
+# fast build rule for target.
+my_test/fast:
+	$(MAKE) -f CMakeFiles/my_test.dir/build.make CMakeFiles/my_test.dir/build
+.PHONY : my_test/fast
+
+#=============================================================================
 # Target rules for targets named test_config
 
 # Build rule for target.
@@ -151,6 +151,19 @@ test_config: cmake_check_build_system
 test_config/fast:
 	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/build
 .PHONY : test_config/fast
+
+#=============================================================================
+# Target rules for targets named test_thread
+
+# Build rule for target.
+test_thread: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_thread
+.PHONY : test_thread
+
+# fast build rule for target.
+test_thread/fast:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
+.PHONY : test_thread/fast
 
 lyslg/config.o: lyslg/config.cc.o
 
@@ -205,6 +218,60 @@ lyslg/log.s: lyslg/log.cc.s
 lyslg/log.cc.s:
 	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/log.cc.s
 .PHONY : lyslg/log.cc.s
+
+lyslg/mutex.o: lyslg/mutex.cc.o
+
+.PHONY : lyslg/mutex.o
+
+# target to build an object file
+lyslg/mutex.cc.o:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/mutex.cc.o
+.PHONY : lyslg/mutex.cc.o
+
+lyslg/mutex.i: lyslg/mutex.cc.i
+
+.PHONY : lyslg/mutex.i
+
+# target to preprocess a source file
+lyslg/mutex.cc.i:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/mutex.cc.i
+.PHONY : lyslg/mutex.cc.i
+
+lyslg/mutex.s: lyslg/mutex.cc.s
+
+.PHONY : lyslg/mutex.s
+
+# target to generate assembly for a file
+lyslg/mutex.cc.s:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/mutex.cc.s
+.PHONY : lyslg/mutex.cc.s
+
+lyslg/thread.o: lyslg/thread.cc.o
+
+.PHONY : lyslg/thread.o
+
+# target to build an object file
+lyslg/thread.cc.o:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/thread.cc.o
+.PHONY : lyslg/thread.cc.o
+
+lyslg/thread.i: lyslg/thread.cc.i
+
+.PHONY : lyslg/thread.i
+
+# target to preprocess a source file
+lyslg/thread.cc.i:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/thread.cc.i
+.PHONY : lyslg/thread.cc.i
+
+lyslg/thread.s: lyslg/thread.cc.s
+
+.PHONY : lyslg/thread.s
+
+# target to generate assembly for a file
+lyslg/thread.cc.s:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/thread.cc.s
+.PHONY : lyslg/thread.cc.s
 
 lyslg/util.o: lyslg/util.cc.o
 
@@ -287,6 +354,33 @@ tests/test_config.cc.s:
 	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.s
 .PHONY : tests/test_config.cc.s
 
+tests/test_thread.o: tests/test_thread.cc.o
+
+.PHONY : tests/test_thread.o
+
+# target to build an object file
+tests/test_thread.cc.o:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.o
+.PHONY : tests/test_thread.cc.o
+
+tests/test_thread.i: tests/test_thread.cc.i
+
+.PHONY : tests/test_thread.i
+
+# target to preprocess a source file
+tests/test_thread.cc.i:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.i
+.PHONY : tests/test_thread.cc.i
+
+tests/test_thread.s: tests/test_thread.cc.s
+
+.PHONY : tests/test_thread.s
+
+# target to generate assembly for a file
+tests/test_thread.cc.s:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.s
+.PHONY : tests/test_thread.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -294,16 +388,23 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... my_test"
-	@echo "... lyslg"
 	@echo "... edit_cache"
+	@echo "... lyslg"
+	@echo "... my_test"
 	@echo "... test_config"
+	@echo "... test_thread"
 	@echo "... lyslg/config.o"
 	@echo "... lyslg/config.i"
 	@echo "... lyslg/config.s"
 	@echo "... lyslg/log.o"
 	@echo "... lyslg/log.i"
 	@echo "... lyslg/log.s"
+	@echo "... lyslg/mutex.o"
+	@echo "... lyslg/mutex.i"
+	@echo "... lyslg/mutex.s"
+	@echo "... lyslg/thread.o"
+	@echo "... lyslg/thread.i"
+	@echo "... lyslg/thread.s"
 	@echo "... lyslg/util.o"
 	@echo "... lyslg/util.i"
 	@echo "... lyslg/util.s"
@@ -313,6 +414,9 @@ help:
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"
+	@echo "... tests/test_thread.o"
+	@echo "... tests/test_thread.i"
+	@echo "... tests/test_thread.s"
 .PHONY : help
 
 
