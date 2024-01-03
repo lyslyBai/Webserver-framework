@@ -6,14 +6,30 @@ CMakeFiles/lyslg.dir/lyslg/config.cc.o: ../lyslg/config.h
 CMakeFiles/lyslg.dir/lyslg/config.cc.o: ../lyslg/log.h
 CMakeFiles/lyslg.dir/lyslg/config.cc.o: ../lyslg/mutex.h
 CMakeFiles/lyslg.dir/lyslg/config.cc.o: ../lyslg/singleton.h
+CMakeFiles/lyslg.dir/lyslg/config.cc.o: ../lyslg/thread.h
 CMakeFiles/lyslg.dir/lyslg/config.cc.o: ../lyslg/util.h
+
+CMakeFiles/lyslg.dir/lyslg/fiber.cc.o: ../lyslg/config.h
+CMakeFiles/lyslg.dir/lyslg/fiber.cc.o: ../lyslg/fiber.cc
+CMakeFiles/lyslg.dir/lyslg/fiber.cc.o: ../lyslg/fiber.h
+CMakeFiles/lyslg.dir/lyslg/fiber.cc.o: ../lyslg/log.h
+CMakeFiles/lyslg.dir/lyslg/fiber.cc.o: ../lyslg/macro.h
+CMakeFiles/lyslg.dir/lyslg/fiber.cc.o: ../lyslg/mutex.h
+CMakeFiles/lyslg.dir/lyslg/fiber.cc.o: ../lyslg/singleton.h
+CMakeFiles/lyslg.dir/lyslg/fiber.cc.o: ../lyslg/thread.h
+CMakeFiles/lyslg.dir/lyslg/fiber.cc.o: ../lyslg/util.h
 
 CMakeFiles/lyslg.dir/lyslg/log.cc.o: ../lyslg/config.h
 CMakeFiles/lyslg.dir/lyslg/log.cc.o: ../lyslg/log.cc
 CMakeFiles/lyslg.dir/lyslg/log.cc.o: ../lyslg/log.h
 CMakeFiles/lyslg.dir/lyslg/log.cc.o: ../lyslg/mutex.h
 CMakeFiles/lyslg.dir/lyslg/log.cc.o: ../lyslg/singleton.h
+CMakeFiles/lyslg.dir/lyslg/log.cc.o: ../lyslg/thread.h
 CMakeFiles/lyslg.dir/lyslg/log.cc.o: ../lyslg/util.h
+
+CMakeFiles/lyslg.dir/lyslg/macro.cc.o: ../lyslg/macro.cc
+CMakeFiles/lyslg.dir/lyslg/macro.cc.o: ../lyslg/macro.h
+CMakeFiles/lyslg.dir/lyslg/macro.cc.o: ../lyslg/util.h
 
 CMakeFiles/lyslg.dir/lyslg/mutex.cc.o: ../lyslg/mutex.cc
 CMakeFiles/lyslg.dir/lyslg/mutex.cc.o: ../lyslg/mutex.h
@@ -25,6 +41,11 @@ CMakeFiles/lyslg.dir/lyslg/thread.cc.o: ../lyslg/thread.cc
 CMakeFiles/lyslg.dir/lyslg/thread.cc.o: ../lyslg/thread.h
 CMakeFiles/lyslg.dir/lyslg/thread.cc.o: ../lyslg/util.h
 
+CMakeFiles/lyslg.dir/lyslg/util.cc.o: ../lyslg/fiber.h
+CMakeFiles/lyslg.dir/lyslg/util.cc.o: ../lyslg/log.h
+CMakeFiles/lyslg.dir/lyslg/util.cc.o: ../lyslg/mutex.h
+CMakeFiles/lyslg.dir/lyslg/util.cc.o: ../lyslg/singleton.h
+CMakeFiles/lyslg.dir/lyslg/util.cc.o: ../lyslg/thread.h
 CMakeFiles/lyslg.dir/lyslg/util.cc.o: ../lyslg/util.cc
 CMakeFiles/lyslg.dir/lyslg/util.cc.o: ../lyslg/util.h
 

@@ -40,6 +40,14 @@ log.h
 mutex.h
 ../lyslg/mutex.h
 
+../lyslg/fiber.h
+ucontext.h
+-
+memory
+-
+mutex.h
+../lyslg/mutex.h
+
 ../lyslg/log.h
 string
 -
@@ -65,6 +73,8 @@ util.h
 ../lyslg/util.h
 mutex.h
 ../lyslg/mutex.h
+thread.h
+../lyslg/thread.h
 
 ../lyslg/lyslg.h
 log.h
@@ -79,6 +89,18 @@ mutex.h
 ../lyslg/mutex.h
 thread.h
 ../lyslg/thread.h
+macro.h
+../lyslg/macro.h
+fiber.h
+../lyslg/fiber.h
+
+../lyslg/macro.h
+assert.h
+-
+execinfo.h
+-
+util.h
+../lyslg/util.h
 
 ../lyslg/mutex.h
 thread
@@ -112,6 +134,10 @@ stdio.h
 unistd.h
 -
 cstdint
+-
+string
+-
+vector
 -
 
 /home/lyslg/lyslg_/tests/test_thread.cc

@@ -7,5 +7,8 @@
 #include "util.h"
 #include "mutex.h"
 #include "thread.h"
+#include "macro.h"
+#include "fiber.h"
+
 
 #endif

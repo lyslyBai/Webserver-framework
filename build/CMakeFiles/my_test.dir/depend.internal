@@ -5,5 +5,6 @@ CMakeFiles/my_test.dir/tests/test.cc.o
  ../lyslg/log.h
  ../lyslg/mutex.h
  ../lyslg/singleton.h
+ ../lyslg/thread.h
  ../lyslg/util.h
  /home/lyslg/lyslg_/tests/test.cc

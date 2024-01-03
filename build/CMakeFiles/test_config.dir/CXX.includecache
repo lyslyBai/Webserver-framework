@@ -65,6 +65,8 @@ util.h
 ../lyslg/util.h
 mutex.h
 ../lyslg/mutex.h
+thread.h
+../lyslg/thread.h
 
 ../lyslg/mutex.h
 thread
@@ -82,6 +84,10 @@ atomic
 
 ../lyslg/singleton.h
 
+../lyslg/thread.h
+mutex.h
+../lyslg/mutex.h
+
 ../lyslg/util.h
 pthread.h
 -
@@ -94,6 +100,10 @@ stdio.h
 unistd.h
 -
 cstdint
+-
+string
+-
+vector
 -
 
 /home/lyslg/lyslg_/tests/test_config.cc

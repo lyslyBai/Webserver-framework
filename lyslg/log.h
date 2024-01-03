@@ -13,12 +13,13 @@
 #include "singleton.h"
 #include "util.h"
 #include "mutex.h"
+#include "thread.h"
 
 #define LYSLG_LOG_LEVEL(logger,level) \
     if(logger->getLevel() <= level) \
         lyslg::LogEventWrap(lyslg::LogEvent::ptr(new lyslg::LogEvent(logger,level \
         ,__FILE__,__LINE__,0,lyslg::GetThreadId(), \
-        lyslg::GetFiberId(),time(0)))).getSS()
+        lyslg::GetFiberId(),time(0),lyslg::Thread::GetName()))).getSS()
 
 #define LYSLG_LOG_DEBUG(logger) LYSLG_LOG_LEVEL(logger,lyslg::LogLevel::DEBUG)
 #define LYSLG_LOG_INFO(logger) LYSLG_LOG_LEVEL(logger,lyslg::LogLevel::INFO)
@@ -30,7 +31,7 @@
     if(logger->getLevel() <= level) \
         lyslg::LogEventWrap(lyslg::LogEvent::ptr(new lyslg::LogEvent(logger,level \
         ,__FILE__,__LINE__,0,lyslg::GetThreadId(),lyslg::GetFiberId(), \
-        time(0)))).getEvent()->format(fmt,__VA_ARGS__)                    // __VA_ARGS__ 等价于 ... 内容，为预定义的宏
+        time(0),lyslg::Thread::GetName()))).getEvent()->format(fmt,__VA_ARGS__)                    // __VA_ARGS__ 等价于 ... 内容，为预定义的宏
 
 #define LYSLG_LOG_FMT_DEBUG(logger,fmt,...) LYSLG_LOG_FMT_LEVEL(logger,lyslg::LogLevel::DEBUG,fmt,__VA_ARGS__)
 #define LYSLG_LOG_FMT_INFO(logger,fmt,...) LYSLG_LOG_FMT_LEVEL(logger,lyslg::LogLevel::INFO,fmt,__VA_ARGS__)
@@ -68,13 +69,15 @@ class LogEvent
 {
 public:
     typedef std::shared_ptr<LogEvent> ptr;
-    LogEvent(std::shared_ptr<Logger> logger, LogLevel::Level level,const char* file,int32_t line,int32_t elapse,int32_t threadId,int32_t fiberId,int64_t time);
+    LogEvent(std::shared_ptr<Logger> logger, LogLevel::Level level, \
+        const char* file,int32_t line,int32_t elapse,int32_t threadId, \
+        int32_t fiberId,int64_t time, const std::string& thread_name);
 
     const char* getFile() const {return m_file;}
     int32_t getLine() const {return m_line;}
     int32_t getElapse() const {return m_elapse;}
     int32_t getThreadId() const {return m_threadId;}
-    std::string getThreadNmame() const {return m_threadName;}
+    std::string getThreadName() const {return m_threadName;}
     int32_t getFiberId() const {return m_fiberId;}
     int64_t getTime() const {return m_time;}
     std::string getContent() const {return m_ss.str();}
@@ -89,14 +92,12 @@ private:
     int32_t m_line = 0;   // 行号
     int32_t m_elapse = 0;  // 程序启动到现在的毫秒数
     int32_t m_threadId = 0; // 线程ID
-    std::string m_threadName ; // 线程ID
     int32_t m_fiberId = 0; // 协程ID
     int64_t m_time = 0; // 时间戳
     std::stringstream m_ss; // 
-
     std::shared_ptr<Logger> m_logger;
     LogLevel::Level m_level;
-
+    std::string m_threadName ; // 线程名称
 };
 
 class LogEventWrap{

@@ -34,7 +34,9 @@ void Thread::SetName(const std::string& name){
     }
     t_thread_name = name;
 }
-
+/*是的，当使用pthread_create创建线程时，线程入口函数必须是一个C函数，
+而成员函数有一个隐藏的this指针，使得它的函数签名与C函数不同。
+为了解决这个问题，通常使用静态成员函数作为线程的入口函数。*/
 Thread::Thread(std::function<void()> cb,const std::string& name)
     :m_cb(cb)
     ,m_name(name){

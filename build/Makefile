@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_util
+
+# Build rule for target.
+test_util: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_util
+.PHONY : test_util
+
+# fast build rule for target.
+test_util/fast:
+	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
+.PHONY : test_util/fast
+
+#=============================================================================
 # Target rules for targets named lyslg
 
 # Build rule for target.
@@ -125,6 +138,19 @@ lyslg: cmake_check_build_system
 lyslg/fast:
 	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/build
 .PHONY : lyslg/fast
+
+#=============================================================================
+# Target rules for targets named test_fiber
+
+# Build rule for target.
+test_fiber: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_fiber
+.PHONY : test_fiber
+
+# fast build rule for target.
+test_fiber/fast:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
+.PHONY : test_fiber/fast
 
 #=============================================================================
 # Target rules for targets named my_test
@@ -192,6 +218,33 @@ lyslg/config.cc.s:
 	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/config.cc.s
 .PHONY : lyslg/config.cc.s
 
+lyslg/fiber.o: lyslg/fiber.cc.o
+
+.PHONY : lyslg/fiber.o
+
+# target to build an object file
+lyslg/fiber.cc.o:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/fiber.cc.o
+.PHONY : lyslg/fiber.cc.o
+
+lyslg/fiber.i: lyslg/fiber.cc.i
+
+.PHONY : lyslg/fiber.i
+
+# target to preprocess a source file
+lyslg/fiber.cc.i:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/fiber.cc.i
+.PHONY : lyslg/fiber.cc.i
+
+lyslg/fiber.s: lyslg/fiber.cc.s
+
+.PHONY : lyslg/fiber.s
+
+# target to generate assembly for a file
+lyslg/fiber.cc.s:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/fiber.cc.s
+.PHONY : lyslg/fiber.cc.s
+
 lyslg/log.o: lyslg/log.cc.o
 
 .PHONY : lyslg/log.o
@@ -218,6 +271,33 @@ lyslg/log.s: lyslg/log.cc.s
 lyslg/log.cc.s:
 	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/log.cc.s
 .PHONY : lyslg/log.cc.s
+
+lyslg/macro.o: lyslg/macro.cc.o
+
+.PHONY : lyslg/macro.o
+
+# target to build an object file
+lyslg/macro.cc.o:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/macro.cc.o
+.PHONY : lyslg/macro.cc.o
+
+lyslg/macro.i: lyslg/macro.cc.i
+
+.PHONY : lyslg/macro.i
+
+# target to preprocess a source file
+lyslg/macro.cc.i:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/macro.cc.i
+.PHONY : lyslg/macro.cc.i
+
+lyslg/macro.s: lyslg/macro.cc.s
+
+.PHONY : lyslg/macro.s
+
+# target to generate assembly for a file
+lyslg/macro.cc.s:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/macro.cc.s
+.PHONY : lyslg/macro.cc.s
 
 lyslg/mutex.o: lyslg/mutex.cc.o
 
@@ -354,6 +434,33 @@ tests/test_config.cc.s:
 	$(MAKE) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.s
 .PHONY : tests/test_config.cc.s
 
+tests/test_fiber.o: tests/test_fiber.cc.o
+
+.PHONY : tests/test_fiber.o
+
+# target to build an object file
+tests/test_fiber.cc.o:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.o
+.PHONY : tests/test_fiber.cc.o
+
+tests/test_fiber.i: tests/test_fiber.cc.i
+
+.PHONY : tests/test_fiber.i
+
+# target to preprocess a source file
+tests/test_fiber.cc.i:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.i
+.PHONY : tests/test_fiber.cc.i
+
+tests/test_fiber.s: tests/test_fiber.cc.s
+
+.PHONY : tests/test_fiber.s
+
+# target to generate assembly for a file
+tests/test_fiber.cc.s:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.s
+.PHONY : tests/test_fiber.cc.s
+
 tests/test_thread.o: tests/test_thread.cc.o
 
 .PHONY : tests/test_thread.o
@@ -381,6 +488,33 @@ tests/test_thread.cc.s:
 	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.s
 .PHONY : tests/test_thread.cc.s
 
+tests/test_util.o: tests/test_util.cc.o
+
+.PHONY : tests/test_util.o
+
+# target to build an object file
+tests/test_util.cc.o:
+	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/tests/test_util.cc.o
+.PHONY : tests/test_util.cc.o
+
+tests/test_util.i: tests/test_util.cc.i
+
+.PHONY : tests/test_util.i
+
+# target to preprocess a source file
+tests/test_util.cc.i:
+	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/tests/test_util.cc.i
+.PHONY : tests/test_util.cc.i
+
+tests/test_util.s: tests/test_util.cc.s
+
+.PHONY : tests/test_util.s
+
+# target to generate assembly for a file
+tests/test_util.cc.s:
+	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/tests/test_util.cc.s
+.PHONY : tests/test_util.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -388,17 +522,25 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... test_util"
 	@echo "... edit_cache"
 	@echo "... lyslg"
+	@echo "... test_fiber"
 	@echo "... my_test"
 	@echo "... test_config"
 	@echo "... test_thread"
 	@echo "... lyslg/config.o"
 	@echo "... lyslg/config.i"
 	@echo "... lyslg/config.s"
+	@echo "... lyslg/fiber.o"
+	@echo "... lyslg/fiber.i"
+	@echo "... lyslg/fiber.s"
 	@echo "... lyslg/log.o"
 	@echo "... lyslg/log.i"
 	@echo "... lyslg/log.s"
+	@echo "... lyslg/macro.o"
+	@echo "... lyslg/macro.i"
+	@echo "... lyslg/macro.s"
 	@echo "... lyslg/mutex.o"
 	@echo "... lyslg/mutex.i"
 	@echo "... lyslg/mutex.s"
@@ -414,9 +556,15 @@ help:
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"
+	@echo "... tests/test_fiber.o"
+	@echo "... tests/test_fiber.i"
+	@echo "... tests/test_fiber.s"
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"
+	@echo "... tests/test_util.o"
+	@echo "... tests/test_util.i"
+	@echo "... tests/test_util.s"
 .PHONY : help
 
 

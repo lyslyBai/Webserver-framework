@@ -3,8 +3,10 @@
 
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o
  ../lyslg/config.h
+ ../lyslg/fiber.h
  ../lyslg/log.h
  ../lyslg/lyslg.h
+ ../lyslg/macro.h
  ../lyslg/mutex.h
  ../lyslg/singleton.h
  ../lyslg/thread.h

@@ -5,7 +5,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/lyslg/lyslg_/lyslg/config.cc" "/home/lyslg/lyslg_/build/CMakeFiles/lyslg.dir/lyslg/config.cc.o"
+  "/home/lyslg/lyslg_/lyslg/fiber.cc" "/home/lyslg/lyslg_/build/CMakeFiles/lyslg.dir/lyslg/fiber.cc.o"
   "/home/lyslg/lyslg_/lyslg/log.cc" "/home/lyslg/lyslg_/build/CMakeFiles/lyslg.dir/lyslg/log.cc.o"
+  "/home/lyslg/lyslg_/lyslg/macro.cc" "/home/lyslg/lyslg_/build/CMakeFiles/lyslg.dir/lyslg/macro.cc.o"
   "/home/lyslg/lyslg_/lyslg/mutex.cc" "/home/lyslg/lyslg_/build/CMakeFiles/lyslg.dir/lyslg/mutex.cc.o"
   "/home/lyslg/lyslg_/lyslg/thread.cc" "/home/lyslg/lyslg_/build/CMakeFiles/lyslg.dir/lyslg/thread.cc.o"
   "/home/lyslg/lyslg_/lyslg/util.cc" "/home/lyslg/lyslg_/build/CMakeFiles/lyslg.dir/lyslg/util.cc.o"

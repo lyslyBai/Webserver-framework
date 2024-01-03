@@ -91,7 +91,7 @@ public:
     ThreadNameFormatItem(const std::string& str = "") {}
     void format(std::ostream& os,std::shared_ptr<Logger> logger,LogLevel::Level level,LogEvent::ptr event) override
     {
-        os << event->getThreadNmame();
+        os << event->getThreadName();
     }
 };
 
@@ -104,6 +104,7 @@ public:
         os << event->getFiberId();
     }
 };
+
 
 class DateTimeFormatItem:public LogFormatter::FormatItem
 {
@@ -180,7 +181,9 @@ private:
     std::string m_string;
 };
 
-LogEvent::LogEvent(std::shared_ptr<Logger> logger,LogLevel::Level level,const char* file,int32_t line,int32_t elapse,int32_t threadId,int32_t fiberId,int64_t time)
+LogEvent::LogEvent(std::shared_ptr<Logger> logger,LogLevel::Level level,\
+     const char* file,int32_t line,int32_t elapse, \
+     int32_t threadId,int32_t fiberId,int64_t time, const std::string& thread_name)
     :m_file(file)
     ,m_line(line)
     ,m_elapse(elapse)
@@ -188,7 +191,8 @@ LogEvent::LogEvent(std::shared_ptr<Logger> logger,LogLevel::Level level,const ch
     ,m_fiberId(fiberId)
     ,m_time(time)
     ,m_logger(logger)
-    ,m_level(level){
+    ,m_level(level)
+    ,m_threadName(thread_name){
         // std:: cout << "LogEvent" <<std::endl;
 }
 
@@ -486,7 +490,7 @@ void LogFormatter::init()
     XX(N,ThreadNameFormatItem),        //N:线程名称
 #undef XX
     };
-
+//"%d{%Y-%m-%d %H:%M:%S}%T%t%T%N%T%F%T[%p]%T[%c]%T%f:%l%T%m%n"
     // %m - 消息体
     // %p - levev
     // %r -- 启动后的时间

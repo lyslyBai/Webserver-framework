@@ -10,7 +10,11 @@ CXX_INCLUDES = -I/home/lyslg/lyslg_/lyslg
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/config.cc.o_DEFINES = __FILE__="lyslg/config.cc"
 
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/fiber.cc.o_DEFINES = __FILE__="lyslg/fiber.cc"
+
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/log.cc.o_DEFINES = __FILE__="lyslg/log.cc"
+
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/macro.cc.o_DEFINES = __FILE__="lyslg/macro.cc"
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/mutex.cc.o_DEFINES = __FILE__="lyslg/mutex.cc"
 
