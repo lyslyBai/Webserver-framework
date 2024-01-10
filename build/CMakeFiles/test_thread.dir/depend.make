@@ -7,6 +7,7 @@ CMakeFiles/test_thread.dir/tests/test_thread.cc.o: ../lyslg/log.h
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o: ../lyslg/lyslg.h
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o: ../lyslg/macro.h
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o: ../lyslg/mutex.h
+CMakeFiles/test_thread.dir/tests/test_thread.cc.o: ../lyslg/scheduler.h
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o: ../lyslg/singleton.h
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o: ../lyslg/thread.h
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o: ../lyslg/util.h

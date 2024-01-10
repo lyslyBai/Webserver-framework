@@ -3,6 +3,7 @@
 #include "macro.h"
 #include <atomic>
 #include "log.h"
+#include "scheduler.h"
 
 namespace lyslg{
 
@@ -50,9 +51,10 @@ Fiber::Fiber() {
     LYSLG_LOG_DEBUG(g_logger) << "Fiber::Fiber";
 }
 
-Fiber::Fiber(std::function<void()> cb,size_t stacksize)
+Fiber::Fiber(std::function<void()> cb,size_t stacksize,bool use_caller)
     :m_id(++s_fiber_id)
-    ,m_cb(cb){
+    ,m_cb(cb)
+    ,m_use_caller(use_caller){
     ++s_fiber_count;
     m_stacksize = stacksize ? stacksize :g_fiber_stack_size->getValue();
     m_stack = StackAllocator::Alloc(m_stacksize);
@@ -65,8 +67,16 @@ Fiber::Fiber(std::function<void()> cb,size_t stacksize)
     m_ctx.uc_stack.ss_sp = m_stack;
     m_ctx.uc_stack.ss_size = m_stacksize;
 
-    makecontext(&m_ctx, &Fiber::MainFunc,0);
+    // m_use_caller 其实决定了保存点
+    // m_use_caller == true ,即是使用当前线程的主协程作为保存点
+    // m_use_caller == false, 即是当使用调度函数而没用启用主线程时，即是使用主线程中的m_ctx作为保存点
 
+    if(!m_use_caller) {
+        makecontext(&m_ctx, &Fiber::MainFunc, 0);
+    } else {
+        makecontext(&m_ctx, &Fiber::CallerMainFunc, 0);
+    }
+    
     LYSLG_LOG_DEBUG(g_logger) << "Fiber::Fiber id=" << m_id;
 }
 /*有栈空间的情况：
@@ -118,20 +128,42 @@ void Fiber::reset(std::function<void()> cb){
     makecontext(&m_ctx, &Fiber::MainFunc,0);
     m_state = INIT;
 }
+
+void Fiber::call() {
+    SetThis(this);
+    m_state = EXEC;
+
+    LYSLG_LOG_DEBUG(g_logger) << "Fiber::call";
+
+    if(swapcontext(&t_threadFiber->m_ctx,&m_ctx)) {
+        LYSLG_ASSERT2(false,"swapcontext");
+    }
+}
+
+void Fiber::back(){
+    SetThis(t_threadFiber.get());
+    
+    LYSLG_LOG_DEBUG(g_logger) << "Fiber::back";
+
+    if(swapcontext(&m_ctx, &t_threadFiber->m_ctx)) {
+        LYSLG_ASSERT2(false, "swapcontext");
+    }
+}
+
 // 切换到当前协程执行
 void Fiber::swapIn(){
     SetThis(this);
     LYSLG_ASSERT(m_state != EXEC);
     m_state = EXEC;
-    if(swapcontext(&t_threadFiber->m_ctx,&m_ctx)) {
+    if(swapcontext(&Scheduler::GetMainFiber()->m_ctx,&m_ctx)) {
         LYSLG_ASSERT2(false,"swapcontext");
     }
 }
 // 切换到后台执行
 void Fiber::swapOut(){
-    SetThis(t_threadFiber.get());
-    if(swapcontext(&m_ctx,&t_threadFiber->m_ctx)) {
-        LYSLG_ASSERT2(false,"swapcontext");
+    SetThis(Scheduler::GetMainFiber());
+    if(swapcontext(&m_ctx, &Scheduler::GetMainFiber()->m_ctx)) {
+        LYSLG_ASSERT2(false, "swapcontext");
     }
 }
 
@@ -154,13 +186,21 @@ Fiber::ptr Fiber::GetThis(){
 void Fiber::YieldToTeady(){
     Fiber::ptr cur = GetThis();
     cur->m_state = READY;
-    cur->swapOut();
+    if(!cur->m_use_caller)  {
+        cur->swapOut();
+    }else{
+        cur->back();
+    }
 }
 // 协程切换到后台，并且设置为Hold状态
 void Fiber::YiedldToHold(){
     Fiber::ptr cur = GetThis();
     cur->m_state = HOLD;
-    cur->swapOut();
+    if(!cur->m_use_caller)  {
+        cur->swapOut();
+    }else{
+        cur->back();
+    }
 }
 // 总协程数
 uint64_t Fiber::TotalFibers(){
@@ -176,20 +216,54 @@ void Fiber::MainFunc(){
         cur->m_state = TERM;
     } catch (std::exception& ex) {
         cur->m_state = EXCEPT;
-        LYSLG_LOG_ERROR(g_logger) << "Fiber Except:" << ex.what();
+        LYSLG_LOG_ERROR(g_logger) << "Fiber Except:" << ex.what()
+        << " fiber_id=" << cur->getId()
+        << std::endl
+        << lyslg::BacktraceToString();
     }catch(...) {
         cur->m_state = EXCEPT;
-        LYSLG_LOG_ERROR(g_logger) << "Fiber Except:";
+        LYSLG_LOG_ERROR(g_logger) << "Fiber Except:"
+        << " fiber_id=" << cur->getId()
+        << std::endl
+        << lyslg::BacktraceToString();
     }
     // 这里有些人说使用野指针，可以思考一下（我当前也不确定）
     // 这里有点问题，可以考虑修改一下
     auto raw_ptr = cur.get();
     // 这里已经调用了析构函数
     cur.reset();
-    // 这里使用了悬空指针，可能会有点问题
+    // 因此这里使用了悬空指针，可能会有点问题
     raw_ptr->swapOut();
 
-    LYSLG_ASSERT2(false,"never reach");
+    LYSLG_ASSERT2(false,"never reach fiber_id=" + std::to_string(raw_ptr->getId()));
+}
+
+void Fiber::CallerMainFunc() {
+    Fiber::ptr cur = GetThis();
+    LYSLG_ASSERT(cur);
+    try {
+        cur->m_cb();
+        cur->m_cb = nullptr;
+        cur->m_state = TERM;
+    } catch (std::exception& ex) {
+        cur->m_state = EXCEPT;
+        LYSLG_LOG_ERROR(g_logger) << "Fiber Except: " << ex.what()
+            << " fiber_id=" << cur->getId()
+            << std::endl
+            << lyslg::BacktraceToString();
+    } catch (...) {
+        cur->m_state = EXCEPT;
+        LYSLG_LOG_ERROR(g_logger) << "Fiber Except"
+            << " fiber_id=" << cur->getId()
+            << std::endl
+            << lyslg::BacktraceToString();
+    }
+
+    auto raw_ptr = cur.get();
+    cur.reset();
+    raw_ptr->back();
+    LYSLG_ASSERT2(false, "never reach fiber_id=" + std::to_string(raw_ptr->getId()));
+
 }
 
 }

@@ -15,12 +15,12 @@ void test_fiber() {
     {    
         lyslg::Fiber::GetThis();
         LYSLG_LOG_INFO(g_logger) << "main begin()";
-        lyslg::Fiber::ptr fiber(new lyslg::Fiber(run_in_fiber));
-        fiber->swapIn();
+        lyslg::Fiber::ptr fiber(new lyslg::Fiber(run_in_fiber,0,true));
+        fiber->call();
         LYSLG_LOG_INFO(g_logger) << "main after swapIn";
-        fiber->swapIn();
+        fiber->call();
         LYSLG_LOG_INFO(g_logger) << "main after end";
-        fiber->swapIn();
+        fiber->call();
     }
     LYSLG_LOG_INFO(g_logger) << "main after end2";
 }

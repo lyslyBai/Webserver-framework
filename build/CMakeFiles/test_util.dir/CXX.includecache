@@ -93,6 +93,8 @@ macro.h
 ../lyslg/macro.h
 fiber.h
 ../lyslg/fiber.h
+scheduler.h
+../lyslg/scheduler.h
 
 ../lyslg/macro.h
 assert.h
@@ -115,6 +117,20 @@ semaphore.h
 -
 atomic
 -
+
+../lyslg/scheduler.h
+memory
+-
+list
+-
+fiber.h
+../lyslg/fiber.h
+mutex.h
+../lyslg/mutex.h
+macro.h
+../lyslg/macro.h
+thread.h
+../lyslg/thread.h
 
 ../lyslg/singleton.h
 

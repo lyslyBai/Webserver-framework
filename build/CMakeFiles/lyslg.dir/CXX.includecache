@@ -57,6 +57,8 @@ atomic
 -
 log.h
 /home/lyslg/lyslg_/lyslg/log.h
+scheduler.h
+/home/lyslg/lyslg_/lyslg/scheduler.h
 
 /home/lyslg/lyslg_/lyslg/fiber.h
 ucontext.h
@@ -139,6 +141,26 @@ semaphore.h
 -
 atomic
 -
+
+/home/lyslg/lyslg_/lyslg/scheduler.cc
+scheduler.h
+/home/lyslg/lyslg_/lyslg/scheduler.h
+log.h
+/home/lyslg/lyslg_/lyslg/log.h
+
+/home/lyslg/lyslg_/lyslg/scheduler.h
+memory
+-
+list
+-
+fiber.h
+/home/lyslg/lyslg_/lyslg/fiber.h
+mutex.h
+/home/lyslg/lyslg_/lyslg/mutex.h
+macro.h
+/home/lyslg/lyslg_/lyslg/macro.h
+thread.h
+/home/lyslg/lyslg_/lyslg/thread.h
 
 /home/lyslg/lyslg_/lyslg/singleton.h
 

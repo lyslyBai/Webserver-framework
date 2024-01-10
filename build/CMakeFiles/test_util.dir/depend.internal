@@ -8,6 +8,7 @@ CMakeFiles/test_util.dir/tests/test_util.cc.o
  ../lyslg/lyslg.h
  ../lyslg/macro.h
  ../lyslg/mutex.h
+ ../lyslg/scheduler.h
  ../lyslg/singleton.h
  ../lyslg/thread.h
  ../lyslg/util.h

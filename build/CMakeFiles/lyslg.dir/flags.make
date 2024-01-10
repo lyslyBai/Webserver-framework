@@ -18,6 +18,8 @@ CXX_INCLUDES = -I/home/lyslg/lyslg_/lyslg
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/mutex.cc.o_DEFINES = __FILE__="lyslg/mutex.cc"
 
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o_DEFINES = __FILE__="lyslg/scheduler.cc"
+
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/thread.cc.o_DEFINES = __FILE__="lyslg/thread.cc"
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/util.cc.o_DEFINES = __FILE__="lyslg/util.cc"

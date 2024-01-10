@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_scheduler
+
+# Build rule for target.
+test_scheduler: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_scheduler
+.PHONY : test_scheduler
+
+# fast build rule for target.
+test_scheduler/fast:
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/build
+.PHONY : test_scheduler/fast
+
+#=============================================================================
 # Target rules for targets named test_util
 
 # Build rule for target.
@@ -326,6 +339,33 @@ lyslg/mutex.cc.s:
 	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/mutex.cc.s
 .PHONY : lyslg/mutex.cc.s
 
+lyslg/scheduler.o: lyslg/scheduler.cc.o
+
+.PHONY : lyslg/scheduler.o
+
+# target to build an object file
+lyslg/scheduler.cc.o:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o
+.PHONY : lyslg/scheduler.cc.o
+
+lyslg/scheduler.i: lyslg/scheduler.cc.i
+
+.PHONY : lyslg/scheduler.i
+
+# target to preprocess a source file
+lyslg/scheduler.cc.i:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/scheduler.cc.i
+.PHONY : lyslg/scheduler.cc.i
+
+lyslg/scheduler.s: lyslg/scheduler.cc.s
+
+.PHONY : lyslg/scheduler.s
+
+# target to generate assembly for a file
+lyslg/scheduler.cc.s:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/scheduler.cc.s
+.PHONY : lyslg/scheduler.cc.s
+
 lyslg/thread.o: lyslg/thread.cc.o
 
 .PHONY : lyslg/thread.o
@@ -461,6 +501,33 @@ tests/test_fiber.cc.s:
 	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.s
 .PHONY : tests/test_fiber.cc.s
 
+tests/test_scheduler.o: tests/test_scheduler.cc.o
+
+.PHONY : tests/test_scheduler.o
+
+# target to build an object file
+tests/test_scheduler.cc.o:
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.o
+.PHONY : tests/test_scheduler.cc.o
+
+tests/test_scheduler.i: tests/test_scheduler.cc.i
+
+.PHONY : tests/test_scheduler.i
+
+# target to preprocess a source file
+tests/test_scheduler.cc.i:
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.i
+.PHONY : tests/test_scheduler.cc.i
+
+tests/test_scheduler.s: tests/test_scheduler.cc.s
+
+.PHONY : tests/test_scheduler.s
+
+# target to generate assembly for a file
+tests/test_scheduler.cc.s:
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.s
+.PHONY : tests/test_scheduler.cc.s
+
 tests/test_thread.o: tests/test_thread.cc.o
 
 .PHONY : tests/test_thread.o
@@ -522,6 +589,7 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... test_scheduler"
 	@echo "... test_util"
 	@echo "... edit_cache"
 	@echo "... lyslg"
@@ -544,6 +612,9 @@ help:
 	@echo "... lyslg/mutex.o"
 	@echo "... lyslg/mutex.i"
 	@echo "... lyslg/mutex.s"
+	@echo "... lyslg/scheduler.o"
+	@echo "... lyslg/scheduler.i"
+	@echo "... lyslg/scheduler.s"
 	@echo "... lyslg/thread.o"
 	@echo "... lyslg/thread.i"
 	@echo "... lyslg/thread.s"
@@ -559,6 +630,9 @@ help:
 	@echo "... tests/test_fiber.o"
 	@echo "... tests/test_fiber.i"
 	@echo "... tests/test_fiber.s"
+	@echo "... tests/test_scheduler.o"
+	@echo "... tests/test_scheduler.i"
+	@echo "... tests/test_scheduler.s"
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"

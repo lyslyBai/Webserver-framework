@@ -16,6 +16,7 @@ CMakeFiles/lyslg.dir/lyslg/fiber.cc.o
  /home/lyslg/lyslg_/lyslg/log.h
  /home/lyslg/lyslg_/lyslg/macro.h
  /home/lyslg/lyslg_/lyslg/mutex.h
+ /home/lyslg/lyslg_/lyslg/scheduler.h
  /home/lyslg/lyslg_/lyslg/singleton.h
  /home/lyslg/lyslg_/lyslg/thread.h
  /home/lyslg/lyslg_/lyslg/util.h
@@ -34,6 +35,16 @@ CMakeFiles/lyslg.dir/lyslg/macro.cc.o
 CMakeFiles/lyslg.dir/lyslg/mutex.cc.o
  /home/lyslg/lyslg_/lyslg/mutex.cc
  /home/lyslg/lyslg_/lyslg/mutex.h
+CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o
+ /home/lyslg/lyslg_/lyslg/fiber.h
+ /home/lyslg/lyslg_/lyslg/log.h
+ /home/lyslg/lyslg_/lyslg/macro.h
+ /home/lyslg/lyslg_/lyslg/mutex.h
+ /home/lyslg/lyslg_/lyslg/scheduler.cc
+ /home/lyslg/lyslg_/lyslg/scheduler.h
+ /home/lyslg/lyslg_/lyslg/singleton.h
+ /home/lyslg/lyslg_/lyslg/thread.h
+ /home/lyslg/lyslg_/lyslg/util.h
 CMakeFiles/lyslg.dir/lyslg/thread.cc.o
  /home/lyslg/lyslg_/lyslg/log.h
  /home/lyslg/lyslg_/lyslg/mutex.h
