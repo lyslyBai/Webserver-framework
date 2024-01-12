@@ -15,10 +15,10 @@ public:
     typedef std::shared_ptr<Scheduler> ptr;
     typedef Mutex MutexType;
 
-    Scheduler(size_t threads = 1,bool use_caller = true, const std::string& name = "");
+    Scheduler(size_t threads = 1,bool use_caller = true,const std::string& name = "nihao");
     virtual ~Scheduler();
 
-    const std::string& getNmae() const { return m_name;}
+    const std::string& getName() const { return m_name;}
 
     static Scheduler* GetThis();
     static Fiber* GetMainFiber();
@@ -62,6 +62,8 @@ protected:
     virtual void idle();
 
     void SetThis();
+
+    bool hasIdleThreads() {return m_idleThreadCount>0;}
 private:
     template<class FiberOrCb> 
     bool scheduleNoLock(FiberOrCb fc,int thread) {

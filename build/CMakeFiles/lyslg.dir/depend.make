@@ -20,6 +20,18 @@ CMakeFiles/lyslg.dir/lyslg/fiber.cc.o: ../lyslg/singleton.h
 CMakeFiles/lyslg.dir/lyslg/fiber.cc.o: ../lyslg/thread.h
 CMakeFiles/lyslg.dir/lyslg/fiber.cc.o: ../lyslg/util.h
 
+CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o: ../lyslg/fiber.h
+CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o: ../lyslg/iomanager.cc
+CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o: ../lyslg/iomanager.h
+CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o: ../lyslg/log.h
+CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o: ../lyslg/macro.h
+CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o: ../lyslg/mutex.h
+CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o: ../lyslg/scheduler.h
+CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o: ../lyslg/singleton.h
+CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o: ../lyslg/thread.h
+CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o: ../lyslg/timer.h
+CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o: ../lyslg/util.h
+
 CMakeFiles/lyslg.dir/lyslg/log.cc.o: ../lyslg/config.h
 CMakeFiles/lyslg.dir/lyslg/log.cc.o: ../lyslg/log.cc
 CMakeFiles/lyslg.dir/lyslg/log.cc.o: ../lyslg/log.h
@@ -51,6 +63,12 @@ CMakeFiles/lyslg.dir/lyslg/thread.cc.o: ../lyslg/singleton.h
 CMakeFiles/lyslg.dir/lyslg/thread.cc.o: ../lyslg/thread.cc
 CMakeFiles/lyslg.dir/lyslg/thread.cc.o: ../lyslg/thread.h
 CMakeFiles/lyslg.dir/lyslg/thread.cc.o: ../lyslg/util.h
+
+CMakeFiles/lyslg.dir/lyslg/timer.cc.o: ../lyslg/mutex.h
+CMakeFiles/lyslg.dir/lyslg/timer.cc.o: ../lyslg/thread.h
+CMakeFiles/lyslg.dir/lyslg/timer.cc.o: ../lyslg/timer.cc
+CMakeFiles/lyslg.dir/lyslg/timer.cc.o: ../lyslg/timer.h
+CMakeFiles/lyslg.dir/lyslg/timer.cc.o: ../lyslg/util.h
 
 CMakeFiles/lyslg.dir/lyslg/util.cc.o: ../lyslg/fiber.h
 CMakeFiles/lyslg.dir/lyslg/util.cc.o: ../lyslg/log.h

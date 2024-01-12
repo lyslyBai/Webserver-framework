@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_iomanager
+
+# Build rule for target.
+test_iomanager: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_iomanager
+.PHONY : test_iomanager
+
+# fast build rule for target.
+test_iomanager/fast:
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
+.PHONY : test_iomanager/fast
+
+#=============================================================================
 # Target rules for targets named test_scheduler
 
 # Build rule for target.
@@ -258,6 +271,33 @@ lyslg/fiber.cc.s:
 	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/fiber.cc.s
 .PHONY : lyslg/fiber.cc.s
 
+lyslg/iomanager.o: lyslg/iomanager.cc.o
+
+.PHONY : lyslg/iomanager.o
+
+# target to build an object file
+lyslg/iomanager.cc.o:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o
+.PHONY : lyslg/iomanager.cc.o
+
+lyslg/iomanager.i: lyslg/iomanager.cc.i
+
+.PHONY : lyslg/iomanager.i
+
+# target to preprocess a source file
+lyslg/iomanager.cc.i:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/iomanager.cc.i
+.PHONY : lyslg/iomanager.cc.i
+
+lyslg/iomanager.s: lyslg/iomanager.cc.s
+
+.PHONY : lyslg/iomanager.s
+
+# target to generate assembly for a file
+lyslg/iomanager.cc.s:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/iomanager.cc.s
+.PHONY : lyslg/iomanager.cc.s
+
 lyslg/log.o: lyslg/log.cc.o
 
 .PHONY : lyslg/log.o
@@ -393,6 +433,33 @@ lyslg/thread.cc.s:
 	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/thread.cc.s
 .PHONY : lyslg/thread.cc.s
 
+lyslg/timer.o: lyslg/timer.cc.o
+
+.PHONY : lyslg/timer.o
+
+# target to build an object file
+lyslg/timer.cc.o:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/timer.cc.o
+.PHONY : lyslg/timer.cc.o
+
+lyslg/timer.i: lyslg/timer.cc.i
+
+.PHONY : lyslg/timer.i
+
+# target to preprocess a source file
+lyslg/timer.cc.i:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/timer.cc.i
+.PHONY : lyslg/timer.cc.i
+
+lyslg/timer.s: lyslg/timer.cc.s
+
+.PHONY : lyslg/timer.s
+
+# target to generate assembly for a file
+lyslg/timer.cc.s:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/timer.cc.s
+.PHONY : lyslg/timer.cc.s
+
 lyslg/util.o: lyslg/util.cc.o
 
 .PHONY : lyslg/util.o
@@ -501,6 +568,33 @@ tests/test_fiber.cc.s:
 	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.s
 .PHONY : tests/test_fiber.cc.s
 
+tests/test_iomanager.o: tests/test_iomanager.cc.o
+
+.PHONY : tests/test_iomanager.o
+
+# target to build an object file
+tests/test_iomanager.cc.o:
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o
+.PHONY : tests/test_iomanager.cc.o
+
+tests/test_iomanager.i: tests/test_iomanager.cc.i
+
+.PHONY : tests/test_iomanager.i
+
+# target to preprocess a source file
+tests/test_iomanager.cc.i:
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.i
+.PHONY : tests/test_iomanager.cc.i
+
+tests/test_iomanager.s: tests/test_iomanager.cc.s
+
+.PHONY : tests/test_iomanager.s
+
+# target to generate assembly for a file
+tests/test_iomanager.cc.s:
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.s
+.PHONY : tests/test_iomanager.cc.s
+
 tests/test_scheduler.o: tests/test_scheduler.cc.o
 
 .PHONY : tests/test_scheduler.o
@@ -588,6 +682,7 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... test_iomanager"
 	@echo "... rebuild_cache"
 	@echo "... test_scheduler"
 	@echo "... test_util"
@@ -603,6 +698,9 @@ help:
 	@echo "... lyslg/fiber.o"
 	@echo "... lyslg/fiber.i"
 	@echo "... lyslg/fiber.s"
+	@echo "... lyslg/iomanager.o"
+	@echo "... lyslg/iomanager.i"
+	@echo "... lyslg/iomanager.s"
 	@echo "... lyslg/log.o"
 	@echo "... lyslg/log.i"
 	@echo "... lyslg/log.s"
@@ -618,6 +716,9 @@ help:
 	@echo "... lyslg/thread.o"
 	@echo "... lyslg/thread.i"
 	@echo "... lyslg/thread.s"
+	@echo "... lyslg/timer.o"
+	@echo "... lyslg/timer.i"
+	@echo "... lyslg/timer.s"
 	@echo "... lyslg/util.o"
 	@echo "... lyslg/util.i"
 	@echo "... lyslg/util.s"
@@ -630,6 +731,9 @@ help:
 	@echo "... tests/test_fiber.o"
 	@echo "... tests/test_fiber.i"
 	@echo "... tests/test_fiber.s"
+	@echo "... tests/test_iomanager.o"
+	@echo "... tests/test_iomanager.i"
+	@echo "... tests/test_iomanager.s"
 	@echo "... tests/test_scheduler.o"
 	@echo "... tests/test_scheduler.i"
 	@echo "... tests/test_scheduler.s"

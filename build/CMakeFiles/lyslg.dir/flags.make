@@ -12,6 +12,8 @@ CXX_INCLUDES = -I/home/lyslg/lyslg_/lyslg
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/fiber.cc.o_DEFINES = __FILE__="lyslg/fiber.cc"
 
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o_DEFINES = __FILE__="lyslg/iomanager.cc"
+
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/log.cc.o_DEFINES = __FILE__="lyslg/log.cc"
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/macro.cc.o_DEFINES = __FILE__="lyslg/macro.cc"
@@ -21,6 +23,8 @@ CXX_INCLUDES = -I/home/lyslg/lyslg_/lyslg
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o_DEFINES = __FILE__="lyslg/scheduler.cc"
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/thread.cc.o_DEFINES = __FILE__="lyslg/thread.cc"
+
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/timer.cc.o_DEFINES = __FILE__="lyslg/timer.cc"
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/util.cc.o_DEFINES = __FILE__="lyslg/util.cc"
 

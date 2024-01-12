@@ -14,8 +14,8 @@ static thread_local Scheduler* t_scheduler = nullptr;
 // 主协程每个线程中都存在的调度协程，相当于中转站，t_fiber为在执行的协程
 static thread_local Fiber* t_fiber = nullptr;
 
-// use_caller 是否使用当前调用线程
-Scheduler::Scheduler(size_t threads ,bool use_caller , const std::string& name)
+// use_caller 是否使用当前调用线程   这里很奇怪name的默认值好像没有用
+Scheduler::Scheduler(size_t threads ,bool use_caller,const std::string& name)
     :m_name(name){
     LYSLG_ASSERT(threads > 0);
 
@@ -29,7 +29,8 @@ Scheduler::Scheduler(size_t threads ,bool use_caller , const std::string& name)
 
         // 本线程执行的函数
         m_rootFiber.reset(new Fiber(std::bind(&Scheduler::run,this),0,true));
-        lyslg::Thread::SetName(m_name); // 默认没有名字才对，但我原来好像不是
+        // std::cout << "name :"<< name << std::endl;
+        lyslg::Thread::SetName(name); // 默认没有名字才对，但我原来好像不是
 
         t_fiber = m_rootFiber.get();
         m_rootThread = lyslg::GetThreadId();
