@@ -39,8 +39,8 @@
 #define LYSLG_LOG_FMT_ERROR(logger,fmt,...) LYSLG_LOG_FMT_LEVEL(logger,lyslg::LogLevel::ERROR,fmt,__VA_ARGS__)
 #define LYSLG_LOG_FMT_FATAL(logger,fmt,...) LYSLG_LOG_FMT_LEVEL(logger,lyslg::LogLevel::FATAL,fmt,__VA_ARGS__)
 
-#define LYSLG_LOG_ROOT() lyslg::LoggerMgr::GetInstnce()->getRoot()
-#define LYSLG_LOG_NAME(name) lyslg::LoggerMgr::GetInstnce()->getLogger(name)
+#define LYSLG_LOG_ROOT() lyslg::LoggerMgr::GetInstance()->getRoot()
+#define LYSLG_LOG_NAME(name) lyslg::LoggerMgr::GetInstance()->getLogger(name)
 
 namespace lyslg{
 

@@ -9,6 +9,7 @@ CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o
  ../lyslg/lyslg.h
  ../lyslg/macro.h
  ../lyslg/mutex.h
+ ../lyslg/noncopyable.h
  ../lyslg/scheduler.h
  ../lyslg/singleton.h
  ../lyslg/thread.h

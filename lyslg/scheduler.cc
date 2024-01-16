@@ -1,6 +1,6 @@
 #include "scheduler.h"
 #include "log.h"
-
+#include "hook.h"
 
 
 
@@ -150,6 +150,8 @@ void Scheduler::SetThis(){
 
 void Scheduler::run(){
     LYSLG_LOG_DEBUG(g_logger) << m_name << " run";
+    // 设置hook
+    set_hook_enable(true);
     SetThis();
     // 这里不太懂，这里的判断是为什么
     if(lyslg::GetThreadId() != m_rootThread) {
@@ -267,7 +269,7 @@ bool Scheduler::stopping(){
 void Scheduler::idle(){
     LYSLG_LOG_INFO(g_logger) << "idle";
     while(!stopping()) {
-        lyslg::Fiber::YiedldToHold();
+        lyslg::Fiber::YieldToHold();
     }
 }
     

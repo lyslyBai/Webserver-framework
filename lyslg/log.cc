@@ -19,6 +19,13 @@ std::stringstream& LogEventWrap::getSS(){
     return m_event->getSS();
 }
 
+/*其中va_list（ VA_LIST 是在C语言中解决变参问题的一组宏）：va_list表示可变参数列表类型，实际上就是一个char指针fmt。
+
+然后是va_start：va_start用于获取函数参数列表中可变参数的首指针(获取函数可变参数列表) 
+
+         1、输出参数args(类型为va_list): 用于保存函数参数列表中可变参数的首指针(即,可变参数列表)
+
+         2、输入参数fmt: args指向fmt后面的参数，为第一个参数的前一个参数，是一个固定参数*/
 void LogEvent::format(const char* fmt,...){
     va_list al;
     va_start(al,fmt);

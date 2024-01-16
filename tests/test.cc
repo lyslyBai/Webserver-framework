@@ -27,7 +27,7 @@ int main(int argc,char** argv)
 
     LYSLG_LOG_FMT_ERROR(logger,"test macro fmt error %s","aa");
     
-    auto l = lyslg::LoggerMgr::GetInstnce()->getLogger("xx");
+    auto l = lyslg::LoggerMgr::GetInstance()->getLogger("xx");
     LYSLG_LOG_INFO(l) << "xxx";
     return 0;
 }

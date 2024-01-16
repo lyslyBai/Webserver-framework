@@ -187,8 +187,8 @@ PTHREAD:FILEPATH=/usr/lib64/libpthread.so
 //Value Computed by CMake
 lyslg_BINARY_DIR:STATIC=/home/lyslg/lyslg_/build
 
-//Dependencies for target
-lyslg_LIB_DEPENDS:STATIC=
+//Dependencies for the target
+lyslg_LIB_DEPENDS:STATIC=general;-ldl;
 
 //Value Computed by CMake
 lyslg_SOURCE_DIR:STATIC=/home/lyslg/lyslg_

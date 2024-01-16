@@ -45,9 +45,9 @@ public:
     // 放回到当前协程
     static Fiber::ptr GetThis();
     // 协程切换到后台，并且设置为Ready状态
-    static void YieldToTeady();
+    static void YieldToReady();
     // 协程切换到后台，并且设置为Hold状态
-    static void YiedldToHold();
+    static void YieldToHold();
     // 总协程数
     static uint64_t TotalFibers();
 

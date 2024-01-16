@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lyslg.dir/lyslg/config.cc.o"
+  "CMakeFiles/lyslg.dir/lyslg/fd_manager.cc.o"
   "CMakeFiles/lyslg.dir/lyslg/fiber.cc.o"
+  "CMakeFiles/lyslg.dir/lyslg/hook.cc.o"
   "CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o"
   "CMakeFiles/lyslg.dir/lyslg/log.cc.o"
   "CMakeFiles/lyslg.dir/lyslg/macro.cc.o"

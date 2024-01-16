@@ -7,6 +7,7 @@
 #include <sys/epoll.h>
 #include <string.h>
 #include <unistd.h>
+#include <iostream>
 
 namespace lyslg{
 
@@ -46,6 +47,7 @@ void IoManager::FdContext::triggerEvent(IoManager::Event event){
 
 IoManager::IoManager(size_t threads, bool use_caller, const std::string& name)
     :Scheduler(threads,use_caller,name){
+
     m_epfd = epoll_create(500);
     LYSLG_ASSERT(m_epfd > 0);
 /*On success, zero is returned.  On error, -1 is returned, and errno is set appropriately.*/
@@ -142,7 +144,7 @@ int IoManager::addEvent(int fd, Event event, std::function<void()> cb){
     if(cb) {
         event_ctx.cb.swap(cb);
     }else {
-        // 当前线程的协程，处于执行状态
+        // 当前线程的协程，处于执行状态，这一点怎么理解？
         event_ctx.fiber = Fiber::GetThis();
         LYSLG_ASSERT(event_ctx.fiber->getState() == Fiber::EXEC);
     }
@@ -211,15 +213,10 @@ bool IoManager::cancelEvent(int fd, Event event){
             << rt << " ("<< errno << ") (" << strerror(errno) << ")";
         return false; 
     }
-
+    // 这里为什么要trigger
     fd_ctx->triggerEvent(event);
     --m_pendingEventCount;
     return true;
-
-    // FdContext::EventContext& event_ctx = fd_ctx->getContext(event);
-    // fd_ctx->resetContext(event_ctx);
-    // --m_pendingEventCount;
-    // return true;
 }
 
 bool IoManager::cancelAll(int fd){
@@ -268,10 +265,9 @@ void IoManager::tickle(){
     if(!hasIdleThreads()) {
         return;
     }
-
+    // 此处想管道中写入数据
     int rt = write(m_tickleFds[1],"T",1);
     LYSLG_ASSERT(rt == 1);
-
 }
 
 bool IoManager::stopping(uint64_t& timeout) {
@@ -306,6 +302,7 @@ void IoManager::idle(){
 
         int rt = 0;
         do{ // 毫秒
+            // 这里使用下个定时器的执行时间间隔与MAX_TIMEOUT中的小值作为超时时间，保证定时器的按时执行
             static const int MAX_TIMEOUT = 3000;
             if(next_timeout != ~0ull) {
                 next_timeout = (int)next_timeout > MAX_TIMEOUT
@@ -323,6 +320,7 @@ void IoManager::idle(){
             }
         }while(true);
 
+        // tickle() 中pipe触发读事件，epoll_wait返回，于是执行Timer中过期函数，（当处在定时器插入到定时器队列首时执行一次）
         std::vector<std::function<void()> > cbs;
         listExpiredCb(cbs);
         if(!cbs.empty()) {
@@ -400,7 +398,7 @@ void IoManager::idle(){
 }
 
 void IoManager::onTimerInsertedAtFront() {
-
+    tickle();
 }
 
 

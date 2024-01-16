@@ -5,6 +5,7 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o
  ../lyslg/config.h
  ../lyslg/log.h
  ../lyslg/mutex.h
+ ../lyslg/noncopyable.h
  ../lyslg/singleton.h
  ../lyslg/thread.h
  ../lyslg/util.h

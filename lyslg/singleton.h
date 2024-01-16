@@ -6,7 +6,7 @@ namespace lyslg{
 template<class T,class X = void, int N = 0>
 class Singleton{
 public:
-    static T* GetInstnce(){
+    static T* GetInstance(){
         static T v;
         return &v;
     }

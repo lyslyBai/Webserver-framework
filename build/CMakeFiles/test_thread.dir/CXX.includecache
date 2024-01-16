@@ -48,6 +48,12 @@ memory
 mutex.h
 ../lyslg/mutex.h
 
+../lyslg/iomanager.h
+scheduler.h
+../lyslg/scheduler.h
+timer.h
+../lyslg/timer.h
+
 ../lyslg/log.h
 string
 -
@@ -95,6 +101,8 @@ fiber.h
 ../lyslg/fiber.h
 scheduler.h
 ../lyslg/scheduler.h
+iomanager.h
+../lyslg/iomanager.h
 
 ../lyslg/macro.h
 assert.h
@@ -117,6 +125,10 @@ semaphore.h
 -
 atomic
 -
+noncopyable.h
+../lyslg/noncopyable.h
+
+../lyslg/noncopyable.h
 
 ../lyslg/scheduler.h
 memory
@@ -137,6 +149,18 @@ thread.h
 ../lyslg/thread.h
 mutex.h
 ../lyslg/mutex.h
+noncopyable.h
+../lyslg/noncopyable.h
+
+../lyslg/timer.h
+memory
+-
+thread.h
+../lyslg/thread.h
+set
+-
+vector
+-
 
 ../lyslg/util.h
 pthread.h

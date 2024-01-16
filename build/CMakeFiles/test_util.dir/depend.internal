@@ -4,12 +4,15 @@
 CMakeFiles/test_util.dir/tests/test_util.cc.o
  ../lyslg/config.h
  ../lyslg/fiber.h
+ ../lyslg/iomanager.h
  ../lyslg/log.h
  ../lyslg/lyslg.h
  ../lyslg/macro.h
  ../lyslg/mutex.h
+ ../lyslg/noncopyable.h
  ../lyslg/scheduler.h
  ../lyslg/singleton.h
  ../lyslg/thread.h
+ ../lyslg/timer.h
  ../lyslg/util.h
  /home/lyslg/lyslg_/tests/test_util.cc

@@ -81,12 +81,18 @@ semaphore.h
 -
 atomic
 -
+noncopyable.h
+../lyslg/noncopyable.h
+
+../lyslg/noncopyable.h
 
 ../lyslg/singleton.h
 
 ../lyslg/thread.h
 mutex.h
 ../lyslg/mutex.h
+noncopyable.h
+../lyslg/noncopyable.h
 
 ../lyslg/util.h
 pthread.h

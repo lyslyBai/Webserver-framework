@@ -114,69 +114,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named test_iomanager
+# Target rules for targets named test_thread
 
 # Build rule for target.
-test_iomanager: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_iomanager
-.PHONY : test_iomanager
+test_thread: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_thread
+.PHONY : test_thread
 
 # fast build rule for target.
-test_iomanager/fast:
-	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
-.PHONY : test_iomanager/fast
-
-#=============================================================================
-# Target rules for targets named test_scheduler
-
-# Build rule for target.
-test_scheduler: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_scheduler
-.PHONY : test_scheduler
-
-# fast build rule for target.
-test_scheduler/fast:
-	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/build
-.PHONY : test_scheduler/fast
-
-#=============================================================================
-# Target rules for targets named test_util
-
-# Build rule for target.
-test_util: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_util
-.PHONY : test_util
-
-# fast build rule for target.
-test_util/fast:
-	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
-.PHONY : test_util/fast
-
-#=============================================================================
-# Target rules for targets named lyslg
-
-# Build rule for target.
-lyslg: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 lyslg
-.PHONY : lyslg
-
-# fast build rule for target.
-lyslg/fast:
-	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/build
-.PHONY : lyslg/fast
-
-#=============================================================================
-# Target rules for targets named test_fiber
-
-# Build rule for target.
-test_fiber: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_fiber
-.PHONY : test_fiber
-
-# fast build rule for target.
-test_fiber/fast:
-	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
-.PHONY : test_fiber/fast
+test_thread/fast:
+	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
+.PHONY : test_thread/fast
 
 #=============================================================================
 # Target rules for targets named my_test
@@ -192,6 +140,45 @@ my_test/fast:
 .PHONY : my_test/fast
 
 #=============================================================================
+# Target rules for targets named test_fiber
+
+# Build rule for target.
+test_fiber: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_fiber
+.PHONY : test_fiber
+
+# fast build rule for target.
+test_fiber/fast:
+	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/build
+.PHONY : test_fiber/fast
+
+#=============================================================================
+# Target rules for targets named lyslg
+
+# Build rule for target.
+lyslg: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lyslg
+.PHONY : lyslg
+
+# fast build rule for target.
+lyslg/fast:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/build
+.PHONY : lyslg/fast
+
+#=============================================================================
+# Target rules for targets named test_util
+
+# Build rule for target.
+test_util: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_util
+.PHONY : test_util
+
+# fast build rule for target.
+test_util/fast:
+	$(MAKE) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
+.PHONY : test_util/fast
+
+#=============================================================================
 # Target rules for targets named test_config
 
 # Build rule for target.
@@ -205,17 +192,43 @@ test_config/fast:
 .PHONY : test_config/fast
 
 #=============================================================================
-# Target rules for targets named test_thread
+# Target rules for targets named test_hook
 
 # Build rule for target.
-test_thread: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 test_thread
-.PHONY : test_thread
+test_hook: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_hook
+.PHONY : test_hook
 
 # fast build rule for target.
-test_thread/fast:
-	$(MAKE) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
-.PHONY : test_thread/fast
+test_hook/fast:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/build
+.PHONY : test_hook/fast
+
+#=============================================================================
+# Target rules for targets named test_scheduler
+
+# Build rule for target.
+test_scheduler: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_scheduler
+.PHONY : test_scheduler
+
+# fast build rule for target.
+test_scheduler/fast:
+	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/build
+.PHONY : test_scheduler/fast
+
+#=============================================================================
+# Target rules for targets named test_iomanager
+
+# Build rule for target.
+test_iomanager: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_iomanager
+.PHONY : test_iomanager
+
+# fast build rule for target.
+test_iomanager/fast:
+	$(MAKE) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
+.PHONY : test_iomanager/fast
 
 lyslg/config.o: lyslg/config.cc.o
 
@@ -244,6 +257,33 @@ lyslg/config.cc.s:
 	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/config.cc.s
 .PHONY : lyslg/config.cc.s
 
+lyslg/fd_manager.o: lyslg/fd_manager.cc.o
+
+.PHONY : lyslg/fd_manager.o
+
+# target to build an object file
+lyslg/fd_manager.cc.o:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/fd_manager.cc.o
+.PHONY : lyslg/fd_manager.cc.o
+
+lyslg/fd_manager.i: lyslg/fd_manager.cc.i
+
+.PHONY : lyslg/fd_manager.i
+
+# target to preprocess a source file
+lyslg/fd_manager.cc.i:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/fd_manager.cc.i
+.PHONY : lyslg/fd_manager.cc.i
+
+lyslg/fd_manager.s: lyslg/fd_manager.cc.s
+
+.PHONY : lyslg/fd_manager.s
+
+# target to generate assembly for a file
+lyslg/fd_manager.cc.s:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/fd_manager.cc.s
+.PHONY : lyslg/fd_manager.cc.s
+
 lyslg/fiber.o: lyslg/fiber.cc.o
 
 .PHONY : lyslg/fiber.o
@@ -270,6 +310,33 @@ lyslg/fiber.s: lyslg/fiber.cc.s
 lyslg/fiber.cc.s:
 	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/fiber.cc.s
 .PHONY : lyslg/fiber.cc.s
+
+lyslg/hook.o: lyslg/hook.cc.o
+
+.PHONY : lyslg/hook.o
+
+# target to build an object file
+lyslg/hook.cc.o:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/hook.cc.o
+.PHONY : lyslg/hook.cc.o
+
+lyslg/hook.i: lyslg/hook.cc.i
+
+.PHONY : lyslg/hook.i
+
+# target to preprocess a source file
+lyslg/hook.cc.i:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/hook.cc.i
+.PHONY : lyslg/hook.cc.i
+
+lyslg/hook.s: lyslg/hook.cc.s
+
+.PHONY : lyslg/hook.s
+
+# target to generate assembly for a file
+lyslg/hook.cc.s:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/hook.cc.s
+.PHONY : lyslg/hook.cc.s
 
 lyslg/iomanager.o: lyslg/iomanager.cc.o
 
@@ -568,6 +635,33 @@ tests/test_fiber.cc.s:
 	$(MAKE) -f CMakeFiles/test_fiber.dir/build.make CMakeFiles/test_fiber.dir/tests/test_fiber.cc.s
 .PHONY : tests/test_fiber.cc.s
 
+tests/test_hook.o: tests/test_hook.cc.o
+
+.PHONY : tests/test_hook.o
+
+# target to build an object file
+tests/test_hook.cc.o:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.o
+.PHONY : tests/test_hook.cc.o
+
+tests/test_hook.i: tests/test_hook.cc.i
+
+.PHONY : tests/test_hook.i
+
+# target to preprocess a source file
+tests/test_hook.cc.i:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.i
+.PHONY : tests/test_hook.cc.i
+
+tests/test_hook.s: tests/test_hook.cc.s
+
+.PHONY : tests/test_hook.s
+
+# target to generate assembly for a file
+tests/test_hook.cc.s:
+	$(MAKE) -f CMakeFiles/test_hook.dir/build.make CMakeFiles/test_hook.dir/tests/test_hook.cc.s
+.PHONY : tests/test_hook.cc.s
+
 tests/test_iomanager.o: tests/test_iomanager.cc.o
 
 .PHONY : tests/test_iomanager.o
@@ -682,22 +776,29 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... test_iomanager"
 	@echo "... rebuild_cache"
-	@echo "... test_scheduler"
-	@echo "... test_util"
-	@echo "... edit_cache"
-	@echo "... lyslg"
-	@echo "... test_fiber"
-	@echo "... my_test"
-	@echo "... test_config"
 	@echo "... test_thread"
+	@echo "... my_test"
+	@echo "... test_fiber"
+	@echo "... lyslg"
+	@echo "... edit_cache"
+	@echo "... test_util"
+	@echo "... test_config"
+	@echo "... test_hook"
+	@echo "... test_scheduler"
+	@echo "... test_iomanager"
 	@echo "... lyslg/config.o"
 	@echo "... lyslg/config.i"
 	@echo "... lyslg/config.s"
+	@echo "... lyslg/fd_manager.o"
+	@echo "... lyslg/fd_manager.i"
+	@echo "... lyslg/fd_manager.s"
 	@echo "... lyslg/fiber.o"
 	@echo "... lyslg/fiber.i"
 	@echo "... lyslg/fiber.s"
+	@echo "... lyslg/hook.o"
+	@echo "... lyslg/hook.i"
+	@echo "... lyslg/hook.s"
 	@echo "... lyslg/iomanager.o"
 	@echo "... lyslg/iomanager.i"
 	@echo "... lyslg/iomanager.s"
@@ -731,6 +832,9 @@ help:
 	@echo "... tests/test_fiber.o"
 	@echo "... tests/test_fiber.i"
 	@echo "... tests/test_fiber.s"
+	@echo "... tests/test_hook.o"
+	@echo "... tests/test_hook.i"
+	@echo "... tests/test_hook.s"
 	@echo "... tests/test_iomanager.o"
 	@echo "... tests/test_iomanager.i"
 	@echo "... tests/test_iomanager.s"

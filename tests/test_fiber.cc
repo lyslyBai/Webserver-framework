@@ -5,9 +5,9 @@ lyslg::Logger::ptr g_logger = LYSLG_LOG_ROOT();
 void run_in_fiber()
 {
     LYSLG_LOG_INFO(g_logger) << "run_in_fiber begin";
-    lyslg::Fiber::YiedldToHold();
+    lyslg::Fiber::YieldToHold();
     LYSLG_LOG_INFO(g_logger) << "run_in_fiber end";
-    lyslg::Fiber::YiedldToHold();
+    lyslg::Fiber::YieldToHold();
 }
  
 void test_fiber() {

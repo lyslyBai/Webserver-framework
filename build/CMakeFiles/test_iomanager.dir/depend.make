@@ -8,6 +8,7 @@ CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: ../lyslg/log.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: ../lyslg/lyslg.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: ../lyslg/macro.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: ../lyslg/mutex.h
+CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: ../lyslg/noncopyable.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: ../lyslg/scheduler.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: ../lyslg/singleton.h
 CMakeFiles/test_iomanager.dir/tests/test_iomanager.cc.o: ../lyslg/thread.h

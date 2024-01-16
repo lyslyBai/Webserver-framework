@@ -15,7 +15,7 @@ public:
     typedef std::shared_ptr<Scheduler> ptr;
     typedef Mutex MutexType;
 
-    Scheduler(size_t threads = 1,bool use_caller = true,const std::string& name = "nihao");
+    Scheduler(size_t threads = 1,bool use_caller = true,const std::string& name = "adsfadsfas");
     virtual ~Scheduler();
 
     const std::string& getName() const { return m_name;}
@@ -110,7 +110,7 @@ private:
     MutexType m_mutex;
     std::vector<Thread::ptr> m_threads; // 线程池
     std::list<FiberAndThread> m_fibers; // 待执行的协程队列
-    std::string m_name;  // 协程调度器名字
+    std::string m_name = "";  // 协程调度器名字
     Fiber::ptr m_rootFiber;  /// use_caller为true时有效, 调度协程
 protected:
     // 携程下的线程id数组

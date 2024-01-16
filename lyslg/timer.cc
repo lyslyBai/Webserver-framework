@@ -43,6 +43,7 @@ bool Timer::refresh(){
     m_manager->m_timers.insert(shared_from_this());
     return true;
 }
+
 bool Timer::reset(uint64_t ms,bool from_now){
     if(ms == m_ms && !from_now) {
         return true;
@@ -71,6 +72,10 @@ bool Timer::reset(uint64_t ms,bool from_now){
 
 
 bool Timer::Comparator::operator() (const Timer::ptr& lhs, const Timer::ptr rhs) const {
+    /*如果两个 Timer::ptr 智能指针都为空（即 nullptr），那么返回 false，
+    因为它们相等。如果 lhs 为空而 rhs 不为空，那么返回 true，因为一个空指
+    针被认为小于非空指针。如果 lhs 不为空而 rhs 为空，那么返回 false，
+    因为非空指针被认为大于空指针。*/
     if(!lhs && !rhs) {
         return false;
     }
@@ -113,7 +118,7 @@ static void OnTimer(std::weak_ptr<void> weak_cond,std::function<void()> cb) {
         cb();
     }
 }
-
+// 这个函数的回调函数为std::bind(&OnTimer,weak_cond,cb)，执行时会先检查weak_cond是否存在，即是否能转化为智能指针，能，则执行
 Timer::ptr TimerManager::addCondictionTimer(uint16_t ms,std::function<void()> cb
                                 , std::weak_ptr<void> weak_cond
                                 , bool recurring){
@@ -122,6 +127,7 @@ Timer::ptr TimerManager::addCondictionTimer(uint16_t ms,std::function<void()> cb
 
 uint64_t TimerManager::getNextTimer(){
     RWMutexType::ReadLock lock(m_mutex);
+    // m_tickled
     m_tickled = false;
     if(m_timers.empty()){
         return ~0ull;
@@ -129,6 +135,7 @@ uint64_t TimerManager::getNextTimer(){
 
     const Timer::ptr next = *m_timers.begin();
     uint64_t now_ms = lyslg::GetCurrentMS();
+    // 即这个计时器已经执行完了
     if(now_ms >= next->m_next) {
         return 0;
     } else {
@@ -152,15 +159,20 @@ void  TimerManager::listExpiredCb(std::vector<std::function<void()> >& cbs){
         return ;
     }
 
-
-
     Timer::ptr now_timer(new Timer(now_ms));
-    // 从容器中找到不小于它的第一个元素的位置
+    // 从容器中找到不小于它的第一个元素的位置（即大于等于，还需要去除等于，将之放到队列中）
+    /*while(it != m_timers.end() && (*it)->m_next == now_ms) 
+    使用 while 循环，继续向后移动迭代器 it 直到遇到第一个过期时间
+    不等于当前时间的计时器。这是因为 lower_bound 可能会找到多个计
+    时器的过期时间等于当前时间，而我们只关心第一个过期时间不等于当
+    前时间的计时器。
+    整个过程的目的是为了找到在容器中第一个过期时间大于
+     now_timer 的位置，以便在后续的逻辑中正确处理这些计时器。*/
     auto it = rollover ? m_timers.end() : m_timers.lower_bound(now_timer);
     while(it!=m_timers.end() && (*it)->m_next == now_ms) {
         ++it;
     }
-
+    // 这里系统回绕这全部放入过期队列
     expired.insert(expired.begin(),m_timers.begin(),it);
     m_timers.erase(m_timers.begin(),it);
     cbs.reserve(expired.size());
@@ -179,6 +191,10 @@ void  TimerManager::listExpiredCb(std::vector<std::function<void()> >& cbs){
 }
 
 void TimerManager::addTimer(Timer::ptr val,RWMutexType::WriteLock& lock){
+    /*在C++中，std::set 的 insert 方法会返回一个 std::pair 对象，
+    该对象包含两个成员：first 和 second。对于 std::set，insert 
+    方法的返回值的 first 成员指向插入的元素（或者已经存在的相同元素）
+    ，而 second 成员是一个布尔值，表示插入是否成功。*/
     auto it = m_timers.insert(val).first;
     bool at_front = (it == m_timers.begin()) && !m_tickled;
     if(at_front) {
@@ -191,9 +207,11 @@ void TimerManager::addTimer(Timer::ptr val,RWMutexType::WriteLock& lock){
     }
 }
 
+/*这段代码用于检测系统时钟是否发生了溢出（即回绕）。
+在某些情况下，系统时钟的值可能会回绕，这可能导致定时器逻辑出现问题。*/
 bool TimerManager::detectClockRollover(uint64_t now_ms){
     bool rollover = false;
-    if(now_ms < m_previousTime && now_ms < (m_previousTime)) {
+    if(now_ms < m_previousTime && now_ms < (m_previousTime - 60*60*1000)) {
         rollover = true;
     }
     m_previousTime = now_ms;

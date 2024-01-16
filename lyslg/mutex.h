@@ -7,10 +7,14 @@
 #include <memory>
 #include <semaphore.h>
 #include <atomic>
+#include "noncopyable.h"
 
+/*当一个类（比如 MyClass）继承自 Noncopyable 时，MyClass 
+就会继承 Noncopyable 中的拷贝构造函数和拷贝赋值运算符的删
+除声明。这样一来，MyClass 在编译时就会因为无法使用这两个函数而禁止拷贝。*/
 namespace lyslg {
 
-class Semaphore{
+class Semaphore:Noncopyable{
 public:
     Semaphore(uint32_t count = 0);
     ~Semaphore();
@@ -26,7 +30,7 @@ private:
 };
 
 template<class T>
-struct ScopedLockImpl {
+struct ScopedLockImpl:Noncopyable {
 public:
     ScopedLockImpl(T& mutex) 
         :m_mutex(mutex){
@@ -58,7 +62,7 @@ private:
 };
 
 template<class T>
-struct ReadScopedLockImpl {
+struct ReadScopedLockImpl:Noncopyable {
 public:
     ReadScopedLockImpl(T& mutex) 
         :m_mutex(mutex){
@@ -90,7 +94,7 @@ private:
 };
 
 template<class T>
-struct WriteScopedLockImpl {
+struct WriteScopedLockImpl:Noncopyable {
 public:
     WriteScopedLockImpl(T& mutex) 
         :m_mutex(mutex){
@@ -133,7 +137,7 @@ private:
 缺点：
 
 在锁被长时间占用的情况下，自旋锁可能导致线程长时间占用 CPU 资源，浪费 CPU 时间。*/
-class SpinMutex{
+class SpinMutex:Noncopyable{
 public:
     typedef ScopedLockImpl<SpinMutex> Lock; 
     SpinMutex() {
@@ -156,7 +160,7 @@ private:
 };
 
 
-class CASLock { // 这个和spinlock差不多
+class CASLock:Noncopyable { // 这个和spinlock差不多
 public:
     typedef ScopedLockImpl<CASLock> Lock; 
     CASLock() 
@@ -207,7 +211,7 @@ private:
 有些处理器提供了硬件级别的支持，如原子操作指令，可以提高自旋锁的性能。
 在一些情况下，使用硬件支持的自旋锁可能比互斥锁更有效。*/
 /*上面是理论分析，，实际上具体机器具体测试，不同机器可能会有不同的效果，起码，在我这里是互斥锁更好，在原机器上，是自旋锁更好*/
-class Mutex{
+class Mutex:Noncopyable{
 public:
     typedef ScopedLockImpl<Mutex> Lock; 
     Mutex() {
@@ -229,7 +233,7 @@ private:
     pthread_mutex_t m_mutex;
 };
 
-class NullMutex {
+class NullMutex:Noncopyable {
 public:
     typedef ScopedLockImpl<NullMutex> Lock;
     NullMutex() {}
@@ -241,7 +245,7 @@ public:
 
 
 // 一般读频率远大于写频率，用这个会好一点
-class RWMutex {
+class RWMutex :Noncopyable{
 public:
     typedef ReadScopedLockImpl<RWMutex> ReadLock;
     typedef WriteScopedLockImpl<RWMutex> WriteLock;
@@ -267,7 +271,7 @@ private:
     pthread_rwlock_t m_lock;
 };
 
-class NullRWMutex {
+class NullRWMutex:Noncopyable {
 public:
     typedef ReadScopedLockImpl<NullRWMutex> ReadLock;
     typedef WriteScopedLockImpl<NullRWMutex> WriteLock;

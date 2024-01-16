@@ -3,6 +3,7 @@
 
 CMakeFiles/my_test.dir/tests/test.cc.o: ../lyslg/log.h
 CMakeFiles/my_test.dir/tests/test.cc.o: ../lyslg/mutex.h
+CMakeFiles/my_test.dir/tests/test.cc.o: ../lyslg/noncopyable.h
 CMakeFiles/my_test.dir/tests/test.cc.o: ../lyslg/singleton.h
 CMakeFiles/my_test.dir/tests/test.cc.o: ../lyslg/thread.h
 CMakeFiles/my_test.dir/tests/test.cc.o: ../lyslg/util.h

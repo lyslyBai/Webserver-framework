@@ -2,11 +2,13 @@
 #define __THREAD_H__
 
 #include "mutex.h"
+#include "noncopyable.h"
 
 namespace lyslg{
 
 
-class Thread{
+
+class Thread {
 public:
     typedef std::shared_ptr<Thread> ptr;
     
