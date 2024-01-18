@@ -3,6 +3,7 @@
 
 CMakeFiles/test_hook.dir/tests/test_hook.cc.o
  ../lyslg/config.h
+ ../lyslg/fd_manager.h
  ../lyslg/fiber.h
  ../lyslg/hook.h
  ../lyslg/iomanager.h
@@ -10,6 +11,7 @@ CMakeFiles/test_hook.dir/tests/test_hook.cc.o
  ../lyslg/lyslg.h
  ../lyslg/macro.h
  ../lyslg/mutex.h
+ ../lyslg/my_endian.h
  ../lyslg/noncopyable.h
  ../lyslg/scheduler.h
  ../lyslg/singleton.h

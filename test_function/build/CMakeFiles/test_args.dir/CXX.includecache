@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/lyslg/lyslg_/test_function/test_args.cc
+iostream
+-
+string
+-
+cstdarg
+-
+iostream
+-
+cstdarg
+-
+

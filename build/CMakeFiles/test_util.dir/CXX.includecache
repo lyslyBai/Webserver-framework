@@ -40,6 +40,16 @@ log.h
 mutex.h
 ../lyslg/mutex.h
 
+../lyslg/fd_manager.h
+memory
+-
+vector
+-
+mutex.h
+../lyslg/mutex.h
+singleton.h
+../lyslg/singleton.h
+
 ../lyslg/fiber.h
 ucontext.h
 -
@@ -47,6 +57,22 @@ memory
 -
 mutex.h
 ../lyslg/mutex.h
+
+../lyslg/hook.h
+fcntl.h
+-
+sys/ioctl.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+stdint.h
+-
+time.h
+-
+unistd.h
+-
 
 ../lyslg/iomanager.h
 scheduler.h
@@ -103,6 +129,16 @@ scheduler.h
 ../lyslg/scheduler.h
 iomanager.h
 ../lyslg/iomanager.h
+timer.h
+../lyslg/timer.h
+fd_manager.h
+../lyslg/fd_manager.h
+my_endian.h
+../lyslg/my_endian.h
+noncopyable.h
+../lyslg/noncopyable.h
+hook.h
+../lyslg/hook.h
 
 ../lyslg/macro.h
 assert.h
@@ -127,6 +163,14 @@ atomic
 -
 noncopyable.h
 ../lyslg/noncopyable.h
+
+../lyslg/my_endian.h
+byteswap.h
+-
+stdint.h
+-
+type_traits
+-
 
 ../lyslg/noncopyable.h
 

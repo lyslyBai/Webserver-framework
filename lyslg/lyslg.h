@@ -11,6 +11,11 @@
 #include "fiber.h"
 #include "scheduler.h"
 #include "iomanager.h"
+#include "timer.h"
+#include "fd_manager.h"
+#include "my_endian.h"
+#include "noncopyable.h"
+#include "hook.h"
 
 
 #endif

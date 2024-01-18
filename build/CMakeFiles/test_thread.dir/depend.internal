@@ -3,12 +3,15 @@
 
 CMakeFiles/test_thread.dir/tests/test_thread.cc.o
  ../lyslg/config.h
+ ../lyslg/fd_manager.h
  ../lyslg/fiber.h
+ ../lyslg/hook.h
  ../lyslg/iomanager.h
  ../lyslg/log.h
  ../lyslg/lyslg.h
  ../lyslg/macro.h
  ../lyslg/mutex.h
+ ../lyslg/my_endian.h
  ../lyslg/noncopyable.h
  ../lyslg/scheduler.h
  ../lyslg/singleton.h

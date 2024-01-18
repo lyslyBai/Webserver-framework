@@ -1,0 +1,13 @@
+/home/lyslg/lyslg_/test_function/build/CMakeFiles/edit_cache.dir
+/home/lyslg/lyslg_/test_function/build/CMakeFiles/test_bind.dir
+/home/lyslg/lyslg_/test_function/build/CMakeFiles/test_args.dir
+/home/lyslg/lyslg_/test_function/build/CMakeFiles/test_enable_if.dir
+/home/lyslg/lyslg_/test_function/build/CMakeFiles/test_cond_define.dir
+/home/lyslg/lyslg_/test_function/build/CMakeFiles/rebuild_cache.dir
+/home/lyslg/lyslg_/test_function/build/CMakeFiles/test_ucontext.dir
+/home/lyslg/lyslg_/test_function/build/CMakeFiles/test_bit.dir
+/home/lyslg/lyslg_/test_function/build/CMakeFiles/test_enable_if_2.dir
+/home/lyslg/lyslg_/test_function/build/CMakeFiles/test_bswap_64.dir
+/home/lyslg/lyslg_/test_function/build/CMakeFiles/test_class_overload.dir
+/home/lyslg/lyslg_/test_function/build/CMakeFiles/test_offsetof.dir
+/home/lyslg/lyslg_/test_function/build/CMakeFiles/test_memcpy.dir
