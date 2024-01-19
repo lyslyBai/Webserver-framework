@@ -15,11 +15,12 @@ static T CreateMask(uint32_t bits) {
     // 前bits位为0
     return static_cast<T>((1 << (sizeof(T) * 8 - bits)) - 1);
 }
-
+// 用于计算输入值 value 二进制表示中设置为1的位数。
 template <class T>
 static uint32_t CountBytes(T value) {
     uint32_t result = 0;
     for(;value;++result) {
+        // 这有效地清除了最低有效位的1,高位不变，直到value为0，结束循环
         value &= value -1;   // value 至少有一位由1变成0，0变成1，则不变，1变成0，则覆盖
     }
     return result;
@@ -39,7 +40,7 @@ Address::ptr Address::Create(const sockaddr* addr, socklen_t addrlen){
         case AF_INET6:
             result.reset(new IPv6Address(*(const sockaddr_in6*)addr));
             break;
-       default:
+        default:
             result.reset(new UnknowAddress(*addr));
             break;
     }
@@ -50,17 +51,17 @@ Address::ptr Address::LookupAny(const std::string& host,
                         int family, int type,int protocol){
     std::vector<Address::ptr> result;
     if(Lookup(result,host,family,type,protocol)) {
-        return result[0];
+        return result[0];  // 返回第一个ip
     }
     return nullptr;
 }
 
-std::shared_ptr<IPAddress> Address::LookupAnyIPAdress(const std::string& host, 
+std::shared_ptr<IPAddress> Address::LookupAnyIPAddress(const std::string& host, 
                         int family, int type ,int protocol ){
     std::vector<Address::ptr> result;
     if(Lookup(result,host,family,type,protocol)) {
         for(auto& i : result) {
-            IPAddress::ptr v = std::dynamic_pointer_cast<IPAddress>(i);
+            IPAddress::ptr v = std::dynamic_pointer_cast<IPAddress>(i); // 可以转，这属于IP地址，返回
             if(v) {
                 return v;
             }
@@ -69,6 +70,7 @@ std::shared_ptr<IPAddress> Address::LookupAnyIPAdress(const std::string& host,
     return nullptr;                        
 }
 
+// 寻找符合条件的ip
 bool Address::Lookup(std::vector<Address::ptr>& result,const std::string& host, 
                     int family , int type,int protocol){
     addrinfo hints, *results,*next;
@@ -86,54 +88,60 @@ bool Address::Lookup(std::vector<Address::ptr>& result,const std::string& host,
 
     // 检查 ipv6address service
     if(!host.empty() && host[0] == '[') {
+        /*该函数的目的是在host字符串的剩余部分中查找右方括号 ']' 的位置。*/
         const char* endipv6 = (const char* )memchr(host.c_str() +1 ,']',host.size()-1);
         if(endipv6) {
             // TODO check out of range
             if(*(endipv6 + 1) == ':') {
-                service = endipv6 +2;
+                service = endipv6 +2;  // 这个部分实际上是为了找到host中的端口号，例子：[www.baidu.com]:80,service 即为端口号
             }
         }
-        node = host.substr(1,endipv6 - host.c_str() - 1);
+        /*host.c_str() 返回的是指向字符串 host 中第一个字符的指针*/
+        node = host.substr(1,endipv6 - host.c_str() - 1);  // 这个不是是为了获取域名或ip，即为上例中的www.baidu.com
     }
 
     // 检查 node service
-    if(node.empty()) {
-        service = (const char* )memchr(host.c_str(),':',host.size());
+    if(node.empty()) { // 即node未初始化   处理 www.baidu.com:ftp ,情况
+        service = (const char* )memchr(host.c_str(),':',host.size());  
         if(service) {
             if(!memchr(service +1 ,':',host.c_str() + host.size() - service -1)) {
-                node = host.substr(0,service - host.c_str());
-                service++;
+                node = host.substr(0,service - host.c_str());  // 上面未找到：，node = www.baidu.com
+                service++;  // service = ftp
             }
         }
         
     }
 
     if(node.empty()) {
-        node = host;
+        node = host;   
     }
 
+    /*getaddrinfo 函数是一个用于获取地址信息的系统调用，它可以根据给定的主机名
+    （或 IP 地址字符串）、服务名（或端口号字符串）、地址族、套接字类型和协议等信
+    息，返回一个或多个符合条件的地址信息。*/
     int error = getaddrinfo(node.c_str(),service,&hints,&results);
     if(error) {
-        LYSLG_LOG_ERROR(g_logger) << "Adress::lockup getaddress (" << host <<" "
+        LYSLG_LOG_ERROR(g_logger) << "Address::lockup getaddress (" << host <<" "
                             << family << ", " << type << ") err=" << error << " errstr="
                             << strerror(errno);
         return false;
     }
-
+    // results 为一个链表的头部
     next = results;
     while(next) {
         result.push_back(Create(next->ai_addr, (socklen_t)next->ai_addrlen));
         next = next->ai_next;
     }
-
+    // 调用者需要负责释放这块内存
     freeaddrinfo(results);
     return true;  
 }
 
-
+// 未指定网卡
 bool Address::GetInterfaceAddresses(std::multimap<std::string, 
                                     std::pair<Address::ptr, uint32_t> >& result,int family){
     struct ifaddrs *next, *results;
+    // 于获取系统中所有网络接口的信息
     if(getifaddrs(&results) != 0) {
         LYSLG_LOG_ERROR(g_logger) << "Adress::GetInterfaceAddress getifaddrs "
                                   << " err=" << errno << " errstr=" << strerror(errno);
@@ -141,6 +149,7 @@ bool Address::GetInterfaceAddresses(std::multimap<std::string,
     }
 
     try{
+        // 遍历链表，打印每个接口的信息
         for(next = results;next;next = next->ifa_next) {
             Address::ptr addr;
             uint32_t prefix_len = ~0u;
@@ -151,7 +160,9 @@ bool Address::GetInterfaceAddresses(std::multimap<std::string,
                 case AF_INET:
                     {
                         addr = Create(next->ifa_addr, sizeof(sockaddr_in));
+                        // 先next->ifa_netmask，然后(sockaddr_in*),指向网络接口信息结构体中网关掩码的指针 ，， 但有点问题，问为什么这里有子网掩码了，其他其他地方还需要prefix_len
                         uint32_t netmask = ((sockaddr_in*)next->ifa_netmask)->sin_addr.s_addr;
+                        // 通过子网掩码，获得，prefix_len，其实也就是网络位的个数
                         prefix_len = CountBytes(netmask);
                     }
                     break;
@@ -184,14 +195,16 @@ bool Address::GetInterfaceAddresses(std::multimap<std::string,
     return true;
 }
 
-
+// 指定网卡
 bool Address::GetInterfaceAddresses(std::vector<std::pair<Address::ptr, uint32_t> >& result,
                                       const std::string& iface, int family){
     if(iface.empty() || iface == "*") {
         if(family == AF_INET || family == AF_UNSPEC) {
+            // 提供默认的网络接口
             result.push_back(std::make_pair(Address::ptr(new IPv4Address()),0u));
         }
         if(family == AF_INET6 || family == AF_UNSPEC) {
+             // 提供默认的网络接口
             result.push_back(std::make_pair(Address::ptr(new IPv6Address()),0u));
         }
         return true;
@@ -202,7 +215,9 @@ bool Address::GetInterfaceAddresses(std::vector<std::pair<Address::ptr, uint32_t
     if(!GetInterfaceAddresses(results,family)) {
         return false;
     }
-
+    // 该函数返回一个 std::pair，表示给定键在容器中的等值范围。
+    // range 是一个 std::pair，其中 range.first 是指向第一个匹配 iface 的迭代器，
+    // 而 range.second 是指向最后一个匹配的后一个位置的迭代器。
     auto its = results.equal_range(iface);
     for(;its.first != its.second; ++its.first){
         result.push_back(its.first->second);
@@ -222,7 +237,7 @@ std::string Address::toString(){
     return ss.str();
 }
 
-IPAddress::ptr IPAddress::Create(const char* address, uint32_t port){
+IPAddress::ptr IPAddress::Create(const char* address, uint16_t port){
     addrinfo hints ,* results;
     memset(&hints,0,sizeof(addrinfo));
 
@@ -282,15 +297,15 @@ bool Address::operator!=(const Address& rhs) const{
 IPv4Address::IPv4Address(const sockaddr_in& address) {
     m_addr = address;
 }
-
-IPv4Address::IPv4Address(uint32_t address, uint32_t port){
+ 
+IPv4Address::IPv4Address(uint32_t address, uint16_t port){
     memset(&m_addr,0,sizeof(m_addr));
     m_addr.sin_family = AF_INET;
     m_addr.sin_port = byteswapOnLittleEndian(port);
     m_addr.sin_addr.s_addr = byteswapOnLittleEndian(address);
 }
 
-IPv4Address::ptr IPv4Address::Create(const char* address,uint32_t port){
+IPv4Address::ptr IPv4Address::Create(const char* address,uint16_t port){
     IPv4Address::ptr rt(new IPv4Address);
     rt->m_addr.sin_port = byteswapOnLittleEndian(port);
     int result = inet_pton(AF_INET,address,&rt->m_addr.sin_addr);
@@ -362,7 +377,7 @@ void IPv4Address::setPort(uint32_t v) {
     m_addr.sin_port = byteswapOnLittleEndian(v);
 }
 
-IPv6Address::ptr IPv6Address::Create(const char* address, uint32_t port ){
+IPv6Address::ptr IPv6Address::Create(const char* address, uint16_t port ){
     IPv6Address::ptr rt(new IPv6Address);
     rt->m_addr.sin6_port = byteswapOnLittleEndian(port);
     int result = inet_pton(AF_INET6,address,&rt->m_addr.sin6_addr);
@@ -384,7 +399,7 @@ IPv6Address::IPv6Address(const sockaddr_in6& address){
     m_addr = address;
 }
 
-IPv6Address::IPv6Address(const uint8_t* address[16], uint32_t port){
+IPv6Address::IPv6Address(const uint8_t* address[16], uint16_t port){
     memset(&m_addr,0,sizeof(m_addr));
     m_addr.sin6_family = AF_INET6;
     m_addr.sin6_port = byteswapOnLittleEndian(port);

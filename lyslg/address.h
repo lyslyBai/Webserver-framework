@@ -15,17 +15,34 @@
 namespace lyslg{
 
 class IPAddress;
+/**
+ * @brief 网络地址的基类,抽象类
+ */
 class Address {
 public:
     typedef std::shared_ptr<Address> ptr;
     virtual ~Address() {};
-
+    /**
+     * @brief 通过sockaddr指针创建Address
+     * @param[in] addr sockaddr指针
+     * @param[in] addrlen sockaddr的长度
+     * @return 返回和sockaddr相匹配的Address,失败返回nullptr
+     */
     static Address::ptr Create(const sockaddr* addr, socklen_t addrlen);
+    /**
+     * @brief 通过host地址返回对应条件的所有Address
+     * @param[out] result 保存满足条件的Address
+     * @param[in] host 域名,服务器名等.举例: www.sylar.top[:80] (方括号为可选内容)
+     * @param[in] family 协议族(AF_INT, AF_INT6, AF_UNIX)
+     * @param[in] type socketl类型SOCK_STREAM、SOCK_DGRAM 等
+     * @param[in] protocol 协议,IPPROTO_TCP、IPPROTO_UDP 等
+     * @return 返回是否转换成功
+     */
     static bool Lookup(std::vector<Address::ptr>& result,const std::string& host, 
                             int family = AF_UNSPEC, int type = 0,int protocol = 0);
     static Address::ptr LookupAny(const std::string& host, 
                             int family = AF_UNSPEC, int type = 0,int protocol = 0);
-    static std::shared_ptr<IPAddress> LookupAnyIPAdress(const std::string& host, 
+    static std::shared_ptr<IPAddress> LookupAnyIPAddress(const std::string& host, 
                             int family = AF_UNSPEC, int type = 0,int protocol = 0);
 
     static bool GetInterfaceAddresses(std::multimap<std::string, 
