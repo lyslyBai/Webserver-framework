@@ -64,7 +64,7 @@ class IPAddress : public Address {
 public:
     typedef std::shared_ptr<IPAddress> ptr;
     // 和子类的返回类型不同，所以不会被覆盖
-    static IPAddress::ptr Create(const char* address, uint32_t port =0);
+    static IPAddress::ptr Create(const char* address, uint16_t port =0);
     virtual IPAddress::ptr broadcastAddress(uint32_t prefix_len) = 0;
     virtual IPAddress::ptr networdAddress(uint32_t prefix_len) = 0;
     virtual IPAddress::ptr subnetMask(uint32_t prefix_len) = 0;
@@ -78,9 +78,9 @@ public:
     typedef std::shared_ptr<IPv4Address> ptr;
     // 继承的父类的默认构造函数吧
     IPv4Address(const sockaddr_in& address);
-    IPv4Address(uint32_t address = INADDR_ANY, uint32_t port = 0);
+    IPv4Address(uint32_t address = INADDR_ANY, uint16_t port = 0);
 
-    static IPv4Address::ptr Create(const char* address,uint32_t port = 0);
+    static IPv4Address::ptr Create(const char* address,uint16_t port = 0);
     const sockaddr* getAddr() const override;
     socklen_t getAddrLen() const override;
     std::ostream& insert(std::ostream& os) const;
@@ -98,12 +98,12 @@ private:
 class IPv6Address : public IPAddress{
 public:
     typedef std::shared_ptr<IPv6Address> ptr;
-    static IPv6Address::ptr Create(const char* address, uint32_t port = 0);
+    static IPv6Address::ptr Create(const char* address, uint16_t port = 0);
 
 
     IPv6Address();
     IPv6Address(const sockaddr_in6& address);
-    IPv6Address(const uint8_t* address[16], uint32_t port = 0);
+    IPv6Address(const uint8_t* address[16], uint16_t port = 0);
 
     const sockaddr* getAddr() const override;
     socklen_t getAddrLen() const override;
