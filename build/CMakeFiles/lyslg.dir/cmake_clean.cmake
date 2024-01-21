@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/lyslg.dir/lyslg/macro.cc.o"
   "CMakeFiles/lyslg.dir/lyslg/mutex.cc.o"
   "CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o"
+  "CMakeFiles/lyslg.dir/lyslg/socket.cc.o"
   "CMakeFiles/lyslg.dir/lyslg/thread.cc.o"
   "CMakeFiles/lyslg.dir/lyslg/timer.cc.o"
   "CMakeFiles/lyslg.dir/lyslg/util.cc.o"

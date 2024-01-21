@@ -61,7 +61,7 @@ std::shared_ptr<IPAddress> Address::LookupAnyIPAddress(const std::string& host,
     std::vector<Address::ptr> result;
     if(Lookup(result,host,family,type,protocol)) {
         for(auto& i : result) {
-            IPAddress::ptr v = std::dynamic_pointer_cast<IPAddress>(i); // 可以转，这属于IP地址，返回
+            IPAddress::ptr v = std::dynamic_pointer_cast<IPAddress>(i); // 可以转换成IP指针，这属于IP地址，返回
             if(v) {
                 return v;
             }
@@ -318,7 +318,11 @@ IPv4Address::ptr IPv4Address::Create(const char* address,uint16_t port){
     return rt;
 }
 
-const sockaddr*  IPv4Address::getAddr() const {
+const sockaddr* IPv4Address::getAddr() const {
+    return (sockaddr*)&m_addr;
+}
+
+sockaddr*  IPv4Address::getAddr() {
     return (sockaddr*)&m_addr;
 }
 socklen_t  IPv4Address::getAddrLen() const {
@@ -369,12 +373,15 @@ IPAddress::ptr  IPv4Address::subnetMask(uint32_t prefix_len) {
     return IPv4Address::ptr(new IPv4Address(subnet));
 }
 
-uint32_t IPv4Address::getPort() const {
+uint16_t IPv4Address::getPort() const {
     return byteswapOnLittleEndian(m_addr.sin_port);
 }
 
-void IPv4Address::setPort(uint32_t v) {
+// 要注意port为16位地址，如果写成32位，再转换字节序，截断成16位地址，会出错
+void IPv4Address::setPort(uint16_t v) {
+    // LYSLG_LOG_INFO(g_logger) << "m_addr.sin_port:" << v << " byteswapOnLittleEndian(v):" << byteswapOnLittleEndian(v);
     m_addr.sin_port = byteswapOnLittleEndian(v);
+    // LYSLG_LOG_INFO(g_logger) << "m_addr.sin_port:" << m_addr.sin_port;
 }
 
 IPv6Address::ptr IPv6Address::Create(const char* address, uint16_t port ){
@@ -407,6 +414,10 @@ IPv6Address::IPv6Address(const uint8_t* address[16], uint16_t port){
 }
 
 const sockaddr* IPv6Address::getAddr() const {
+    return (sockaddr*)&m_addr;
+}
+
+sockaddr* IPv6Address::getAddr() {
     return (sockaddr*)&m_addr;
 }
 socklen_t  IPv6Address::getAddrLen() const {
@@ -477,10 +488,10 @@ IPAddress::ptr  IPv6Address::subnetMask(uint32_t prefix_len) {
     return IPv6Address::ptr(new IPv6Address(subnet));
 }
 
-uint32_t IPv6Address::getPort() const {
+uint16_t IPv6Address::getPort() const {
     return byteswapOnLittleEndian(m_addr.sin6_port);
 }
-void IPv6Address::setPort(uint32_t v) {
+void IPv6Address::setPort(uint16_t v) {
     m_addr.sin6_port = byteswapOnLittleEndian(v);
 }
 
@@ -515,12 +526,22 @@ UnixAddress::UnixAddress(const std::string& path){
     m_length += offsetof(sockaddr_un,sun_path);
 }
 
-const sockaddr* UnixAddress::getAddr() const{
+const sockaddr* UnixAddress::getAddr() const {
     return (sockaddr*)&m_addr;
 }
+
+sockaddr* UnixAddress::getAddr(){
+    return (sockaddr*)&m_addr;
+}
+
 socklen_t UnixAddress::getAddrLen() const{
     return m_length;
 }
+
+void UnixAddress::setAddrLen(uint32_t v) {
+    m_length = v;
+}
+
 std::ostream& UnixAddress::insert(std::ostream& os) const{
 
     if(m_length > offsetof(sockaddr_un,sun_path)
@@ -540,9 +561,12 @@ UnknowAddress::UnknowAddress(const sockaddr& addr){
     m_addr = addr;
 }
 
+const sockaddr* UnknowAddress::getAddr() const {
+    return (sockaddr*)&m_addr;
+}
 
-const sockaddr* UnknowAddress::getAddr() const{
-    return &m_addr;
+sockaddr* UnknowAddress::getAddr(){
+    return (sockaddr*)&m_addr;
 }
 socklen_t UnknowAddress::getAddrLen() const{
     return sizeof(m_addr);

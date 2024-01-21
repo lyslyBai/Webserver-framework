@@ -1,5 +1,6 @@
 /home/lyslg/lyslg_/build/CMakeFiles/edit_cache.dir
 /home/lyslg/lyslg_/build/CMakeFiles/rebuild_cache.dir
+/home/lyslg/lyslg_/build/CMakeFiles/test_socket.dir
 /home/lyslg/lyslg_/build/CMakeFiles/test_thread.dir
 /home/lyslg/lyslg_/build/CMakeFiles/my_test.dir
 /home/lyslg/lyslg_/build/CMakeFiles/test_fiber.dir

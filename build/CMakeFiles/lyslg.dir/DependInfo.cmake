@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/lyslg/lyslg_/lyslg/macro.cc" "/home/lyslg/lyslg_/build/CMakeFiles/lyslg.dir/lyslg/macro.cc.o"
   "/home/lyslg/lyslg_/lyslg/mutex.cc" "/home/lyslg/lyslg_/build/CMakeFiles/lyslg.dir/lyslg/mutex.cc.o"
   "/home/lyslg/lyslg_/lyslg/scheduler.cc" "/home/lyslg/lyslg_/build/CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o"
+  "/home/lyslg/lyslg_/lyslg/socket.cc" "/home/lyslg/lyslg_/build/CMakeFiles/lyslg.dir/lyslg/socket.cc.o"
   "/home/lyslg/lyslg_/lyslg/thread.cc" "/home/lyslg/lyslg_/build/CMakeFiles/lyslg.dir/lyslg/thread.cc.o"
   "/home/lyslg/lyslg_/lyslg/timer.cc" "/home/lyslg/lyslg_/build/CMakeFiles/lyslg.dir/lyslg/timer.cc.o"
   "/home/lyslg/lyslg_/lyslg/util.cc" "/home/lyslg/lyslg_/build/CMakeFiles/lyslg.dir/lyslg/util.cc.o"

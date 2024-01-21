@@ -9,7 +9,7 @@ lyslg::Logger::ptr g_logger = LYSLG_LOG_ROOT();
 void test() {
     std::vector<lyslg::Address::ptr> addrs;
 
-    bool v = lyslg::Address::Lookup(addrs,"www.baidu.com:ftp");
+    bool v = lyslg::Address::Lookup(addrs,"www.baidu.com");
     if(!v) {
         LYSLG_LOG_ERROR(g_logger) << "lookup fail";
         return;

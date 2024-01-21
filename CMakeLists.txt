@@ -82,6 +82,11 @@ add_dependencies(test_address lyslg)  #用于添加一个目标对其他目标�
 force_redefine_file_macro_for_sources(test_address)
 target_link_libraries(test_address lyslg yaml-cpp) # yaml-cpp  生成的三个动态库，包括两个符号衔接和一个
 
+add_executable(test_socket ${PROJECT_SOURCE_DIR}/tests/test_socket.cc) # test 为cmake保留关键字，不能作为文件名
+add_dependencies(test_socket lyslg)  #用于添加一个目标对其他目标的依赖。
+force_redefine_file_macro_for_sources(test_socket)
+target_link_libraries(test_socket lyslg yaml-cpp) # yaml-cpp  生成的三个动态库，包括两个符号衔接和一个
+
 
 #自动设置PROJECT_SOURCE_DIR的默认值为项目根目录的路径（CMakeLists.txt所在的路径）
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)

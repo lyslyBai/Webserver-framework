@@ -12,6 +12,29 @@ public:
     typedef std::shared_ptr<Socket> ptr;
     typedef std::weak_ptr<Socket> weak_ptr;
 
+    enum Type{
+        TCP = SOCK_STREAM,
+        UDP = SOCK_DGRAM
+    };
+
+    enum Family{
+        Ipv4 = AF_INET,
+        Ipv6 = AF_INET6,
+        UNIX = AF_UNIX
+
+    };
+
+    static Socket::ptr CreateTCP(lyslg::Address::ptr address);
+    static Socket::ptr CreateUDP(lyslg::Address::ptr address);
+
+    static Socket::ptr CreateTCPSocket();
+    static Socket::ptr CreateUDPSocket();
+    static Socket::ptr CreateTCPSocket6();
+    static Socket::ptr CreateUDPSocket6();
+
+    static Socket::ptr CreateUnixTCP();
+    static Socket::ptr CreateUnixUDP();
+
     Socket(int family,int type,int protocol = 0);
     ~Socket();
 
@@ -37,9 +60,21 @@ public:
 
     Socket::ptr accept();
 
+    bool isValid() const;
+
     bool init(int sock);
     bool bind(const Address::ptr addr);
-    bool accept(const Address::ptr addr,uint16_t timeout_ms = -1);
+
+    /**
+     * @brief 连接地址
+     * @param[in] addr 目标地址
+     * @param[in] timeout_ms 超时时间(毫秒)
+     */
+    virtual bool connect(const Address::ptr addr, uint64_t timeout_ms = -1);
+
+    virtual bool reconnect(uint64_t timeout_ms = -1);
+
+
     bool listen(int backlog = SOMAXCONN);
     bool close();
 
@@ -53,15 +88,14 @@ public:
     int recvFrom(void* buffers, size_t length,Address::ptr from, int flags = 0);
     int recvFrom(iovec* buffers, size_t length,Address::ptr from, int flags = 0);
 
-    Address::ptr getRemoteAddress() const { return m_remoteAddress;}
-    Address::ptr getLocalAddress() const { return m_localAdderss;}
+    Address::ptr getRemoteAddress();
+    Address::ptr getLocalAddress();
 
     int getFamily() const { return m_family;}
     int getType() const { return m_type;}
     int getProtocol() const { return m_protocol;}
 
     bool isConnected() const { return m_isConnected;}
-    bool isVaild() const;
     int getError();
 
     std::ostream& dump(std::ostream& os) const;
@@ -82,7 +116,7 @@ private:
     int m_protocol;
     bool m_isConnected;
 
-    Address::ptr m_localAdderss;
+    Address::ptr m_localAddress;
     Address::ptr m_remoteAddress;
 };
 

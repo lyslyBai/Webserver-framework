@@ -114,6 +114,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_socket
+
+# Build rule for target.
+test_socket: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_socket
+.PHONY : test_socket
+
+# fast build rule for target.
+test_socket/fast:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/build
+.PHONY : test_socket/fast
+
+#=============================================================================
 # Target rules for targets named test_thread
 
 # Build rule for target.
@@ -513,6 +526,33 @@ lyslg/scheduler.cc.s:
 	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/scheduler.cc.s
 .PHONY : lyslg/scheduler.cc.s
 
+lyslg/socket.o: lyslg/socket.cc.o
+
+.PHONY : lyslg/socket.o
+
+# target to build an object file
+lyslg/socket.cc.o:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/socket.cc.o
+.PHONY : lyslg/socket.cc.o
+
+lyslg/socket.i: lyslg/socket.cc.i
+
+.PHONY : lyslg/socket.i
+
+# target to preprocess a source file
+lyslg/socket.cc.i:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/socket.cc.i
+.PHONY : lyslg/socket.cc.i
+
+lyslg/socket.s: lyslg/socket.cc.s
+
+.PHONY : lyslg/socket.s
+
+# target to generate assembly for a file
+lyslg/socket.cc.s:
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/socket.cc.s
+.PHONY : lyslg/socket.cc.s
+
 lyslg/thread.o: lyslg/thread.cc.o
 
 .PHONY : lyslg/thread.o
@@ -783,6 +823,33 @@ tests/test_scheduler.cc.s:
 	$(MAKE) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/tests/test_scheduler.cc.s
 .PHONY : tests/test_scheduler.cc.s
 
+tests/test_socket.o: tests/test_socket.cc.o
+
+.PHONY : tests/test_socket.o
+
+# target to build an object file
+tests/test_socket.cc.o:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.o
+.PHONY : tests/test_socket.cc.o
+
+tests/test_socket.i: tests/test_socket.cc.i
+
+.PHONY : tests/test_socket.i
+
+# target to preprocess a source file
+tests/test_socket.cc.i:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.i
+.PHONY : tests/test_socket.cc.i
+
+tests/test_socket.s: tests/test_socket.cc.s
+
+.PHONY : tests/test_socket.s
+
+# target to generate assembly for a file
+tests/test_socket.cc.s:
+	$(MAKE) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.s
+.PHONY : tests/test_socket.cc.s
+
 tests/test_thread.o: tests/test_thread.cc.o
 
 .PHONY : tests/test_thread.o
@@ -845,6 +912,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test_socket"
 	@echo "... test_thread"
 	@echo "... my_test"
 	@echo "... test_fiber"
@@ -885,6 +953,9 @@ help:
 	@echo "... lyslg/scheduler.o"
 	@echo "... lyslg/scheduler.i"
 	@echo "... lyslg/scheduler.s"
+	@echo "... lyslg/socket.o"
+	@echo "... lyslg/socket.i"
+	@echo "... lyslg/socket.s"
 	@echo "... lyslg/thread.o"
 	@echo "... lyslg/thread.i"
 	@echo "... lyslg/thread.s"
@@ -915,6 +986,9 @@ help:
 	@echo "... tests/test_scheduler.o"
 	@echo "... tests/test_scheduler.i"
 	@echo "... tests/test_scheduler.s"
+	@echo "... tests/test_socket.o"
+	@echo "... tests/test_socket.i"
+	@echo "... tests/test_socket.s"
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"

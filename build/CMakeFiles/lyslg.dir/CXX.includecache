@@ -292,6 +292,32 @@ thread.h
 
 /home/lyslg/lyslg_/lyslg/singleton.h
 
+/home/lyslg/lyslg_/lyslg/socket.cc
+socket.h
+/home/lyslg/lyslg_/lyslg/socket.h
+fd_manager.h
+/home/lyslg/lyslg_/lyslg/fd_manager.h
+log.h
+/home/lyslg/lyslg_/lyslg/log.h
+macro.h
+/home/lyslg/lyslg_/lyslg/macro.h
+hook.h
+/home/lyslg/lyslg_/lyslg/hook.h
+netinet/tcp.h
+-
+fd_manager.h
+/home/lyslg/lyslg_/lyslg/fd_manager.h
+iomanager.h
+/home/lyslg/lyslg_/lyslg/iomanager.h
+
+/home/lyslg/lyslg_/lyslg/socket.h
+memory
+-
+address.h
+/home/lyslg/lyslg_/lyslg/address.h
+noncopyable.h
+/home/lyslg/lyslg_/lyslg/noncopyable.h
+
 /home/lyslg/lyslg_/lyslg/thread.cc
 thread.h
 /home/lyslg/lyslg_/lyslg/thread.h

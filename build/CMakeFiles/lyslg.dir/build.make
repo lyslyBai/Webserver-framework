@@ -300,9 +300,33 @@ CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o.provides: CMakeFiles/lyslg.dir/lyslg/s
 CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o.provides.build: CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o
 
 
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o: CMakeFiles/lyslg.dir/flags.make
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o: ../lyslg/socket.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/lyslg.dir/lyslg/socket.cc.o"
+	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"lyslg/socket.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lyslg.dir/lyslg/socket.cc.o -c /home/lyslg/lyslg_/lyslg/socket.cc
+
+CMakeFiles/lyslg.dir/lyslg/socket.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lyslg.dir/lyslg/socket.cc.i"
+	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/socket.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lyslg/lyslg_/lyslg/socket.cc > CMakeFiles/lyslg.dir/lyslg/socket.cc.i
+
+CMakeFiles/lyslg.dir/lyslg/socket.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lyslg.dir/lyslg/socket.cc.s"
+	/opt/rh/devtoolset-8/root/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/socket.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lyslg/lyslg_/lyslg/socket.cc -o CMakeFiles/lyslg.dir/lyslg/socket.cc.s
+
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o.requires:
+
+.PHONY : CMakeFiles/lyslg.dir/lyslg/socket.cc.o.requires
+
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o.provides: CMakeFiles/lyslg.dir/lyslg/socket.cc.o.requires
+	$(MAKE) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/socket.cc.o.provides.build
+.PHONY : CMakeFiles/lyslg.dir/lyslg/socket.cc.o.provides
+
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o.provides.build: CMakeFiles/lyslg.dir/lyslg/socket.cc.o
+
+
 CMakeFiles/lyslg.dir/lyslg/thread.cc.o: CMakeFiles/lyslg.dir/flags.make
 CMakeFiles/lyslg.dir/lyslg/thread.cc.o: ../lyslg/thread.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/lyslg.dir/lyslg/thread.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/lyslg.dir/lyslg/thread.cc.o"
 	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"lyslg/thread.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lyslg.dir/lyslg/thread.cc.o -c /home/lyslg/lyslg_/lyslg/thread.cc
 
 CMakeFiles/lyslg.dir/lyslg/thread.cc.i: cmake_force
@@ -326,7 +350,7 @@ CMakeFiles/lyslg.dir/lyslg/thread.cc.o.provides.build: CMakeFiles/lyslg.dir/lysl
 
 CMakeFiles/lyslg.dir/lyslg/timer.cc.o: CMakeFiles/lyslg.dir/flags.make
 CMakeFiles/lyslg.dir/lyslg/timer.cc.o: ../lyslg/timer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/lyslg.dir/lyslg/timer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/lyslg.dir/lyslg/timer.cc.o"
 	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"lyslg/timer.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lyslg.dir/lyslg/timer.cc.o -c /home/lyslg/lyslg_/lyslg/timer.cc
 
 CMakeFiles/lyslg.dir/lyslg/timer.cc.i: cmake_force
@@ -350,7 +374,7 @@ CMakeFiles/lyslg.dir/lyslg/timer.cc.o.provides.build: CMakeFiles/lyslg.dir/lyslg
 
 CMakeFiles/lyslg.dir/lyslg/util.cc.o: CMakeFiles/lyslg.dir/flags.make
 CMakeFiles/lyslg.dir/lyslg/util.cc.o: ../lyslg/util.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/lyslg.dir/lyslg/util.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/lyslg.dir/lyslg/util.cc.o"
 	/opt/rh/devtoolset-8/root/usr/bin/c++  $(CXX_DEFINES) -D__FILE__=\"lyslg/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/lyslg.dir/lyslg/util.cc.o -c /home/lyslg/lyslg_/lyslg/util.cc
 
 CMakeFiles/lyslg.dir/lyslg/util.cc.i: cmake_force
@@ -384,6 +408,7 @@ lyslg_OBJECTS = \
 "CMakeFiles/lyslg.dir/lyslg/macro.cc.o" \
 "CMakeFiles/lyslg.dir/lyslg/mutex.cc.o" \
 "CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o" \
+"CMakeFiles/lyslg.dir/lyslg/socket.cc.o" \
 "CMakeFiles/lyslg.dir/lyslg/thread.cc.o" \
 "CMakeFiles/lyslg.dir/lyslg/timer.cc.o" \
 "CMakeFiles/lyslg.dir/lyslg/util.cc.o"
@@ -401,12 +426,13 @@ lyslg_EXTERNAL_OBJECTS =
 ../lib/liblyslg.so: CMakeFiles/lyslg.dir/lyslg/macro.cc.o
 ../lib/liblyslg.so: CMakeFiles/lyslg.dir/lyslg/mutex.cc.o
 ../lib/liblyslg.so: CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o
+../lib/liblyslg.so: CMakeFiles/lyslg.dir/lyslg/socket.cc.o
 ../lib/liblyslg.so: CMakeFiles/lyslg.dir/lyslg/thread.cc.o
 ../lib/liblyslg.so: CMakeFiles/lyslg.dir/lyslg/timer.cc.o
 ../lib/liblyslg.so: CMakeFiles/lyslg.dir/lyslg/util.cc.o
 ../lib/liblyslg.so: CMakeFiles/lyslg.dir/build.make
 ../lib/liblyslg.so: CMakeFiles/lyslg.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX shared library ../lib/liblyslg.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lyslg/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX shared library ../lib/liblyslg.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lyslg.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -424,6 +450,7 @@ CMakeFiles/lyslg.dir/requires: CMakeFiles/lyslg.dir/lyslg/log.cc.o.requires
 CMakeFiles/lyslg.dir/requires: CMakeFiles/lyslg.dir/lyslg/macro.cc.o.requires
 CMakeFiles/lyslg.dir/requires: CMakeFiles/lyslg.dir/lyslg/mutex.cc.o.requires
 CMakeFiles/lyslg.dir/requires: CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o.requires
+CMakeFiles/lyslg.dir/requires: CMakeFiles/lyslg.dir/lyslg/socket.cc.o.requires
 CMakeFiles/lyslg.dir/requires: CMakeFiles/lyslg.dir/lyslg/thread.cc.o.requires
 CMakeFiles/lyslg.dir/requires: CMakeFiles/lyslg.dir/lyslg/timer.cc.o.requires
 CMakeFiles/lyslg.dir/requires: CMakeFiles/lyslg.dir/lyslg/util.cc.o.requires

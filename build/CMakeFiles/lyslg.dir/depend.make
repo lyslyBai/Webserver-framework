@@ -97,6 +97,23 @@ CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o: ../lyslg/singleton.h
 CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o: ../lyslg/thread.h
 CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o: ../lyslg/util.h
 
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o: ../lyslg/address.h
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o: ../lyslg/fd_manager.h
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o: ../lyslg/fiber.h
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o: ../lyslg/hook.h
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o: ../lyslg/iomanager.h
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o: ../lyslg/log.h
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o: ../lyslg/macro.h
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o: ../lyslg/mutex.h
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o: ../lyslg/noncopyable.h
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o: ../lyslg/scheduler.h
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o: ../lyslg/singleton.h
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o: ../lyslg/socket.cc
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o: ../lyslg/socket.h
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o: ../lyslg/thread.h
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o: ../lyslg/timer.h
+CMakeFiles/lyslg.dir/lyslg/socket.cc.o: ../lyslg/util.h
+
 CMakeFiles/lyslg.dir/lyslg/thread.cc.o: ../lyslg/log.h
 CMakeFiles/lyslg.dir/lyslg/thread.cc.o: ../lyslg/mutex.h
 CMakeFiles/lyslg.dir/lyslg/thread.cc.o: ../lyslg/noncopyable.h

@@ -28,6 +28,8 @@ CXX_INCLUDES = -I/home/lyslg/lyslg_/lyslg
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o_DEFINES = __FILE__="lyslg/scheduler.cc"
 
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/socket.cc.o_DEFINES = __FILE__="lyslg/socket.cc"
+
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/thread.cc.o_DEFINES = __FILE__="lyslg/thread.cc"
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/timer.cc.o_DEFINES = __FILE__="lyslg/timer.cc"
