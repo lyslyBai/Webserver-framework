@@ -1,1 +1,0 @@
-/opt/rh/devtoolset-8/root/usr/bin/c++     CMakeFiles/yaml-cpp-sandbox.dir/sandbox.cpp.o  -o sandbox -Wl,-rpath,/home/lyslg/lyslg_/yaml-cpp/build ../libyaml-cpp.so.0.8.0 

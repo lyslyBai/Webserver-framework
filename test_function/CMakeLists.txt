@@ -28,4 +28,10 @@ add_executable(test_bit ${PROJECT_SOURCE_DIR}/test_bit.cc)
 
 add_executable(test_class_overload ${PROJECT_SOURCE_DIR}/test_class_overload.cc) 
 
+add_executable(test_printf ${PROJECT_SOURCE_DIR}/test_printf.cc) 
+
+add_executable(test_unsigned ${PROJECT_SOURCE_DIR}/test_unsigned.cc)
+
+add_executable(test_EncodeZigzag ${PROJECT_SOURCE_DIR}/test_EncodeZigzag.cc) 
+
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)

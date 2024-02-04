@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named test_unsigned
+
+# Build rule for target.
+test_unsigned: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_unsigned
+.PHONY : test_unsigned
+
+# fast build rule for target.
+test_unsigned/fast:
+	$(MAKE) -f CMakeFiles/test_unsigned.dir/build.make CMakeFiles/test_unsigned.dir/build
+.PHONY : test_unsigned/fast
+
+#=============================================================================
+# Target rules for targets named test_printf
+
+# Build rule for target.
+test_printf: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_printf
+.PHONY : test_printf
+
+# fast build rule for target.
+test_printf/fast:
+	$(MAKE) -f CMakeFiles/test_printf.dir/build.make CMakeFiles/test_printf.dir/build
+.PHONY : test_printf/fast
+
+#=============================================================================
 # Target rules for targets named test_bind
 
 # Build rule for target.
@@ -122,6 +148,19 @@ test_bind: cmake_check_build_system
 test_bind/fast:
 	$(MAKE) -f CMakeFiles/test_bind.dir/build.make CMakeFiles/test_bind.dir/build
 .PHONY : test_bind/fast
+
+#=============================================================================
+# Target rules for targets named test_EncodeZigzag
+
+# Build rule for target.
+test_EncodeZigzag: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test_EncodeZigzag
+.PHONY : test_EncodeZigzag
+
+# fast build rule for target.
+test_EncodeZigzag/fast:
+	$(MAKE) -f CMakeFiles/test_EncodeZigzag.dir/build.make CMakeFiles/test_EncodeZigzag.dir/build
+.PHONY : test_EncodeZigzag/fast
 
 #=============================================================================
 # Target rules for targets named test_args
@@ -252,6 +291,33 @@ test_memcpy: cmake_check_build_system
 test_memcpy/fast:
 	$(MAKE) -f CMakeFiles/test_memcpy.dir/build.make CMakeFiles/test_memcpy.dir/build
 .PHONY : test_memcpy/fast
+
+test_EncodeZigzag.o: test_EncodeZigzag.cc.o
+
+.PHONY : test_EncodeZigzag.o
+
+# target to build an object file
+test_EncodeZigzag.cc.o:
+	$(MAKE) -f CMakeFiles/test_EncodeZigzag.dir/build.make CMakeFiles/test_EncodeZigzag.dir/test_EncodeZigzag.cc.o
+.PHONY : test_EncodeZigzag.cc.o
+
+test_EncodeZigzag.i: test_EncodeZigzag.cc.i
+
+.PHONY : test_EncodeZigzag.i
+
+# target to preprocess a source file
+test_EncodeZigzag.cc.i:
+	$(MAKE) -f CMakeFiles/test_EncodeZigzag.dir/build.make CMakeFiles/test_EncodeZigzag.dir/test_EncodeZigzag.cc.i
+.PHONY : test_EncodeZigzag.cc.i
+
+test_EncodeZigzag.s: test_EncodeZigzag.cc.s
+
+.PHONY : test_EncodeZigzag.s
+
+# target to generate assembly for a file
+test_EncodeZigzag.cc.s:
+	$(MAKE) -f CMakeFiles/test_EncodeZigzag.dir/build.make CMakeFiles/test_EncodeZigzag.dir/test_EncodeZigzag.cc.s
+.PHONY : test_EncodeZigzag.cc.s
 
 test_args.o: test_args.cc.o
 
@@ -523,6 +589,33 @@ test_offsetof.cc.s:
 	$(MAKE) -f CMakeFiles/test_offsetof.dir/build.make CMakeFiles/test_offsetof.dir/test_offsetof.cc.s
 .PHONY : test_offsetof.cc.s
 
+test_printf.o: test_printf.cc.o
+
+.PHONY : test_printf.o
+
+# target to build an object file
+test_printf.cc.o:
+	$(MAKE) -f CMakeFiles/test_printf.dir/build.make CMakeFiles/test_printf.dir/test_printf.cc.o
+.PHONY : test_printf.cc.o
+
+test_printf.i: test_printf.cc.i
+
+.PHONY : test_printf.i
+
+# target to preprocess a source file
+test_printf.cc.i:
+	$(MAKE) -f CMakeFiles/test_printf.dir/build.make CMakeFiles/test_printf.dir/test_printf.cc.i
+.PHONY : test_printf.cc.i
+
+test_printf.s: test_printf.cc.s
+
+.PHONY : test_printf.s
+
+# target to generate assembly for a file
+test_printf.cc.s:
+	$(MAKE) -f CMakeFiles/test_printf.dir/build.make CMakeFiles/test_printf.dir/test_printf.cc.s
+.PHONY : test_printf.cc.s
+
 test_ucontext.o: test_ucontext.cc.o
 
 .PHONY : test_ucontext.o
@@ -550,6 +643,33 @@ test_ucontext.cc.s:
 	$(MAKE) -f CMakeFiles/test_ucontext.dir/build.make CMakeFiles/test_ucontext.dir/test_ucontext.cc.s
 .PHONY : test_ucontext.cc.s
 
+test_unsigned.o: test_unsigned.cc.o
+
+.PHONY : test_unsigned.o
+
+# target to build an object file
+test_unsigned.cc.o:
+	$(MAKE) -f CMakeFiles/test_unsigned.dir/build.make CMakeFiles/test_unsigned.dir/test_unsigned.cc.o
+.PHONY : test_unsigned.cc.o
+
+test_unsigned.i: test_unsigned.cc.i
+
+.PHONY : test_unsigned.i
+
+# target to preprocess a source file
+test_unsigned.cc.i:
+	$(MAKE) -f CMakeFiles/test_unsigned.dir/build.make CMakeFiles/test_unsigned.dir/test_unsigned.cc.i
+.PHONY : test_unsigned.cc.i
+
+test_unsigned.s: test_unsigned.cc.s
+
+.PHONY : test_unsigned.s
+
+# target to generate assembly for a file
+test_unsigned.cc.s:
+	$(MAKE) -f CMakeFiles/test_unsigned.dir/build.make CMakeFiles/test_unsigned.dir/test_unsigned.cc.s
+.PHONY : test_unsigned.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -557,7 +677,10 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... test_unsigned"
+	@echo "... test_printf"
 	@echo "... test_bind"
+	@echo "... test_EncodeZigzag"
 	@echo "... test_args"
 	@echo "... test_enable_if"
 	@echo "... test_cond_define"
@@ -569,6 +692,9 @@ help:
 	@echo "... test_class_overload"
 	@echo "... test_offsetof"
 	@echo "... test_memcpy"
+	@echo "... test_EncodeZigzag.o"
+	@echo "... test_EncodeZigzag.i"
+	@echo "... test_EncodeZigzag.s"
 	@echo "... test_args.o"
 	@echo "... test_args.i"
 	@echo "... test_args.s"
@@ -599,9 +725,15 @@ help:
 	@echo "... test_offsetof.o"
 	@echo "... test_offsetof.i"
 	@echo "... test_offsetof.s"
+	@echo "... test_printf.o"
+	@echo "... test_printf.i"
+	@echo "... test_printf.s"
 	@echo "... test_ucontext.o"
 	@echo "... test_ucontext.i"
 	@echo "... test_ucontext.s"
+	@echo "... test_unsigned.o"
+	@echo "... test_unsigned.i"
+	@echo "... test_unsigned.s"
 .PHONY : help
 
 

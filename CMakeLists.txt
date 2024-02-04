@@ -16,16 +16,19 @@ include (cmake/utils.cmake)
 set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O3 -g -std=c++11 -Wall -Werror -Wno-unused-function -Wno-builtin-macro-redefined -pthread")
 
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/lyslg LIB_SRC)
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/lyslg/http LIB_SRC_1)
 # set(LIB_SRC 
 #     ${PROJECT_SOURCE_DIR}/log.cc
 #     ${PROJECT_SOURCE_DIR}/util.cc
 #     ${PROJECT_SOURCE_DIR}/config.cc
 #     )
 
-add_library(lyslg SHARED ${LIB_SRC})
+add_library(lyslg SHARED ${LIB_SRC} ${LIB_SRC_1})
 target_link_libraries(lyslg -ldl)
 force_redefine_file_macro_for_sources(lyslg)
+
 include_directories(${PROJECT_SOURCE_DIR}/lyslg)
+include_directories(${PROJECT_SOURCE_DIR}/lyslg/http)
 
 # target_include_directories(lyslg PUBLIC ${PROJECT_SOURCE_DIR}/lyslg)
 link_directories(${PROJECT_SOURCE_DIR}/lib)
@@ -87,6 +90,15 @@ add_dependencies(test_socket lyslg)  #用于添加一个目标对其他目标的
 force_redefine_file_macro_for_sources(test_socket)
 target_link_libraries(test_socket lyslg yaml-cpp) # yaml-cpp  生成的三个动态库，包括两个符号衔接和一个
 
+add_executable(test_bytearray ${PROJECT_SOURCE_DIR}/tests/test_bytearray.cc) # test 为cmake保留关键字，不能作为文件名
+add_dependencies(test_bytearray lyslg)  #用于添加一个目标对其他目标的依赖。
+force_redefine_file_macro_for_sources(test_bytearray)
+target_link_libraries(test_bytearray lyslg yaml-cpp) # yaml-cpp  生成的三个动态库，包括两个符号衔接和一个
+
+add_executable(test_http ${PROJECT_SOURCE_DIR}/tests/test_http.cc) # test 为cmake保留关键字，不能作为文件名
+add_dependencies(test_http lyslg)  #用于添加一个目标对其他目标的依赖。
+force_redefine_file_macro_for_sources(test_http)
+target_link_libraries(test_http lyslg yaml-cpp) 
 
 #自动设置PROJECT_SOURCE_DIR的默认值为项目根目录的路径（CMakeLists.txt所在的路径）
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)

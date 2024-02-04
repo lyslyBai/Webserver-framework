@@ -1,21 +1,19 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lyslg/lyslg_/tests/test_thread.cc" "/home/lyslg/lyslg_/build/CMakeFiles/test_thread.dir/tests/test_thread.cc.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../lyslg"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/lyslg/Documents/lyslg_/tests/test_thread.cc" "CMakeFiles/test_thread.dir/tests/test_thread.cc.o" "gcc" "CMakeFiles/test_thread.dir/tests/test_thread.cc.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/lyslg/lyslg_/build/CMakeFiles/lyslg.dir/DependInfo.cmake"
+  "/home/lyslg/Documents/lyslg_/build/CMakeFiles/lyslg.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

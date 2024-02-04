@@ -40,7 +40,7 @@ int main()
     Person::ptr b = Ch.Person::test(); // 这里只能使用Person::来调用不同类中的函数
     Person::ptr a = Ch.test();
     // 只可以调用不同名的成员函数，否则就需要要加作用域
-    Person::ptr a = Ch.test_1(3);
+    // Person::ptr a = Ch.test_1(3);
 
     return 0;
 }

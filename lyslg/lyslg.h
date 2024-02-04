@@ -16,6 +16,8 @@
 #include "my_endian.h"
 #include "noncopyable.h"
 #include "hook.h"
+#include "address.h"
+#include "socket.h"
 
 
 #endif

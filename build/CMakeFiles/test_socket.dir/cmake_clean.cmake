@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/test_socket.dir/tests/test_socket.cc.o"
-  "../bin/test_socket.pdb"
   "../bin/test_socket"
+  "../bin/test_socket.pdb"
+  "CMakeFiles/test_socket.dir/tests/test_socket.cc.o"
+  "CMakeFiles/test_socket.dir/tests/test_socket.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.
