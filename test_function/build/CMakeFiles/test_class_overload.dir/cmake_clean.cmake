@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/test_class_overload.dir/test_class_overload.cc.o"
-  "../bin/test_class_overload.pdb"
   "../bin/test_class_overload"
+  "../bin/test_class_overload.pdb"
+  "CMakeFiles/test_class_overload.dir/test_class_overload.cc.o"
+  "CMakeFiles/test_class_overload.dir/test_class_overload.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -79,6 +79,7 @@ all: CMakeFiles/test_address.dir/all
 all: CMakeFiles/test_socket.dir/all
 all: CMakeFiles/test_bytearray.dir/all
 all: CMakeFiles/test_http.dir/all
+all: CMakeFiles/test_http_parser.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -99,6 +100,7 @@ clean: CMakeFiles/test_address.dir/clean
 clean: CMakeFiles/test_socket.dir/clean
 clean: CMakeFiles/test_bytearray.dir/clean
 clean: CMakeFiles/test_http.dir/clean
+clean: CMakeFiles/test_http_parser.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -186,7 +188,7 @@ CMakeFiles/test_config.dir/clean:
 CMakeFiles/test_thread.dir/all: CMakeFiles/lyslg.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=41,42 "Built target test_thread"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=43,44 "Built target test_thread"
 .PHONY : CMakeFiles/test_thread.dir/all
 
 # Build rule for subdir invocation for target.
@@ -212,7 +214,7 @@ CMakeFiles/test_thread.dir/clean:
 CMakeFiles/test_util.dir/all: CMakeFiles/lyslg.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_util.dir/build.make CMakeFiles/test_util.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=43,44 "Built target test_util"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=45,46 "Built target test_util"
 .PHONY : CMakeFiles/test_util.dir/all
 
 # Build rule for subdir invocation for target.
@@ -264,7 +266,7 @@ CMakeFiles/test_fiber.dir/clean:
 CMakeFiles/test_scheduler.dir/all: CMakeFiles/lyslg.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_scheduler.dir/build.make CMakeFiles/test_scheduler.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=37,38 "Built target test_scheduler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=39,40 "Built target test_scheduler"
 .PHONY : CMakeFiles/test_scheduler.dir/all
 
 # Build rule for subdir invocation for target.
@@ -290,7 +292,7 @@ CMakeFiles/test_scheduler.dir/clean:
 CMakeFiles/test_iomanager.dir/all: CMakeFiles/lyslg.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_iomanager.dir/build.make CMakeFiles/test_iomanager.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=35,36 "Built target test_iomanager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=37,38 "Built target test_iomanager"
 .PHONY : CMakeFiles/test_iomanager.dir/all
 
 # Build rule for subdir invocation for target.
@@ -368,7 +370,7 @@ CMakeFiles/test_address.dir/clean:
 CMakeFiles/test_socket.dir/all: CMakeFiles/lyslg.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=39,40 "Built target test_socket"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=41,42 "Built target test_socket"
 .PHONY : CMakeFiles/test_socket.dir/all
 
 # Build rule for subdir invocation for target.
@@ -438,6 +440,32 @@ test_http: CMakeFiles/test_http.dir/rule
 CMakeFiles/test_http.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/clean
 .PHONY : CMakeFiles/test_http.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_http_parser.dir
+
+# All Build rule for target.
+CMakeFiles/test_http_parser.dir/all: CMakeFiles/lyslg.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=35,36 "Built target test_http_parser"
+.PHONY : CMakeFiles/test_http_parser.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_http_parser.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/Documents/lyslg_/build/CMakeFiles 22
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_http_parser.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/Documents/lyslg_/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_http_parser.dir/rule
+
+# Convenience name for target.
+test_http_parser: CMakeFiles/test_http_parser.dir/rule
+.PHONY : test_http_parser
+
+# clean rule for target.
+CMakeFiles/test_http_parser.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/clean
+.PHONY : CMakeFiles/test_http_parser.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

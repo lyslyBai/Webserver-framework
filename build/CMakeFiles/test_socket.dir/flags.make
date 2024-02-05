@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/lyslg/Documents/lyslg_/lyslg -I/home/lyslg/Documents/lyslg_/lyslg/http
 
-CXX_FLAGS =  -rdynamic -O3 -g -std=c++11 -Wall -Werror -Wno-unused-function -Wno-builtin-macro-redefined -pthread
+CXX_FLAGS =  -rdynamic -O0 -g -std=c++11 -Wall -Werror -Wno-unused-function -Wno-builtin-macro-redefined -pthread
 
 # Custom defines: CMakeFiles/test_socket.dir/tests/test_socket.cc.o_DEFINES = __FILE__="tests/test_socket.cc"
 

@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/test_EncodeZigzag.dir/test_EncodeZigzag.cc.o"
-  "../bin/test_EncodeZigzag.pdb"
   "../bin/test_EncodeZigzag"
+  "../bin/test_EncodeZigzag.pdb"
+  "CMakeFiles/test_EncodeZigzag.dir/test_EncodeZigzag.cc.o"
+  "CMakeFiles/test_EncodeZigzag.dir/test_EncodeZigzag.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

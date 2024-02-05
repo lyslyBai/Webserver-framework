@@ -11,5 +11,6 @@
 /home/lyslg/Documents/lyslg_/build/CMakeFiles/test_socket.dir
 /home/lyslg/Documents/lyslg_/build/CMakeFiles/test_bytearray.dir
 /home/lyslg/Documents/lyslg_/build/CMakeFiles/test_http.dir
+/home/lyslg/Documents/lyslg_/build/CMakeFiles/test_http_parser.dir
 /home/lyslg/Documents/lyslg_/build/CMakeFiles/edit_cache.dir
 /home/lyslg/Documents/lyslg_/build/CMakeFiles/rebuild_cache.dir

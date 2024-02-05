@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/test_ucontext.dir/test_ucontext.cc.o"
-  "../bin/test_ucontext.pdb"
   "../bin/test_ucontext"
+  "../bin/test_ucontext.pdb"
+  "CMakeFiles/test_ucontext.dir/test_ucontext.cc.o"
+  "CMakeFiles/test_ucontext.dir/test_ucontext.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

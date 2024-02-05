@@ -6,39 +6,9 @@
 #include <string>
 #include <map>
 #include <boost/lexical_cast.hpp>
-
+#include <iostream>
 
 namespace lyslg{
-
-template<class MapType,class T>
-bool checkgetAs(const MapType& m,const std::string& key,T& val,const T& def = T()) {
-    auto it = m.find(key);
-    if(it == m.end()) {
-        val = def;
-        return false;
-    }
-    try {
-        val = boost::lexical_cast<T>(it->second);
-        return true;
-    } catch(...) {
-        val = def;
-    }
-    return false;
-}
-
-template<class MapType,class T>
-T getAs(const MapType& m, const std::string& key, const T& def = T()) {
-    auto it = m.find(key);
-    if(it == m.end()) {
-        return def;
-    }
-    try {
-        return boost::lexical_cast<T>(it->second);
-    }catch(...) {
-    }
-    return def;
-}
-
 
 namespace http{
 /* Request Methods */
@@ -147,6 +117,37 @@ namespace http{
     XX(508, LOOP_DETECTED,                   Loop Detected)                   \
     XX(510, NOT_EXTENDED,                    Not Extended)                    \
     XX(511, NETWORK_AUTHENTICATION_REQUIRED, Network Authentication Required) \
+
+// 对于整数类型，包括 uint64_t，默认初始化的值是0。
+template<class MapType,class T>
+bool checkGetAs(const MapType& m,const std::string& key,T& val,const T& def = T()) {
+    auto it = m.find(key);
+    if(it == m.end()) {
+        val = def;
+        return false;
+    }
+    try {
+        val = boost::lexical_cast<T>(it->second);
+        return true;
+    } catch(...) {
+        val = def;
+    }
+    return false;
+}
+
+template<class MapType,class T>
+T getAs(const MapType& m, const std::string& key, const T& def = T()) {
+    auto it = m.find(key);
+    if(it == m.end()) {
+        return def;
+    }
+    try {
+        return boost::lexical_cast<T>(it->second);
+    }catch(...) {
+    }
+    return def;
+}
+
 
 /**
  * @brief HTTP方法枚举
@@ -263,8 +264,8 @@ public:
     }
 
     template<class T>
-    bool getHeaderAs(const std::string& key,const T& def = T()) {
-        return checkGetAs(m_headers,key,def);
+    T getHeaderAs(const std::string& key,const T& def = T()) {
+        return  getAs(m_headers,key,def);
     }
 
     template<class T>
@@ -273,8 +274,8 @@ public:
     }
 
     template<class T>
-    bool getParamAs(const std::string& key,const T& def = T()) {
-        return checkGetAs(m_params,key,def);
+    T getParamAs(const std::string& key,const T& def = T()) {
+        return getAs(m_params,key,def);
     }
 
     template<class T>
@@ -283,17 +284,20 @@ public:
     }
 
     template<class T>
-    bool getCookieAs(const std::string& key,const T& def = T()) {
-        return checkGetAs(m_cookies,key,def);
+    T getCookieAs(const std::string& key,const T& def = T()) {
+        return getAs(m_cookies,key,def);
     }
 
-    std::ostream& dump(std::ostream& os);
+    std::ostream& dump(std::ostream& os) const;
+    std::string toString() const; 
+
     
 private:
     /// HTTP方法
     HttpMethod m_method;
-
+    
     HttpStatus m_status;
+    
     /// HTTP版本
     uint8_t m_version;
     // 是否自动关闭
@@ -349,12 +353,12 @@ public:
     }
 
     template<class T>
-    bool getHeaderAs(const std::string& key,const T& def = T()) {
-        return checkGetAs(m_headers,key,def);
+    T getHeaderAs(const std::string& key,const T& def = T()) {
+        return getAs(m_headers,key,def);
     }
 
-    std::ostream& dump(std::ostream& os);
-
+    std::ostream& dump(std::ostream& os) const;
+    std::string toString() const; 
 private:
     HttpStatus m_status;
     uint8_t m_version;
