@@ -22,15 +22,11 @@ public:
     void wait();
     void notify();
 private:
-    Semaphore(const Semaphore&) = delete;
-    Semaphore(const Semaphore&&) = delete;
-    Semaphore& operator=(const Semaphore&) = delete;
-private:
     sem_t m_semaphore;
 };
 
 template<class T>
-struct ScopedLockImpl:Noncopyable {
+struct ScopedLockImpl {
 public:
     ScopedLockImpl(T& mutex) 
         :m_mutex(mutex){
@@ -62,7 +58,7 @@ private:
 };
 
 template<class T>
-struct ReadScopedLockImpl:Noncopyable {
+struct ReadScopedLockImpl {
 public:
     ReadScopedLockImpl(T& mutex) 
         :m_mutex(mutex){
@@ -94,7 +90,7 @@ private:
 };
 
 template<class T>
-struct WriteScopedLockImpl:Noncopyable {
+struct WriteScopedLockImpl {
 public:
     WriteScopedLockImpl(T& mutex) 
         :m_mutex(mutex){

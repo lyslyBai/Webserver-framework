@@ -115,7 +115,10 @@ std::forward 是 C++ 标准库中的一个模板函数，它用于进行完美�
 
     LYSLG_LOG_INFO(g_logger) << "hook_fun_name:" << hook_fun_name;
 
+
     lyslg::FdCtx::ptr ctx = lyslg::FdMgr::GetInstance()->get(fd);
+
+    
     if(!ctx) {
         return fun(fd,std::forward<Args>(args)...);
     }
@@ -125,13 +128,15 @@ std::forward 是 C++ 标准库中的一个模板函数，它用于进行完美�
         return -1;
     }
 
+
     if(!ctx->isSocket() || ctx->getUserNonblock()) {
         return fun(fd,std::forward<Args>(args)...);
     }
 
+
     uint64_t to = ctx->getTimerout(timeout_so);
     std::shared_ptr<timer_info> tinfo(new timer_info);
-
+    
 retry:
     ssize_t n = fun(fd, std::forward<Args>(args)...);
     /*函数尝试调用 fun 进行IO操作。如果操作返回 -1 并且 

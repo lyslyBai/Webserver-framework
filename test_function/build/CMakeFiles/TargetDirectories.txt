@@ -13,5 +13,6 @@
 /home/lyslg/Documents/lyslg_/test_function/build/CMakeFiles/test_unsigned.dir
 /home/lyslg/Documents/lyslg_/test_function/build/CMakeFiles/test_EncodeZigzag.dir
 /home/lyslg/Documents/lyslg_/test_function/build/CMakeFiles/test_char.dir
+/home/lyslg/Documents/lyslg_/test_function/build/CMakeFiles/test_setoptionUN.dir
 /home/lyslg/Documents/lyslg_/test_function/build/CMakeFiles/edit_cache.dir
 /home/lyslg/Documents/lyslg_/test_function/build/CMakeFiles/rebuild_cache.dir

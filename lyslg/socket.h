@@ -32,8 +32,8 @@ public:
     static Socket::ptr CreateTCPSocket6();
     static Socket::ptr CreateUDPSocket6();
 
-    static Socket::ptr CreateUnixTCP();
-    static Socket::ptr CreateUnixUDP();
+    static Socket::ptr CreateUnixTCPSocket();
+    static Socket::ptr CreateUnixUDPSocket();
 
     Socket(int family,int type,int protocol = 0);
     ~Socket();
@@ -98,7 +98,11 @@ public:
     bool isConnected() const { return m_isConnected;}
     int getError();
 
-    std::ostream& dump(std::ostream& os) const;
+    virtual std::ostream& dump(std::ostream& os) const;
+
+    virtual std::string toString() const;
+
+
     int getSocket() const { return m_sock;}
 
     bool cancelRead();
@@ -120,6 +124,8 @@ private:
     Address::ptr m_remoteAddress;
 };
 
+
+std::ostream& operator<<(std::ostream& , const Socket& addr);
 
 
 }

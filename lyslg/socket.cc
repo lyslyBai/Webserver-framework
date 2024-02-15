@@ -39,11 +39,12 @@ Socket::ptr Socket::CreateUDPSocket6(){
     return sock;
 }
 
-Socket::ptr Socket::CreateUnixTCP(){
+Socket::ptr Socket::CreateUnixTCPSocket(){
     Socket::ptr sock(new Socket(UNIX,TCP,0));
     return sock;
 }
-Socket::ptr Socket::CreateUnixUDP(){
+
+Socket::ptr Socket::CreateUnixUDPSocket(){
     Socket::ptr sock(new Socket(UNIX,UDP,0));
     return sock;
 }
@@ -104,10 +105,12 @@ bool Socket::getOption(int level, int option,void* result,size_t len){
 
 
 bool Socket::setOption(int level, int option,const void* result,socklen_t len){
+    
     if(setsockopt(m_sock,level,option,result,(socklen_t)len)) {
         LYSLG_LOG_DEBUG(g_logger) << "setOption sock=" << m_sock
                 << " level=" << level << " option=" << option 
                 << " errno=" << errno << " errstr=" << strerror(errno);
+        LYSLG_ASSERT(false);
         return false;
     }
     return true;
@@ -154,10 +157,21 @@ bool Socket::bind(const Address::ptr addr){
             << ") not equal, addr=" << addr->toString();
         return false;
     }
+
+    // UnixAddress::ptr uaddr = std::dynamic_pointer_cast<UnixAddress>(addr);
+    // if(uaddr) {
+    //     Socket::ptr sock = Socket::CreateUnixTCPSocket();
+    //     if(sock->connect(uaddr)) {
+    //         return false;
+    //     }
+    //     // } else {
+    //     //     lyslg::FSUtil::Unlink(uaddr->getPath(), true);
+    //     // }
+    // }
     
     if(::bind(m_sock,addr->getAddr(),addr->getAddrLen())) {
         LYSLG_LOG_ERROR(g_logger) << "bind error errno=" <<errno
-            << " errstr" <<strerror(errno);
+            << " errstr=" <<strerror(errno);
         return false;
     }
     getLocalAddress();
@@ -189,6 +203,7 @@ bool Socket::connect(const Address::ptr addr,uint64_t timeout_ms){
             << ") not equal, addr=" << addr->toString();
         return false;
     }
+
 
     if(timeout_ms == (uint64_t)-1) {
         if(::connect(m_sock,addr->getAddr(),addr->getAddrLen())) {
@@ -370,10 +385,11 @@ Address::ptr Socket::getLocalAddress(){
             result.reset(new UnknowAddress(m_family));
             break;
     }
+    
 
     socklen_t addrlen = result->getAddrLen();
-    if(getpeername(m_sock,result->getAddr(),&addrlen)) {
-        LYSLG_LOG_ERROR(g_logger) << "getpeername error sock=" << m_sock
+    if(getsockname(m_sock,result->getAddr(),&addrlen)) {
+        LYSLG_LOG_ERROR(g_logger) << "getpeername error sock=" << m_sock << " m_family=" << m_family
             << " errno=" << errno << " errstr=" << strerror(errno);
         return Address::ptr(new UnknowAddress(m_family));
     }
@@ -417,6 +433,12 @@ std::ostream& Socket::dump(std::ostream& os) const{
     return os;
 }
 
+std::string Socket::toString() const {
+    std::stringstream ss;
+    dump(ss);
+    return ss.str();
+}
+
 bool Socket::cancelRead(){
     return IoManager::GetThis()->cancelEvent(m_sock,lyslg::IoManager::READ);
 }
@@ -434,10 +456,11 @@ bool Socket::cancelAll(){
 void Socket::initSock(){
     int val = 1;
     setOption(SOL_SOCKET,SO_REUSEADDR,val);
-    if(m_type == SOCK_STREAM) {
-        setOption(IPPROTO_TCP,TCP_NODELAY,val);
+    if(m_family != AF_UNIX && m_type == SOCK_STREAM) { // m_family != AF_UNIX && 
+        setOption(IPPROTO_TCP,TCP_NODELAY,val); // 这个不支持UNIX
     }
 }
+
 void Socket::newSock(){
     m_sock = socket(m_family,m_type,m_protocol);
     if(LYSLG_LICKLY(m_sock != -1)) {
@@ -447,6 +470,10 @@ void Socket::newSock(){
         << ", " << m_type << ", " << m_protocol << ") errno="
         << errno << " strerr" << strerror(errno);
     }
+}
+
+std::ostream& operator<<(std::ostream& os, const Socket& sock){
+    return sock.dump(os);
 }
 
 }

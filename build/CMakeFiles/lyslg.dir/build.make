@@ -240,10 +240,52 @@ CMakeFiles/lyslg.dir/lyslg/socket.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lyslg.dir/lyslg/socket.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/socket.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lyslg/Documents/lyslg_/lyslg/socket.cc -o CMakeFiles/lyslg.dir/lyslg/socket.cc.s
 
+CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.o: CMakeFiles/lyslg.dir/flags.make
+CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.o: ../lyslg/socket_stream.cc
+CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.o: CMakeFiles/lyslg.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/socket_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.o -MF CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.o.d -o CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.o -c /home/lyslg/Documents/lyslg_/lyslg/socket_stream.cc
+
+CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/socket_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lyslg/Documents/lyslg_/lyslg/socket_stream.cc > CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.i
+
+CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/socket_stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lyslg/Documents/lyslg_/lyslg/socket_stream.cc -o CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.s
+
+CMakeFiles/lyslg.dir/lyslg/stream.cc.o: CMakeFiles/lyslg.dir/flags.make
+CMakeFiles/lyslg.dir/lyslg/stream.cc.o: ../lyslg/stream.cc
+CMakeFiles/lyslg.dir/lyslg/stream.cc.o: CMakeFiles/lyslg.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/lyslg.dir/lyslg/stream.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lyslg.dir/lyslg/stream.cc.o -MF CMakeFiles/lyslg.dir/lyslg/stream.cc.o.d -o CMakeFiles/lyslg.dir/lyslg/stream.cc.o -c /home/lyslg/Documents/lyslg_/lyslg/stream.cc
+
+CMakeFiles/lyslg.dir/lyslg/stream.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lyslg.dir/lyslg/stream.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lyslg/Documents/lyslg_/lyslg/stream.cc > CMakeFiles/lyslg.dir/lyslg/stream.cc.i
+
+CMakeFiles/lyslg.dir/lyslg/stream.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lyslg.dir/lyslg/stream.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/stream.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lyslg/Documents/lyslg_/lyslg/stream.cc -o CMakeFiles/lyslg.dir/lyslg/stream.cc.s
+
+CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.o: CMakeFiles/lyslg.dir/flags.make
+CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.o: ../lyslg/tcp_server.cc
+CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.o: CMakeFiles/lyslg.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/tcp_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.o -MF CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.o.d -o CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.o -c /home/lyslg/Documents/lyslg_/lyslg/tcp_server.cc
+
+CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/tcp_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/lyslg/Documents/lyslg_/lyslg/tcp_server.cc > CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.i
+
+CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/tcp_server.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/lyslg/Documents/lyslg_/lyslg/tcp_server.cc -o CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.s
+
 CMakeFiles/lyslg.dir/lyslg/thread.cc.o: CMakeFiles/lyslg.dir/flags.make
 CMakeFiles/lyslg.dir/lyslg/thread.cc.o: ../lyslg/thread.cc
 CMakeFiles/lyslg.dir/lyslg/thread.cc.o: CMakeFiles/lyslg.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/lyslg.dir/lyslg/thread.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/lyslg.dir/lyslg/thread.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/thread.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lyslg.dir/lyslg/thread.cc.o -MF CMakeFiles/lyslg.dir/lyslg/thread.cc.o.d -o CMakeFiles/lyslg.dir/lyslg/thread.cc.o -c /home/lyslg/Documents/lyslg_/lyslg/thread.cc
 
 CMakeFiles/lyslg.dir/lyslg/thread.cc.i: cmake_force
@@ -257,7 +299,7 @@ CMakeFiles/lyslg.dir/lyslg/thread.cc.s: cmake_force
 CMakeFiles/lyslg.dir/lyslg/timer.cc.o: CMakeFiles/lyslg.dir/flags.make
 CMakeFiles/lyslg.dir/lyslg/timer.cc.o: ../lyslg/timer.cc
 CMakeFiles/lyslg.dir/lyslg/timer.cc.o: CMakeFiles/lyslg.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/lyslg.dir/lyslg/timer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/lyslg.dir/lyslg/timer.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/timer.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lyslg.dir/lyslg/timer.cc.o -MF CMakeFiles/lyslg.dir/lyslg/timer.cc.o.d -o CMakeFiles/lyslg.dir/lyslg/timer.cc.o -c /home/lyslg/Documents/lyslg_/lyslg/timer.cc
 
 CMakeFiles/lyslg.dir/lyslg/timer.cc.i: cmake_force
@@ -271,7 +313,7 @@ CMakeFiles/lyslg.dir/lyslg/timer.cc.s: cmake_force
 CMakeFiles/lyslg.dir/lyslg/util.cc.o: CMakeFiles/lyslg.dir/flags.make
 CMakeFiles/lyslg.dir/lyslg/util.cc.o: ../lyslg/util.cc
 CMakeFiles/lyslg.dir/lyslg/util.cc.o: CMakeFiles/lyslg.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/lyslg.dir/lyslg/util.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/lyslg.dir/lyslg/util.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/util.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lyslg.dir/lyslg/util.cc.o -MF CMakeFiles/lyslg.dir/lyslg/util.cc.o.d -o CMakeFiles/lyslg.dir/lyslg/util.cc.o -c /home/lyslg/Documents/lyslg_/lyslg/util.cc
 
 CMakeFiles/lyslg.dir/lyslg/util.cc.i: cmake_force
@@ -285,7 +327,7 @@ CMakeFiles/lyslg.dir/lyslg/util.cc.s: cmake_force
 CMakeFiles/lyslg.dir/lyslg/http/http.cc.o: CMakeFiles/lyslg.dir/flags.make
 CMakeFiles/lyslg.dir/lyslg/http/http.cc.o: ../lyslg/http/http.cc
 CMakeFiles/lyslg.dir/lyslg/http/http.cc.o: CMakeFiles/lyslg.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/lyslg.dir/lyslg/http/http.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/lyslg.dir/lyslg/http/http.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/http/http.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lyslg.dir/lyslg/http/http.cc.o -MF CMakeFiles/lyslg.dir/lyslg/http/http.cc.o.d -o CMakeFiles/lyslg.dir/lyslg/http/http.cc.o -c /home/lyslg/Documents/lyslg_/lyslg/http/http.cc
 
 CMakeFiles/lyslg.dir/lyslg/http/http.cc.i: cmake_force
@@ -299,7 +341,7 @@ CMakeFiles/lyslg.dir/lyslg/http/http.cc.s: cmake_force
 CMakeFiles/lyslg.dir/lyslg/http/http11_parser.cc.o: CMakeFiles/lyslg.dir/flags.make
 CMakeFiles/lyslg.dir/lyslg/http/http11_parser.cc.o: ../lyslg/http/http11_parser.cc
 CMakeFiles/lyslg.dir/lyslg/http/http11_parser.cc.o: CMakeFiles/lyslg.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/lyslg.dir/lyslg/http/http11_parser.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/lyslg.dir/lyslg/http/http11_parser.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/http/http11_parser.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lyslg.dir/lyslg/http/http11_parser.cc.o -MF CMakeFiles/lyslg.dir/lyslg/http/http11_parser.cc.o.d -o CMakeFiles/lyslg.dir/lyslg/http/http11_parser.cc.o -c /home/lyslg/Documents/lyslg_/lyslg/http/http11_parser.cc
 
 CMakeFiles/lyslg.dir/lyslg/http/http11_parser.cc.i: cmake_force
@@ -313,7 +355,7 @@ CMakeFiles/lyslg.dir/lyslg/http/http11_parser.cc.s: cmake_force
 CMakeFiles/lyslg.dir/lyslg/http/http_parser.cc.o: CMakeFiles/lyslg.dir/flags.make
 CMakeFiles/lyslg.dir/lyslg/http/http_parser.cc.o: ../lyslg/http/http_parser.cc
 CMakeFiles/lyslg.dir/lyslg/http/http_parser.cc.o: CMakeFiles/lyslg.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/lyslg.dir/lyslg/http/http_parser.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/lyslg.dir/lyslg/http/http_parser.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/http/http_parser.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lyslg.dir/lyslg/http/http_parser.cc.o -MF CMakeFiles/lyslg.dir/lyslg/http/http_parser.cc.o.d -o CMakeFiles/lyslg.dir/lyslg/http/http_parser.cc.o -c /home/lyslg/Documents/lyslg_/lyslg/http/http_parser.cc
 
 CMakeFiles/lyslg.dir/lyslg/http/http_parser.cc.i: cmake_force
@@ -327,7 +369,7 @@ CMakeFiles/lyslg.dir/lyslg/http/http_parser.cc.s: cmake_force
 CMakeFiles/lyslg.dir/lyslg/http/httpclient_parser.cc.o: CMakeFiles/lyslg.dir/flags.make
 CMakeFiles/lyslg.dir/lyslg/http/httpclient_parser.cc.o: ../lyslg/http/httpclient_parser.cc
 CMakeFiles/lyslg.dir/lyslg/http/httpclient_parser.cc.o: CMakeFiles/lyslg.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/lyslg.dir/lyslg/http/httpclient_parser.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/lyslg.dir/lyslg/http/httpclient_parser.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) -D__FILE__=\"lyslg/http/httpclient_parser.cc\" $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lyslg.dir/lyslg/http/httpclient_parser.cc.o -MF CMakeFiles/lyslg.dir/lyslg/http/httpclient_parser.cc.o.d -o CMakeFiles/lyslg.dir/lyslg/http/httpclient_parser.cc.o -c /home/lyslg/Documents/lyslg_/lyslg/http/httpclient_parser.cc
 
 CMakeFiles/lyslg.dir/lyslg/http/httpclient_parser.cc.i: cmake_force
@@ -352,6 +394,9 @@ lyslg_OBJECTS = \
 "CMakeFiles/lyslg.dir/lyslg/mutex.cc.o" \
 "CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o" \
 "CMakeFiles/lyslg.dir/lyslg/socket.cc.o" \
+"CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.o" \
+"CMakeFiles/lyslg.dir/lyslg/stream.cc.o" \
+"CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.o" \
 "CMakeFiles/lyslg.dir/lyslg/thread.cc.o" \
 "CMakeFiles/lyslg.dir/lyslg/timer.cc.o" \
 "CMakeFiles/lyslg.dir/lyslg/util.cc.o" \
@@ -375,6 +420,9 @@ lyslg_EXTERNAL_OBJECTS =
 ../lib/liblyslg.so: CMakeFiles/lyslg.dir/lyslg/mutex.cc.o
 ../lib/liblyslg.so: CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o
 ../lib/liblyslg.so: CMakeFiles/lyslg.dir/lyslg/socket.cc.o
+../lib/liblyslg.so: CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.o
+../lib/liblyslg.so: CMakeFiles/lyslg.dir/lyslg/stream.cc.o
+../lib/liblyslg.so: CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.o
 ../lib/liblyslg.so: CMakeFiles/lyslg.dir/lyslg/thread.cc.o
 ../lib/liblyslg.so: CMakeFiles/lyslg.dir/lyslg/timer.cc.o
 ../lib/liblyslg.so: CMakeFiles/lyslg.dir/lyslg/util.cc.o
@@ -384,7 +432,7 @@ lyslg_EXTERNAL_OBJECTS =
 ../lib/liblyslg.so: CMakeFiles/lyslg.dir/lyslg/http/httpclient_parser.cc.o
 ../lib/liblyslg.so: CMakeFiles/lyslg.dir/build.make
 ../lib/liblyslg.so: CMakeFiles/lyslg.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX shared library ../lib/liblyslg.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/lyslg/Documents/lyslg_/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX shared library ../lib/liblyslg.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lyslg.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

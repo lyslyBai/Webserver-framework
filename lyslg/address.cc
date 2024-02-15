@@ -73,6 +73,7 @@ std::shared_ptr<IPAddress> Address::LookupAnyIPAddress(const std::string& host,
 // 寻找符合条件的ip
 bool Address::Lookup(std::vector<Address::ptr>& result,const std::string& host, 
                     int family , int type,int protocol){
+
     addrinfo hints, *results,*next;
     hints.ai_flags = 0;
     hints.ai_family = family;
@@ -231,7 +232,7 @@ int Address::getFamily() const{
     return getAddr()->sa_family;
 }
 
-std::string Address::toString(){
+std::string Address::toString() const{
     std::stringstream ss;
     insert(ss);
     return ss.str();
@@ -513,9 +514,9 @@ UnixAddress::UnixAddress(const std::string& path){
     // 这里好像永远不会满足，除非path为c风格字符串，注释掉试一下
     // 若为空字符串拷贝过来，最后会存在一个'\0',但不会计数
     // 若为空字符串，path.empty()为true，所以这点有问题
-    // if(!path.empty() && path[0] == '\0') {
-    //     --m_length;
-    // }
+    if(!path.empty() && path[0] == '\0') {
+        --m_length;
+    }
 
     if(m_length > sizeof(m_addr.sun_path)) {
         throw std::logic_error("path too long");
@@ -540,6 +541,18 @@ socklen_t UnixAddress::getAddrLen() const{
 
 void UnixAddress::setAddrLen(uint32_t v) {
     m_length = v;
+}
+
+std::string UnixAddress::getPath() const {
+    std::stringstream ss;
+    if(m_length > offsetof(sockaddr_un, sun_path)
+            && m_addr.sun_path[0] == '\0') {
+        ss << "\\0" << std::string(m_addr.sun_path + 1,
+                m_length - offsetof(sockaddr_un, sun_path) - 1);
+    } else {
+        ss << m_addr.sun_path;
+    }
+    return ss.str();
 }
 
 std::ostream& UnixAddress::insert(std::ostream& os) const{
@@ -576,5 +589,8 @@ std::ostream& UnknowAddress::insert(std::ostream& os) const{
     return os; 
 }
 
+std::ostream& operator<<(std::ostream& os, const Address& addr){
+    return addr.insert(os); 
+}
 
 }

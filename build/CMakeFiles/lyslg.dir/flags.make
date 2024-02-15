@@ -6,7 +6,7 @@ CXX_DEFINES = -Dlyslg_EXPORTS
 
 CXX_INCLUDES = -I/home/lyslg/Documents/lyslg_/lyslg -I/home/lyslg/Documents/lyslg_/lyslg/http
 
-CXX_FLAGS =  -rdynamic -O0 -g -std=c++11 -Wall -Werror -Wno-unused-function -Wno-builtin-macro-redefined -pthread -fPIC
+CXX_FLAGS =  -rdynamic -O3 -g -std=c++11 -Wall -Werror -Wno-unused-function -Wno-builtin-macro-redefined -pthread -fPIC
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/address.cc.o_DEFINES = __FILE__="lyslg/address.cc"
 
@@ -31,6 +31,12 @@ CXX_FLAGS =  -rdynamic -O0 -g -std=c++11 -Wall -Werror -Wno-unused-function -Wno
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/scheduler.cc.o_DEFINES = __FILE__="lyslg/scheduler.cc"
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/socket.cc.o_DEFINES = __FILE__="lyslg/socket.cc"
+
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.o_DEFINES = __FILE__="lyslg/socket_stream.cc"
+
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/stream.cc.o_DEFINES = __FILE__="lyslg/stream.cc"
+
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.o_DEFINES = __FILE__="lyslg/tcp_server.cc"
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/thread.cc.o_DEFINES = __FILE__="lyslg/thread.cc"
 

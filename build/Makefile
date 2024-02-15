@@ -301,6 +301,56 @@ test_http_parser/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/build
 .PHONY : test_http_parser/fast
 
+#=============================================================================
+# Target rules for targets named test_tcp_server
+
+# Build rule for target.
+test_tcp_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_tcp_server
+.PHONY : test_tcp_server
+
+# fast build rule for target.
+test_tcp_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/build
+.PHONY : test_tcp_server/fast
+
+#=============================================================================
+# Target rules for targets named echo_server
+
+# Build rule for target.
+echo_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 echo_server
+.PHONY : echo_server
+
+# fast build rule for target.
+echo_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/build
+.PHONY : echo_server/fast
+
+examples/echo_server.o: examples/echo_server.cc.o
+.PHONY : examples/echo_server.o
+
+# target to build an object file
+examples/echo_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/examples/echo_server.cc.o
+.PHONY : examples/echo_server.cc.o
+
+examples/echo_server.i: examples/echo_server.cc.i
+.PHONY : examples/echo_server.i
+
+# target to preprocess a source file
+examples/echo_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/examples/echo_server.cc.i
+.PHONY : examples/echo_server.cc.i
+
+examples/echo_server.s: examples/echo_server.cc.s
+.PHONY : examples/echo_server.s
+
+# target to generate assembly for a file
+examples/echo_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/examples/echo_server.cc.s
+.PHONY : examples/echo_server.cc.s
+
 lyslg/address.o: lyslg/address.cc.o
 .PHONY : lyslg/address.o
 
@@ -685,6 +735,78 @@ lyslg/socket.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/socket.cc.s
 .PHONY : lyslg/socket.cc.s
 
+lyslg/socket_stream.o: lyslg/socket_stream.cc.o
+.PHONY : lyslg/socket_stream.o
+
+# target to build an object file
+lyslg/socket_stream.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.o
+.PHONY : lyslg/socket_stream.cc.o
+
+lyslg/socket_stream.i: lyslg/socket_stream.cc.i
+.PHONY : lyslg/socket_stream.i
+
+# target to preprocess a source file
+lyslg/socket_stream.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.i
+.PHONY : lyslg/socket_stream.cc.i
+
+lyslg/socket_stream.s: lyslg/socket_stream.cc.s
+.PHONY : lyslg/socket_stream.s
+
+# target to generate assembly for a file
+lyslg/socket_stream.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.s
+.PHONY : lyslg/socket_stream.cc.s
+
+lyslg/stream.o: lyslg/stream.cc.o
+.PHONY : lyslg/stream.o
+
+# target to build an object file
+lyslg/stream.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/stream.cc.o
+.PHONY : lyslg/stream.cc.o
+
+lyslg/stream.i: lyslg/stream.cc.i
+.PHONY : lyslg/stream.i
+
+# target to preprocess a source file
+lyslg/stream.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/stream.cc.i
+.PHONY : lyslg/stream.cc.i
+
+lyslg/stream.s: lyslg/stream.cc.s
+.PHONY : lyslg/stream.s
+
+# target to generate assembly for a file
+lyslg/stream.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/stream.cc.s
+.PHONY : lyslg/stream.cc.s
+
+lyslg/tcp_server.o: lyslg/tcp_server.cc.o
+.PHONY : lyslg/tcp_server.o
+
+# target to build an object file
+lyslg/tcp_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.o
+.PHONY : lyslg/tcp_server.cc.o
+
+lyslg/tcp_server.i: lyslg/tcp_server.cc.i
+.PHONY : lyslg/tcp_server.i
+
+# target to preprocess a source file
+lyslg/tcp_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.i
+.PHONY : lyslg/tcp_server.cc.i
+
+lyslg/tcp_server.s: lyslg/tcp_server.cc.s
+.PHONY : lyslg/tcp_server.s
+
+# target to generate assembly for a file
+lyslg/tcp_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.s
+.PHONY : lyslg/tcp_server.cc.s
+
 lyslg/thread.o: lyslg/thread.cc.o
 .PHONY : lyslg/thread.o
 
@@ -1021,6 +1143,30 @@ tests/test_socket.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_socket.dir/build.make CMakeFiles/test_socket.dir/tests/test_socket.cc.s
 .PHONY : tests/test_socket.cc.s
 
+tests/test_tcp_server.o: tests/test_tcp_server.cc.o
+.PHONY : tests/test_tcp_server.o
+
+# target to build an object file
+tests/test_tcp_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cc.o
+.PHONY : tests/test_tcp_server.cc.o
+
+tests/test_tcp_server.i: tests/test_tcp_server.cc.i
+.PHONY : tests/test_tcp_server.i
+
+# target to preprocess a source file
+tests/test_tcp_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cc.i
+.PHONY : tests/test_tcp_server.cc.i
+
+tests/test_tcp_server.s: tests/test_tcp_server.cc.s
+.PHONY : tests/test_tcp_server.s
+
+# target to generate assembly for a file
+tests/test_tcp_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_tcp_server.dir/build.make CMakeFiles/test_tcp_server.dir/tests/test_tcp_server.cc.s
+.PHONY : tests/test_tcp_server.cc.s
+
 tests/test_thread.o: tests/test_thread.cc.o
 .PHONY : tests/test_thread.o
 
@@ -1077,6 +1223,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... echo_server"
 	@echo "... lyslg"
 	@echo "... my_test"
 	@echo "... test_address"
@@ -1089,8 +1236,12 @@ help:
 	@echo "... test_iomanager"
 	@echo "... test_scheduler"
 	@echo "... test_socket"
+	@echo "... test_tcp_server"
 	@echo "... test_thread"
 	@echo "... test_util"
+	@echo "... examples/echo_server.o"
+	@echo "... examples/echo_server.i"
+	@echo "... examples/echo_server.s"
 	@echo "... lyslg/address.o"
 	@echo "... lyslg/address.i"
 	@echo "... lyslg/address.s"
@@ -1139,6 +1290,15 @@ help:
 	@echo "... lyslg/socket.o"
 	@echo "... lyslg/socket.i"
 	@echo "... lyslg/socket.s"
+	@echo "... lyslg/socket_stream.o"
+	@echo "... lyslg/socket_stream.i"
+	@echo "... lyslg/socket_stream.s"
+	@echo "... lyslg/stream.o"
+	@echo "... lyslg/stream.i"
+	@echo "... lyslg/stream.s"
+	@echo "... lyslg/tcp_server.o"
+	@echo "... lyslg/tcp_server.i"
+	@echo "... lyslg/tcp_server.s"
 	@echo "... lyslg/thread.o"
 	@echo "... lyslg/thread.i"
 	@echo "... lyslg/thread.s"
@@ -1181,6 +1341,9 @@ help:
 	@echo "... tests/test_socket.o"
 	@echo "... tests/test_socket.i"
 	@echo "... tests/test_socket.s"
+	@echo "... tests/test_tcp_server.o"
+	@echo "... tests/test_tcp_server.i"
+	@echo "... tests/test_tcp_server.s"
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"

@@ -36,4 +36,6 @@ add_executable(test_EncodeZigzag ${PROJECT_SOURCE_DIR}/test_EncodeZigzag.cc)
 
 add_executable(test_char ${PROJECT_SOURCE_DIR}/test_char[].cc) 
 
+add_executable(test_setoptionUN ${PROJECT_SOURCE_DIR}/test_setoptionUN.cc) 
+
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)

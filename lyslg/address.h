@@ -55,7 +55,7 @@ public:
     virtual sockaddr* getAddr() = 0;
     virtual socklen_t getAddrLen() const = 0;
     virtual std::ostream& insert(std::ostream& os) const = 0;
-    std::string toString();
+    std::string toString() const;
     bool operator<(const Address& rhs) const;
     bool operator==(const Address& rhs) const;
     bool operator!=(const Address& rhs) const;
@@ -137,6 +137,7 @@ public:
     const sockaddr* getAddr() const override;
     socklen_t getAddrLen() const override;
     void setAddrLen(uint32_t v);
+    std::string getPath() const;
     std::ostream& insert(std::ostream& os) const override;
 private:
     struct sockaddr_un m_addr;
@@ -157,7 +158,10 @@ private:
 };
 
 
-
+/**
+ * @brief 流式输出Address
+ */
+std::ostream& operator<<(std::ostream& os, const Address& addr);
 
 
 

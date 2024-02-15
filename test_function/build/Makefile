@@ -311,6 +311,19 @@ test_char/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_char.dir/build.make CMakeFiles/test_char.dir/build
 .PHONY : test_char/fast
 
+#=============================================================================
+# Target rules for targets named test_setoptionUN
+
+# Build rule for target.
+test_setoptionUN: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_setoptionUN
+.PHONY : test_setoptionUN
+
+# fast build rule for target.
+test_setoptionUN/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_setoptionUN.dir/build.make CMakeFiles/test_setoptionUN.dir/build
+.PHONY : test_setoptionUN/fast
+
 test_EncodeZigzag.o: test_EncodeZigzag.cc.o
 .PHONY : test_EncodeZigzag.o
 
@@ -623,6 +636,30 @@ test_printf.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_printf.dir/build.make CMakeFiles/test_printf.dir/test_printf.cc.s
 .PHONY : test_printf.cc.s
 
+test_setoptionUN.o: test_setoptionUN.cc.o
+.PHONY : test_setoptionUN.o
+
+# target to build an object file
+test_setoptionUN.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_setoptionUN.dir/build.make CMakeFiles/test_setoptionUN.dir/test_setoptionUN.cc.o
+.PHONY : test_setoptionUN.cc.o
+
+test_setoptionUN.i: test_setoptionUN.cc.i
+.PHONY : test_setoptionUN.i
+
+# target to preprocess a source file
+test_setoptionUN.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_setoptionUN.dir/build.make CMakeFiles/test_setoptionUN.dir/test_setoptionUN.cc.i
+.PHONY : test_setoptionUN.cc.i
+
+test_setoptionUN.s: test_setoptionUN.cc.s
+.PHONY : test_setoptionUN.s
+
+# target to generate assembly for a file
+test_setoptionUN.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_setoptionUN.dir/build.make CMakeFiles/test_setoptionUN.dir/test_setoptionUN.cc.s
+.PHONY : test_setoptionUN.cc.s
+
 test_ucontext.o: test_ucontext.cc.o
 .PHONY : test_ucontext.o
 
@@ -692,6 +729,7 @@ help:
 	@echo "... test_memcpy"
 	@echo "... test_offsetof"
 	@echo "... test_printf"
+	@echo "... test_setoptionUN"
 	@echo "... test_ucontext"
 	@echo "... test_unsigned"
 	@echo "... test_EncodeZigzag.o"
@@ -733,6 +771,9 @@ help:
 	@echo "... test_printf.o"
 	@echo "... test_printf.i"
 	@echo "... test_printf.s"
+	@echo "... test_setoptionUN.o"
+	@echo "... test_setoptionUN.i"
+	@echo "... test_setoptionUN.s"
 	@echo "... test_ucontext.o"
 	@echo "... test_ucontext.i"
 	@echo "... test_ucontext.s"

@@ -74,7 +74,8 @@ private:
 
 class FdManager {
 public:
-    typedef RWMutex RWMutexType;
+    typedef RWMutex RWMutexType;  
+    // typedef Mutex MutexType;
     FdManager();
     /**
      * @brief 获取/创建文件句柄类FdCtx
@@ -82,7 +83,7 @@ public:
      * @param[in] auto_create 是否自动创建
      * @return 返回对应文件句柄类FdCtx::ptr
      */
-    FdCtx::ptr get(int  fd, bool auto_create = false);
+    FdCtx::ptr get(int fd, bool auto_create = false);
     void del(int fd);
 
 private:
@@ -93,9 +94,6 @@ private:
 };
 /// 文件句柄单例
 typedef Singleton<FdManager> FdMgr;
-
-
-
 
 
 

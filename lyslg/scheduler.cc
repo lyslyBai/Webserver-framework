@@ -52,6 +52,7 @@ Scheduler::~Scheduler(){
 Scheduler* Scheduler::GetThis(){
     return t_scheduler;
 }
+
 Fiber* Scheduler::GetMainFiber(){
     return t_fiber;
 }

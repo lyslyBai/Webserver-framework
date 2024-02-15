@@ -22,7 +22,7 @@ FdCtx::~FdCtx(){
 
 bool FdCtx::init(){
     if(m_isInit) {
-        return false;
+        return true;
     }
     m_recvTimeout = -1;
     m_sendTimeout = -1;
@@ -37,7 +37,7 @@ bool FdCtx::init(){
     }
 
     if(m_isSocket) {
-        int flags = fcntl(m_fd,F_GETFL,0);
+        int flags = fcntl_f(m_fd,F_GETFL,0);
         if(!(flags & O_NONBLOCK)) {
             fcntl_f(m_fd,F_SETFL,flags|O_NONBLOCK);
         }
@@ -73,7 +73,7 @@ FdManager::FdManager(){
 }
 
 // 默认不创建fd，auto_create为true是创建
-FdCtx::ptr FdManager::get(int  fd, bool auto_create){
+FdCtx::ptr FdManager::get(int fd, bool auto_create){
     if(fd == -1) {
         return nullptr;
     }
@@ -94,7 +94,11 @@ FdCtx::ptr FdManager::get(int  fd, bool auto_create){
 
     RWMutexType::WriteLock lock2(m_mutex);
     FdCtx::ptr ctx(new FdCtx(fd));
+    if(fd >= (int)m_datas.size()) {
+        m_datas.resize(fd * 1.5);
+    }
     m_datas[fd]=ctx;
+    lock.unlock();
     return ctx;
 }
 

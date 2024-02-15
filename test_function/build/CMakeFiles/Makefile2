@@ -78,6 +78,7 @@ all: CMakeFiles/test_printf.dir/all
 all: CMakeFiles/test_unsigned.dir/all
 all: CMakeFiles/test_EncodeZigzag.dir/all
 all: CMakeFiles/test_char.dir/all
+all: CMakeFiles/test_setoptionUN.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -100,6 +101,7 @@ clean: CMakeFiles/test_printf.dir/clean
 clean: CMakeFiles/test_unsigned.dir/clean
 clean: CMakeFiles/test_EncodeZigzag.dir/clean
 clean: CMakeFiles/test_char.dir/clean
+clean: CMakeFiles/test_setoptionUN.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -187,7 +189,7 @@ CMakeFiles/test_bind.dir/clean:
 CMakeFiles/test_ucontext.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ucontext.dir/build.make CMakeFiles/test_ucontext.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_ucontext.dir/build.make CMakeFiles/test_ucontext.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/Documents/lyslg_/test_function/build/CMakeFiles --progress-num=27,28 "Built target test_ucontext"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/Documents/lyslg_/test_function/build/CMakeFiles --progress-num=29,30 "Built target test_ucontext"
 .PHONY : CMakeFiles/test_ucontext.dir/all
 
 # Build rule for subdir invocation for target.
@@ -421,7 +423,7 @@ CMakeFiles/test_printf.dir/clean:
 CMakeFiles/test_unsigned.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_unsigned.dir/build.make CMakeFiles/test_unsigned.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_unsigned.dir/build.make CMakeFiles/test_unsigned.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/Documents/lyslg_/test_function/build/CMakeFiles --progress-num=29,30 "Built target test_unsigned"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/Documents/lyslg_/test_function/build/CMakeFiles --progress-num=31,32 "Built target test_unsigned"
 .PHONY : CMakeFiles/test_unsigned.dir/all
 
 # Build rule for subdir invocation for target.
@@ -491,6 +493,32 @@ test_char: CMakeFiles/test_char.dir/rule
 CMakeFiles/test_char.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_char.dir/build.make CMakeFiles/test_char.dir/clean
 .PHONY : CMakeFiles/test_char.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test_setoptionUN.dir
+
+# All Build rule for target.
+CMakeFiles/test_setoptionUN.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_setoptionUN.dir/build.make CMakeFiles/test_setoptionUN.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_setoptionUN.dir/build.make CMakeFiles/test_setoptionUN.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/lyslg/Documents/lyslg_/test_function/build/CMakeFiles --progress-num=27,28 "Built target test_setoptionUN"
+.PHONY : CMakeFiles/test_setoptionUN.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_setoptionUN.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/Documents/lyslg_/test_function/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_setoptionUN.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/Documents/lyslg_/test_function/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_setoptionUN.dir/rule
+
+# Convenience name for target.
+test_setoptionUN: CMakeFiles/test_setoptionUN.dir/rule
+.PHONY : test_setoptionUN
+
+# clean rule for target.
+CMakeFiles/test_setoptionUN.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_setoptionUN.dir/build.make CMakeFiles/test_setoptionUN.dir/clean
+.PHONY : CMakeFiles/test_setoptionUN.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

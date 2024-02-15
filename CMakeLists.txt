@@ -105,6 +105,16 @@ add_dependencies(test_http_parser lyslg)  #用于添加一个目标对其他目�
 force_redefine_file_macro_for_sources(test_http_parser)
 target_link_libraries(test_http_parser lyslg yaml-cpp) 
 
+add_executable(test_tcp_server ${PROJECT_SOURCE_DIR}/tests/test_tcp_server.cc) # test 为cmake保留关键字，不能作为文件名
+add_dependencies(test_tcp_server lyslg)  #用于添加一个目标对其他目标的依赖。
+force_redefine_file_macro_for_sources(test_tcp_server)
+target_link_libraries(test_tcp_server lyslg yaml-cpp) 
+
+add_executable(echo_server ${PROJECT_SOURCE_DIR}/examples/echo_server.cc) # test 为cmake保留关键字，不能作为文件名
+add_dependencies(echo_server lyslg)  #用于添加一个目标对其他目标的依赖。
+force_redefine_file_macro_for_sources(echo_server)
+target_link_libraries(echo_server lyslg yaml-cpp) 
+
 #自动设置PROJECT_SOURCE_DIR的默认值为项目根目录的路径（CMakeLists.txt所在的路径）
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

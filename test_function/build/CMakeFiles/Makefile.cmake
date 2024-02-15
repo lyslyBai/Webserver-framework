@@ -58,4 +58,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/test_unsigned.dir/DependInfo.cmake"
   "CMakeFiles/test_EncodeZigzag.dir/DependInfo.cmake"
   "CMakeFiles/test_char.dir/DependInfo.cmake"
+  "CMakeFiles/test_setoptionUN.dir/DependInfo.cmake"
   )
