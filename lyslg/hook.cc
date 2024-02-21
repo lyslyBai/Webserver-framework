@@ -113,7 +113,7 @@ std::forward 是 C++ 标准库中的一个模板函数，它用于进行完美�
         return fun(fd,std::forward<Args>(args)...);
     }
 
-    LYSLG_LOG_INFO(g_logger) << "hook_fun_name:" << hook_fun_name;
+    // LYSLG_LOG_INFO(g_logger) << "hook_fun_name:" << hook_fun_name;
 
 
     lyslg::FdCtx::ptr ctx = lyslg::FdMgr::GetInstance()->get(fd);

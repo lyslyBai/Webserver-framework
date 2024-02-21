@@ -219,7 +219,7 @@ lyslg_BINARY_DIR:STATIC=/home/lyslg/Documents/lyslg_/build
 lyslg_IS_TOP_LEVEL:STATIC=ON
 
 //Dependencies for the target
-lyslg_LIB_DEPENDS:STATIC=general;-ldl;
+lyslg_LIB_DEPENDS:STATIC=general;-ldl;general;-lssl;general;-lcrypto;
 
 //Value Computed by CMake
 lyslg_SOURCE_DIR:STATIC=/home/lyslg/Documents/lyslg_

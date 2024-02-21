@@ -16,6 +16,7 @@ class TcpServer : public std::enable_shared_from_this<TcpServer>
 public:
     typedef std::shared_ptr<TcpServer> ptr;
     TcpServer(lyslg::IoManager* worker = lyslg::IoManager::GetThis(),
+               lyslg::IoManager* io_woker = lyslg::IoManager::GetThis(),
                lyslg::IoManager* accept_worker = lyslg::IoManager::GetThis() );
     virtual ~TcpServer();
 
@@ -29,7 +30,7 @@ public:
     uint64_t getRecvTimeout() const { return m_recvTimeout;}
     std::string getName() {return m_name;}
     void setRecvTimeout(uint64_t v) {m_recvTimeout = v;}
-    void setName(const std::string& v) {m_name = v;}
+    virtual void setName(const std::string& v) {m_name = v;}
 
     bool isStop() const { return m_isStop;}
 
@@ -40,9 +41,12 @@ protected:
 private:
     std::vector<Socket::ptr> m_socks;
     IoManager* m_worker;
+    IoManager* m_ioWorker;
     IoManager* m_acceptWorker;
     uint64_t m_recvTimeout;
     std::string m_name;
+    /// 服务器类型
+    // std::string m_type = "tcp";
     bool m_isStop;
 };
 

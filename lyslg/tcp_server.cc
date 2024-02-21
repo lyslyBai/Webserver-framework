@@ -10,8 +10,11 @@ static lyslg::ConfigVar<uint64_t>::ptr g_tcp_server_read_timeout =
 
 static lyslg::Logger::ptr g_logger = LYSLG_LOG_NAME("system");
 
-TcpServer::TcpServer(lyslg::IoManager* worker,lyslg::IoManager* accept_worker)
+TcpServer::TcpServer(lyslg::IoManager* worker,
+                    lyslg::IoManager* io_worker,
+                    lyslg::IoManager* accept_worker)
     :m_worker(worker)
+    ,m_ioWorker(io_worker)
     ,m_acceptWorker(accept_worker)
     ,m_recvTimeout(g_tcp_server_read_timeout->getValue())
     ,m_name("lyslg/1.0.0")

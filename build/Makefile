@@ -327,6 +327,45 @@ echo_server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/echo_server.dir/build.make CMakeFiles/echo_server.dir/build
 .PHONY : echo_server/fast
 
+#=============================================================================
+# Target rules for targets named test_http_server
+
+# Build rule for target.
+test_http_server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_http_server
+.PHONY : test_http_server
+
+# fast build rule for target.
+test_http_server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/build
+.PHONY : test_http_server/fast
+
+#=============================================================================
+# Target rules for targets named test_http_connection
+
+# Build rule for target.
+test_http_connection: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_http_connection
+.PHONY : test_http_connection
+
+# fast build rule for target.
+test_http_connection/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/build
+.PHONY : test_http_connection/fast
+
+#=============================================================================
+# Target rules for targets named test_uri
+
+# Build rule for target.
+test_uri: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_uri
+.PHONY : test_uri
+
+# fast build rule for target.
+test_uri/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/build
+.PHONY : test_uri/fast
+
 examples/echo_server.o: examples/echo_server.cc.o
 .PHONY : examples/echo_server.o
 
@@ -543,6 +582,30 @@ lyslg/http/http11_parser.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/http11_parser.cc.s
 .PHONY : lyslg/http/http11_parser.cc.s
 
+lyslg/http/http_connection.o: lyslg/http/http_connection.cc.o
+.PHONY : lyslg/http/http_connection.o
+
+# target to build an object file
+lyslg/http/http_connection.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/http_connection.cc.o
+.PHONY : lyslg/http/http_connection.cc.o
+
+lyslg/http/http_connection.i: lyslg/http/http_connection.cc.i
+.PHONY : lyslg/http/http_connection.i
+
+# target to preprocess a source file
+lyslg/http/http_connection.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/http_connection.cc.i
+.PHONY : lyslg/http/http_connection.cc.i
+
+lyslg/http/http_connection.s: lyslg/http/http_connection.cc.s
+.PHONY : lyslg/http/http_connection.s
+
+# target to generate assembly for a file
+lyslg/http/http_connection.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/http_connection.cc.s
+.PHONY : lyslg/http/http_connection.cc.s
+
 lyslg/http/http_parser.o: lyslg/http/http_parser.cc.o
 .PHONY : lyslg/http/http_parser.o
 
@@ -567,6 +630,54 @@ lyslg/http/http_parser.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/http_parser.cc.s
 .PHONY : lyslg/http/http_parser.cc.s
 
+lyslg/http/http_server.o: lyslg/http/http_server.cc.o
+.PHONY : lyslg/http/http_server.o
+
+# target to build an object file
+lyslg/http/http_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/http_server.cc.o
+.PHONY : lyslg/http/http_server.cc.o
+
+lyslg/http/http_server.i: lyslg/http/http_server.cc.i
+.PHONY : lyslg/http/http_server.i
+
+# target to preprocess a source file
+lyslg/http/http_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/http_server.cc.i
+.PHONY : lyslg/http/http_server.cc.i
+
+lyslg/http/http_server.s: lyslg/http/http_server.cc.s
+.PHONY : lyslg/http/http_server.s
+
+# target to generate assembly for a file
+lyslg/http/http_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/http_server.cc.s
+.PHONY : lyslg/http/http_server.cc.s
+
+lyslg/http/http_session.o: lyslg/http/http_session.cc.o
+.PHONY : lyslg/http/http_session.o
+
+# target to build an object file
+lyslg/http/http_session.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/http_session.cc.o
+.PHONY : lyslg/http/http_session.cc.o
+
+lyslg/http/http_session.i: lyslg/http/http_session.cc.i
+.PHONY : lyslg/http/http_session.i
+
+# target to preprocess a source file
+lyslg/http/http_session.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/http_session.cc.i
+.PHONY : lyslg/http/http_session.cc.i
+
+lyslg/http/http_session.s: lyslg/http/http_session.cc.s
+.PHONY : lyslg/http/http_session.s
+
+# target to generate assembly for a file
+lyslg/http/http_session.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/http_session.cc.s
+.PHONY : lyslg/http/http_session.cc.s
+
 lyslg/http/httpclient_parser.o: lyslg/http/httpclient_parser.cc.o
 .PHONY : lyslg/http/httpclient_parser.o
 
@@ -590,6 +701,30 @@ lyslg/http/httpclient_parser.s: lyslg/http/httpclient_parser.cc.s
 lyslg/http/httpclient_parser.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/httpclient_parser.cc.s
 .PHONY : lyslg/http/httpclient_parser.cc.s
+
+lyslg/http/servlet.o: lyslg/http/servlet.cc.o
+.PHONY : lyslg/http/servlet.o
+
+# target to build an object file
+lyslg/http/servlet.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/servlet.cc.o
+.PHONY : lyslg/http/servlet.cc.o
+
+lyslg/http/servlet.i: lyslg/http/servlet.cc.i
+.PHONY : lyslg/http/servlet.i
+
+# target to preprocess a source file
+lyslg/http/servlet.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/servlet.cc.i
+.PHONY : lyslg/http/servlet.cc.i
+
+lyslg/http/servlet.s: lyslg/http/servlet.cc.s
+.PHONY : lyslg/http/servlet.s
+
+# target to generate assembly for a file
+lyslg/http/servlet.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/servlet.cc.s
+.PHONY : lyslg/http/servlet.cc.s
 
 lyslg/iomanager.o: lyslg/iomanager.cc.o
 .PHONY : lyslg/iomanager.o
@@ -855,6 +990,30 @@ lyslg/timer.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/timer.cc.s
 .PHONY : lyslg/timer.cc.s
 
+lyslg/uri.o: lyslg/uri.cc.o
+.PHONY : lyslg/uri.o
+
+# target to build an object file
+lyslg/uri.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/uri.cc.o
+.PHONY : lyslg/uri.cc.o
+
+lyslg/uri.i: lyslg/uri.cc.i
+.PHONY : lyslg/uri.i
+
+# target to preprocess a source file
+lyslg/uri.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/uri.cc.i
+.PHONY : lyslg/uri.cc.i
+
+lyslg/uri.s: lyslg/uri.cc.s
+.PHONY : lyslg/uri.s
+
+# target to generate assembly for a file
+lyslg/uri.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/uri.cc.s
+.PHONY : lyslg/uri.cc.s
+
 lyslg/util.o: lyslg/util.cc.o
 .PHONY : lyslg/util.o
 
@@ -1047,6 +1206,30 @@ tests/test_http.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http.dir/build.make CMakeFiles/test_http.dir/tests/test_http.cc.s
 .PHONY : tests/test_http.cc.s
 
+tests/test_http_connection.o: tests/test_http_connection.cc.o
+.PHONY : tests/test_http_connection.o
+
+# target to build an object file
+tests/test_http_connection.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/tests/test_http_connection.cc.o
+.PHONY : tests/test_http_connection.cc.o
+
+tests/test_http_connection.i: tests/test_http_connection.cc.i
+.PHONY : tests/test_http_connection.i
+
+# target to preprocess a source file
+tests/test_http_connection.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/tests/test_http_connection.cc.i
+.PHONY : tests/test_http_connection.cc.i
+
+tests/test_http_connection.s: tests/test_http_connection.cc.s
+.PHONY : tests/test_http_connection.s
+
+# target to generate assembly for a file
+tests/test_http_connection.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_connection.dir/build.make CMakeFiles/test_http_connection.dir/tests/test_http_connection.cc.s
+.PHONY : tests/test_http_connection.cc.s
+
 tests/test_http_parser.o: tests/test_http_parser.cc.o
 .PHONY : tests/test_http_parser.o
 
@@ -1070,6 +1253,30 @@ tests/test_http_parser.s: tests/test_http_parser.cc.s
 tests/test_http_parser.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_parser.dir/build.make CMakeFiles/test_http_parser.dir/tests/test_http_parser.cc.s
 .PHONY : tests/test_http_parser.cc.s
+
+tests/test_http_server.o: tests/test_http_server.cc.o
+.PHONY : tests/test_http_server.o
+
+# target to build an object file
+tests/test_http_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o
+.PHONY : tests/test_http_server.cc.o
+
+tests/test_http_server.i: tests/test_http_server.cc.i
+.PHONY : tests/test_http_server.i
+
+# target to preprocess a source file
+tests/test_http_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/tests/test_http_server.cc.i
+.PHONY : tests/test_http_server.cc.i
+
+tests/test_http_server.s: tests/test_http_server.cc.s
+.PHONY : tests/test_http_server.s
+
+# target to generate assembly for a file
+tests/test_http_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_http_server.dir/build.make CMakeFiles/test_http_server.dir/tests/test_http_server.cc.s
+.PHONY : tests/test_http_server.cc.s
 
 tests/test_iomanager.o: tests/test_iomanager.cc.o
 .PHONY : tests/test_iomanager.o
@@ -1191,6 +1398,30 @@ tests/test_thread.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_thread.dir/build.make CMakeFiles/test_thread.dir/tests/test_thread.cc.s
 .PHONY : tests/test_thread.cc.s
 
+tests/test_uri.o: tests/test_uri.cc.o
+.PHONY : tests/test_uri.o
+
+# target to build an object file
+tests/test_uri.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/tests/test_uri.cc.o
+.PHONY : tests/test_uri.cc.o
+
+tests/test_uri.i: tests/test_uri.cc.i
+.PHONY : tests/test_uri.i
+
+# target to preprocess a source file
+tests/test_uri.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/tests/test_uri.cc.i
+.PHONY : tests/test_uri.cc.i
+
+tests/test_uri.s: tests/test_uri.cc.s
+.PHONY : tests/test_uri.s
+
+# target to generate assembly for a file
+tests/test_uri.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/tests/test_uri.cc.s
+.PHONY : tests/test_uri.cc.s
+
 tests/test_util.o: tests/test_util.cc.o
 .PHONY : tests/test_util.o
 
@@ -1232,12 +1463,15 @@ help:
 	@echo "... test_fiber"
 	@echo "... test_hook"
 	@echo "... test_http"
+	@echo "... test_http_connection"
 	@echo "... test_http_parser"
+	@echo "... test_http_server"
 	@echo "... test_iomanager"
 	@echo "... test_scheduler"
 	@echo "... test_socket"
 	@echo "... test_tcp_server"
 	@echo "... test_thread"
+	@echo "... test_uri"
 	@echo "... test_util"
 	@echo "... examples/echo_server.o"
 	@echo "... examples/echo_server.i"
@@ -1266,12 +1500,24 @@ help:
 	@echo "... lyslg/http/http11_parser.o"
 	@echo "... lyslg/http/http11_parser.i"
 	@echo "... lyslg/http/http11_parser.s"
+	@echo "... lyslg/http/http_connection.o"
+	@echo "... lyslg/http/http_connection.i"
+	@echo "... lyslg/http/http_connection.s"
 	@echo "... lyslg/http/http_parser.o"
 	@echo "... lyslg/http/http_parser.i"
 	@echo "... lyslg/http/http_parser.s"
+	@echo "... lyslg/http/http_server.o"
+	@echo "... lyslg/http/http_server.i"
+	@echo "... lyslg/http/http_server.s"
+	@echo "... lyslg/http/http_session.o"
+	@echo "... lyslg/http/http_session.i"
+	@echo "... lyslg/http/http_session.s"
 	@echo "... lyslg/http/httpclient_parser.o"
 	@echo "... lyslg/http/httpclient_parser.i"
 	@echo "... lyslg/http/httpclient_parser.s"
+	@echo "... lyslg/http/servlet.o"
+	@echo "... lyslg/http/servlet.i"
+	@echo "... lyslg/http/servlet.s"
 	@echo "... lyslg/iomanager.o"
 	@echo "... lyslg/iomanager.i"
 	@echo "... lyslg/iomanager.s"
@@ -1305,6 +1551,9 @@ help:
 	@echo "... lyslg/timer.o"
 	@echo "... lyslg/timer.i"
 	@echo "... lyslg/timer.s"
+	@echo "... lyslg/uri.o"
+	@echo "... lyslg/uri.i"
+	@echo "... lyslg/uri.s"
 	@echo "... lyslg/util.o"
 	@echo "... lyslg/util.i"
 	@echo "... lyslg/util.s"
@@ -1329,9 +1578,15 @@ help:
 	@echo "... tests/test_http.o"
 	@echo "... tests/test_http.i"
 	@echo "... tests/test_http.s"
+	@echo "... tests/test_http_connection.o"
+	@echo "... tests/test_http_connection.i"
+	@echo "... tests/test_http_connection.s"
 	@echo "... tests/test_http_parser.o"
 	@echo "... tests/test_http_parser.i"
 	@echo "... tests/test_http_parser.s"
+	@echo "... tests/test_http_server.o"
+	@echo "... tests/test_http_server.i"
+	@echo "... tests/test_http_server.s"
 	@echo "... tests/test_iomanager.o"
 	@echo "... tests/test_iomanager.i"
 	@echo "... tests/test_iomanager.s"
@@ -1347,6 +1602,9 @@ help:
 	@echo "... tests/test_thread.o"
 	@echo "... tests/test_thread.i"
 	@echo "... tests/test_thread.s"
+	@echo "... tests/test_uri.o"
+	@echo "... tests/test_uri.i"
+	@echo "... tests/test_uri.s"
 	@echo "... tests/test_util.o"
 	@echo "... tests/test_util.i"
 	@echo "... tests/test_util.s"

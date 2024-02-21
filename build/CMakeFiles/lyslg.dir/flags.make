@@ -42,13 +42,23 @@ CXX_FLAGS =  -rdynamic -O3 -g -std=c++11 -Wall -Werror -Wno-unused-function -Wno
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/timer.cc.o_DEFINES = __FILE__="lyslg/timer.cc"
 
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/uri.cc.o_DEFINES = __FILE__="lyslg/uri.cc"
+
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/util.cc.o_DEFINES = __FILE__="lyslg/util.cc"
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/http/http.cc.o_DEFINES = __FILE__="lyslg/http/http.cc"
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/http/http11_parser.cc.o_DEFINES = __FILE__="lyslg/http/http11_parser.cc"
 
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/http/http_connection.cc.o_DEFINES = __FILE__="lyslg/http/http_connection.cc"
+
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/http/http_parser.cc.o_DEFINES = __FILE__="lyslg/http/http_parser.cc"
 
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/http/http_server.cc.o_DEFINES = __FILE__="lyslg/http/http_server.cc"
+
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/http/http_session.cc.o_DEFINES = __FILE__="lyslg/http/http_session.cc"
+
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/http/httpclient_parser.cc.o_DEFINES = __FILE__="lyslg/http/httpclient_parser.cc"
+
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/http/servlet.cc.o_DEFINES = __FILE__="lyslg/http/servlet.cc"
 

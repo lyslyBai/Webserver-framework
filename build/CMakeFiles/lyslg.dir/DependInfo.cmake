@@ -16,8 +16,12 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lyslg/Documents/lyslg_/lyslg/hook.cc" "CMakeFiles/lyslg.dir/lyslg/hook.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/hook.cc.o.d"
   "/home/lyslg/Documents/lyslg_/lyslg/http/http.cc" "CMakeFiles/lyslg.dir/lyslg/http/http.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/http/http.cc.o.d"
   "/home/lyslg/Documents/lyslg_/lyslg/http/http11_parser.cc" "CMakeFiles/lyslg.dir/lyslg/http/http11_parser.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/http/http11_parser.cc.o.d"
+  "/home/lyslg/Documents/lyslg_/lyslg/http/http_connection.cc" "CMakeFiles/lyslg.dir/lyslg/http/http_connection.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/http/http_connection.cc.o.d"
   "/home/lyslg/Documents/lyslg_/lyslg/http/http_parser.cc" "CMakeFiles/lyslg.dir/lyslg/http/http_parser.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/http/http_parser.cc.o.d"
+  "/home/lyslg/Documents/lyslg_/lyslg/http/http_server.cc" "CMakeFiles/lyslg.dir/lyslg/http/http_server.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/http/http_server.cc.o.d"
+  "/home/lyslg/Documents/lyslg_/lyslg/http/http_session.cc" "CMakeFiles/lyslg.dir/lyslg/http/http_session.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/http/http_session.cc.o.d"
   "/home/lyslg/Documents/lyslg_/lyslg/http/httpclient_parser.cc" "CMakeFiles/lyslg.dir/lyslg/http/httpclient_parser.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/http/httpclient_parser.cc.o.d"
+  "/home/lyslg/Documents/lyslg_/lyslg/http/servlet.cc" "CMakeFiles/lyslg.dir/lyslg/http/servlet.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/http/servlet.cc.o.d"
   "/home/lyslg/Documents/lyslg_/lyslg/iomanager.cc" "CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o.d"
   "/home/lyslg/Documents/lyslg_/lyslg/log.cc" "CMakeFiles/lyslg.dir/lyslg/log.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/log.cc.o.d"
   "/home/lyslg/Documents/lyslg_/lyslg/macro.cc" "CMakeFiles/lyslg.dir/lyslg/macro.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/macro.cc.o.d"
@@ -29,6 +33,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lyslg/Documents/lyslg_/lyslg/tcp_server.cc" "CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/tcp_server.cc.o.d"
   "/home/lyslg/Documents/lyslg_/lyslg/thread.cc" "CMakeFiles/lyslg.dir/lyslg/thread.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/thread.cc.o.d"
   "/home/lyslg/Documents/lyslg_/lyslg/timer.cc" "CMakeFiles/lyslg.dir/lyslg/timer.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/timer.cc.o.d"
+  "/home/lyslg/Documents/lyslg_/lyslg/uri.cc" "CMakeFiles/lyslg.dir/lyslg/uri.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/uri.cc.o.d"
   "/home/lyslg/Documents/lyslg_/lyslg/util.cc" "CMakeFiles/lyslg.dir/lyslg/util.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/util.cc.o.d"
   )
 

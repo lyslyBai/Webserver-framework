@@ -24,7 +24,7 @@ aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/lyslg/http LIB_SRC_1)
 #     )
 
 add_library(lyslg SHARED ${LIB_SRC} ${LIB_SRC_1})
-target_link_libraries(lyslg -ldl)
+target_link_libraries(lyslg -ldl -lssl -lcrypto)
 force_redefine_file_macro_for_sources(lyslg)
 
 include_directories(${PROJECT_SOURCE_DIR}/lyslg)
@@ -114,6 +114,21 @@ add_executable(echo_server ${PROJECT_SOURCE_DIR}/examples/echo_server.cc) # test
 add_dependencies(echo_server lyslg)  #用于添加一个目标对其他目标的依赖。
 force_redefine_file_macro_for_sources(echo_server)
 target_link_libraries(echo_server lyslg yaml-cpp) 
+
+add_executable(test_http_server ${PROJECT_SOURCE_DIR}/tests/test_http_server.cc) # test 为cmake保留关键字，不能作为文件名
+add_dependencies(test_http_server lyslg)  #用于添加一个目标对其他目标的依赖。
+force_redefine_file_macro_for_sources(test_http_server)
+target_link_libraries(test_http_server lyslg yaml-cpp) 
+
+add_executable(test_http_connection ${PROJECT_SOURCE_DIR}/tests/test_http_connection.cc) # test 为cmake保留关键字，不能作为文件名
+add_dependencies(test_http_connection lyslg)  #用于添加一个目标对其他目标的依赖。
+force_redefine_file_macro_for_sources(test_http_connection)
+target_link_libraries(test_http_connection lyslg yaml-cpp) 
+
+add_executable(test_uri ${PROJECT_SOURCE_DIR}/tests/test_uri.cc) # test 为cmake保留关键字，不能作为文件名
+add_dependencies(test_uri lyslg)  #用于添加一个目标对其他目标的依赖。
+force_redefine_file_macro_for_sources(test_uri)
+target_link_libraries(test_uri lyslg yaml-cpp) 
 
 #自动设置PROJECT_SOURCE_DIR的默认值为项目根目录的路径（CMakeLists.txt所在的路径）
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
