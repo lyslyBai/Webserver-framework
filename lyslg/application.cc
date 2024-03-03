@@ -4,6 +4,7 @@
 #include "config.h"
 #include "daemon.h"
 #include "tcp_server.h"
+#include "ws_server.h"
 #include <signal.h>
 
 
@@ -13,7 +14,7 @@ static lyslg::Logger::ptr g_logger = LYSLG_LOG_NAME("system");
 
 static lyslg::ConfigVar<std::string>::ptr g_server_work_path =
     lyslg::Config::Lookup("server.work_path"
-            ,std::string("/home/lyslg/Documents/lyslg_/server_work")
+            ,std::string("../server_work")
             , "server work path");
 
 static lyslg::ConfigVar<std::string>::ptr g_server_pid_file =
@@ -143,7 +144,7 @@ int Application::run_fiber() {
     auto http_confs = g_servers_conf->getValue();
     std::vector<TcpServer::ptr> svrs;
     for(auto& i : http_confs) {
-        LYSLG_LOG_DEBUG(g_logger) << std::endl << LexicalCast<TcpServerConf, std::string>()(i);
+        // LYSLG_LOG_DEBUG(g_logger) << std::endl << LexicalCast<TcpServerConf, std::string>()(i);
 
         std::vector<Address::ptr> address;
         for(auto& a : i.address) {
@@ -189,6 +190,9 @@ int Application::run_fiber() {
         TcpServer::ptr server;
         if(i.type == "http") {
             server.reset(new lyslg::http::HttpServer(i.keepalive,
+                            process_worker, io_worker, accept_worker));
+        } else if(i.type == "ws") {
+            server.reset(new lyslg::http::WSServer(
                             process_worker, io_worker, accept_worker));
         } else {
             LYSLG_LOG_ERROR(g_logger) << "invalid server type=" << i.type

@@ -25,6 +25,10 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lyslg/Documents/lyslg/lyslg/http/http_session.cc" "CMakeFiles/lyslg.dir/lyslg/http/http_session.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/http/http_session.cc.o.d"
   "/home/lyslg/Documents/lyslg/lyslg/http/httpclient_parser.cc" "CMakeFiles/lyslg.dir/lyslg/http/httpclient_parser.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/http/httpclient_parser.cc.o.d"
   "/home/lyslg/Documents/lyslg/lyslg/http/servlet.cc" "CMakeFiles/lyslg.dir/lyslg/http/servlet.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/http/servlet.cc.o.d"
+  "/home/lyslg/Documents/lyslg/lyslg/http/ws_connection.cc" "CMakeFiles/lyslg.dir/lyslg/http/ws_connection.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/http/ws_connection.cc.o.d"
+  "/home/lyslg/Documents/lyslg/lyslg/http/ws_server.cc" "CMakeFiles/lyslg.dir/lyslg/http/ws_server.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/http/ws_server.cc.o.d"
+  "/home/lyslg/Documents/lyslg/lyslg/http/ws_servlet.cc" "CMakeFiles/lyslg.dir/lyslg/http/ws_servlet.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/http/ws_servlet.cc.o.d"
+  "/home/lyslg/Documents/lyslg/lyslg/http/ws_session.cc" "CMakeFiles/lyslg.dir/lyslg/http/ws_session.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/http/ws_session.cc.o.d"
   "/home/lyslg/Documents/lyslg/lyslg/iomanager.cc" "CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o.d"
   "/home/lyslg/Documents/lyslg/lyslg/library.cc" "CMakeFiles/lyslg.dir/lyslg/library.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/library.cc.o.d"
   "/home/lyslg/Documents/lyslg/lyslg/log.cc" "CMakeFiles/lyslg.dir/lyslg/log.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/log.cc.o.d"
@@ -40,6 +44,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lyslg/Documents/lyslg/lyslg/timer.cc" "CMakeFiles/lyslg.dir/lyslg/timer.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/timer.cc.o.d"
   "/home/lyslg/Documents/lyslg/lyslg/uri.cc" "CMakeFiles/lyslg.dir/lyslg/uri.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/uri.cc.o.d"
   "/home/lyslg/Documents/lyslg/lyslg/util.cc" "CMakeFiles/lyslg.dir/lyslg/util.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/util.cc.o.d"
+  "/home/lyslg/Documents/lyslg/lyslg/util/hash_util.cc" "CMakeFiles/lyslg.dir/lyslg/util/hash_util.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/util/hash_util.cc.o.d"
   )
 
 # Targets to which this target links.

@@ -947,7 +947,13 @@ CMakeFiles/lyslg.dir/lyslg/application.cc.o: \
  /home/lyslg/Documents/lyslg/lyslg/log.h \
  /home/lyslg/Documents/lyslg/lyslg/config.h \
  /home/lyslg/Documents/lyslg/lyslg/daemon.h \
- /home/lyslg/Documents/lyslg/lyslg/tcp_server.h /usr/include/signal.h \
+ /home/lyslg/Documents/lyslg/lyslg/tcp_server.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/ws_server.h \
+ /home/lyslg/Documents/lyslg/lyslg/tcp_server.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/ws_session.h \
+ /home/lyslg/Documents/lyslg/lyslg/config.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/ws_servlet.h \
+ /home/lyslg/Documents/lyslg/lyslg/thread.h /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \

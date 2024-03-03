@@ -208,6 +208,7 @@ struct CaseInsensitiveLess{
  *      @retval true 转换成功, val 为对应的值
  *      @retval false 不存在或者转换失败 val = def
  */
+class HttpResponse;
 class HttpRequest{
 public:
     typedef std::shared_ptr<HttpRequest> ptr;
@@ -215,8 +216,9 @@ public:
 
     HttpRequest(uint8_t version = 0x11, bool close = true);
 
+    std::shared_ptr<HttpResponse> createResponse();
+
     HttpMethod getMethod() const {return m_method;}
-    HttpStatus getStatus() const {return m_status;}
     uint8_t getVersion() const {return m_version;}
     const std::string& getPath() const {return m_path;}
     const std::string& getQuery() const {return m_query;}
@@ -226,11 +228,20 @@ public:
     const MapType& getParams() const {return m_params;}
     const MapType& getCookies() const {return m_cookies;}
 
+    /**
+     * @brief 是否websocket
+     */
+    bool isWebsocket() const { return m_websocket;}
+
+    /**
+     * @brief 设置是否websocket
+     */
+    void setWebsocket(bool v) { m_websocket = v;}
+
     bool isClose() {return m_close;}
     void setClose(bool v) {m_close = v;}
 
     void setMethod(HttpMethod v) {m_method = v;}
-    void setStatus(HttpStatus v) {m_status = v;}
     void setVersion(uint8_t v) {m_version = v;}
 
     void setPath(const std::string& v) {m_path= v;}
@@ -291,7 +302,7 @@ public:
     std::ostream& dump(std::ostream& os) const;
     std::string toString() const; 
 
-    void init();
+ void init();
     void initParam();
     void initQueryParam();
     void initBodyParam();
@@ -299,92 +310,218 @@ public:
 private:
     /// HTTP方法
     HttpMethod m_method;
-    
-    HttpStatus m_status;
-    
     /// HTTP版本
     uint8_t m_version;
-    // 是否自动关闭
+    /// 是否自动关闭
     bool m_close;
+    /// 是否为websocket
+    bool m_websocket;
 
     uint8_t m_parserParamFlag;
     /// 请求路径
     std::string m_path;
     /// 请求参数
     std::string m_query;
-    /// 请求消息体
-    std::string m_body;
     /// 请求fragment
     std::string m_fragment;
+    /// 请求消息体
+    std::string m_body;
     /// 请求头部MAP
     MapType m_headers;
     /// 请求参数MAP
     MapType m_params;
     /// 请求Cookie MAP
     MapType m_cookies;
-
-
-
 };
 
-
+/**
+ * @brief HTTP响应结构体
+ */
 class HttpResponse {
 public:
+    /// HTTP响应结构智能指针
     typedef std::shared_ptr<HttpResponse> ptr;
-    typedef std::map<std::string,std::string,CaseInsensitiveLess> MapType;
-    HttpResponse(uint8_t version = 0x11,bool close = true);
+    /// MapType
+    typedef std::map<std::string, std::string, CaseInsensitiveLess> MapType;
+    /**
+     * @brief 构造函数
+     * @param[in] version 版本
+     * @param[in] close 是否自动关闭
+     */
+    HttpResponse(uint8_t version = 0x11, bool close = true);
 
-    HttpStatus getStatus() const {return m_status;}
-    uint8_t getVersion() const {return m_version;}
-    const std::string getBody() const {return m_body;}
-    const std::string getReason() const {return m_reason;}
-    const MapType& getHeaders() const {return m_headers;}
+    /**
+     * @brief 返回响应状态
+     * @return 请求状态
+     */
+    HttpStatus getStatus() const { return m_status;}
 
-    void setStatus(HttpStatus v) {m_status = v;}
-    void setVersion(uint8_t v) {m_version = v;}
-    void setBody(const std::string& v) {m_body = v;}
-    void setReason(const std::string& v) {m_reason = v;}
-    void setHeaders(const MapType& v) {m_headers = v;}
+    /**
+     * @brief 返回响应版本
+     * @return 版本
+     */
+    uint8_t getVersion() const { return m_version;}
 
-    bool isClose() {return m_close;}
-    void setClose(bool v) {m_close = v;}
+    /**
+     * @brief 返回响应消息体
+     * @return 消息体
+     */
+    const std::string& getBody() const { return m_body;}
 
+    /**
+     * @brief 返回响应原因
+     */
+    const std::string& getReason() const { return m_reason;}
+
+    /**
+     * @brief 返回响应头部MAP
+     * @return MAP
+     */
+    const MapType& getHeaders() const { return m_headers;}
+
+    /**
+     * @brief 设置响应状态
+     * @param[in] v 响应状态
+     */
+    void setStatus(HttpStatus v) { m_status = v;}
+
+    /**
+     * @brief 设置响应版本
+     * @param[in] v 版本
+     */
+    void setVersion(uint8_t v) { m_version = v;}
+
+    /**
+     * @brief 设置响应消息体
+     * @param[in] v 消息体
+     */
+    void setBody(const std::string& v) { m_body = v;}
+
+    /**
+     * @brief 设置响应原因
+     * @param[in] v 原因
+     */
+    void setReason(const std::string& v) { m_reason = v;}
+
+    /**
+     * @brief 设置响应头部MAP
+     * @param[in] v MAP
+     */
+    void setHeaders(const MapType& v) { m_headers = v;}
+
+    /**
+     * @brief 是否自动关闭
+     */
+    bool isClose() const { return m_close;}
+
+    /**
+     * @brief 设置是否自动关闭
+     */
+    void setClose(bool v) { m_close = v;}
+
+    /**
+     * @brief 是否websocket
+     */
+    bool isWebsocket() const { return m_websocket;}
+
+    /**
+     * @brief 设置是否websocket
+     */
+    void setWebsocket(bool v) { m_websocket = v;}
+
+    /**
+     * @brief 获取响应头部参数
+     * @param[in] key 关键字
+     * @param[in] def 默认值
+     * @return 如果存在返回对应值,否则返回def
+     */
     std::string getHeader(const std::string& key, const std::string& def = "") const;
+
+    /**
+     * @brief 设置响应头部参数
+     * @param[in] key 关键字
+     * @param[in] val 值
+     */
     void setHeader(const std::string& key, const std::string& val);
+
+    /**
+     * @brief 删除响应头部参数
+     * @param[in] key 关键字
+     */
     void delHeader(const std::string& key);
 
+    /**
+     * @brief 检查并获取响应头部参数
+     * @tparam T 值类型
+     * @param[in] key 关键字
+     * @param[out] val 值
+     * @param[in] def 默认值
+     * @return 如果存在且转换成功返回true,否则失败val=def
+     */
     template<class T>
     bool checkGetHeaderAs(const std::string& key, T& val, const T& def = T()) {
-        return checkGetAs(m_headers,key,val,def);
+        return checkGetAs(m_headers, key, val, def);
     }
 
+    /**
+     * @brief 获取响应的头部参数
+     * @tparam T 转换类型
+     * @param[in] key 关键字
+     * @param[in] def 默认值
+     * @return 如果存在且转换成功返回对应的值,否则返回def
+     */
     template<class T>
-    T getHeaderAs(const std::string& key,const T& def = T()) {
-        return getAs(m_headers,key,def);
+    T getHeaderAs(const std::string& key, const T& def = T()) {
+        return getAs(m_headers, key, def);
     }
 
+    /**
+     * @brief 序列化输出到流
+     * @param[in, out] os 输出流
+     * @return 输出流
+     */
     std::ostream& dump(std::ostream& os) const;
-    std::string toString() const; 
+
+    /**
+     * @brief 转成字符串
+     */
+    std::string toString() const;
 private:
+    /// 响应状态
     HttpStatus m_status;
+    /// 版本
     uint8_t m_version;
+    /// 是否自动关闭
     bool m_close;
+    /// 是否为websocket
+    bool m_websocket;
+    /// 响应消息体
     std::string m_body;
+    /// 响应原因
     std::string m_reason;
+    /// 响应头部MAP
     MapType m_headers;
 
+    std::vector<std::string> m_cookies;
 };
 
+/**
+ * @brief 流式输出HttpRequest
+ * @param[in, out] os 输出流
+ * @param[in] req HTTP请求
+ * @return 输出流
+ */
 std::ostream& operator<<(std::ostream& os, const HttpRequest& req);
+
+/**
+ * @brief 流式输出HttpResponse
+ * @param[in, out] os 输出流
+ * @param[in] rsp HTTP响应
+ * @return 输出流
+ */
 std::ostream& operator<<(std::ostream& os, const HttpResponse& rsp);
 
-
+}
 }
 
-
-
-}
-
-
-
-#endif 
+#endif

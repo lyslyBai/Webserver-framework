@@ -1,0 +1,58 @@
+2024-03-03 17:50:13	7656	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg/bin/conf/log.yml ok
+2024-03-03 17:50:13	7656	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg/bin/conf/server.yml ok
+2024-03-03 17:50:16	7679	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg/bin/conf/log.yml ok
+2024-03-03 17:50:16	7679	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg/bin/conf/server.yml ok
+2024-03-03 17:50:16	7679	UNKNOW	0	[INFO]	[system]	lyslg/daemon.cc:77	start_daemon
+2024-03-03 17:50:16	7679	UNKNOW	0	[INFO]	[system]	lyslg/application.cc:100	main
+2024-03-03 17:50:16	7679	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg/bin/conf/log.yml ok
+2024-03-03 17:50:16	7679	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg/bin/conf/server.yml ok
+2024-03-03 17:50:16	7679	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:53	Fiber::Fiber
+2024-03-03 17:50:16	7679	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=1
+2024-03-03 17:50:16	7679	main	0	[INFO]	[system]	lyslg/scheduler.cc:97	0x14fab50 0 stopped
+2024-03-03 17:50:16	7679	main	1	[DEBUG]	[system]	lyslg/scheduler.cc:161	main run
+2024-03-03 17:50:16	7679	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=2
+2024-03-03 17:50:16	7679	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=3
+2024-03-03 17:50:16	7679	main	3	[DEBUG]	[system]	lyslg/application.cc:147	
+id: ""
+type: http
+name: lyslg/1.1
+keepalive: 1
+timeout: 1000
+ssl: 0
+cert_file: ""
+key_file: ""
+accept_worker: accept
+io_worker: io
+process_worker: io
+args: {}
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091
+  - ../tmp/test.sock
+2024-03-03 17:50:16	7679	main	3	[ERROR]	[system]	lyslg/socket.cc:217	sock=11 connect(../tmp/test.sock) error errno=2 errstr=No such file or directory
+2024-03-03 17:50:16	7679	main	3	[INFO]	[system]	lyslg/socket.cc:175	file delete
+2024-03-03 17:50:16	7679	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=8 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090]
+2024-03-03 17:50:16	7679	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091]
+2024-03-03 17:50:16	7679	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=10 is_connected=0 family=1 type=1 protocol=0 local_address=../tmp/test.sock]
+2024-03-03 17:50:16	7679	main	3	[DEBUG]	[system]	lyslg/application.cc:147	
+id: ""
+type: ws
+name: lyslg/2.1
+keepalive: 1
+timeout: 1000
+ssl: 0
+cert_file: ""
+key_file: ""
+accept_worker: accept
+io_worker: io
+process_worker: io
+args: {}
+address:
+  - 0.0.0.0:8062
+  - 127.0.0.1:8061
+2024-03-03 17:50:16	7679	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=11 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8062]
+2024-03-03 17:50:16	7679	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=12 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8061]
+2024-03-03 17:50:16	7679	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=4
+2024-03-03 17:50:16	7679	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=5
+2024-03-03 17:50:16	7679	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=6
+2024-03-03 17:50:16	7679	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=7

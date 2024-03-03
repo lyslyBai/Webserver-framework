@@ -17,18 +17,20 @@ set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O3 -g -std=c++11 -Wall -Werror -W
 
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/lyslg LIB_SRC)
 aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/lyslg/http LIB_SRC_1)
+aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/lyslg/util LIB_SRC_2)
 # set(LIB_SRC 
 #     ${PROJECT_SOURCE_DIR}/log.cc
 #     ${PROJECT_SOURCE_DIR}/util.cc
 #     ${PROJECT_SOURCE_DIR}/config.cc
 #     )
 
-add_library(lyslg SHARED ${LIB_SRC} ${LIB_SRC_1})
+add_library(lyslg SHARED ${LIB_SRC} ${LIB_SRC_1} ${LIB_SRC_2})
 target_link_libraries(lyslg -ldl -lssl -lcrypto)
 force_redefine_file_macro_for_sources(lyslg)
 
 include_directories(${PROJECT_SOURCE_DIR}/lyslg)
 include_directories(${PROJECT_SOURCE_DIR}/lyslg/http)
+include_directories(${PROJECT_SOURCE_DIR}/lyslg/util)
 
 # target_include_directories(lyslg PUBLIC ${PROJECT_SOURCE_DIR}/lyslg)
 link_directories(${PROJECT_SOURCE_DIR}/lib)

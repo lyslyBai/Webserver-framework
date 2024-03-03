@@ -35,6 +35,14 @@ file(REMOVE_RECURSE
   "CMakeFiles/lyslg.dir/lyslg/http/httpclient_parser.cc.o.d"
   "CMakeFiles/lyslg.dir/lyslg/http/servlet.cc.o"
   "CMakeFiles/lyslg.dir/lyslg/http/servlet.cc.o.d"
+  "CMakeFiles/lyslg.dir/lyslg/http/ws_connection.cc.o"
+  "CMakeFiles/lyslg.dir/lyslg/http/ws_connection.cc.o.d"
+  "CMakeFiles/lyslg.dir/lyslg/http/ws_server.cc.o"
+  "CMakeFiles/lyslg.dir/lyslg/http/ws_server.cc.o.d"
+  "CMakeFiles/lyslg.dir/lyslg/http/ws_servlet.cc.o"
+  "CMakeFiles/lyslg.dir/lyslg/http/ws_servlet.cc.o.d"
+  "CMakeFiles/lyslg.dir/lyslg/http/ws_session.cc.o"
+  "CMakeFiles/lyslg.dir/lyslg/http/ws_session.cc.o.d"
   "CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o"
   "CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o.d"
   "CMakeFiles/lyslg.dir/lyslg/library.cc.o"
@@ -65,6 +73,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/lyslg.dir/lyslg/uri.cc.o.d"
   "CMakeFiles/lyslg.dir/lyslg/util.cc.o"
   "CMakeFiles/lyslg.dir/lyslg/util.cc.o.d"
+  "CMakeFiles/lyslg.dir/lyslg/util/hash_util.cc.o"
+  "CMakeFiles/lyslg.dir/lyslg/util/hash_util.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

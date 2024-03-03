@@ -64,6 +64,12 @@ HttpRequest::HttpRequest(uint8_t version , bool close )
     ,m_path("/"){
 }
 
+std::shared_ptr<HttpResponse> HttpRequest::createResponse() {
+    HttpResponse::ptr rsp(new HttpResponse(getVersion()
+                            ,isClose()));
+    return rsp;
+}
+
 std::string HttpRequest::getHeader(const std::string& key, const std::string& def) const{
     auto it = m_headers.find(key);
     return it == m_headers.end() ? def : it->second;

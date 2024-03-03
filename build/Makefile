@@ -850,6 +850,102 @@ lyslg/http/servlet.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/servlet.cc.s
 .PHONY : lyslg/http/servlet.cc.s
 
+lyslg/http/ws_connection.o: lyslg/http/ws_connection.cc.o
+.PHONY : lyslg/http/ws_connection.o
+
+# target to build an object file
+lyslg/http/ws_connection.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/ws_connection.cc.o
+.PHONY : lyslg/http/ws_connection.cc.o
+
+lyslg/http/ws_connection.i: lyslg/http/ws_connection.cc.i
+.PHONY : lyslg/http/ws_connection.i
+
+# target to preprocess a source file
+lyslg/http/ws_connection.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/ws_connection.cc.i
+.PHONY : lyslg/http/ws_connection.cc.i
+
+lyslg/http/ws_connection.s: lyslg/http/ws_connection.cc.s
+.PHONY : lyslg/http/ws_connection.s
+
+# target to generate assembly for a file
+lyslg/http/ws_connection.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/ws_connection.cc.s
+.PHONY : lyslg/http/ws_connection.cc.s
+
+lyslg/http/ws_server.o: lyslg/http/ws_server.cc.o
+.PHONY : lyslg/http/ws_server.o
+
+# target to build an object file
+lyslg/http/ws_server.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/ws_server.cc.o
+.PHONY : lyslg/http/ws_server.cc.o
+
+lyslg/http/ws_server.i: lyslg/http/ws_server.cc.i
+.PHONY : lyslg/http/ws_server.i
+
+# target to preprocess a source file
+lyslg/http/ws_server.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/ws_server.cc.i
+.PHONY : lyslg/http/ws_server.cc.i
+
+lyslg/http/ws_server.s: lyslg/http/ws_server.cc.s
+.PHONY : lyslg/http/ws_server.s
+
+# target to generate assembly for a file
+lyslg/http/ws_server.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/ws_server.cc.s
+.PHONY : lyslg/http/ws_server.cc.s
+
+lyslg/http/ws_servlet.o: lyslg/http/ws_servlet.cc.o
+.PHONY : lyslg/http/ws_servlet.o
+
+# target to build an object file
+lyslg/http/ws_servlet.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/ws_servlet.cc.o
+.PHONY : lyslg/http/ws_servlet.cc.o
+
+lyslg/http/ws_servlet.i: lyslg/http/ws_servlet.cc.i
+.PHONY : lyslg/http/ws_servlet.i
+
+# target to preprocess a source file
+lyslg/http/ws_servlet.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/ws_servlet.cc.i
+.PHONY : lyslg/http/ws_servlet.cc.i
+
+lyslg/http/ws_servlet.s: lyslg/http/ws_servlet.cc.s
+.PHONY : lyslg/http/ws_servlet.s
+
+# target to generate assembly for a file
+lyslg/http/ws_servlet.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/ws_servlet.cc.s
+.PHONY : lyslg/http/ws_servlet.cc.s
+
+lyslg/http/ws_session.o: lyslg/http/ws_session.cc.o
+.PHONY : lyslg/http/ws_session.o
+
+# target to build an object file
+lyslg/http/ws_session.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/ws_session.cc.o
+.PHONY : lyslg/http/ws_session.cc.o
+
+lyslg/http/ws_session.i: lyslg/http/ws_session.cc.i
+.PHONY : lyslg/http/ws_session.i
+
+# target to preprocess a source file
+lyslg/http/ws_session.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/ws_session.cc.i
+.PHONY : lyslg/http/ws_session.cc.i
+
+lyslg/http/ws_session.s: lyslg/http/ws_session.cc.s
+.PHONY : lyslg/http/ws_session.s
+
+# target to generate assembly for a file
+lyslg/http/ws_session.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/http/ws_session.cc.s
+.PHONY : lyslg/http/ws_session.cc.s
+
 lyslg/iomanager.o: lyslg/iomanager.cc.o
 .PHONY : lyslg/iomanager.o
 
@@ -1209,6 +1305,30 @@ lyslg/util.s: lyslg/util.cc.s
 lyslg/util.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/util.cc.s
 .PHONY : lyslg/util.cc.s
+
+lyslg/util/hash_util.o: lyslg/util/hash_util.cc.o
+.PHONY : lyslg/util/hash_util.o
+
+# target to build an object file
+lyslg/util/hash_util.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/util/hash_util.cc.o
+.PHONY : lyslg/util/hash_util.cc.o
+
+lyslg/util/hash_util.i: lyslg/util/hash_util.cc.i
+.PHONY : lyslg/util/hash_util.i
+
+# target to preprocess a source file
+lyslg/util/hash_util.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/util/hash_util.cc.i
+.PHONY : lyslg/util/hash_util.cc.i
+
+lyslg/util/hash_util.s: lyslg/util/hash_util.cc.s
+.PHONY : lyslg/util/hash_util.s
+
+# target to generate assembly for a file
+lyslg/util/hash_util.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/util/hash_util.cc.s
+.PHONY : lyslg/util/hash_util.cc.s
 
 test_exe/main.o: test_exe/main.cc.o
 .PHONY : test_exe/main.o
@@ -1799,6 +1919,18 @@ help:
 	@echo "... lyslg/http/servlet.o"
 	@echo "... lyslg/http/servlet.i"
 	@echo "... lyslg/http/servlet.s"
+	@echo "... lyslg/http/ws_connection.o"
+	@echo "... lyslg/http/ws_connection.i"
+	@echo "... lyslg/http/ws_connection.s"
+	@echo "... lyslg/http/ws_server.o"
+	@echo "... lyslg/http/ws_server.i"
+	@echo "... lyslg/http/ws_server.s"
+	@echo "... lyslg/http/ws_servlet.o"
+	@echo "... lyslg/http/ws_servlet.i"
+	@echo "... lyslg/http/ws_servlet.s"
+	@echo "... lyslg/http/ws_session.o"
+	@echo "... lyslg/http/ws_session.i"
+	@echo "... lyslg/http/ws_session.s"
 	@echo "... lyslg/iomanager.o"
 	@echo "... lyslg/iomanager.i"
 	@echo "... lyslg/iomanager.s"
@@ -1844,6 +1976,9 @@ help:
 	@echo "... lyslg/util.o"
 	@echo "... lyslg/util.i"
 	@echo "... lyslg/util.s"
+	@echo "... lyslg/util/hash_util.o"
+	@echo "... lyslg/util/hash_util.i"
+	@echo "... lyslg/util/hash_util.s"
 	@echo "... test_exe/main.o"
 	@echo "... test_exe/main.i"
 	@echo "... test_exe/main.s"
