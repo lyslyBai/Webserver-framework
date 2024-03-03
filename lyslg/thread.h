@@ -20,7 +20,6 @@ public:
     const std::string& getName() const {return m_name;}
 
     static void SetName(const std::string& name);
-    
 
     void join();
     

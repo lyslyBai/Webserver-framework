@@ -27,7 +27,7 @@ void test_fiber() {
     if(!connect(sock,(const sockaddr*)&addr,sizeof(addr))){
 
     }else if(errno == EINPROGRESS) {
-        LYSLG_LOG_INFO(g_logger) << "add event errno=" << errno << strerror(errno);
+        LYSLG_LOG_INFO(g_logger) << "add event errno=" << errno << " " << strerror(errno);
 
         lyslg::IoManager::GetThis()->addEvent(sock,lyslg::IoManager::WRITE,[](){
             LYSLG_LOG_INFO(g_logger) << "connected";
@@ -44,6 +44,7 @@ void test1() {
 }
 
 lyslg::Timer::ptr s_timer;
+
 void test_timer() {
     lyslg::IoManager iom(2);
     s_timer = iom.addTimer(1000,[](){
@@ -60,7 +61,7 @@ void test_timer() {
 
 
 int main(int argc, char** argv) {
-    // test1();
-    test_timer();
+    test1();
+    // test_timer();
     return 0;
 }

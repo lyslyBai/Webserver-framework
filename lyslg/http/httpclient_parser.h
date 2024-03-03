@@ -37,6 +37,25 @@
 
 #include <http11_common.h>
 
+/*int cs: 表示解析器的当前状态。
+size_t body_start: 记录 HTTP 响应体的起始位置。
+int content_len: 记录 HTTP 响应的内容长度。
+int status: 记录 HTTP 响应的状态码。
+int chunked: 表示是否采用分块传输编码。
+int chunks_done: 记录已完成的分块数量。
+int close: 表示连接是否关闭。
+size_t nread: 记录已读取的字节数。
+size_t mark: 标记某一位置。
+size_t field_start: 记录 HTTP 响应头字段的起始位置。
+size_t field_len: 记录 HTTP 响应头字段的长度。
+void *data: 指向用户定义的数据结构，用于在回调函数中传递额外的数据。
+field_cb http_field: 回调函数，用于处理 HTTP 响应头字段。
+element_cb reason_phrase: 回调函数，用于处理 HTTP 响应原因短语。
+element_cb status_code: 回调函数，用于处理 HTTP 响应状态码。
+element_cb chunk_size: 回调函数，用于处理分块传输编码的块大小。
+element_cb http_version: 回调函数，用于处理 HTTP 版本信息。
+element_cb header_done: 回调函数，表示 HTTP 响应头解析完成。
+element_cb last_chunk: 回调函数，表示最后一个分块的处理。*/
 typedef struct httpclient_parser { 
   int cs;
   size_t body_start;

@@ -69,7 +69,7 @@ public:
      */
     int addEvent(int fd, Event event, std::function<void()> cb = nullptr);
     // 删除时间，同时参数对应的Event
-    bool delEvent(int fd, Event event);
+    bool delEvent(int fd, Event event); 
     /**
      * @brief 取消事件
      * @param[in] fd socket句柄

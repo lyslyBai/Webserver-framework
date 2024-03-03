@@ -45,7 +45,8 @@ uint64_t HttpResponseParser::GetHttpResponseMaxBodySize() {
     return s_http_response_max_body_size;
 }
 
-
+/*这个命名空间的目的是将其中定义的 _RequestSizeIniter 
+结构体和相关的初始化代码限定在当前文件的作用域内，防止与其他文件中的同名结构体或全局变量发生命名冲突。*/
 namespace {
 struct _RequestSizeIniter {
     _RequestSizeIniter() {
@@ -241,7 +242,9 @@ HttpResponseParser::HttpResponseParser()
     m_parser.http_field = on_response_http_field;
     m_parser.data = this;
 }
-
+/*由于分块传输编码的特殊性，需要在每次解析新的数据块之前重新初始化 httpclient_parser，
+以确保正确解析新的块。这是因为 httpclient_parser 内部会保持状态信息，
+重新初始化可以清除先前的状态，从而正确处理新的数据块。*/
 size_t HttpResponseParser::execute(char* data, size_t len, bool chunck) {
     if(chunck) {
         httpclient_parser_init(&m_parser);

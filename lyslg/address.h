@@ -12,6 +12,21 @@
 #include <map>
 #include <vector>
 
+/*IPAddress（IP 地址）:
+
+使用场景： IP 地址用于在 Internet 协议（IP）网络中标识和定位设备。
+它是在 Internet 上进行通信时的基本构建块，用于唯一标识网络中的计算机或设备。
+不同之处： IP 地址可以分为 IPv4 和 IPv6 两个主要版本。IPv4 地址是 32 位的，
+通常表示为点分十进制（例如，192.168.1.1），而 IPv6 地址是 128 位的，
+通常表示为八组四位十六进制数（例如，2001:0db8:85a3:0000:0000:8a2e:0370:7334）。
+Unix域套接字地址:
+
+使用场景： Unix 域套接字是在本地主机上进行进程间通信（IPC）时使用的一种机制。
+它不涉及网络，而是在同一台计算机上的进程之间创建连接，实现本地通信。
+不同之处： Unix 域套接字不涉及网络协议栈，因此它们在性能上通常比网络套接字更高效。
+它们使用文件系统路径作为地址，而不是 IP 地址和端口号。Unix 域套接字通常用于同一台
+机器上的进程之间的通信，因为它们提供了一种轻量级的、低延迟的通信方式。*/
+
 namespace lyslg{
 
 class IPAddress;
@@ -78,6 +93,7 @@ class IPv4Address : public IPAddress{
 public:
     typedef std::shared_ptr<IPv4Address> ptr;
     // 继承的父类的默认构造函数吧
+
     IPv4Address(const sockaddr_in& address);
     IPv4Address(uint32_t address = INADDR_ANY, uint16_t port = 0);
 

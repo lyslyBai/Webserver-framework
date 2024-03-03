@@ -324,6 +324,19 @@ test_setoptionUN/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_setoptionUN.dir/build.make CMakeFiles/test_setoptionUN.dir/build
 .PHONY : test_setoptionUN/fast
 
+#=============================================================================
+# Target rules for targets named test_chartostr
+
+# Build rule for target.
+test_chartostr: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_chartostr
+.PHONY : test_chartostr
+
+# fast build rule for target.
+test_chartostr/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_chartostr.dir/build.make CMakeFiles/test_chartostr.dir/build
+.PHONY : test_chartostr/fast
+
 test_EncodeZigzag.o: test_EncodeZigzag.cc.o
 .PHONY : test_EncodeZigzag.o
 
@@ -467,6 +480,30 @@ test_char[].s: test_char[].cc.s
 test_char[].cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_char.dir/build.make CMakeFiles/test_char.dir/test_char[].cc.s
 .PHONY : test_char[].cc.s
+
+test_chartostr.o: test_chartostr.cc.o
+.PHONY : test_chartostr.o
+
+# target to build an object file
+test_chartostr.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_chartostr.dir/build.make CMakeFiles/test_chartostr.dir/test_chartostr.cc.o
+.PHONY : test_chartostr.cc.o
+
+test_chartostr.i: test_chartostr.cc.i
+.PHONY : test_chartostr.i
+
+# target to preprocess a source file
+test_chartostr.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_chartostr.dir/build.make CMakeFiles/test_chartostr.dir/test_chartostr.cc.i
+.PHONY : test_chartostr.cc.i
+
+test_chartostr.s: test_chartostr.cc.s
+.PHONY : test_chartostr.s
+
+# target to generate assembly for a file
+test_chartostr.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_chartostr.dir/build.make CMakeFiles/test_chartostr.dir/test_chartostr.cc.s
+.PHONY : test_chartostr.cc.s
 
 test_class_overload.o: test_class_overload.cc.o
 .PHONY : test_class_overload.o
@@ -722,6 +759,7 @@ help:
 	@echo "... test_bit"
 	@echo "... test_bswap_64"
 	@echo "... test_char"
+	@echo "... test_chartostr"
 	@echo "... test_class_overload"
 	@echo "... test_cond_define"
 	@echo "... test_enable_if"
@@ -750,6 +788,9 @@ help:
 	@echo "... test_char[].o"
 	@echo "... test_char[].i"
 	@echo "... test_char[].s"
+	@echo "... test_chartostr.o"
+	@echo "... test_chartostr.i"
+	@echo "... test_chartostr.s"
 	@echo "... test_class_overload.o"
 	@echo "... test_class_overload.i"
 	@echo "... test_class_overload.s"

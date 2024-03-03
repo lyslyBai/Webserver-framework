@@ -1,6 +1,8 @@
 #ifndef __LYSLG_SINGLETON_H__
 #define __LYSLG_SINGLETON_H__
 
+#include <memory>
+
 namespace lyslg{
 
 template<class T,class X = void, int N = 0>

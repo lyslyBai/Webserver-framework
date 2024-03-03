@@ -43,7 +43,7 @@ public:
 private:
     callback m_cb;
 };
-
+/*这个类的目的是根据 URI 的匹配程度，选择合适的 Servlet 处理客户端的 HTTP 请求。*/
 class ServletDispatch : public Servlet {
 public:
     typedef std::shared_ptr<ServletDispatch> ptr;

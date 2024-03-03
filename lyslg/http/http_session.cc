@@ -22,7 +22,7 @@ http::HttpRequest::ptr HttpSession::recvRequest(){
     char* data = buffer.get();
     int offset = 0;
     do{
-        int len = read(data + offset, buff_size - offset);
+        int len = read(data + offset, buff_size - offset); // 这里offset是未解析的数据，buff_size为缓存剩下的空间
         if(len <= 0) {
             close();
             return nullptr;
@@ -34,7 +34,7 @@ http::HttpRequest::ptr HttpSession::recvRequest(){
             return nullptr;
         }
         offset = len - nparse;
-        if(offset == (int)buff_size) {
+        if(offset == (int)buff_size) {  //如果缓存满了（offset 等于缓存大小），则关闭连接并返回空指针。
             close();
             return nullptr;
         }
@@ -43,7 +43,7 @@ http::HttpRequest::ptr HttpSession::recvRequest(){
         }
     }while(true);
     int64_t length = parser->getContentLength();
-    if(length > 0) {
+    if(length > 0) {  // 如果内容长度大于 0，则创建一个 std::string 对象 body 用于存储请求体。
         std::string body;
         body.reserve(length);
 
@@ -55,7 +55,7 @@ http::HttpRequest::ptr HttpSession::recvRequest(){
             memcpy(&body[0], data, length);
             len = length;
         }
-
+        // 上述将之前读到的正文报文copy到body，若之前读取的内容不足，则读取指定字节，未读到，则退出
         length -= offset;
         if(length > 0) {
             if(readFixSize(&body[len], length) <= 0) {
@@ -65,7 +65,7 @@ http::HttpRequest::ptr HttpSession::recvRequest(){
         }
         parser->getData()->setBody(body);
     }
-
+    // 设置m_close标志位
     parser->getData()->init();
     return parser->getData();
 }

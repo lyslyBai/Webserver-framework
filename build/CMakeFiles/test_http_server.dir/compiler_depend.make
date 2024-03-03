@@ -347,13 +347,7 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
   /usr/include/openssl/tls1.h \
   /usr/include/openssl/dtls1.h \
   /usr/include/openssl/srtp.h \
-  ../lyslg/http/http_session.h \
-  ../lyslg/socket_stream.h \
-  ../lyslg/stream.h \
-  ../lyslg/bytearray.h \
-  /usr/include/x86_64-linux-gnu/sys/uio.h \
-  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
-  ../lyslg/http/http.h \
+  ../lyslg/config.h \
   /usr/include/boost/lexical_cast.hpp \
   /usr/include/boost/config.hpp \
   /usr/include/boost/config/user.hpp \
@@ -1037,13 +1031,116 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
   /usr/include/boost/integer.hpp \
   /usr/include/boost/integer_fwd.hpp \
   /usr/include/boost/detail/basic_pointerbuf.hpp \
-  ../lyslg/http/servlet.h \
   /usr/include/c++/8/unordered_map \
   /usr/include/c++/8/bits/hashtable.h \
   /usr/include/c++/8/bits/hashtable_policy.h \
   /usr/include/c++/8/bits/unordered_map.h \
+  /usr/include/c++/8/unordered_set \
+  /usr/include/c++/8/bits/unordered_set.h \
+  /usr/local/include/yaml-cpp/yaml.h \
+  /usr/local/include/yaml-cpp/parser.h \
+  /usr/local/include/yaml-cpp/dll.h \
+  /usr/local/include/yaml-cpp/emitter.h \
+  /usr/local/include/yaml-cpp/binary.h \
+  /usr/local/include/yaml-cpp/emitterdef.h \
+  /usr/local/include/yaml-cpp/emittermanip.h \
+  /usr/local/include/yaml-cpp/null.h \
+  /usr/local/include/yaml-cpp/ostream_wrapper.h \
+  /usr/local/include/yaml-cpp/emitterstyle.h \
+  /usr/local/include/yaml-cpp/stlemitter.h \
+  /usr/local/include/yaml-cpp/exceptions.h \
+  /usr/local/include/yaml-cpp/mark.h \
+  /usr/local/include/yaml-cpp/noexcept.h \
+  /usr/local/include/yaml-cpp/traits.h \
+  /usr/local/include/yaml-cpp/node/node.h \
+  /usr/local/include/yaml-cpp/node/detail/iterator_fwd.h \
+  /usr/local/include/yaml-cpp/node/ptr.h \
+  /usr/local/include/yaml-cpp/node/type.h \
+  /usr/local/include/yaml-cpp/node/impl.h \
+  /usr/local/include/yaml-cpp/node/detail/memory.h \
+  /usr/local/include/yaml-cpp/node/detail/node.h \
+  /usr/local/include/yaml-cpp/node/detail/node_ref.h \
+  /usr/local/include/yaml-cpp/node/detail/node_data.h \
+  /usr/local/include/yaml-cpp/node/detail/node_iterator.h \
+  /usr/local/include/yaml-cpp/node/iterator.h \
+  /usr/local/include/yaml-cpp/node/detail/iterator.h \
+  /usr/local/include/yaml-cpp/node/convert.h \
+  /usr/include/c++/8/valarray \
+  /usr/include/c++/8/bits/valarray_array.h \
+  /usr/include/c++/8/bits/valarray_array.tcc \
+  /usr/include/c++/8/bits/valarray_before.h \
+  /usr/include/c++/8/bits/slice_array.h \
+  /usr/include/c++/8/bits/valarray_after.h \
+  /usr/include/c++/8/bits/gslice.h \
+  /usr/include/c++/8/bits/gslice_array.h \
+  /usr/include/c++/8/bits/mask_array.h \
+  /usr/include/c++/8/bits/indirect_array.h \
+  /usr/local/include/yaml-cpp/node/detail/impl.h \
+  /usr/local/include/yaml-cpp/node/parse.h \
+  /usr/local/include/yaml-cpp/node/emit.h \
+  ../lyslg/log.h \
+  ../lyslg/http/http_session.h \
+  ../lyslg/socket_stream.h \
+  ../lyslg/stream.h \
+  ../lyslg/bytearray.h \
+  /usr/include/x86_64-linux-gnu/sys/uio.h \
+  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
+  ../lyslg/http/http.h \
+  ../lyslg/http/servlet.h \
   ../lyslg/mutex.h
 
+
+../lyslg/http/http.h:
+
+/usr/include/x86_64-linux-gnu/bits/uio-ext.h:
+
+../lyslg/stream.h:
+
+../lyslg/http/http_session.h:
+
+/usr/include/c++/8/bits/mask_array.h:
+
+/usr/include/c++/8/bits/valarray_after.h:
+
+/usr/include/c++/8/bits/valarray_array.h:
+
+/usr/local/include/yaml-cpp/node/convert.h:
+
+/usr/local/include/yaml-cpp/node/detail/iterator.h:
+
+/usr/include/c++/8/valarray:
+
+/usr/local/include/yaml-cpp/node/iterator.h:
+
+/usr/local/include/yaml-cpp/node/detail/node_iterator.h:
+
+/usr/local/include/yaml-cpp/node/detail/node_data.h:
+
+/usr/local/include/yaml-cpp/node/detail/node.h:
+
+/usr/local/include/yaml-cpp/node/detail/memory.h:
+
+/usr/local/include/yaml-cpp/node/impl.h:
+
+/usr/local/include/yaml-cpp/node/type.h:
+
+/usr/local/include/yaml-cpp/node/ptr.h:
+
+/usr/local/include/yaml-cpp/node/node.h:
+
+/usr/local/include/yaml-cpp/exceptions.h:
+
+/usr/local/include/yaml-cpp/stlemitter.h:
+
+/usr/include/c++/8/bits/valarray_array.tcc:
+
+/usr/local/include/yaml-cpp/dll.h:
+
+/usr/local/include/yaml-cpp/parser.h:
+
+/usr/local/include/yaml-cpp/mark.h:
+
+/usr/include/c++/8/bits/unordered_set.h:
 
 /usr/include/c++/8/bits/hashtable_policy.h:
 
@@ -1293,6 +1390,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/boost/predef/library/std/vacpp.h:
 
+/usr/local/include/yaml-cpp/noexcept.h:
+
 /usr/include/boost/predef/library/std/stlport.h:
 
 /usr/include/boost/predef/platform/cloudabi.h:
@@ -1321,6 +1420,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/boost/predef/library/c/gnu.h:
 
+/usr/local/include/yaml-cpp/emittermanip.h:
+
 /usr/include/c++/8/cassert:
 
 /usr/include/boost/predef/detail/_cassert.h:
@@ -1332,6 +1433,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 /usr/include/boost/predef/compiler/tendra.h:
 
 /usr/include/boost/predef/compiler/sgi_mipspro.h:
+
+/usr/include/c++/8/bits/indirect_array.h:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/advance_backward.hpp:
 
@@ -1362,6 +1465,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 /usr/include/boost/predef/compiler/digitalmars.h:
 
 /usr/include/boost/predef/compiler/diab.h:
+
+/usr/local/include/yaml-cpp/emitterstyle.h:
 
 /usr/include/boost/predef/compiler/compaq.h:
 
@@ -1479,16 +1584,6 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/boost/numeric/conversion/detail/numeric_cast_traits.hpp:
 
-/usr/include/boost/numeric/conversion/detail/bounds.hpp:
-
-/usr/include/boost/mpl/aux_/iter_apply.hpp:
-
-/usr/include/boost/numeric/conversion/bounds.hpp:
-
-/usr/include/boost/predef/compiler/pgi.h:
-
-/usr/include/boost/numeric/conversion/detail/converter.hpp:
-
 /usr/include/openssl/cterr.h:
 
 /usr/include/boost/type_traits/is_void.hpp:
@@ -1587,6 +1682,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/x86_64-linux-gnu/asm/bitsperlong.h:
 
+/usr/local/include/yaml-cpp/node/emit.h:
+
 /usr/include/boost/detail/workaround.hpp:
 
 /usr/include/x86_64-linux-gnu/asm/posix_types.h:
@@ -1645,6 +1742,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/x86_64-linux-gnu/bits/environments.h:
 
+/usr/local/include/yaml-cpp/yaml.h:
+
 /usr/include/boost/preprocessor/repetition/enum_trailing_params.hpp:
 
 /usr/include/x86_64-linux-gnu/sys/sysmacros.h:
@@ -1661,6 +1760,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/c++/8/iostream:
 
+/usr/include/c++/8/bits/slice_array.h:
+
 /usr/include/boost/mpl/apply.hpp:
 
 ../lyslg/util.h:
@@ -1676,6 +1777,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 /usr/include/boost/mpl/aux_/preprocessed/gcc/and.hpp:
 
 /usr/include/c++/8/map:
+
+/usr/local/include/yaml-cpp/traits.h:
 
 /usr/include/unistd.h:
 
@@ -1700,10 +1803,6 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 /usr/include/boost/preprocessor/control/if.hpp:
 
 /usr/include/boost/mpl/next.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
-
-/usr/include/c++/8/bits/ostream.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
@@ -1831,6 +1930,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/errno.h:
 
+/usr/include/c++/8/bits/valarray_before.h:
+
 /usr/include/c++/8/new:
 
 /usr/include/boost/mpl/aux_/at_impl.hpp:
@@ -1920,6 +2021,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 /usr/include/arpa/inet.h:
 
 /usr/include/boost/preprocessor/list/detail/fold_right.hpp:
+
+/usr/local/include/yaml-cpp/null.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
@@ -2081,6 +2184,10 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/asm-generic/bitsperlong.h:
 
+/usr/include/x86_64-linux-gnu/sys/uio.h:
+
+/usr/include/c++/8/bits/exception_defines.h:
+
 /usr/include/boost/mpl/aux_/size_impl.hpp:
 
 /usr/include/c++/8/bits/shared_ptr.h:
@@ -2106,8 +2213,6 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 /usr/include/boost/mpl/aux_/O1_size_impl.hpp:
 
 /usr/include/c++/8/cwchar:
-
-../lyslg/http/http.h:
 
 /usr/include/c++/8/bits/stl_iterator.h:
 
@@ -2155,10 +2260,6 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/boost/mpl/quote.hpp:
 
-/usr/include/x86_64-linux-gnu/bits/mathinline.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
-
 /usr/include/boost/predef/language.h:
 
 /usr/include/c++/8/bits/stl_map.h:
@@ -2167,9 +2268,9 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/c++/8/bits/shared_ptr_atomic.h:
 
-/usr/include/boost/numeric/conversion/numeric_cast_traits.hpp:
-
 /usr/include/netinet/in.h:
+
+/usr/include/boost/numeric/conversion/numeric_cast_traits.hpp:
 
 /usr/include/c++/8/bits/nested_exception.h:
 
@@ -2186,6 +2287,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
 /usr/include/linux/errno.h:
+
+/usr/include/c++/8/bits/gslice.h:
 
 /usr/include/c++/8/bits/hash_bytes.h:
 
@@ -2305,6 +2408,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h:
 
+/usr/local/include/yaml-cpp/node/detail/iterator_fwd.h:
+
 /usr/include/c++/8/bits/vector.tcc:
 
 /usr/include/boost/mpl/aux_/na.hpp:
@@ -2356,6 +2461,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 /usr/include/boost/preprocessor/tuple/elem.hpp:
 
 /usr/include/c++/8/bits/stl_raw_storage_iter.h:
+
+/usr/local/include/yaml-cpp/emitterdef.h:
 
 /usr/include/c++/8/bits/codecvt.h:
 
@@ -2443,29 +2550,7 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/boost/core/noncopyable.hpp:
 
-../lyslg/http/http_session.h:
-
-/usr/include/boost/mpl/aux_/traits_lambda_spec.hpp:
-
-/usr/include/boost/predef/compiler/kai.h:
-
-/usr/include/boost/preprocessor/repetition/for.hpp:
-
-../lyslg/stream.h:
-
-/usr/include/boost/array.hpp:
-
-/usr/include/boost/type_traits/is_arithmetic.hpp:
-
-/usr/include/boost/type_traits/has_minus.hpp:
-
-/usr/include/c++/8/bits/exception_defines.h:
-
-/usr/include/x86_64-linux-gnu/sys/uio.h:
-
-/usr/include/boost/type_traits/is_class.hpp:
-
-/usr/include/x86_64-linux-gnu/bits/uio-ext.h:
+../lyslg/config.h:
 
 /usr/include/boost/lexical_cast.hpp:
 
@@ -2557,9 +2642,9 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/boost/mpl/aux_/config/intel.hpp:
 
-/usr/include/boost/predef/platform/windows_uwp.h:
-
 ../lyslg/bytearray.h:
+
+/usr/include/boost/predef/platform/windows_uwp.h:
 
 /usr/include/boost/mpl/aux_/config/ctps.hpp:
 
@@ -2602,6 +2687,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 /usr/include/boost/iterator/iterator_adaptor.hpp:
 
 /usr/include/boost/mpl/aux_/config/nttp.hpp:
+
+/usr/local/include/yaml-cpp/node/parse.h:
 
 /usr/include/c++/8/bits/stl_relops.h:
 
@@ -2701,6 +2788,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/boost/range/detail/has_member_size.hpp:
 
+/usr/include/c++/8/bits/gslice_array.h:
+
 ../lyslg/iomanager.h:
 
 /usr/include/boost/preprocessor/list/reverse.hpp:
@@ -2771,9 +2860,15 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/boost/mpl/assert.hpp:
 
+/usr/local/include/yaml-cpp/binary.h:
+
 /usr/include/boost/mpl/aux_/config/arrays.hpp:
 
 /usr/include/boost/mpl/bind.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathinline.h:
 
 /usr/include/boost/mpl/aux_/config/gpu.hpp:
 
@@ -2793,9 +2888,15 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/boost/type_traits/is_pointer.hpp:
 
+/usr/include/boost/type_traits/is_class.hpp:
+
 /usr/include/boost/type_traits/is_volatile.hpp:
 
 /usr/include/boost/type_traits/is_member_function_pointer.hpp:
+
+/usr/include/c++/8/bits/ostream.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 
 /usr/include/boost/utility/addressof.hpp:
 
@@ -2875,6 +2976,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/boost/mpl/aux_/has_type.hpp:
 
+/usr/include/boost/numeric/conversion/detail/bounds.hpp:
+
 /usr/include/x86_64-linux-gnu/c++/8/bits/messages_members.h:
 
 /usr/include/boost/mpl/less.hpp:
@@ -2886,6 +2989,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 ../lyslg/timer.h:
 
 /usr/include/boost/mpl/aux_/preprocessed/gcc/full_lambda.hpp:
+
+/usr/local/include/yaml-cpp/node/detail/impl.h:
 
 /usr/include/boost/config/detail/select_platform_config.hpp:
 
@@ -2918,6 +3023,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 /usr/include/boost/mpl/aux_/config/workaround.hpp:
 
 /usr/include/boost/range/end.hpp:
+
+/usr/include/c++/8/unordered_set:
 
 /usr/include/boost/range/detail/sfinae.hpp:
 
@@ -2957,6 +3064,12 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/boost/concept/usage.hpp:
 
+/usr/include/boost/mpl/aux_/traits_lambda_spec.hpp:
+
+/usr/include/boost/predef/compiler/kai.h:
+
+/usr/include/boost/preprocessor/repetition/for.hpp:
+
 /usr/include/x86_64-linux-gnu/asm/socket.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
@@ -2993,6 +3106,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/c++/8/climits:
 
+/usr/local/include/yaml-cpp/node/detail/node_ref.h:
+
 /usr/include/boost/type_traits/is_unsigned.hpp:
 
 /usr/include/asm-generic/socket.h:
@@ -3025,11 +3140,21 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/boost/core/checked_delete.hpp:
 
+/usr/include/boost/predef/compiler/pgi.h:
+
+/usr/include/boost/numeric/conversion/detail/converter.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
 /usr/include/boost/range/distance.hpp:
 
 /usr/include/boost/range/rbegin.hpp:
+
+/usr/include/boost/array.hpp:
+
+/usr/include/boost/type_traits/is_arithmetic.hpp:
+
+/usr/include/boost/type_traits/has_minus.hpp:
 
 /usr/include/boost/predef/os/qnxnto.h:
 
@@ -3058,6 +3183,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 /usr/include/boost/type_traits/is_base_and_derived.hpp:
 
 /usr/include/boost/numeric/conversion/detail/meta.hpp:
+
+/usr/local/include/yaml-cpp/emitter.h:
 
 /usr/include/c++/8/vector:
 
@@ -3089,6 +3216,8 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/boost/numeric/conversion/detail/sign_mixture.hpp:
 
+/usr/local/include/yaml-cpp/ostream_wrapper.h:
+
 /usr/include/boost/numeric/conversion/sign_mixture_enum.hpp:
 
 /usr/include/boost/numeric/conversion/detail/udt_builtin_mixture.hpp:
@@ -3105,9 +3234,9 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 
 /usr/include/boost/config/no_tr1/cmath.hpp:
 
-/usr/include/c++/8/bits/functional_hash.h:
-
 ../lyslg/socket_stream.h:
+
+/usr/include/c++/8/bits/functional_hash.h:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
@@ -3118,3 +3247,7 @@ CMakeFiles/test_http_server.dir/tests/test_http_server.cc.o: ../tests/test_http_
 /usr/include/boost/type_traits/is_scalar.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
+
+/usr/include/boost/mpl/aux_/iter_apply.hpp:
+
+/usr/include/boost/numeric/conversion/bounds.hpp:

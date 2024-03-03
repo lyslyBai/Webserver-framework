@@ -75,7 +75,7 @@ void* Thread::run(void* arg){
     Thread* thread = (Thread*)arg;
     //静态线程局部变量，用于存储当前线程的指针
     t_thread = thread;
-    t_thread_name = thread->m_name;
+    t_thread_name = thread->m_name;  // t_thread_name是线程id，thread->m_name是当前这个线程类的名称，不一样
     thread->m_id = lyslg::GetThreadId();
     // 设置当前线程的名称，这里使用 pthread_setname_np 函数。这个名称将会在调试工具和日志中用于标识线程。
     // pthread_self() 用来回去当前线程id，substr(0,15)为了确保线程名字不超过系统规定的长度
@@ -92,7 +92,7 @@ void* Thread::run(void* arg){
     cb.swap(thread->m_cb); 通过原子的交换操作确保了线程安全性。
     通过交换，保证了在执行 cb(); 之前，thread->m_cb 持有了正确的资源。*/
     cb.swap(thread->m_cb);
-    thread->m_semaphore.notify();  // 确保当前的线程跑起来
+    thread->m_semaphore.notify();  // 确保当前的线程跑起来，，， 这一句运行完后，上面m_semaphore.wait() 退出阻塞状态，即，当前线程的执行函数执行后，这条线程才算执行完成
 
     cb();
     return 0;

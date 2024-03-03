@@ -22,7 +22,6 @@ public:
         Ipv4 = AF_INET,
         Ipv6 = AF_INET6,
         UNIX = AF_UNIX
-
     };
 
     static Socket::ptr CreateTCP(lyslg::Address::ptr address);

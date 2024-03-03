@@ -30,14 +30,17 @@ bool Timer::cancel(){
 }
 bool Timer::refresh(){
     TimerManager::RWMutexType::WriteLock lock(m_manager->m_mutex);
-    if(m_cb) {
+    if(!m_cb) {
        return false;
     }
     auto it = m_manager->m_timers.find(shared_from_this());
     if(it == m_manager->m_timers.end()) {
         return false;
     }
-    // 可以考虑一下这里为什么不直接修改
+    // 可以考虑一下这里为什么不直接修改 ??
+    //C++ 中的 std::set 是一个有序的关联容器，它在元素插入时会按照某种排序准则
+    //（默认是升序）进行排序。一旦元素插入到 std::set 中，它们就会按照排序准则保持有序。
+    // 然而，std::set 并不会在元素的其他属性发生变化时自动重新排序。
     m_manager->m_timers.erase(it);
     m_next =  lyslg::GetCurrentMS() + m_ms;
     m_manager->m_timers.insert(shared_from_this());
@@ -111,7 +114,7 @@ Timer::ptr TimerManager::addTimer(uint16_t ms,std::function<void()> cb
     addTimer(timer,lock);
     return timer;
 }
-
+/*这样的操作会检查弱指针是否关联着有效的共享指针，如果是，则将其转换为共享指针，否则得到一个空的共享指针。*/
 static void OnTimer(std::weak_ptr<void> weak_cond,std::function<void()> cb) {
     std::shared_ptr<void> tmp = weak_cond.lock();
     if(tmp) {
@@ -172,7 +175,7 @@ void  TimerManager::listExpiredCb(std::vector<std::function<void()> >& cbs){
     while(it!=m_timers.end() && (*it)->m_next == now_ms) {
         ++it;
     }
-    // 这里系统回绕这全部放入过期队列
+    // 这里系统回绕则全部放入过期队列
     expired.insert(expired.begin(),m_timers.begin(),it);
     m_timers.erase(m_timers.begin(),it);
     cbs.reserve(expired.size());
@@ -180,7 +183,7 @@ void  TimerManager::listExpiredCb(std::vector<std::function<void()> >& cbs){
     for(auto& timer:expired){
         cbs.push_back(timer->m_cb);
         if(timer->m_recurring) {
-            timer->m_next = now_ms + timer->m_ms;
+            timer->m_next = now_ms + timer->m_ms; // 这里以当前时间为基准，再次插入到定时器队列
             m_timers.insert(timer);
         } else {
             timer->m_cb = nullptr;

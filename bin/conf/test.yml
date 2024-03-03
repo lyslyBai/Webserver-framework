@@ -1,17 +1,17 @@
 logs:
     - name: root
       level: info
-      formatter: "%d%T%m%n"
+      # formatter: "%d%T%m%n"
       appenders:
             - type: FileLogAppender
-              file: /home/lyslg/lyslg_/root.txt
+              file: /home/lyslg/Documents/lyslg_/root.txt
             - type: StdoutLogAppender
     - name: system
       level: debug
-      formatter: "%d%T%m%n"
-      appender:
+      # formatter: "%d%T%m%n"
+      appenders:
           - type: FileLogAppender
-            file: /home/lyslg/lyslg_/system.txt
+            file: /home/lyslg/Documents/lyslg_/system.txt
           - type: StdoutLogAppender
 system:
       port: 4578

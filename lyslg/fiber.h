@@ -59,7 +59,7 @@ public:
 
 private:
     uint64_t m_id = 0;
-    uint32_t m_stacksize = 0;
+    uint32_t m_stacksize = 0; 
     State m_state = INIT;
     ucontext_t m_ctx;
     void* m_stack = nullptr;

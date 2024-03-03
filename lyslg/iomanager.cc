@@ -30,12 +30,13 @@ void IoManager::FdContext::resetContext(FdContext::EventContext& ctx){
     ctx.cb = nullptr;
 }
 
+// 执行对应的回调函数，然后将其置空
 void IoManager::FdContext::triggerEvent(IoManager::Event event){
     LYSLG_ASSERT(event & events);
     events = (Event)(events  & ~event);
     EventContext& ctx = getContext(event);
-    if(ctx.cb) {
-        ctx.scheduler->schedule(&ctx.cb);
+    if(ctx.cb) {              
+        ctx.scheduler->schedule(&ctx.cb);  // 这里schedule使用类型推断，也可以使用<>提供显示类型
     } else {
         ctx.scheduler->schedule(&ctx.fiber);
     }
@@ -59,7 +60,7 @@ IoManager::IoManager(size_t threads, bool use_caller, const std::string& name)
     event.events = EPOLLIN|EPOLLET;
     event.data.fd = m_tickleFds[0];
 
-    // 获取原来的flag，加上非阻塞，从新设置,-1为error，0成功
+    // 获取原来的flag，加上非阻塞，从新设置,-1为error，0成功 FL 表示 "File Status Flags"，即文件状态标志
     int flags = fcntl(m_tickleFds[0], F_GETFL, 0);
     flags |= O_NONBLOCK;  // 设置为非阻塞
     rt = fcntl(m_tickleFds[0], F_SETFL, flags);
@@ -214,6 +215,9 @@ bool IoManager::cancelEvent(int fd, Event event){
         return false; 
     }
     // 这里为什么要trigger
+    /*取消事件后触发相应的回调函数的目的在于通知应用程序，即便取消了某个事件，
+    仍然要执行相应的处理逻辑。这种机制通常用于清理资源、执行必要的收尾工作或进行一些异步操作的处理。*/
+    /*在异步编程中，取消事件后触发回调函数可以保证事件处理的完整性和一致性。*/
     fd_ctx->triggerEvent(event);
     --m_pendingEventCount;
     return true;
@@ -330,6 +334,7 @@ void IoManager::idle(){
 
         for(int i = 0;i<rt;++i) {
             epoll_event& event = events[i];
+            // 无名管道的读事件，目的是触发epoll，处理过期的定时器
             if(event.data.fd == m_tickleFds[0]) {
                 uint8_t dummy;
                 while(read(m_tickleFds[0],&dummy,1) == 1);

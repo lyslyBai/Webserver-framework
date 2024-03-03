@@ -56,7 +56,7 @@ namespace http{
     /* icecast */                     \
     XX(33, SOURCE,      SOURCE)       \
 
-/* Status Codes */
+/* Status Codes */  /*数字状态码与符号名称和可读的描述相对应*/
 #define HTTP_STATUS_MAP(XX)                                                 \
     XX(100, CONTINUE,                        Continue)                        \
     XX(101, SWITCHING_PROTOCOLS,             Switching Protocols)             \

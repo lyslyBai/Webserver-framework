@@ -15,7 +15,7 @@ public:
     typedef std::shared_ptr<Scheduler> ptr;
     typedef Mutex MutexType;
 
-    Scheduler(size_t threads = 1,bool use_caller = true,const std::string& name = "adsfadsfas");
+    Scheduler(size_t threads = 1,bool use_caller = true,const std::string& name = "name");
     virtual ~Scheduler();
 
     const std::string& getName() const { return m_name;}
@@ -53,7 +53,8 @@ public:
         }
     }
 
-
+// 这里idle和tikkel是对应的，如果idle会使线程陷入休眠，则使用tikkle唤醒，
+// 需要继承的之类实现。iomanager没有陷入休眠，所以也就不需要tikkle唤醒。
 
 protected:
     virtual void tickle();
@@ -76,6 +77,7 @@ private:
     }
 
 private:
+    // 调度系统接收的数据可能是回调函数，可能是协程，使用一个结构体
     struct FiberAndThread {
         Fiber::ptr fiber;
         std::function<void()> cb;
@@ -121,17 +123,13 @@ protected:
     std::atomic<size_t> m_activeThreadCount = {0};
     // 空闲线程数量
     std::atomic<size_t> m_idleThreadCount = {0};
-    // 是否正在停止
+    // 是否正在停止，
     bool m_stopping = true;
-    // 是否自动停止
+    // 是否自动停止，满足一定条件后可以停止
     bool m_autoStop = false;
     // 主线程id（use_caller）
     int m_rootThread = 0;
 };
-
-
-
-
 
 }
 

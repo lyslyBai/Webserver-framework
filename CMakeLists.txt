@@ -130,6 +130,21 @@ add_dependencies(test_uri lyslg)  #用于添加一个目标对其他目标的依
 force_redefine_file_macro_for_sources(test_uri)
 target_link_libraries(test_uri lyslg yaml-cpp) 
 
+add_executable(test_daemon ${PROJECT_SOURCE_DIR}/tests/test_daemon.cc) # test 为cmake保留关键字，不能作为文件名
+add_dependencies(test_daemon lyslg)  #用于添加一个目标对其他目标的依赖。
+force_redefine_file_macro_for_sources(test_daemon)
+target_link_libraries(test_daemon lyslg yaml-cpp) 
+
+add_executable(test_env ${PROJECT_SOURCE_DIR}/tests/test_env.cc) # test 为cmake保留关键字，不能作为文件名
+add_dependencies(test_env lyslg)  #用于添加一个目标对其他目标的依赖。
+force_redefine_file_macro_for_sources(test_env)
+target_link_libraries(test_env lyslg yaml-cpp) 
+
+add_executable(test_application ${PROJECT_SOURCE_DIR}/tests/test_application.cc) # test 为cmake保留关键字，不能作为文件名
+add_dependencies(test_application lyslg)  #用于添加一个目标对其他目标的依赖。
+force_redefine_file_macro_for_sources(test_application)
+target_link_libraries(test_application lyslg yaml-cpp) 
+
 #自动设置PROJECT_SOURCE_DIR的默认值为项目根目录的路径（CMakeLists.txt所在的路径）
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/lib)

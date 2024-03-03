@@ -163,13 +163,7 @@ CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
  /usr/include/c++/8/vector /usr/include/c++/8/bits/stl_vector.h \
  /usr/include/c++/8/bits/stl_bvector.h /usr/include/c++/8/bits/vector.tcc \
- /home/lyslg/Documents/lyslg_/lyslg/thread.h \
- /home/lyslg/Documents/lyslg_/lyslg/timer.h /usr/include/c++/8/set \
- /usr/include/c++/8/bits/stl_tree.h /usr/include/c++/8/bits/stl_set.h \
- /usr/include/c++/8/bits/stl_multiset.h \
- /home/lyslg/Documents/lyslg_/lyslg/log.h /usr/include/c++/8/sstream \
- /usr/include/c++/8/istream /usr/include/c++/8/ios \
- /usr/include/c++/8/bits/ios_base.h \
+ /usr/include/c++/8/ios /usr/include/c++/8/bits/ios_base.h \
  /usr/include/c++/8/bits/locale_classes.h \
  /usr/include/c++/8/bits/locale_classes.tcc \
  /usr/include/c++/8/system_error \
@@ -182,7 +176,13 @@ CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o: \
  /usr/include/c++/8/bits/streambuf_iterator.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/ctype_inline.h \
  /usr/include/c++/8/bits/locale_facets.tcc \
- /usr/include/c++/8/bits/basic_ios.tcc /usr/include/c++/8/ostream \
+ /usr/include/c++/8/bits/basic_ios.tcc \
+ /home/lyslg/Documents/lyslg_/lyslg/thread.h \
+ /home/lyslg/Documents/lyslg_/lyslg/timer.h /usr/include/c++/8/set \
+ /usr/include/c++/8/bits/stl_tree.h /usr/include/c++/8/bits/stl_set.h \
+ /usr/include/c++/8/bits/stl_multiset.h \
+ /home/lyslg/Documents/lyslg_/lyslg/log.h /usr/include/c++/8/sstream \
+ /usr/include/c++/8/istream /usr/include/c++/8/ostream \
  /usr/include/c++/8/bits/ostream.tcc /usr/include/c++/8/bits/istream.tcc \
  /usr/include/c++/8/bits/sstream.tcc /usr/include/c++/8/fstream \
  /usr/include/c++/8/bits/codecvt.h \

@@ -56,9 +56,9 @@ private:
     bool m_isInit: 1;
     /// 是否socket
     bool m_isSocket: 1;
-    /// 是否hook非阻塞
+    /// 是否hook非阻塞     系统太非阻塞
     bool m_sysNonblock: 1;
-    /// 是否用户主动设置非阻塞
+    /// 是否用户主动设置非阻塞   用户态非阻塞
     bool m_userNonblock: 1;
     /// 是否关闭
     bool m_isClosed: 1;

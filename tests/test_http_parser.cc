@@ -20,6 +20,7 @@ void test_request() {
         << " content_length=" << parser.getContentLength();
     tmp.resize(tmp.size() - s);
     LYSLG_LOG_INFO(g_logger) << parser.getData()->toString();
+    LYSLG_LOG_INFO(g_logger) << tmp;
 }
 
 const char test_response_data[] = "HTTP/1.1 200 OK\r\n"

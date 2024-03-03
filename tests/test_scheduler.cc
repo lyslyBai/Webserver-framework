@@ -6,12 +6,16 @@ lyslg::Logger::ptr g_logger = LYSLG_LOG_ROOT();
 
 void test_fiber() {
     LYSLG_LOG_INFO(g_logger) << "test in fiber";
-    static int s_count = 5;
-    sleep_f(1); // hook 后的原函数
-
-    if(--s_count >= 0) {        // 这里you段错误是因为
-        lyslg::Scheduler::GetThis()->schedule(&test_fiber,lyslg::GetThreadId()); //
+    static int s_count = 10;
+    while(--s_count) {
+        LYSLG_LOG_INFO(g_logger) << "s_count=" << s_count;
+        lyslg::Fiber::YieldToReady();
     }
+    // sleep_f(1); // hook 后的原函数
+
+    // if(--s_count >= 0) {        // 这里you段错误是因为
+    //     lyslg::Scheduler::GetThis()->schedule(&test_fiber,lyslg::GetThreadId()); //
+    // }
  
 }
 

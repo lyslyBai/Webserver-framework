@@ -366,6 +366,45 @@ test_uri/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_uri.dir/build.make CMakeFiles/test_uri.dir/build
 .PHONY : test_uri/fast
 
+#=============================================================================
+# Target rules for targets named test_daemon
+
+# Build rule for target.
+test_daemon: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_daemon
+.PHONY : test_daemon
+
+# fast build rule for target.
+test_daemon/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_daemon.dir/build.make CMakeFiles/test_daemon.dir/build
+.PHONY : test_daemon/fast
+
+#=============================================================================
+# Target rules for targets named test_env
+
+# Build rule for target.
+test_env: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_env
+.PHONY : test_env
+
+# fast build rule for target.
+test_env/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/build
+.PHONY : test_env/fast
+
+#=============================================================================
+# Target rules for targets named test_application
+
+# Build rule for target.
+test_application: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_application
+.PHONY : test_application
+
+# fast build rule for target.
+test_application/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_application.dir/build.make CMakeFiles/test_application.dir/build
+.PHONY : test_application/fast
+
 examples/echo_server.o: examples/echo_server.cc.o
 .PHONY : examples/echo_server.o
 
@@ -414,6 +453,30 @@ lyslg/address.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/address.cc.s
 .PHONY : lyslg/address.cc.s
 
+lyslg/application.o: lyslg/application.cc.o
+.PHONY : lyslg/application.o
+
+# target to build an object file
+lyslg/application.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/application.cc.o
+.PHONY : lyslg/application.cc.o
+
+lyslg/application.i: lyslg/application.cc.i
+.PHONY : lyslg/application.i
+
+# target to preprocess a source file
+lyslg/application.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/application.cc.i
+.PHONY : lyslg/application.cc.i
+
+lyslg/application.s: lyslg/application.cc.s
+.PHONY : lyslg/application.s
+
+# target to generate assembly for a file
+lyslg/application.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/application.cc.s
+.PHONY : lyslg/application.cc.s
+
 lyslg/bytearray.o: lyslg/bytearray.cc.o
 .PHONY : lyslg/bytearray.o
 
@@ -461,6 +524,54 @@ lyslg/config.s: lyslg/config.cc.s
 lyslg/config.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/config.cc.s
 .PHONY : lyslg/config.cc.s
+
+lyslg/daemon.o: lyslg/daemon.cc.o
+.PHONY : lyslg/daemon.o
+
+# target to build an object file
+lyslg/daemon.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/daemon.cc.o
+.PHONY : lyslg/daemon.cc.o
+
+lyslg/daemon.i: lyslg/daemon.cc.i
+.PHONY : lyslg/daemon.i
+
+# target to preprocess a source file
+lyslg/daemon.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/daemon.cc.i
+.PHONY : lyslg/daemon.cc.i
+
+lyslg/daemon.s: lyslg/daemon.cc.s
+.PHONY : lyslg/daemon.s
+
+# target to generate assembly for a file
+lyslg/daemon.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/daemon.cc.s
+.PHONY : lyslg/daemon.cc.s
+
+lyslg/env.o: lyslg/env.cc.o
+.PHONY : lyslg/env.o
+
+# target to build an object file
+lyslg/env.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/env.cc.o
+.PHONY : lyslg/env.cc.o
+
+lyslg/env.i: lyslg/env.cc.i
+.PHONY : lyslg/env.i
+
+# target to preprocess a source file
+lyslg/env.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/env.cc.i
+.PHONY : lyslg/env.cc.i
+
+lyslg/env.s: lyslg/env.cc.s
+.PHONY : lyslg/env.s
+
+# target to generate assembly for a file
+lyslg/env.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/env.cc.s
+.PHONY : lyslg/env.cc.s
 
 lyslg/fd_manager.o: lyslg/fd_manager.cc.o
 .PHONY : lyslg/fd_manager.o
@@ -1086,6 +1197,30 @@ tests/test_address.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_address.dir/build.make CMakeFiles/test_address.dir/tests/test_address.cc.s
 .PHONY : tests/test_address.cc.s
 
+tests/test_application.o: tests/test_application.cc.o
+.PHONY : tests/test_application.o
+
+# target to build an object file
+tests/test_application.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_application.dir/build.make CMakeFiles/test_application.dir/tests/test_application.cc.o
+.PHONY : tests/test_application.cc.o
+
+tests/test_application.i: tests/test_application.cc.i
+.PHONY : tests/test_application.i
+
+# target to preprocess a source file
+tests/test_application.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_application.dir/build.make CMakeFiles/test_application.dir/tests/test_application.cc.i
+.PHONY : tests/test_application.cc.i
+
+tests/test_application.s: tests/test_application.cc.s
+.PHONY : tests/test_application.s
+
+# target to generate assembly for a file
+tests/test_application.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_application.dir/build.make CMakeFiles/test_application.dir/tests/test_application.cc.s
+.PHONY : tests/test_application.cc.s
+
 tests/test_bytearray.o: tests/test_bytearray.cc.o
 .PHONY : tests/test_bytearray.o
 
@@ -1133,6 +1268,54 @@ tests/test_config.s: tests/test_config.cc.s
 tests/test_config.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_config.dir/build.make CMakeFiles/test_config.dir/tests/test_config.cc.s
 .PHONY : tests/test_config.cc.s
+
+tests/test_daemon.o: tests/test_daemon.cc.o
+.PHONY : tests/test_daemon.o
+
+# target to build an object file
+tests/test_daemon.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_daemon.dir/build.make CMakeFiles/test_daemon.dir/tests/test_daemon.cc.o
+.PHONY : tests/test_daemon.cc.o
+
+tests/test_daemon.i: tests/test_daemon.cc.i
+.PHONY : tests/test_daemon.i
+
+# target to preprocess a source file
+tests/test_daemon.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_daemon.dir/build.make CMakeFiles/test_daemon.dir/tests/test_daemon.cc.i
+.PHONY : tests/test_daemon.cc.i
+
+tests/test_daemon.s: tests/test_daemon.cc.s
+.PHONY : tests/test_daemon.s
+
+# target to generate assembly for a file
+tests/test_daemon.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_daemon.dir/build.make CMakeFiles/test_daemon.dir/tests/test_daemon.cc.s
+.PHONY : tests/test_daemon.cc.s
+
+tests/test_env.o: tests/test_env.cc.o
+.PHONY : tests/test_env.o
+
+# target to build an object file
+tests/test_env.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/tests/test_env.cc.o
+.PHONY : tests/test_env.cc.o
+
+tests/test_env.i: tests/test_env.cc.i
+.PHONY : tests/test_env.i
+
+# target to preprocess a source file
+tests/test_env.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/tests/test_env.cc.i
+.PHONY : tests/test_env.cc.i
+
+tests/test_env.s: tests/test_env.cc.s
+.PHONY : tests/test_env.s
+
+# target to generate assembly for a file
+tests/test_env.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_env.dir/build.make CMakeFiles/test_env.dir/tests/test_env.cc.s
+.PHONY : tests/test_env.cc.s
 
 tests/test_fiber.o: tests/test_fiber.cc.o
 .PHONY : tests/test_fiber.o
@@ -1458,8 +1641,11 @@ help:
 	@echo "... lyslg"
 	@echo "... my_test"
 	@echo "... test_address"
+	@echo "... test_application"
 	@echo "... test_bytearray"
 	@echo "... test_config"
+	@echo "... test_daemon"
+	@echo "... test_env"
 	@echo "... test_fiber"
 	@echo "... test_hook"
 	@echo "... test_http"
@@ -1479,12 +1665,21 @@ help:
 	@echo "... lyslg/address.o"
 	@echo "... lyslg/address.i"
 	@echo "... lyslg/address.s"
+	@echo "... lyslg/application.o"
+	@echo "... lyslg/application.i"
+	@echo "... lyslg/application.s"
 	@echo "... lyslg/bytearray.o"
 	@echo "... lyslg/bytearray.i"
 	@echo "... lyslg/bytearray.s"
 	@echo "... lyslg/config.o"
 	@echo "... lyslg/config.i"
 	@echo "... lyslg/config.s"
+	@echo "... lyslg/daemon.o"
+	@echo "... lyslg/daemon.i"
+	@echo "... lyslg/daemon.s"
+	@echo "... lyslg/env.o"
+	@echo "... lyslg/env.i"
+	@echo "... lyslg/env.s"
 	@echo "... lyslg/fd_manager.o"
 	@echo "... lyslg/fd_manager.i"
 	@echo "... lyslg/fd_manager.s"
@@ -1563,12 +1758,21 @@ help:
 	@echo "... tests/test_address.o"
 	@echo "... tests/test_address.i"
 	@echo "... tests/test_address.s"
+	@echo "... tests/test_application.o"
+	@echo "... tests/test_application.i"
+	@echo "... tests/test_application.s"
 	@echo "... tests/test_bytearray.o"
 	@echo "... tests/test_bytearray.i"
 	@echo "... tests/test_bytearray.s"
 	@echo "... tests/test_config.o"
 	@echo "... tests/test_config.i"
 	@echo "... tests/test_config.s"
+	@echo "... tests/test_daemon.o"
+	@echo "... tests/test_daemon.i"
+	@echo "... tests/test_daemon.s"
+	@echo "... tests/test_env.o"
+	@echo "... tests/test_env.i"
+	@echo "... tests/test_env.s"
 	@echo "... tests/test_fiber.o"
 	@echo "... tests/test_fiber.i"
 	@echo "... tests/test_fiber.s"

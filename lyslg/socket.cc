@@ -5,6 +5,7 @@
 #include "hook.h"
 #include <netinet/tcp.h>
 #include "fd_manager.h"
+#include "util.h"
 #include "iomanager.h"
 
 namespace lyslg{
@@ -163,16 +164,17 @@ bool Socket::bind(const Address::ptr addr){
         return false;
     }
 
-    // UnixAddress::ptr uaddr = std::dynamic_pointer_cast<UnixAddress>(addr);
-    // if(uaddr) {
-    //     Socket::ptr sock = Socket::CreateUnixTCPSocket();
-    //     if(sock->connect(uaddr)) {
-    //         return false;
-    //     }
-    //     // } else {
-    //     //     lyslg::FSUtil::Unlink(uaddr->getPath(), true);
-    //     // }
-    // }
+    UnixAddress::ptr uaddr = std::dynamic_pointer_cast<UnixAddress>(addr);
+    if(uaddr) {
+        Socket::ptr sock = Socket::CreateUnixTCPSocket();
+        if(sock->connect(uaddr)) {
+            return false;
+        } else {
+            // 若已存在，则删掉，true，指文件已存在
+            lyslg::FSUtil::Unlink(uaddr->getPath(), true);
+            LYSLG_LOG_INFO(g_logger) << "file delete";
+        }
+    }
     
     if(::bind(m_sock,addr->getAddr(),addr->getAddrLen())) {
         LYSLG_LOG_ERROR(g_logger) << "bind error errno=" <<errno
@@ -266,7 +268,11 @@ int Socket::send(const void* buffer, size_t length,int flags){
     }
     return -1;
 }
+/*msghdr 结构体：
 
+msghdr 结构体用于描述消息的头部信息，包括消息的缓冲区、长度等。
+msg_iov 指向 iovec 结构体数组的指针，表示消息的数据缓冲区。iovec 结构体定义了一个数据块的地址和长度。
+msg_iovlen 表示 iovec 数组的长度，即消息包含多少个数据块。*/
 int Socket::send(const iovec* buffers, size_t length,int flags){
     if(isConnected()) {
         msghdr msg;
@@ -394,7 +400,7 @@ Address::ptr Socket::getLocalAddress(){
 
     socklen_t addrlen = result->getAddrLen();
     if(getsockname(m_sock,result->getAddr(),&addrlen)) {
-        LYSLG_LOG_ERROR(g_logger) << "getpeername error sock=" << m_sock << " m_family=" << m_family
+        LYSLG_LOG_ERROR(g_logger) << "getsockname error sock=" << m_sock << " m_family=" << m_family
             << " errno=" << errno << " errstr=" << strerror(errno);
         return Address::ptr(new UnknowAddress(m_family));
     }

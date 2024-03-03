@@ -125,10 +125,17 @@ static uint64_t EncodeZigzag64(const int64_t& v){
         return v * 2;
     }
 }
+/*(v >> 1): 这部分右移 v 的二进制表示一位，相当于除以2。这是因为在 Zigzag 编码中，正整数被乘以2，而负整数被乘以2并减去1，所以右移一位是为了还原这个过程。
 
+-(v & 1): 这部分是对 v 的最低位进行按位与操作 &，然后取负数。 (v & 1) 的结果是1或0，表示 v 的最低位是1或0。
+
+如果 (v & 1) 的结果为1，表示 v 是奇数（最低位为1），负号 - 将其变为 -1。
+
+如果 (v & 1) 的结果为0，表示 v 是偶数（最低位为0），负号 - 将其变为 0。
+
+最后，使用异或运算符 ^ 结合这两个结果。这个操作的目的是将右移后的数和取负的结果按位异或，实现还原原始的符号。如果最低位为1，结果就是 -1，如果最低位为0，结果就是 0。*/
 static int32_t DecodeZigzag32(const uint32_t& v){
     return(v >>1 ) ^ -(v & 1);
-
 }
 
 static int64_t DecodeZigzag64(const uint64_t& v){
@@ -392,7 +399,7 @@ void ByteArray::read(void* buf,size_t size){
     }
 
     size_t npos = m_position % m_baseSize;
-    size_t ncap = m_cur->size - npos;
+    size_t ncap = m_cur->size - npos; // 直接使用当前直接快是否不太严谨呢
     size_t bpos = 0;
     while(size > 0) {
         if(ncap >= size) {
@@ -424,7 +431,7 @@ void ByteArray::read(void* buf,size_t size,size_t position) const{
     size_t npos = position % m_baseSize;
     size_t ncap = m_cur->size - npos;
     size_t bpos = 0;
-    Node* cur = m_cur;
+    Node* cur = m_cur; // 这个直接使用当前直接快有问题
     while(size > 0) {
         if(ncap >= size) {
             memcpy((char*)buf + bpos , cur->ptr + npos, size);
@@ -456,6 +463,7 @@ void ByteArray::setPosition(size_t v){
     if(m_position > m_size) {
         m_size = m_position;
     }
+    // 这里确保m_position与字节块是对应的
     m_cur = m_root;
     while(v > m_cur->size) {
         v -= m_cur->size;

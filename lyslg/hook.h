@@ -19,7 +19,7 @@ namespace lyslg{
 typedef 和 extern 关键字的位置会影响它们的作用域和可见性。在这个特定的代码中，它们被放在了 namespace lyslg 外面，这样可以确保这些定义在整个命名空间之外是可见的。
 
 如果将 typedef 和 extern 写在 namespace lyslg 内部，那么它们的作用域将仅限于该命名空间。这可能会导致在命名空间之外的其他地方无法访问这些定义，从而阻止它们在命名空间外使用。*/
-
+/*extern 关键字用于声明一个变量，但不进行定义。这表明 sleep_f 是在其他地方定义的，而在这里只是声明。*/
 extern "C" {
     typedef unsigned int (*sleep_fun)(unsigned int seconds);
     extern sleep_fun sleep_f;
@@ -89,7 +89,6 @@ extern "C" {
     extern setsockopt_fun setsockopt_f;
 
     extern int connect_with_timeout(int fd, const struct sockaddr* addr, socklen_t addrlen, uint64_t timeout_ms);
-
 
 }
 #endif

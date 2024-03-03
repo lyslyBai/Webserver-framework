@@ -17,5 +17,8 @@
 /home/lyslg/Documents/lyslg_/build/CMakeFiles/test_http_server.dir
 /home/lyslg/Documents/lyslg_/build/CMakeFiles/test_http_connection.dir
 /home/lyslg/Documents/lyslg_/build/CMakeFiles/test_uri.dir
+/home/lyslg/Documents/lyslg_/build/CMakeFiles/test_daemon.dir
+/home/lyslg/Documents/lyslg_/build/CMakeFiles/test_env.dir
+/home/lyslg/Documents/lyslg_/build/CMakeFiles/test_application.dir
 /home/lyslg/Documents/lyslg_/build/CMakeFiles/edit_cache.dir
 /home/lyslg/Documents/lyslg_/build/CMakeFiles/rebuild_cache.dir

@@ -249,13 +249,8 @@ CMakeFiles/lyslg.dir/lyslg/http/http_server.cc.o: \
  /usr/include/openssl/sslerr.h /usr/include/openssl/ssl2.h \
  /usr/include/openssl/ssl3.h /usr/include/openssl/tls1.h \
  /usr/include/openssl/dtls1.h /usr/include/openssl/srtp.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/http_session.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/../socket_stream.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/../stream.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/../bytearray.h \
- /usr/include/x86_64-linux-gnu/sys/uio.h \
- /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/http.h \
+ /home/lyslg/Documents/lyslg_/lyslg/http/../config.h \
+ /usr/include/c++/8/sstream /usr/include/c++/8/bits/sstream.tcc \
  /usr/include/boost/lexical_cast.hpp /usr/include/boost/config.hpp \
  /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
@@ -619,8 +614,7 @@ CMakeFiles/lyslg.dir/lyslg/http/http_server.cc.o: \
  /usr/include/x86_64-linux-gnu/c++/8/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/8/bits/codecvt.h \
  /usr/include/c++/8/bits/locale_facets_nonio.tcc \
- /usr/include/c++/8/bits/locale_conv.h /usr/include/c++/8/sstream \
- /usr/include/c++/8/bits/sstream.tcc \
+ /usr/include/c++/8/bits/locale_conv.h \
  /usr/include/boost/lexical_cast/detail/lcast_char_constants.hpp \
  /usr/include/boost/lexical_cast/detail/lcast_unsigned_converters.hpp \
  /usr/include/boost/noncopyable.hpp \
@@ -890,16 +884,60 @@ CMakeFiles/lyslg.dir/lyslg/http/http_server.cc.o: \
  /usr/include/boost/math/tools/real_cast.hpp \
  /usr/include/boost/integer.hpp /usr/include/boost/integer_fwd.hpp \
  /usr/include/boost/detail/basic_pointerbuf.hpp \
- /home/lyslg/Documents/lyslg_/lyslg/http/servlet.h \
  /usr/include/c++/8/unordered_map /usr/include/c++/8/bits/hashtable.h \
  /usr/include/c++/8/bits/hashtable_policy.h \
- /usr/include/c++/8/bits/unordered_map.h \
- /home/lyslg/Documents/lyslg_/lyslg/mutex.h \
- /home/lyslg/Documents/lyslg_/lyslg/log.h /usr/include/c++/8/fstream \
+ /usr/include/c++/8/bits/unordered_map.h /usr/include/c++/8/unordered_set \
+ /usr/include/c++/8/bits/unordered_set.h \
+ /usr/local/include/yaml-cpp/yaml.h /usr/local/include/yaml-cpp/parser.h \
+ /usr/local/include/yaml-cpp/dll.h /usr/local/include/yaml-cpp/emitter.h \
+ /usr/local/include/yaml-cpp/binary.h \
+ /usr/local/include/yaml-cpp/emitterdef.h \
+ /usr/local/include/yaml-cpp/emittermanip.h \
+ /usr/local/include/yaml-cpp/null.h \
+ /usr/local/include/yaml-cpp/ostream_wrapper.h \
+ /usr/local/include/yaml-cpp/emitterstyle.h \
+ /usr/local/include/yaml-cpp/stlemitter.h \
+ /usr/local/include/yaml-cpp/exceptions.h \
+ /usr/local/include/yaml-cpp/mark.h \
+ /usr/local/include/yaml-cpp/noexcept.h \
+ /usr/local/include/yaml-cpp/traits.h \
+ /usr/local/include/yaml-cpp/node/node.h \
+ /usr/local/include/yaml-cpp/node/detail/iterator_fwd.h \
+ /usr/local/include/yaml-cpp/node/ptr.h \
+ /usr/local/include/yaml-cpp/node/type.h \
+ /usr/local/include/yaml-cpp/node/impl.h \
+ /usr/local/include/yaml-cpp/node/detail/memory.h \
+ /usr/local/include/yaml-cpp/node/detail/node.h \
+ /usr/local/include/yaml-cpp/node/detail/node_ref.h \
+ /usr/local/include/yaml-cpp/node/detail/node_data.h \
+ /usr/local/include/yaml-cpp/node/detail/node_iterator.h \
+ /usr/local/include/yaml-cpp/node/iterator.h \
+ /usr/local/include/yaml-cpp/node/detail/iterator.h \
+ /usr/local/include/yaml-cpp/node/convert.h /usr/include/c++/8/valarray \
+ /usr/include/c++/8/bits/valarray_array.h \
+ /usr/include/c++/8/bits/valarray_array.tcc \
+ /usr/include/c++/8/bits/valarray_before.h \
+ /usr/include/c++/8/bits/slice_array.h \
+ /usr/include/c++/8/bits/valarray_after.h \
+ /usr/include/c++/8/bits/gslice.h /usr/include/c++/8/bits/gslice_array.h \
+ /usr/include/c++/8/bits/mask_array.h \
+ /usr/include/c++/8/bits/indirect_array.h \
+ /usr/local/include/yaml-cpp/node/detail/impl.h \
+ /usr/local/include/yaml-cpp/node/parse.h \
+ /usr/local/include/yaml-cpp/node/emit.h \
+ /home/lyslg/Documents/lyslg_/lyslg/http/../log.h \
+ /usr/include/c++/8/fstream \
  /usr/include/x86_64-linux-gnu/c++/8/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++io.h \
  /usr/include/c++/8/bits/fstream.tcc \
- /home/lyslg/Documents/lyslg_/lyslg/singleton.h \
- /home/lyslg/Documents/lyslg_/lyslg/util.h \
+ /home/lyslg/Documents/lyslg_/lyslg/http/../singleton.h \
+ /home/lyslg/Documents/lyslg_/lyslg/http/http_session.h \
+ /home/lyslg/Documents/lyslg_/lyslg/http/../socket_stream.h \
+ /home/lyslg/Documents/lyslg_/lyslg/http/../stream.h \
+ /home/lyslg/Documents/lyslg_/lyslg/http/../bytearray.h \
+ /usr/include/x86_64-linux-gnu/sys/uio.h \
+ /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
+ /home/lyslg/Documents/lyslg_/lyslg/http/http.h \
+ /home/lyslg/Documents/lyslg_/lyslg/http/servlet.h \
  /home/lyslg/Documents/lyslg_/lyslg/mutex.h \
- /home/lyslg/Documents/lyslg_/lyslg/thread.h
+ /home/lyslg/Documents/lyslg_/lyslg/log.h

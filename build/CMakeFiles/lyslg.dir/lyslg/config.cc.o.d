@@ -862,4 +862,8 @@ CMakeFiles/lyslg.dir/lyslg/config.cc.o: \
  /usr/include/c++/8/bits/parse_numbers.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
  /home/lyslg/Documents/lyslg_/lyslg/noncopyable.h \
- /home/lyslg/Documents/lyslg_/lyslg/thread.h
+ /home/lyslg/Documents/lyslg_/lyslg/thread.h \
+ /home/lyslg/Documents/lyslg_/lyslg/env.h \
+ /usr/include/x86_64-linux-gnu/sys/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/stat.h \
+ /usr/include/x86_64-linux-gnu/bits/statx.h

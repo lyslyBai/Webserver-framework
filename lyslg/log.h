@@ -20,13 +20,14 @@
         lyslg::LogEventWrap(lyslg::LogEvent::ptr(new lyslg::LogEvent(logger,level \
         ,__FILE__,__LINE__,0,lyslg::GetThreadId(), \
         lyslg::GetFiberId(),time(0),lyslg::Thread::GetName()))).getSS()
-
+// 流式日志
 #define LYSLG_LOG_DEBUG(logger) LYSLG_LOG_LEVEL(logger,lyslg::LogLevel::DEBUG)
 #define LYSLG_LOG_INFO(logger) LYSLG_LOG_LEVEL(logger,lyslg::LogLevel::INFO)
 #define LYSLG_LOG_WARN(logger) LYSLG_LOG_LEVEL(logger,lyslg::LogLevel::WARN)
 #define LYSLG_LOG_ERROR(logger) LYSLG_LOG_LEVEL(logger,lyslg::LogLevel::ERROR)
 #define LYSLG_LOG_FATAL(logger) LYSLG_LOG_LEVEL(logger,lyslg::LogLevel::FATAL)
 
+// 格式化日志
 #define LYSLG_LOG_FMT_LEVEL(logger,level,fmt,...) \
     if(logger->getLevel() <= level) \
         lyslg::LogEventWrap(lyslg::LogEvent::ptr(new lyslg::LogEvent(logger,level \
@@ -184,7 +185,7 @@ public:
 
     void addAppender(LogAppender::ptr appender);
     void delAppender(LogAppender::ptr appender);
-    void clearAppender();
+    void clearAppenders();
 
     LogLevel::Level getLevel() const {return m_level;}
     void setLevel(LogLevel::Level val) {m_level = val;}

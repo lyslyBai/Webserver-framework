@@ -985,8 +985,11 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o: ../tests/test_config.cc \
   /usr/local/include/yaml-cpp/node/detail/impl.h \
   /usr/local/include/yaml-cpp/node/parse.h \
   /usr/local/include/yaml-cpp/node/emit.h \
-  ../lyslg/log.h
+  ../lyslg/log.h \
+  ../lyslg/env.h
 
+
+../lyslg/env.h:
 
 /usr/include/c++/8/bits/mask_array.h:
 

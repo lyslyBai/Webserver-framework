@@ -5,6 +5,8 @@
 #include "log.h"
 #include "scheduler.h"
 
+
+
 namespace lyslg{
 
 static Logger::ptr g_logger = LYSLG_LOG_NAME("system");
@@ -70,10 +72,10 @@ Fiber::Fiber(std::function<void()> cb,size_t stacksize,bool use_caller)
     // m_use_caller 其实决定了保存点
     // m_use_caller == true ,即是使用当前线程的主协程作为保存点
     // m_use_caller == false, 即是当使用调度函数而没用启用主线程时，即是使用主线程中的m_ctx作为保存点
-
+    // makecontext(&m_ctx, &Fiber::CallerMainFunc,0);
     if(!m_use_caller) {
         makecontext(&m_ctx, &Fiber::MainFunc, 0);
-    } else {
+    } else {  
         makecontext(&m_ctx, &Fiber::CallerMainFunc, 0);
     }
     
@@ -125,15 +127,20 @@ void Fiber::reset(std::function<void()> cb){
     m_ctx.uc_stack.ss_sp = m_stack;
     m_ctx.uc_stack.ss_size = m_stacksize;
 
-    makecontext(&m_ctx, &Fiber::MainFunc,0);
+    // makecontext(&m_ctx, &Fiber::CallerMainFunc,0);
+    if(!m_use_caller) {
+        makecontext(&m_ctx, &Fiber::MainFunc, 0);
+    } else {
+        makecontext(&m_ctx, &Fiber::CallerMainFunc, 0);
+    }
     m_state = INIT;
 }
 
 void Fiber::call() {
+    // LYSLG_LOG_DEBUG(g_logger) << "Fiber::call";
+
     SetThis(this);
     m_state = EXEC;
-
-    LYSLG_LOG_DEBUG(g_logger) << "Fiber::call";
 
     if(swapcontext(&t_threadFiber->m_ctx,&m_ctx)) {
         LYSLG_ASSERT2(false,"swapcontext");
@@ -141,9 +148,8 @@ void Fiber::call() {
 }
 
 void Fiber::back(){
+    // LYSLG_LOG_DEBUG(g_logger) << "Fiber::back";
     SetThis(t_threadFiber.get());
-    
-    LYSLG_LOG_DEBUG(g_logger) << "Fiber::back";
 
     if(swapcontext(&m_ctx, &t_threadFiber->m_ctx)) {
         LYSLG_ASSERT2(false, "swapcontext");
@@ -155,26 +161,30 @@ void Fiber::swapIn(){
     SetThis(this);
     LYSLG_ASSERT(m_state != EXEC);
     m_state = EXEC;
+    // LYSLG_LOG_INFO(g_logger) << "swapIn before " << Scheduler::GetMainFiber();
     if(swapcontext(&Scheduler::GetMainFiber()->m_ctx,&m_ctx)) {
         LYSLG_ASSERT2(false,"swapcontext");
     }
+    // LYSLG_LOG_INFO(g_logger) << "swapIn after";
 }
 // 切换到后台执行
 void Fiber::swapOut(){
     SetThis(Scheduler::GetMainFiber());
+    // LYSLG_LOG_INFO(g_logger) << "swapOut before";
     if(swapcontext(&m_ctx, &Scheduler::GetMainFiber()->m_ctx)) {
         LYSLG_ASSERT2(false, "swapcontext");
     }
+    // LYSLG_LOG_INFO(g_logger) << "swapOut after";
 }
 
 void Fiber::SetThis(Fiber* f){
     t_fiber = f;
 }
 
-// 放回到当前协程。。
-// 应该也就初始化是创建主协程，获得主协程的智能指针,主协程没有协程id
+// 返回到当前协程。。
+// 否则创建主协程，获得主协程的智能指针,主协程没有协程id
 Fiber::ptr Fiber::GetThis(){
-    if(t_fiber) {
+    if(t_fiber) {                          // 为了在协程的执行函数中获得当前协程的智能指针，完成GetThis，SetThis
         return t_fiber->shared_from_this();
     }
     Fiber::ptr main_fiber(new Fiber);
@@ -186,6 +196,7 @@ Fiber::ptr Fiber::GetThis(){
 void Fiber::YieldToReady(){
     Fiber::ptr cur = GetThis();
     cur->m_state = READY;
+    // cur->swapOut();
     if(!cur->m_use_caller)  {
         cur->swapOut();
     }else{
@@ -196,6 +207,7 @@ void Fiber::YieldToReady(){
 void Fiber::YieldToHold(){
     Fiber::ptr cur = GetThis();
     cur->m_state = HOLD;
+    // cur->swapOut();
     if(!cur->m_use_caller)  {
         cur->swapOut();
     }else{
@@ -239,7 +251,7 @@ void Fiber::MainFunc(){
 }
 
 void Fiber::CallerMainFunc() {
-    Fiber::ptr cur = GetThis();
+    Fiber::ptr cur = GetThis();  // 这里获得当前对象的智能指针，使用智能指针管理协程对象的生命周期有一些好处 
     LYSLG_ASSERT(cur);
     try {
         cur->m_cb();
@@ -262,8 +274,8 @@ void Fiber::CallerMainFunc() {
     auto raw_ptr = cur.get();
     cur.reset();
     raw_ptr->back();
+    // raw_ptr->swapOut();
     LYSLG_ASSERT2(false, "never reach fiber_id=" + std::to_string(raw_ptr->getId()));
-
 }
 
 }

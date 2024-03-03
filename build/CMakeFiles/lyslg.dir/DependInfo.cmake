@@ -9,8 +9,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/lyslg/Documents/lyslg_/lyslg/address.cc" "CMakeFiles/lyslg.dir/lyslg/address.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/address.cc.o.d"
+  "/home/lyslg/Documents/lyslg_/lyslg/application.cc" "CMakeFiles/lyslg.dir/lyslg/application.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/application.cc.o.d"
   "/home/lyslg/Documents/lyslg_/lyslg/bytearray.cc" "CMakeFiles/lyslg.dir/lyslg/bytearray.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/bytearray.cc.o.d"
   "/home/lyslg/Documents/lyslg_/lyslg/config.cc" "CMakeFiles/lyslg.dir/lyslg/config.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/config.cc.o.d"
+  "/home/lyslg/Documents/lyslg_/lyslg/daemon.cc" "CMakeFiles/lyslg.dir/lyslg/daemon.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/daemon.cc.o.d"
+  "/home/lyslg/Documents/lyslg_/lyslg/env.cc" "CMakeFiles/lyslg.dir/lyslg/env.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/env.cc.o.d"
   "/home/lyslg/Documents/lyslg_/lyslg/fd_manager.cc" "CMakeFiles/lyslg.dir/lyslg/fd_manager.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/fd_manager.cc.o.d"
   "/home/lyslg/Documents/lyslg_/lyslg/fiber.cc" "CMakeFiles/lyslg.dir/lyslg/fiber.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/fiber.cc.o.d"
   "/home/lyslg/Documents/lyslg_/lyslg/hook.cc" "CMakeFiles/lyslg.dir/lyslg/hook.cc.o" "gcc" "CMakeFiles/lyslg.dir/lyslg/hook.cc.o.d"

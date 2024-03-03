@@ -22,3 +22,468 @@
 
 2024-01-02 10:55:11 - hello system
 
+	[INFO]	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+	[INFO]	=========================
+
+	[INFO]	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+	[INFO]	=========================
+
+2024-02-24 16:33:23	22813	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:92	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-02-24 16:33:23	22813	UNKNOW	0	[INFO]	[system]	tests/test_config.cc:257	=========================
+
+2024-02-24 16:36:27	23014	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:92	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-02-24 16:36:27	23014	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	asdf
+2024-02-24 16:36:27	23014	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:92	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-02-24 16:36:27	23014	UNKNOW	0	[INFO]	[system]	tests/test_config.cc:257	=========================
+
+2024-02-24 16:36:37	23055	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:92	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-02-24 16:36:37	23055	UNKNOW	0	[INFO]	[system]	tests/test_config.cc:257	=========================
+
+2024-02-24 16:37:27	23110	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:92	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-02-24 16:37:27	23110	UNKNOW	0	[INFO]	[system]	tests/test_config.cc:257	=========================
+
+2024-02-24 16:38:04	23198	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:92	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-02-24 16:38:04	23198	UNKNOW	0	[INFO]	[system]	tests/test_config.cc:257	=========================
+
+2024-02-24 16:39:35	23765	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:92	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-02-24 16:39:35	23765	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	asdf
+2024-02-24 16:39:35	23765	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:92	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-02-24 16:40:16	24348	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-02-24 16:40:16	24348	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-02-24 16:40:32	24637	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-02-24 16:40:32	24637	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-02-24 16:46:12	25152	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-02-24 16:46:12	25152	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-02-24 16:46:55	25285	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-02-24 16:46:55	25285	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-02-24 16:46:55	25285	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-02-24 16:47:31	25357	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-02-24 16:47:31	25357	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-02-24 16:47:31	25357	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-02-24 16:47:36	25357	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-02-24 17:54:13	30931	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-02-24 17:54:14	30931	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-02-24 17:54:14	30931	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-02-24 17:54:14	30931	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-02-24 17:58:03	31243	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-02-24 17:58:03	31243	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-02-24 17:58:03	31243	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-02-24 17:58:03	31243	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-02-24 17:58:03	31243	UNKNOW	0	[FATAL]	[system]	lyslg/application.cc:82	create work path [/apps/work/lyslg errno=13 errstr=Permission denied
+2024-02-28 16:05:59	25487	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-02-28 16:05:59	25487	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-02-28 16:05:59	25487	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-02-28 16:05:59	25487	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-02-28 16:09:01	25677	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-02-28 16:09:01	25677	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-02-28 16:09:01	25677	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-02-28 16:09:01	25677	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-02-28 16:09:01	25677	UNKNOW	0	[INFO]	[system]	lyslg/daemon.cc:77	start_daemon
+2024-02-28 16:09:01	25677	UNKNOW	0	[INFO]	[system]	lyslg/application.cc:98	main
+2024-02-28 16:09:01	25677	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-02-28 16:09:01	25677	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-02-28 16:09:01	25677	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-02-28 16:09:01	25677	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-02-28 16:09:01	25677	UNKNOW	0	[ERROR]	[system]	lyslg/application.cc:106	open pidfile /apps/work/lyslg/lyslg.pid failed
+2024-02-28 16:25:14	27760	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-02-28 16:25:14	27760	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-02-28 16:25:14	27760	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-02-28 16:25:14	27760	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-02-28 16:25:14	27760	UNKNOW	0	[INFO]	[system]	lyslg/daemon.cc:77	start_daemon
+2024-02-28 16:25:14	27760	UNKNOW	0	[INFO]	[system]	lyslg/application.cc:99	main
+2024-02-28 16:25:14	27760	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-02-28 16:25:14	27760	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-02-28 16:25:14	27760	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-02-28 16:25:14	27760	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-02-28 16:25:14	27760	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:53	Fiber::Fiber
+2024-02-28 16:25:14	27760	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=1
+2024-02-28 16:25:14	27760	main	0	[INFO]	[system]	lyslg/scheduler.cc:97	0x185f770 0 stopped
+2024-02-28 16:25:14	27760	main	1	[DEBUG]	[system]	lyslg/scheduler.cc:161	main run
+2024-02-28 16:25:14	27760	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=2
+2024-02-28 16:25:14	27760	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=3
+2024-02-28 16:25:14	27760	main	3	[INFO]	[system]	lyslg/application.cc:122	run_fiber
+2024-02-28 16:25:16	27760	main	3	[INFO]	[system]	lyslg/application.cc:116	hello
+2024-02-28 16:25:18	27760	main	3	[INFO]	[system]	lyslg/application.cc:116	hello
+2024-02-28 16:25:20	27760	main	3	[INFO]	[system]	lyslg/application.cc:116	hello
+2024-02-28 16:25:22	27760	main	3	[INFO]	[system]	lyslg/application.cc:116	hello
+2024-02-28 16:25:24	27760	main	3	[INFO]	[system]	lyslg/application.cc:116	hello
+2024-02-28 16:25:26	27760	main	3	[INFO]	[system]	lyslg/application.cc:116	hello
+2024-02-28 16:25:28	27760	main	3	[INFO]	[system]	lyslg/application.cc:116	hello
+2024-02-28 16:25:30	27760	main	3	[INFO]	[system]	lyslg/application.cc:116	hello
+2024-02-28 16:25:32	27760	main	3	[INFO]	[system]	lyslg/application.cc:116	hello
+2024-02-28 16:25:34	27760	main	3	[INFO]	[system]	lyslg/application.cc:116	hello
+2024-02-28 16:25:36	27760	main	3	[INFO]	[system]	lyslg/application.cc:116	hello
+2024-03-02 16:09:35	8926	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 16:09:35	8926	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 16:09:35	8926	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 16:09:35	8926	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 16:25:58	10403	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 16:25:58	10403	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 16:25:58	10403	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 16:25:58	10403	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 16:25:59	10403	UNKNOW	0	[INFO]	[system]	lyslg/daemon.cc:77	start_daemon
+2024-03-02 16:25:59	10403	UNKNOW	0	[INFO]	[system]	lyslg/application.cc:99	main
+2024-03-02 16:25:59	10403	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 16:25:59	10403	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 16:25:59	10403	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 16:25:59	10403	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 16:25:59	10403	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:53	Fiber::Fiber
+2024-03-02 16:25:59	10403	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=1
+2024-03-02 16:25:59	10403	main	0	[INFO]	[system]	lyslg/scheduler.cc:97	0x228d770 0 stopped
+2024-03-02 16:25:59	10403	main	1	[DEBUG]	[system]	lyslg/scheduler.cc:161	main run
+2024-03-02 16:25:59	10403	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=2
+2024-03-02 16:25:59	10403	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=3
+2024-03-02 16:25:59	10403	main	3	[DEBUG]	[system]	lyslg/application.cc:146	
+id: ""
+type: http
+name: lyslg/1.1
+keepalive: 1
+timeout: 1000
+ssl: 0
+cert_file: ""
+key_file: ""
+accept_worker: accept
+io_worker: http_io
+process_worker: http_io
+args: {}
+address:
+  - 0.0.0.0:8090
+2024-03-02 16:25:59	10403	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=8 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090]
+2024-03-02 16:26:19	10677	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 16:26:20	10677	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 16:26:20	10677	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 16:26:20	10677	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 16:26:20	10677	UNKNOW	0	[INFO]	[system]	lyslg/daemon.cc:77	start_daemon
+2024-03-02 16:26:20	10677	UNKNOW	0	[INFO]	[system]	lyslg/application.cc:99	main
+2024-03-02 16:26:20	10677	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 16:26:20	10677	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 16:26:20	10677	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 16:26:20	10677	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 16:26:20	10677	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:53	Fiber::Fiber
+2024-03-02 16:26:20	10677	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=1
+2024-03-02 16:26:20	10677	main	0	[INFO]	[system]	lyslg/scheduler.cc:97	0x22ac770 0 stopped
+2024-03-02 16:26:20	10677	main	1	[DEBUG]	[system]	lyslg/scheduler.cc:161	main run
+2024-03-02 16:26:20	10677	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=2
+2024-03-02 16:26:20	10677	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=3
+2024-03-02 16:26:20	10677	main	3	[DEBUG]	[system]	lyslg/application.cc:146	
+id: ""
+type: http
+name: lyslg/1.1
+keepalive: 1
+timeout: 1000
+ssl: 0
+cert_file: ""
+key_file: ""
+accept_worker: accept
+io_worker: http_io
+process_worker: http_io
+args: {}
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091
+2024-03-02 16:26:20	10677	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=8 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090]
+2024-03-02 16:26:20	10677	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091]
+2024-03-02 16:26:20	10677	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=4
+2024-03-02 16:37:38	12558	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 16:37:38	12558	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 16:37:38	12558	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 16:37:38	12558	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 16:37:38	12558	UNKNOW	0	[INFO]	[system]	lyslg/daemon.cc:77	start_daemon
+2024-03-02 16:37:38	12558	UNKNOW	0	[INFO]	[system]	lyslg/application.cc:99	main
+2024-03-02 16:37:38	12558	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 16:43:51	13583	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 16:43:51	13583	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 16:43:51	13583	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 16:43:51	13583	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 16:43:51	13583	UNKNOW	0	[INFO]	[system]	lyslg/daemon.cc:77	start_daemon
+2024-03-02 16:43:51	13583	UNKNOW	0	[INFO]	[system]	lyslg/application.cc:99	main
+2024-03-02 16:43:51	13583	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 16:43:51	13583	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 16:43:51	13583	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 16:43:51	13583	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 16:43:51	13583	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:53	Fiber::Fiber
+2024-03-02 16:43:51	13583	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=1
+2024-03-02 16:43:51	13583	main	0	[INFO]	[system]	lyslg/scheduler.cc:97	0xa34770 0 stopped
+2024-03-02 16:43:51	13583	main	1	[DEBUG]	[system]	lyslg/scheduler.cc:161	main run
+2024-03-02 16:43:51	13583	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=2
+2024-03-02 16:43:51	13583	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=3
+2024-03-02 16:43:51	13583	main	3	[DEBUG]	[system]	lyslg/application.cc:146	
+id: ""
+type: http
+name: lyslg/1.1
+keepalive: 1
+timeout: 1000
+ssl: 0
+cert_file: ""
+key_file: ""
+accept_worker: accept
+io_worker: http_io
+process_worker: http_io
+args: {}
+address:
+  - ../tmp/test_sock
+2024-03-02 16:43:51	13583	main	3	[ERROR]	[system]	lyslg/socket.cc:216	sock=9 connect(../tmp/test_sock) error errno=111 errstr=Connection refused
+2024-03-02 16:43:51	13583	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=8 is_connected=0 family=1 type=1 protocol=0 local_address=../tmp/test_sock]
+2024-03-02 16:45:32	14343	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 16:45:32	14343	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 16:45:32	14343	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 16:45:32	14343	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 16:45:32	14343	UNKNOW	0	[INFO]	[system]	lyslg/daemon.cc:77	start_daemon
+2024-03-02 16:45:32	14343	UNKNOW	0	[INFO]	[system]	lyslg/application.cc:99	main
+2024-03-02 16:45:33	14343	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 16:45:33	14343	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 16:45:33	14343	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 16:45:33	14343	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 16:45:33	14343	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:53	Fiber::Fiber
+2024-03-02 16:45:33	14343	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=1
+2024-03-02 16:45:33	14343	main	0	[INFO]	[system]	lyslg/scheduler.cc:97	0xbe0770 0 stopped
+2024-03-02 16:45:33	14343	main	1	[DEBUG]	[system]	lyslg/scheduler.cc:161	main run
+2024-03-02 16:45:33	14343	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=2
+2024-03-02 16:45:33	14343	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=3
+2024-03-02 16:45:33	14343	main	3	[DEBUG]	[system]	lyslg/application.cc:146	
+id: ""
+type: http
+name: lyslg/1.1
+keepalive: 1
+timeout: 1000
+ssl: 0
+cert_file: ""
+key_file: ""
+accept_worker: accept
+io_worker: http_io
+process_worker: http_io
+args: {}
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091
+  - ../tmp/test_sock
+2024-03-02 16:45:33	14343	main	3	[ERROR]	[system]	lyslg/socket.cc:217	sock=11 connect(../tmp/test_sock) error errno=111 errstr=Connection refused
+2024-03-02 16:45:33	14343	main	3	[INFO]	[system]	lyslg/socket.cc:175	file delete
+2024-03-02 16:45:33	14343	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=8 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090]
+2024-03-02 16:45:33	14343	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091]
+2024-03-02 16:45:33	14343	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=10 is_connected=0 family=1 type=1 protocol=0 local_address=../tmp/test_sock]
+2024-03-02 16:45:33	14343	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=4
+2024-03-02 16:45:33	14343	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=5
+2024-03-02 16:46:33	14461	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 16:46:33	14461	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 16:46:33	14461	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 16:46:33	14461	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 16:46:33	14461	UNKNOW	0	[INFO]	[system]	lyslg/daemon.cc:77	start_daemon
+2024-03-02 16:46:33	14461	UNKNOW	0	[INFO]	[system]	lyslg/application.cc:99	main
+2024-03-02 16:46:33	14461	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 16:46:33	14461	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 16:46:33	14461	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 16:46:33	14461	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 16:46:33	14461	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:53	Fiber::Fiber
+2024-03-02 16:46:33	14461	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=1
+2024-03-02 16:46:33	14461	main	0	[INFO]	[system]	lyslg/scheduler.cc:97	0x4e6770 0 stopped
+2024-03-02 16:46:33	14461	main	1	[DEBUG]	[system]	lyslg/scheduler.cc:161	main run
+2024-03-02 16:46:33	14461	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=2
+2024-03-02 16:46:33	14461	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=3
+2024-03-02 16:46:33	14461	main	3	[DEBUG]	[system]	lyslg/application.cc:146	
+id: ""
+type: http
+name: lyslg/1.1
+keepalive: 1
+timeout: 1000
+ssl: 0
+cert_file: ""
+key_file: ""
+accept_worker: accept
+io_worker: http_io
+process_worker: http_io
+args: {}
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091
+  - ../tmp/test_sock
+2024-03-02 16:46:33	14461	main	3	[ERROR]	[system]	lyslg/socket.cc:217	sock=11 connect(../tmp/test_sock) error errno=111 errstr=Connection refused
+2024-03-02 16:46:33	14461	main	3	[INFO]	[system]	lyslg/socket.cc:175	file delete
+2024-03-02 16:46:33	14461	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=8 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090]
+2024-03-02 16:46:33	14461	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091]
+2024-03-02 16:46:33	14461	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=10 is_connected=0 family=1 type=1 protocol=0 local_address=../tmp/test_sock]
+2024-03-02 16:46:33	14461	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=4
+2024-03-02 16:46:33	14461	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=5
+2024-03-02 16:46:35	14461	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=6
+2024-03-02 16:52:54	14461	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=7
+2024-03-02 16:52:55	14461	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=8
+2024-03-02 17:09:19	17811	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 17:09:20	17811	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 17:09:20	17811	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 17:09:20	17811	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 17:09:20	17811	UNKNOW	0	[INFO]	[system]	lyslg/daemon.cc:77	start_daemon
+2024-03-02 17:09:20	17811	UNKNOW	0	[INFO]	[system]	lyslg/application.cc:99	main
+2024-03-02 17:09:20	17811	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 17:09:20	17811	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 17:09:20	17811	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 17:09:20	17811	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 17:09:20	17811	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:53	Fiber::Fiber
+2024-03-02 17:09:20	17811	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=1
+2024-03-02 17:09:20	17811	main	0	[INFO]	[system]	lyslg/scheduler.cc:97	0xc27770 0 stopped
+2024-03-02 17:09:20	17811	main	1	[DEBUG]	[system]	lyslg/scheduler.cc:161	main run
+2024-03-02 17:09:20	17811	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=2
+2024-03-02 17:09:20	17811	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=3
+2024-03-02 17:09:20	17811	main	3	[DEBUG]	[system]	lyslg/application.cc:146	
+id: ""
+type: http
+name: lyslg/1.1
+keepalive: 1
+timeout: 1000
+ssl: 0
+cert_file: ""
+key_file: ""
+accept_worker: accept
+io_worker: http_io
+process_worker: http_io
+args: {}
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091
+  - ../tmp/test_sock
+2024-03-02 17:09:20	17811	main	3	[ERROR]	[system]	lyslg/socket.cc:217	sock=11 connect(../tmp/test_sock) error errno=111 errstr=Connection refused
+2024-03-02 17:09:20	17811	main	3	[INFO]	[system]	lyslg/socket.cc:175	file delete
+2024-03-02 17:09:20	17811	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=8 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090]
+2024-03-02 17:09:20	17811	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091]
+2024-03-02 17:09:20	17811	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=10 is_connected=0 family=1 type=1 protocol=0 local_address=../tmp/test_sock]
+2024-03-02 17:09:20	17811	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=4
+2024-03-02 17:09:20	17811	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=5
+2024-03-02 17:09:22	17811	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=6
+2024-03-02 17:09:35	17811	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=7
+2024-03-02 17:09:36	17811	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=8
+2024-03-02 17:09:44	17811	main	7	[WARN]	[system]	lyslg/http/http_server.cc:30	recv http request fail, errno=11 errstr=Resource temporarily unavailable client:[Socket sock=-1 is_connected=0 family=2 type=1 protocol=0 local_address=192.168.178.130:8090 remote_address=[UnknowAddress family=2]]
+2024-03-02 17:09:44	17811	main	1	[DEBUG]	[system]	lyslg/fiber.cc:114	Fiber::~Fiber id=7
+2024-03-02 17:09:44	17811	main	6	[WARN]	[system]	lyslg/http/http_server.cc:30	recv http request fail, errno=11 errstr=Resource temporarily unavailable client:[Socket sock=-1 is_connected=0 family=2 type=1 protocol=0 local_address=192.168.178.130:8090 remote_address=[UnknowAddress family=2]]
+2024-03-02 17:09:44	17811	main	1	[DEBUG]	[system]	lyslg/fiber.cc:114	Fiber::~Fiber id=6
+2024-03-02 17:14:31	17811	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=9
+2024-03-02 17:14:32	17811	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=10
+2024-03-02 17:14:51	17811	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=11
+2024-03-02 17:14:53	17811	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=12
+2024-03-02 17:19:14	19193	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 17:19:14	19193	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 17:19:14	19193	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 17:19:14	19193	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 17:19:14	19193	UNKNOW	0	[INFO]	[system]	lyslg/daemon.cc:77	start_daemon
+2024-03-02 17:19:14	19193	UNKNOW	0	[INFO]	[system]	lyslg/application.cc:99	main
+2024-03-02 17:19:14	19193	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 17:19:14	19193	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 17:19:14	19193	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 17:19:14	19193	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 17:19:14	19193	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:53	Fiber::Fiber
+2024-03-02 17:19:14	19193	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=1
+2024-03-02 17:19:14	19193	main	0	[INFO]	[system]	lyslg/scheduler.cc:97	0x18db770 0 stopped
+2024-03-02 17:19:14	19193	main	1	[DEBUG]	[system]	lyslg/scheduler.cc:161	main run
+2024-03-02 17:19:14	19193	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=2
+2024-03-02 17:19:14	19193	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=3
+2024-03-02 17:19:14	19193	main	3	[DEBUG]	[system]	lyslg/application.cc:146	
+id: ""
+type: http
+name: lyslg/1.1
+keepalive: 1
+timeout: 1000
+ssl: 0
+cert_file: ""
+key_file: ""
+accept_worker: accept
+io_worker: http_io
+process_worker: http_io
+args: {}
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091
+  - ../tmp/test_sock
+2024-03-02 17:19:14	19193	main	3	[ERROR]	[system]	lyslg/socket.cc:217	sock=11 connect(../tmp/test_sock) error errno=111 errstr=Connection refused
+2024-03-02 17:19:14	19193	main	3	[INFO]	[system]	lyslg/socket.cc:175	file delete
+2024-03-02 17:19:14	19193	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=8 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090]
+2024-03-02 17:19:14	19193	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091]
+2024-03-02 17:19:14	19193	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=10 is_connected=0 family=1 type=1 protocol=0 local_address=../tmp/test_sock]
+2024-03-02 17:19:14	19193	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=4
+2024-03-02 17:19:14	19193	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=5
+2024-03-02 17:19:16	19193	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=6
+2024-03-02 17:19:38	19193	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=7
+2024-03-02 17:19:39	19193	main	7	[WARN]	[system]	lyslg/http/http_server.cc:30	recv http request fail, errno=11 errstr=Resource temporarily unavailable client:[Socket sock=-1 is_connected=0 family=2 type=1 protocol=0 local_address=192.168.178.130:8090 remote_address=[UnknowAddress family=2]]
+2024-03-02 17:19:39	19193	main	1	[DEBUG]	[system]	lyslg/fiber.cc:114	Fiber::~Fiber id=7
+2024-03-02 17:19:39	19193	main	6	[WARN]	[system]	lyslg/http/http_server.cc:30	recv http request fail, errno=11 errstr=Resource temporarily unavailable client:[Socket sock=-1 is_connected=0 family=2 type=1 protocol=0 local_address=192.168.178.130:8090 remote_address=[UnknowAddress family=2]]
+2024-03-02 17:19:39	19193	main	1	[DEBUG]	[system]	lyslg/fiber.cc:114	Fiber::~Fiber id=6
+2024-03-02 17:44:56	20652	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 17:44:56	20652	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 17:44:56	20652	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 17:44:56	20652	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 17:44:56	20652	UNKNOW	0	[INFO]	[system]	lyslg/daemon.cc:77	start_daemon
+2024-03-02 17:44:56	20652	UNKNOW	0	[INFO]	[system]	lyslg/application.cc:99	main
+2024-03-02 17:44:56	20652	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 17:44:56	20652	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 17:44:56	20652	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 17:44:56	20652	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 17:44:56	20652	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:53	Fiber::Fiber
+2024-03-02 17:44:56	20652	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=1
+2024-03-02 17:44:56	20652	main	0	[INFO]	[system]	lyslg/scheduler.cc:97	0x166c770 0 stopped
+2024-03-02 17:44:56	20652	main	1	[DEBUG]	[system]	lyslg/scheduler.cc:161	main run
+2024-03-02 17:44:56	20652	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=2
+2024-03-02 17:44:56	20652	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=3
+2024-03-02 17:44:56	20652	main	3	[DEBUG]	[system]	lyslg/application.cc:146	
+id: ""
+type: http
+name: lyslg/1.1
+keepalive: 1
+timeout: 1000
+ssl: 0
+cert_file: ""
+key_file: ""
+accept_worker: accept
+io_worker: http_io
+process_worker: http_io
+args: {}
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091
+  - ../tmp/test_sock
+2024-03-02 17:44:56	20652	main	3	[ERROR]	[system]	lyslg/socket.cc:217	sock=12 connect(../tmp/test_sock) error errno=111 errstr=Connection refused
+2024-03-02 17:44:56	20652	main	3	[INFO]	[system]	lyslg/socket.cc:175	file delete
+2024-03-02 17:44:56	20652	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090]
+2024-03-02 17:44:56	20652	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=10 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091]
+2024-03-02 17:44:56	20652	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=11 is_connected=0 family=1 type=1 protocol=0 local_address=../tmp/test_sock]
+2024-03-02 17:44:56	20652	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=4
+2024-03-02 17:44:56	20652	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=5
+2024-03-02 21:02:08	25801	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 21:02:08	25801	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 21:02:08	25801	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 21:02:08	25801	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 21:02:08	25801	UNKNOW	0	[INFO]	[system]	lyslg/daemon.cc:77	start_daemon
+2024-03-02 21:02:08	25801	UNKNOW	0	[INFO]	[system]	lyslg/application.cc:99	main
+2024-03-02 21:02:08	25801	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/test.yml ok
+2024-03-02 21:02:08	25801	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/XX/test.yml ok
+2024-03-02 21:02:08	25801	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/log.yml ok
+2024-03-02 21:02:08	25801	UNKNOW	0	[INFO]	[system]	lyslg/config.cc:90	LoadConfFile file=/home/lyslg/Documents/lyslg_/bin/conf/server.yml ok
+2024-03-02 21:02:08	25801	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:53	Fiber::Fiber
+2024-03-02 21:02:08	25801	UNKNOW	0	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=1
+2024-03-02 21:02:08	25801	main	0	[INFO]	[system]	lyslg/scheduler.cc:97	0x164d770 0 stopped
+2024-03-02 21:02:08	25801	main	1	[DEBUG]	[system]	lyslg/scheduler.cc:161	main run
+2024-03-02 21:02:08	25801	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=2
+2024-03-02 21:02:08	25801	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=3
+2024-03-02 21:02:08	25801	main	3	[DEBUG]	[system]	lyslg/application.cc:146	
+id: ""
+type: http
+name: lyslg/1.1
+keepalive: 1
+timeout: 1000
+ssl: 0
+cert_file: ""
+key_file: ""
+accept_worker: accept
+io_worker: http_io
+process_worker: http_io
+args: {}
+address:
+  - 0.0.0.0:8090
+  - 127.0.0.1:8091
+  - ../tmp/test_sock
+2024-03-02 21:02:08	25801	main	3	[ERROR]	[system]	lyslg/socket.cc:217	sock=12 connect(../tmp/test_sock) error errno=111 errstr=Connection refused
+2024-03-02 21:02:09	25801	main	3	[INFO]	[system]	lyslg/socket.cc:175	file delete
+2024-03-02 21:02:09	25801	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=9 is_connected=0 family=2 type=1 protocol=0 local_address=0.0.0.0:8090]
+2024-03-02 21:02:09	25801	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=10 is_connected=0 family=2 type=1 protocol=0 local_address=127.0.0.1:8091]
+2024-03-02 21:02:09	25801	main	3	[INFO]	[system]	lyslg/tcp_server.cc:71	server bind success[Socket sock=11 is_connected=0 family=1 type=1 protocol=0 local_address=../tmp/test_sock]
+2024-03-02 21:02:09	25801	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=4
+2024-03-02 21:02:09	25801	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=5
+2024-03-02 21:02:10	25801	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=6
+2024-03-02 21:02:31	25801	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=7
+2024-03-02 21:02:32	25801	main	1	[DEBUG]	[system]	lyslg/fiber.cc:82	Fiber::Fiber id=8

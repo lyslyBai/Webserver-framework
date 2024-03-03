@@ -502,7 +502,6 @@ UnixAddress::UnixAddress(){
     memset(&m_addr,0,sizeof(m_addr));
     m_addr.sun_family = AF_UNIX;
     m_length = offsetof(sockaddr_un,sun_path) + MAX_PATH_LEN;
-
 }
 
 // 包括结尾的 null 终止符 \0。

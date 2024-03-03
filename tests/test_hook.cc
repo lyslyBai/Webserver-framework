@@ -34,7 +34,7 @@ void test_sock() {
     
     LYSLG_LOG_INFO(g_logger) << "begin connect";
     int rt = connect(sock,(const sockaddr*)&addr,sizeof(addr));
-    LYSLG_LOG_INFO(g_logger) << "connect re=" << rt <<" errno=" << errno;
+    LYSLG_LOG_INFO(g_logger) << "connect re=" << rt <<" errno=" << errno << " errstr=" << strerror(errno);
 
     if(rt) {
         return;

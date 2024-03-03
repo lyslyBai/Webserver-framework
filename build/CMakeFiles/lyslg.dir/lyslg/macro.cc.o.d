@@ -132,4 +132,19 @@ CMakeFiles/lyslg.dir/lyslg/macro.cc.o: \
  /usr/include/c++/8/bits/stl_construct.h \
  /usr/include/c++/8/bits/stl_uninitialized.h \
  /usr/include/c++/8/bits/stl_vector.h \
- /usr/include/c++/8/bits/stl_bvector.h /usr/include/c++/8/bits/vector.tcc
+ /usr/include/c++/8/bits/stl_bvector.h /usr/include/c++/8/bits/vector.tcc \
+ /usr/include/c++/8/ios /usr/include/c++/8/bits/ios_base.h \
+ /usr/include/c++/8/bits/locale_classes.h \
+ /usr/include/c++/8/bits/locale_classes.tcc \
+ /usr/include/c++/8/system_error \
+ /usr/include/x86_64-linux-gnu/c++/8/bits/error_constants.h \
+ /usr/include/c++/8/stdexcept /usr/include/c++/8/streambuf \
+ /usr/include/c++/8/bits/streambuf.tcc \
+ /usr/include/c++/8/bits/basic_ios.h \
+ /usr/include/c++/8/bits/locale_facets.h /usr/include/c++/8/cwctype \
+ /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
+ /usr/include/x86_64-linux-gnu/c++/8/bits/ctype_base.h \
+ /usr/include/c++/8/bits/streambuf_iterator.h \
+ /usr/include/x86_64-linux-gnu/c++/8/bits/ctype_inline.h \
+ /usr/include/c++/8/bits/locale_facets.tcc \
+ /usr/include/c++/8/bits/basic_ios.tcc

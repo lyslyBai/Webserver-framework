@@ -10,9 +10,15 @@ CXX_FLAGS =  -rdynamic -O3 -g -std=c++11 -Wall -Werror -Wno-unused-function -Wno
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/address.cc.o_DEFINES = __FILE__="lyslg/address.cc"
 
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/application.cc.o_DEFINES = __FILE__="lyslg/application.cc"
+
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/bytearray.cc.o_DEFINES = __FILE__="lyslg/bytearray.cc"
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/config.cc.o_DEFINES = __FILE__="lyslg/config.cc"
+
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/daemon.cc.o_DEFINES = __FILE__="lyslg/daemon.cc"
+
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/env.cc.o_DEFINES = __FILE__="lyslg/env.cc"
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/fd_manager.cc.o_DEFINES = __FILE__="lyslg/fd_manager.cc"
 

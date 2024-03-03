@@ -1,17 +1,15 @@
 logs:
     - name: root
       level: info
-      formatter: "%d%T%m%n"
+      # formatter: "%d%T%m%n"
       appenders:
             - type: FileLogAppender
-              file: /home/lyslg/lyslg_/root.txt
+              file: /home/lyslg/Documents/lyslg_/root.txt
             - type: StdoutLogAppender
     - name: system
       level: debug
-      formatter: "%d%T[%p]%T%m%n"
+      # formatter: "%d%T%m%n"
       appenders:
           - type: FileLogAppender
-            file: /home/lyslg/lyslg_/system.txt
-            #formatter: "%d%T%m%n"
+            file: /home/lyslg/Documents/lyslg_/system.txt
           - type: StdoutLogAppender
-            #formatter: "%d%T[%p]%T%m%n"

@@ -13,7 +13,10 @@ static thread_local Scheduler* t_scheduler = nullptr;
 // 这个为每个线程执行的协程，不为每个线程的主协程
 // 主协程每个线程中都存在的调度协程，相当于中转站，t_fiber为在执行的协程
 static thread_local Fiber* t_fiber = nullptr;
-
+// 区分主线程和子线程
+// 当主线程同样处理协程调度器中的协程时，由于是使用m_rootFiber执行run函数的，而run函数中执行了其他的协程，
+// 所以需要两个中转站，避免覆盖，m_rootFiber使用fiber中的t_threadFiber,而run中的协程使用t_fiber充当中转站。
+// 其他的线程直接执行run函数，所以只需要一个中转站，直接使用t_fiber.逻辑上好像也可以使用t_threadFiber。不知道有没有问题，之后在尝试吧！
 // use_caller 是否使用当前调用线程   这里很奇怪name的默认值好像没有用
 Scheduler::Scheduler(size_t threads ,bool use_caller,const std::string& name)
     :m_name(name){
@@ -80,13 +83,18 @@ void Scheduler::start(){
     // }
 }   
 void Scheduler::stop(){
+    // LYSLG_LOG_INFO(g_logger) << " m_rootFiber before";
+    // m_rootFiber->swapIn();
+    // LYSLG_LOG_INFO(g_logger) << " m_rootFiber after";
+
     m_autoStop = true;
-    if(m_rootFiber  // 考虑主线程
-            && m_threadCount == 0  // 考虑其他线程
+    if(m_rootFiber  // 考虑主线程，若不使用主线程，这m_rootFiber即为nullptr
+            && m_threadCount == 0  // 需要创建的线程，及不需要创建其他线程
             && (m_rootFiber->getState() == Fiber::TERM  // 主线程INIT或结束term 
-                || m_rootFiber->getState() == Fiber::INIT )){
-        LYSLG_LOG_INFO(g_logger) << this << " stopped";
+                || m_rootFiber->getState() == Fiber::INIT)){
+        
         m_stopping = true;
+        LYSLG_LOG_INFO(g_logger) << this <<" "<< stopping() << " stopped";
         if(stopping()) {
             return; // 满足以上条件可以退出
         }
@@ -102,9 +110,12 @@ void Scheduler::stop(){
 
     // 这一点也还是不太明白，tickle();是唤醒线程，那么这里就是唤醒所有线程和主线程？
     m_stopping = true;
-    for(size_t i = 0; i<m_threadCount; ++i) {
+    for(size_t i = 0; i<m_threadCount; ++i) {  // 这里还是主线程在执行，重复执行n次
+        // LYSLG_LOG_INFO(g_logger) << " i = " << i;
         tickle();
     }
+
+    // LYSLG_LOG_INFO(g_logger) << " m_rootFiber before";
 
     if(m_rootFiber) {
         tickle();
@@ -123,7 +134,11 @@ void Scheduler::stop(){
         if(!stopping()) {   // 未停止，
             // 执行m_rootFiber中函数，然后
             m_rootFiber->call();
+            // LYSLG_LOG_INFO(g_logger) << " m_rootFiber before";
+            // m_rootFiber->swapIn();
+            // LYSLG_LOG_INFO(g_logger) << " m_rootFiber after";
         }
+        
     }
 
     std::vector<Thread::ptr> thrs;
@@ -135,14 +150,6 @@ void Scheduler::stop(){
     for(auto& i:thrs) {
         i->join();
     }
-
-    // if(stopping()) {
-    //     return;
-    // }
-
-    // if(exit_on_this_fiber) {
-
-    // }
 }
 
 void Scheduler::SetThis(){
@@ -150,13 +157,13 @@ void Scheduler::SetThis(){
 }
 
 void Scheduler::run(){
+    
     LYSLG_LOG_DEBUG(g_logger) << m_name << " run";
     // 设置hook
     set_hook_enable(true);
     SetThis();
-    // 这里不太懂，这里的判断是为什么
+    // 非主线程，则为初始化线程中的主协程
     if(lyslg::GetThreadId() != m_rootThread) {
-        // 这里应该等于此线程执行中的协程指针，
         t_fiber = Fiber::GetThis().get();
     }
 
@@ -221,7 +228,9 @@ void Scheduler::run(){
                 cb_fiber.reset(new Fiber(ft.cb));
             }
             ft.reset();
+            // LYSLG_LOG_INFO(g_logger) << " cb_fiber before";
             cb_fiber->swapIn();
+            // LYSLG_LOG_INFO(g_logger) << " cb_fiber after";
             --m_activeThreadCount;
             if(cb_fiber->getState() == Fiber::READY) {
                 schedule(cb_fiber);
@@ -243,9 +252,12 @@ void Scheduler::run(){
                 LYSLG_LOG_INFO(g_logger) << "idle fiber term";
                 break;
             }
+           
 
             ++m_idleThreadCount;
+            // LYSLG_LOG_INFO(g_logger) << " idle_fiber before";
             idle_fiber->swapIn();
+            // LYSLG_LOG_INFO(g_logger) << " idle_fiber after";
             --m_idleThreadCount;
             if(idle_fiber->getState() != Fiber::TERM
                     && idle_fiber->getState() != Fiber::EXCEPT) {
@@ -263,6 +275,8 @@ void Scheduler::tickle(){
 
 bool Scheduler::stopping(){
     MutexType::Lock lock(m_mutex);
+    // m_fibers.empty() 不为空
+    // LYSLG_LOG_INFO(g_logger) << " " << m_autoStop << " " << m_stopping<< " " <<  m_fibers.empty()<< " " <<( m_activeThreadCount == 0); 
     return m_autoStop && m_stopping
         && m_fibers.empty() && m_activeThreadCount == 0;                                
 } // 协程列队和工作线程无

@@ -64,7 +64,7 @@ HttpRequest::HttpRequest(uint8_t version , bool close )
     ,m_path("/"){
 }
 
-std::string HttpRequest::getHeader(const std::string& key, const std::string& def ) const{
+std::string HttpRequest::getHeader(const std::string& key, const std::string& def) const{
     auto it = m_headers.find(key);
     return it == m_headers.end() ? def : it->second;
 }
@@ -255,7 +255,9 @@ std::ostream& HttpResponse::dump(std::ostream& os) const{
        << "."
        << ((uint32_t)(m_version & 0x0f))
        << " "
-       << (m_reason.empty() ? HttpStatusToString(m_status) : m_reason)
+       << (uint32_t)m_status
+       << " "
+       << (m_reason.empty() ? HttpStatusToString(m_status) : m_reason) // m_reason 为自定义的原因短语,或原来的
        << "\r\n";
     
     for(auto& i : m_headers) {

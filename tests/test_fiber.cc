@@ -17,7 +17,7 @@ void test_fiber() {
         LYSLG_LOG_INFO(g_logger) << "main begin()";
         lyslg::Fiber::ptr fiber(new lyslg::Fiber(run_in_fiber,0,true));
         fiber->call();
-        LYSLG_LOG_INFO(g_logger) << "main after swapIn";
+        LYSLG_LOG_INFO(g_logger) << "main after call";
         fiber->call();
         LYSLG_LOG_INFO(g_logger) << "main after end";
         fiber->call();
@@ -27,6 +27,7 @@ void test_fiber() {
 int main()
 {
     lyslg::Thread::SetName("main");
+    LYSLG_LOG_INFO(g_logger) << "run in main thread";
     std::vector<lyslg::Thread::ptr> thrs;
     for(int i = 0; i<3;i++) {
         thrs.push_back(lyslg::Thread::ptr(

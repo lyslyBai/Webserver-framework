@@ -69,7 +69,7 @@ struct _HookIniter{
         hook_init();
         s_connect_timeout = g_tcp_connect_timeout->getValue();
 
-         g_tcp_connect_timeout->addListener([](const int& old_value,const int& new_value){
+        g_tcp_connect_timeout->addListener([](const int& old_value,const int& new_value){
             LYSLG_LOG_INFO(g_logger) << "tcp connect time changed from"
                                      << old_value << "to" << new_value;
             s_connect_timeout = new_value;
@@ -91,7 +91,8 @@ struct timer_info{
     int cancelled = 0; 
 };
 /*ssize_t 是函数的返回类型，表示有符号的整数型。*/
-
+// 非hook，或者不记载在fdctx上，或者用户设置为非阻塞了，直接执行
+// 为socket，在fdctx上，设置条件定时器 ， 若在timeout_so内执行结束，则成功，再次执行fun，因为是非阻塞，所以反复执行，指导返回值为0，或者超时结束
 /*typename ... Args 模板中的可变参数模板（Variadic Templates）语法*/
 template<typename OriginFun, typename ... Args>
 static ssize_t do_io(int fd, OriginFun fun,const char* hook_fun_name,
@@ -199,7 +200,8 @@ extern "C" {
 #define XX(name) name ## _fun name ## _f = nullptr;
     HOOK_FUN(XX);
 #undef XX
-
+// 额外逻辑
+// 暂停当前协程，将其sleep一定时间后重新唤醒执行
 unsigned int sleep(unsigned int seconds){
     if(!lyslg::t_hook_enable) {
         return sleep_f(seconds);
@@ -213,7 +215,7 @@ unsigned int sleep(unsigned int seconds){
     lyslg::Fiber::YieldToHold();
     return 0;
 }
-
+// 额外逻辑 , 同上
 int usleep(useconds_t usec){
     if(!lyslg::t_hook_enable) {
         return sleep_f(usec);
@@ -228,6 +230,8 @@ int usleep(useconds_t usec){
     return 0;
 }
 
+// 额外逻辑
+// 创建socket后，将其直接放入fdmanager。 如果是socket，则直接设为非阻塞
 int socket(int domain, int type, int protocol){
     if(!lyslg::t_hook_enable) {
         return socket_f(domain,type,protocol);
@@ -241,7 +245,9 @@ int socket(int domain, int type, int protocol){
     lyslg::FdMgr::GetInstance()->get(fd,true);
     return fd;
 } 
-
+// 额外逻辑
+// 判断是否存在，以及是否是socket，如果不是socket或设为非阻塞则连接。否则设置为socket设置条件定时器。
+// 总体来说，是为了给connect提供超时功能，非阻塞情况下，超出某个时间则连接失败。
 int connect_with_timeout(int sockfd, const struct sockaddr *addr, socklen_t addrlen,uint64_t timeout_ms) {
     if(!lyslg::t_hook_enable) {
         return connect_f(sockfd,addr, addrlen);
@@ -257,13 +263,15 @@ int connect_with_timeout(int sockfd, const struct sockaddr *addr, socklen_t addr
         return connect_f(sockfd,addr, addrlen);
     }
 
-    int n = connect_f(sockfd,addr, addrlen );
+    int n = connect_f(sockfd,addr, addrlen);
     if(n == 0){
         return 0;
         /*EINPROGRESS 这表示连接操作已经启动，但尚未完成。*/
     } else if(n != -1 || errno != EINPROGRESS) {
         return n;
     }
+
+    LYSLG_LOG_INFO(g_logger) << " n=" << n << " errno=" << errno << " errstr=" << strerror(errno);
 
     lyslg::IoManager* iom = lyslg::IoManager::GetThis();
     lyslg::Timer::ptr timer;
@@ -281,25 +289,28 @@ int connect_with_timeout(int sockfd, const struct sockaddr *addr, socklen_t addr
 
         },winfo);
     }
-
+    // 连接建立成功触发写事件的原因是，成功建立连接后，可以向套接字写入数据。
+    // 写事件的触发通知应用程序可以开始向套接字写入数据，这是连接建立成功后的下一步操作。
+    // 这里直接将本协程作为写事件的执行函数。
     int rt = iom->addEvent(sockfd,lyslg::IoManager::WRITE);
     if(rt) {
+        // 事件添加失败
         if(timer){
             timer->cancel();
         }
         LYSLG_LOG_ERROR(g_logger) << "connect addEvent(" <<sockfd << ", WRITE) error";
     }else{
-        lyslg::Fiber::YieldToHold();
+        lyslg::Fiber::YieldToHold(); // iom->addEvent这里重新添加了这个协程,成功建立连接则这里返回，未成功建立连接，同样返回。
         /**处理定时器取消：**在切换回来后，如果定时器被取消，则设置 errno 并返回 -1*/
-        if(timer){
+        if(timer){ // 若定时器存在，则取消。
             timer->cancel();
         }
-        if(tinfo->cancelled) {
+        if(tinfo->cancelled) {  // 如果已经执行定时器，那么相当于超时，连接失败
             errno = tinfo->cancelled;
             return -1;
         }
     }
-
+    // 在规定的时间内返回也不代表没有错误，返回建立套接字中的错误
     int error = 1;
     socklen_t len = sizeof(int);
     if(-1 == getsockopt(sockfd,SOL_SOCKET,SO_ERROR,&error,&len)) {
@@ -313,13 +324,11 @@ int connect_with_timeout(int sockfd, const struct sockaddr *addr, socklen_t addr
     }
 }
 
-
-
-
+// 同上
 int connect(int sockfd, const struct sockaddr *addr, socklen_t addrlen){
     return connect_with_timeout(sockfd,addr, addrlen,lyslg::s_connect_timeout);
 }
-
+// 若建立连接，将之加入fd_manager中
 int accept(int s, struct sockaddr *addr, socklen_t *addrlen){
     int fd = do_io(s,accept_f,"accept",lyslg::IoManager::READ,SO_RCVTIMEO,addr,addrlen);
     if(fd >= 0) {
@@ -368,7 +377,7 @@ ssize_t sendto(int s, const void *msg, size_t len, int flags, const struct socka
 ssize_t sendmsg(int s, const struct msghdr *msg, int flags){
     return do_io(s,sendmsg_f,"sendmsg",lyslg::IoManager::WRITE,SO_SNDTIMEO,msg,flags);
 }
-
+// 关闭后，处理fd对应的时间，关闭
 int close(int fd){
     if(!lyslg::t_hook_enable) {
         return close_f(fd);
@@ -384,7 +393,8 @@ int close(int fd){
     }
     return close_f(fd);
 }
-
+//  首先是针对在fd——manager中的fd，且是未关闭的socket，若设为非阻塞，设置setUserNonblock，根据getSysNonblock，确定是否设置为socket
+//  操作都是基于fd_manager,为了将操作同步到fdctx中
 int fcntl(int fd, int cmd, ... /* arg */ ){
     va_list va;
     va_start(va,cmd);
@@ -398,7 +408,7 @@ int fcntl(int fd, int cmd, ... /* arg */ ){
                     return fcntl_f(fd, cmd, arg);
                 }
                 ctx->setUserNonblock(arg & O_NONBLOCK);
-                if(ctx->getSysNonblock()) {
+                if(ctx->getSysNonblock()) {  //  ？？？？
                     arg |= O_NONBLOCK;
                 } else {
                     arg &= ~O_NONBLOCK;
@@ -414,6 +424,7 @@ int fcntl(int fd, int cmd, ... /* arg */ ){
                 if(!ctx || ctx->isClose() || !ctx->isSocket()){
                     return arg;
                 }
+                // 如果用户设置了非阻塞标志，则将 O_NONBLOCK 标志加入到返回值中；否则，从返回值中去除 O_NONBLOCK 标志。
                 if(ctx->getUserNonblock()){
                     return arg | O_NONBLOCK;
                 } else {
@@ -473,6 +484,10 @@ int fcntl(int fd, int cmd, ... /* arg */ ){
 
 }
 
+// 额外逻辑
+// 在网络编程中，ioctl 也可用于对套接字进行一些控制操作。例如，设置套接字为非阻塞模式、获取套接字的状态等。在这种情况下，d 参数是一个套接字描述符。
+// 当request == FIONBIO，即为设置非阻塞，在fdctx中将其设为用户态非阻塞，即用户自己设置为非阻塞
+//F_SETFL 和 F_GETFL 的处理逻辑主要涉及对非阻塞标志的设置和获取，并且通过 lyslg::FdCtx 管理套接字的上下文信息。
 int ioctl(int d, unsigned long int request, ...){
     va_list va;
     va_start(va,request);
@@ -493,6 +508,7 @@ int getsockopt(int sockfd, int level, int optname, void *optval, socklen_t *optl
     return getsockopt_f(sockfd, level, optname,optval,optlen);
 }
 
+// 如果是对socket进行超时设置，则将超时时间设置到fdctx中
 int setsockopt(int sockfd, int level, int optname, const void *optval, socklen_t optlen){
     if(!lyslg::t_hook_enable) {
         return setsockopt_f(sockfd,  level,  optname, optval, optlen);
