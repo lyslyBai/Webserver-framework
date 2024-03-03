@@ -28,9 +28,13 @@ CXX_FLAGS =  -rdynamic -O3 -g -std=c++11 -Wall -Werror -Wno-unused-function -Wno
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/iomanager.cc.o_DEFINES = __FILE__="lyslg/iomanager.cc"
 
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/library.cc.o_DEFINES = __FILE__="lyslg/library.cc"
+
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/log.cc.o_DEFINES = __FILE__="lyslg/log.cc"
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/macro.cc.o_DEFINES = __FILE__="lyslg/macro.cc"
+
+# Custom defines: CMakeFiles/lyslg.dir/lyslg/mudule.cc.o_DEFINES = __FILE__="lyslg/mudule.cc"
 
 # Custom defines: CMakeFiles/lyslg.dir/lyslg/mutex.cc.o_DEFINES = __FILE__="lyslg/mutex.cc"
 

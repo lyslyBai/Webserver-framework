@@ -861,6 +861,30 @@ lyslg/iomanager.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/iomanager.cc.s
 .PHONY : lyslg/iomanager.cc.s
 
+lyslg/library.o: lyslg/library.cc.o
+.PHONY : lyslg/library.o
+
+# target to build an object file
+lyslg/library.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/library.cc.o
+.PHONY : lyslg/library.cc.o
+
+lyslg/library.i: lyslg/library.cc.i
+.PHONY : lyslg/library.i
+
+# target to preprocess a source file
+lyslg/library.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/library.cc.i
+.PHONY : lyslg/library.cc.i
+
+lyslg/library.s: lyslg/library.cc.s
+.PHONY : lyslg/library.s
+
+# target to generate assembly for a file
+lyslg/library.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/library.cc.s
+.PHONY : lyslg/library.cc.s
+
 lyslg/log.o: lyslg/log.cc.o
 .PHONY : lyslg/log.o
 
@@ -908,6 +932,30 @@ lyslg/macro.s: lyslg/macro.cc.s
 lyslg/macro.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/macro.cc.s
 .PHONY : lyslg/macro.cc.s
+
+lyslg/mudule.o: lyslg/mudule.cc.o
+.PHONY : lyslg/mudule.o
+
+# target to build an object file
+lyslg/mudule.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/mudule.cc.o
+.PHONY : lyslg/mudule.cc.o
+
+lyslg/mudule.i: lyslg/mudule.cc.i
+.PHONY : lyslg/mudule.i
+
+# target to preprocess a source file
+lyslg/mudule.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/mudule.cc.i
+.PHONY : lyslg/mudule.cc.i
+
+lyslg/mudule.s: lyslg/mudule.cc.s
+.PHONY : lyslg/mudule.s
+
+# target to generate assembly for a file
+lyslg/mudule.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/mudule.cc.s
+.PHONY : lyslg/mudule.cc.s
 
 lyslg/mutex.o: lyslg/mutex.cc.o
 .PHONY : lyslg/mutex.o
@@ -1716,12 +1764,18 @@ help:
 	@echo "... lyslg/iomanager.o"
 	@echo "... lyslg/iomanager.i"
 	@echo "... lyslg/iomanager.s"
+	@echo "... lyslg/library.o"
+	@echo "... lyslg/library.i"
+	@echo "... lyslg/library.s"
 	@echo "... lyslg/log.o"
 	@echo "... lyslg/log.i"
 	@echo "... lyslg/log.s"
 	@echo "... lyslg/macro.o"
 	@echo "... lyslg/macro.i"
 	@echo "... lyslg/macro.s"
+	@echo "... lyslg/mudule.o"
+	@echo "... lyslg/mudule.i"
+	@echo "... lyslg/mudule.s"
 	@echo "... lyslg/mutex.o"
 	@echo "... lyslg/mutex.i"
 	@echo "... lyslg/mutex.s"

@@ -1,0 +1,3 @@
+server:
+    work_path: /home/lyslg/work/project_name
+    pid_file: project_name.pid

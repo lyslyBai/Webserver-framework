@@ -1,3 +1,6 @@
+#ifndef __LYSLG_STREAM_H__
+#define __LYSLG_STREAM_H__
+
 #include <memory>
 #include "bytearray.h"
 
@@ -21,3 +24,5 @@ public:
 };
 
 };
+
+#endif
