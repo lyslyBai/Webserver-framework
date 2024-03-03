@@ -4,13 +4,13 @@
 # 如果目录不存在，执行 mkdir bin/module 创建该目录。
 # 如果目录已经存在，执行 unlink 命令删除 bin/project_name 和 bin/module/libproject_name.so 这两个文件。
 
-if [ ! -d bin/module ]
+if [ ! -d ./bin/module ]
 then
-    mkdir bin/module
+    mkdir ./bin/module
 else
-    unlink bin/project_name
-    unlink bin/module/libproject_name.so
+    unlink ./bin/project_name
+    unlink ./bin/module/libproject_name.so
 fi
 
-cp lyslg/bin/lyslg bin/project_name
-cp lib/libproject_name.so bin/module/
+cp ./lyslg/bin/lyslg ./bin/project_name
+cp ./lib/libproject_name.so ./bin/module/
