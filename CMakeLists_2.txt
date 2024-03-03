@@ -1,0 +1,40 @@
+# cmake_minimum_required(VERSION 3.0)
+# project(lyslg)
+# # 为了在cmake生成Makefile后执行make的时候输出详细的编译命令，
+# # 可以在CMakeList.txt内加入
+# set(CMAKE_VERBOSE_MAKEFILE ON)
+
+# include (cmake/utils.cmake)
+# # -Wall 这是一个编译器选项，用于打开所有的警告。
+# # -Werror 这个选项将所有警告视为错误。这意味着如果编译器在代码中找到任何警告，它不会继续编译，而是会报错。
+# # -Wno-unused-function 通常，编译器会发出警告，如果定义了一个没有在代码中使用的函数。这个选项是关闭这个特定警告的。这意味着即使定义了未使用的函数，编译器也不会发出警告。
+# # -O3 这是一个优化级别标志，用于启用所有优化，包括性能优化和代码大小优化。
+# # -g 这个标志用于生成带有调试信息的可执行文件，这有助于在调试时更容易地识别问题。
+# #  -rdynamic这个标志用于在动态链接库中启用符号调试信息，使得在调试时更容易识别函数和变量的来源。
+# # $ENV{CXXFLAGS} 这是获取环境变量CXXFLAGS的值的指令。CXXFLAGS通常包含编译器用于C++代码的标志和选项。 花括号，不是圆括号
+# #set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O3 -g -std=c++11 -Wall -Werror -Wno-unused-function")
+# set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+
+# set(CMAKE_VERBOSE_MAKEFILE ON)
+# set(CMAKE_CXX_FLAGS "$ENV{CXXFLAGS} -rdynamic -O3 -fPIC -ggdb -std=c++11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations")
+# set(CMAKE_C_FLAGS "$ENV{CXXFLAGS} -rdynamic -O3 -fPIC -ggdb -std=c11 -Wall -Wno-deprecated -Werror -Wno-unused-function -Wno-builtin-macro-redefined -Wno-deprecated-declarations")
+
+# include_directories(${PROJECT_SOURCE_DIR}/lyslg)
+# include_directories(${PROJECT_SOURCE_DIR}/lyslg/http)
+
+# aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/lyslg LIB_SRC)
+# aux_source_directory(${CMAKE_CURRENT_SOURCE_DIR}/lyslg/http LIB_SRC_1)
+
+# add_library(lyslg SHARED ${LIB_SRC} ${LIB_SRC_1})
+# target_link_libraries(lyslg -ldl -lssl -lcrypto)
+# force_redefine_file_macro_for_sources(lyslg)
+
+
+# link_directories(${PROJECT_SOURCE_DIR}/lib)
+
+
+
+
+# ragelmaker(lyslg/http/http11_parser.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/lyslg/http)
+# ragelmaker(lyslg/http/httpclient_parser.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/lyslg/http)
+# # ragelmaker(lyslg/uri.rl LIB_SRC ${CMAKE_CURRENT_SOURCE_DIR}/lyslg)

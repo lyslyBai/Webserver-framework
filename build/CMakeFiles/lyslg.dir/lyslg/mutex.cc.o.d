@@ -1,6 +1,6 @@
 CMakeFiles/lyslg.dir/lyslg/mutex.cc.o: \
- /home/lyslg/Documents/lyslg_/lyslg/mutex.cc /usr/include/stdc-predef.h \
- /home/lyslg/Documents/lyslg_/lyslg/mutex.h /usr/include/c++/8/thread \
+ /home/lyslg/Documents/lyslg/lyslg/mutex.cc /usr/include/stdc-predef.h \
+ /home/lyslg/Documents/lyslg/lyslg/mutex.h /usr/include/c++/8/thread \
  /usr/include/c++/8/chrono /usr/include/c++/8/ratio \
  /usr/include/c++/8/type_traits \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
@@ -141,4 +141,4 @@ CMakeFiles/lyslg.dir/lyslg/mutex.cc.o: \
  /usr/include/c++/8/backward/auto_ptr.h /usr/include/c++/8/functional \
  /usr/include/c++/8/bits/std_function.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h /usr/include/c++/8/atomic \
- /home/lyslg/Documents/lyslg_/lyslg/noncopyable.h
+ /home/lyslg/Documents/lyslg/lyslg/noncopyable.h

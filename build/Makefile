@@ -60,10 +60,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lyslg/Documents/lyslg_
+CMAKE_SOURCE_DIR = /home/lyslg/Documents/lyslg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lyslg/Documents/lyslg_/build
+CMAKE_BINARY_DIR = /home/lyslg/Documents/lyslg/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -90,9 +90,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/Documents/lyslg_/build/CMakeFiles /home/lyslg/Documents/lyslg_/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/Documents/lyslg/build/CMakeFiles /home/lyslg/Documents/lyslg/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/Documents/lyslg_/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/Documents/lyslg/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -404,6 +404,19 @@ test_application: cmake_check_build_system
 test_application/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_application.dir/build.make CMakeFiles/test_application.dir/build
 .PHONY : test_application/fast
+
+#=============================================================================
+# Target rules for targets named bin_lyslg
+
+# Build rule for target.
+bin_lyslg: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bin_lyslg
+.PHONY : bin_lyslg
+
+# fast build rule for target.
+bin_lyslg/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin_lyslg.dir/build.make CMakeFiles/bin_lyslg.dir/build
+.PHONY : bin_lyslg/fast
 
 examples/echo_server.o: examples/echo_server.cc.o
 .PHONY : examples/echo_server.o
@@ -1197,6 +1210,30 @@ lyslg/util.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/util.cc.s
 .PHONY : lyslg/util.cc.s
 
+test_exe/main.o: test_exe/main.cc.o
+.PHONY : test_exe/main.o
+
+# target to build an object file
+test_exe/main.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin_lyslg.dir/build.make CMakeFiles/bin_lyslg.dir/test_exe/main.cc.o
+.PHONY : test_exe/main.cc.o
+
+test_exe/main.i: test_exe/main.cc.i
+.PHONY : test_exe/main.i
+
+# target to preprocess a source file
+test_exe/main.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin_lyslg.dir/build.make CMakeFiles/bin_lyslg.dir/test_exe/main.cc.i
+.PHONY : test_exe/main.cc.i
+
+test_exe/main.s: test_exe/main.cc.s
+.PHONY : test_exe/main.s
+
+# target to generate assembly for a file
+test_exe/main.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin_lyslg.dir/build.make CMakeFiles/bin_lyslg.dir/test_exe/main.cc.s
+.PHONY : test_exe/main.cc.s
+
 tests/test.o: tests/test.cc.o
 .PHONY : tests/test.o
 
@@ -1685,6 +1722,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... bin_lyslg"
 	@echo "... echo_server"
 	@echo "... lyslg"
 	@echo "... my_test"
@@ -1806,6 +1844,9 @@ help:
 	@echo "... lyslg/util.o"
 	@echo "... lyslg/util.i"
 	@echo "... lyslg/util.s"
+	@echo "... test_exe/main.o"
+	@echo "... test_exe/main.i"
+	@echo "... test_exe/main.s"
 	@echo "... tests/test.o"
 	@echo "... tests/test.i"
 	@echo "... tests/test.s"

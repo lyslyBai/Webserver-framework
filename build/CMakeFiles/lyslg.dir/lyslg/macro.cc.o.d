@@ -1,12 +1,12 @@
 CMakeFiles/lyslg.dir/lyslg/macro.cc.o: \
- /home/lyslg/Documents/lyslg_/lyslg/macro.cc /usr/include/stdc-predef.h \
- /home/lyslg/Documents/lyslg_/lyslg/macro.h /usr/include/assert.h \
+ /home/lyslg/Documents/lyslg/lyslg/macro.cc /usr/include/stdc-predef.h \
+ /home/lyslg/Documents/lyslg/lyslg/macro.h /usr/include/assert.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h /usr/include/execinfo.h \
- /home/lyslg/Documents/lyslg_/lyslg/util.h /usr/include/pthread.h \
+ /home/lyslg/Documents/lyslg/lyslg/util.h /usr/include/pthread.h \
  /usr/include/endian.h /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \

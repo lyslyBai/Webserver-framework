@@ -1,7 +1,7 @@
 CMakeFiles/lyslg.dir/lyslg/thread.cc.o: \
- /home/lyslg/Documents/lyslg_/lyslg/thread.cc /usr/include/stdc-predef.h \
- /home/lyslg/Documents/lyslg_/lyslg/thread.h \
- /home/lyslg/Documents/lyslg_/lyslg/mutex.h /usr/include/c++/8/thread \
+ /home/lyslg/Documents/lyslg/lyslg/thread.cc /usr/include/stdc-predef.h \
+ /home/lyslg/Documents/lyslg/lyslg/thread.h \
+ /home/lyslg/Documents/lyslg/lyslg/mutex.h /usr/include/c++/8/thread \
  /usr/include/c++/8/chrono /usr/include/c++/8/ratio \
  /usr/include/c++/8/type_traits \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
@@ -142,8 +142,8 @@ CMakeFiles/lyslg.dir/lyslg/thread.cc.o: \
  /usr/include/c++/8/backward/auto_ptr.h /usr/include/c++/8/functional \
  /usr/include/c++/8/bits/std_function.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h /usr/include/c++/8/atomic \
- /home/lyslg/Documents/lyslg_/lyslg/noncopyable.h \
- /home/lyslg/Documents/lyslg_/lyslg/log.h /usr/include/c++/8/list \
+ /home/lyslg/Documents/lyslg/lyslg/noncopyable.h \
+ /home/lyslg/Documents/lyslg/lyslg/log.h /usr/include/c++/8/list \
  /usr/include/c++/8/bits/stl_list.h /usr/include/c++/8/bits/list.tcc \
  /usr/include/c++/8/sstream /usr/include/c++/8/istream \
  /usr/include/c++/8/ios /usr/include/c++/8/bits/ios_base.h \
@@ -172,8 +172,8 @@ CMakeFiles/lyslg.dir/lyslg/thread.cc.o: \
  /usr/include/c++/8/bits/stl_map.h /usr/include/c++/8/bits/stl_multimap.h \
  /usr/include/c++/8/set /usr/include/c++/8/bits/stl_set.h \
  /usr/include/c++/8/bits/stl_multiset.h \
- /home/lyslg/Documents/lyslg_/lyslg/singleton.h \
- /home/lyslg/Documents/lyslg_/lyslg/util.h \
+ /home/lyslg/Documents/lyslg/lyslg/singleton.h \
+ /home/lyslg/Documents/lyslg/lyslg/util.h \
  /usr/include/x86_64-linux-gnu/sys/syscall.h \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \

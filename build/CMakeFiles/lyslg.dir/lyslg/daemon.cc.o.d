@@ -1,7 +1,6 @@
 CMakeFiles/lyslg.dir/lyslg/daemon.cc.o: \
- /home/lyslg/Documents/lyslg_/lyslg/daemon.cc /usr/include/stdc-predef.h \
- /home/lyslg/Documents/lyslg_/lyslg/daemon.h \
- /usr/include/c++/8/functional \
+ /home/lyslg/Documents/lyslg/lyslg/daemon.cc /usr/include/stdc-predef.h \
+ /home/lyslg/Documents/lyslg/lyslg/daemon.h /usr/include/c++/8/functional \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -132,7 +131,7 @@ CMakeFiles/lyslg.dir/lyslg/daemon.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /home/lyslg/Documents/lyslg_/lyslg/singleton.h /usr/include/c++/8/memory \
+ /home/lyslg/Documents/lyslg/lyslg/singleton.h /usr/include/c++/8/memory \
  /usr/include/c++/8/bits/stl_construct.h \
  /usr/include/c++/8/bits/stl_uninitialized.h \
  /usr/include/c++/8/bits/stl_tempbuf.h \
@@ -147,7 +146,7 @@ CMakeFiles/lyslg.dir/lyslg/daemon.cc.o: \
  /usr/include/c++/8/bits/atomic_base.h \
  /usr/include/c++/8/bits/atomic_lockfree_defines.h \
  /usr/include/c++/8/backward/auto_ptr.h \
- /home/lyslg/Documents/lyslg_/lyslg/log.h /usr/include/c++/8/list \
+ /home/lyslg/Documents/lyslg/lyslg/log.h /usr/include/c++/8/list \
  /usr/include/c++/8/bits/stl_list.h /usr/include/c++/8/bits/list.tcc \
  /usr/include/c++/8/sstream /usr/include/c++/8/istream \
  /usr/include/c++/8/ios /usr/include/c++/8/bits/ios_base.h \
@@ -176,19 +175,19 @@ CMakeFiles/lyslg.dir/lyslg/daemon.cc.o: \
  /usr/include/c++/8/bits/stl_map.h /usr/include/c++/8/bits/stl_multimap.h \
  /usr/include/c++/8/set /usr/include/c++/8/bits/stl_set.h \
  /usr/include/c++/8/bits/stl_multiset.h \
- /home/lyslg/Documents/lyslg_/lyslg/util.h \
+ /home/lyslg/Documents/lyslg/lyslg/util.h \
  /usr/include/x86_64-linux-gnu/sys/syscall.h \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
  /usr/include/x86_64-linux-gnu/bits/syscall.h \
- /home/lyslg/Documents/lyslg_/lyslg/mutex.h /usr/include/c++/8/thread \
+ /home/lyslg/Documents/lyslg/lyslg/mutex.h /usr/include/c++/8/thread \
  /usr/include/c++/8/chrono /usr/include/c++/8/ratio \
  /usr/include/c++/8/limits /usr/include/c++/8/ctime \
  /usr/include/c++/8/bits/parse_numbers.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h /usr/include/c++/8/atomic \
- /home/lyslg/Documents/lyslg_/lyslg/noncopyable.h \
- /home/lyslg/Documents/lyslg_/lyslg/thread.h \
- /home/lyslg/Documents/lyslg_/lyslg/config.h \
+ /home/lyslg/Documents/lyslg/lyslg/noncopyable.h \
+ /home/lyslg/Documents/lyslg/lyslg/thread.h \
+ /home/lyslg/Documents/lyslg/lyslg/config.h \
  /usr/include/boost/lexical_cast.hpp /usr/include/boost/config.hpp \
  /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \

@@ -1,5 +1,5 @@
 CMakeFiles/lyslg.dir/lyslg/log.cc.o: \
- /home/lyslg/Documents/lyslg_/lyslg/log.cc /usr/include/stdc-predef.h \
+ /home/lyslg/Documents/lyslg/lyslg/log.cc /usr/include/stdc-predef.h \
  /usr/include/c++/8/iostream \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h \
@@ -142,7 +142,7 @@ CMakeFiles/lyslg.dir/lyslg/log.cc.o: \
  /usr/include/c++/8/bits/invoke.h /usr/include/c++/8/bits/stl_multimap.h \
  /usr/include/c++/8/functional /usr/include/c++/8/bits/refwrap.h \
  /usr/include/c++/8/bits/std_function.h /usr/include/string.h \
- /usr/include/strings.h /home/lyslg/Documents/lyslg_/lyslg/config.h \
+ /usr/include/strings.h /home/lyslg/Documents/lyslg/lyslg/config.h \
  /usr/include/c++/8/memory /usr/include/c++/8/bits/stl_construct.h \
  /usr/include/c++/8/bits/stl_uninitialized.h \
  /usr/include/c++/8/bits/stl_tempbuf.h \
@@ -849,20 +849,20 @@ CMakeFiles/lyslg.dir/lyslg/log.cc.o: \
  /usr/local/include/yaml-cpp/node/detail/impl.h \
  /usr/local/include/yaml-cpp/node/parse.h \
  /usr/local/include/yaml-cpp/node/emit.h \
- /home/lyslg/Documents/lyslg_/lyslg/log.h /usr/include/c++/8/fstream \
+ /home/lyslg/Documents/lyslg/lyslg/log.h /usr/include/c++/8/fstream \
  /usr/include/x86_64-linux-gnu/c++/8/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++io.h \
  /usr/include/c++/8/bits/fstream.tcc \
- /home/lyslg/Documents/lyslg_/lyslg/singleton.h \
- /home/lyslg/Documents/lyslg_/lyslg/util.h \
+ /home/lyslg/Documents/lyslg/lyslg/singleton.h \
+ /home/lyslg/Documents/lyslg/lyslg/util.h \
  /usr/include/x86_64-linux-gnu/sys/syscall.h \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
  /usr/include/x86_64-linux-gnu/bits/syscall.h \
- /home/lyslg/Documents/lyslg_/lyslg/mutex.h /usr/include/c++/8/thread \
+ /home/lyslg/Documents/lyslg/lyslg/mutex.h /usr/include/c++/8/thread \
  /usr/include/c++/8/chrono /usr/include/c++/8/ratio \
  /usr/include/c++/8/bits/parse_numbers.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h \
- /home/lyslg/Documents/lyslg_/lyslg/noncopyable.h \
- /home/lyslg/Documents/lyslg_/lyslg/thread.h \
- /home/lyslg/Documents/lyslg_/lyslg/env.h
+ /home/lyslg/Documents/lyslg/lyslg/noncopyable.h \
+ /home/lyslg/Documents/lyslg/lyslg/thread.h \
+ /home/lyslg/Documents/lyslg/lyslg/env.h

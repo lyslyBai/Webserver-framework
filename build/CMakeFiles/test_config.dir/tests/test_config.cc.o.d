@@ -1,5 +1,5 @@
 CMakeFiles/test_config.dir/tests/test_config.cc.o: \
- /home/lyslg/Documents/lyslg_/tests/test_config.cc \
+ /home/lyslg/Documents/lyslg/tests/test_config.cc \
  /usr/include/stdc-predef.h /usr/include/c++/8/iostream \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h \
@@ -134,7 +134,7 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o: \
  /usr/include/c++/8/bits/basic_ios.tcc \
  /usr/include/c++/8/bits/ostream.tcc /usr/include/c++/8/istream \
  /usr/include/c++/8/bits/istream.tcc \
- /home/lyslg/Documents/lyslg_/lyslg/log.h /usr/include/c++/8/memory \
+ /home/lyslg/Documents/lyslg/lyslg/log.h /usr/include/c++/8/memory \
  /usr/include/c++/8/bits/stl_construct.h \
  /usr/include/c++/8/bits/stl_uninitialized.h \
  /usr/include/c++/8/bits/stl_tempbuf.h \
@@ -165,8 +165,8 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o: \
  /usr/include/c++/8/bits/stl_map.h /usr/include/c++/8/bits/stl_multimap.h \
  /usr/include/c++/8/set /usr/include/c++/8/bits/stl_set.h \
  /usr/include/c++/8/bits/stl_multiset.h \
- /home/lyslg/Documents/lyslg_/lyslg/singleton.h \
- /home/lyslg/Documents/lyslg_/lyslg/util.h \
+ /home/lyslg/Documents/lyslg/lyslg/singleton.h \
+ /home/lyslg/Documents/lyslg/lyslg/util.h \
  /usr/include/x86_64-linux-gnu/sys/syscall.h \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
@@ -178,15 +178,15 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /home/lyslg/Documents/lyslg_/lyslg/mutex.h /usr/include/c++/8/thread \
+ /home/lyslg/Documents/lyslg/lyslg/mutex.h /usr/include/c++/8/thread \
  /usr/include/c++/8/chrono /usr/include/c++/8/ratio \
  /usr/include/c++/8/limits /usr/include/c++/8/ctime \
  /usr/include/c++/8/bits/parse_numbers.h /usr/include/c++/8/functional \
  /usr/include/c++/8/bits/std_function.h /usr/include/semaphore.h \
  /usr/include/x86_64-linux-gnu/bits/semaphore.h /usr/include/c++/8/atomic \
- /home/lyslg/Documents/lyslg_/lyslg/noncopyable.h \
- /home/lyslg/Documents/lyslg_/lyslg/thread.h \
- /home/lyslg/Documents/lyslg_/lyslg/config.h \
+ /home/lyslg/Documents/lyslg/lyslg/noncopyable.h \
+ /home/lyslg/Documents/lyslg/lyslg/thread.h \
+ /home/lyslg/Documents/lyslg/lyslg/config.h \
  /usr/include/boost/lexical_cast.hpp /usr/include/boost/config.hpp \
  /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
@@ -869,5 +869,5 @@ CMakeFiles/test_config.dir/tests/test_config.cc.o: \
  /usr/local/include/yaml-cpp/node/detail/impl.h \
  /usr/local/include/yaml-cpp/node/parse.h \
  /usr/local/include/yaml-cpp/node/emit.h \
- /home/lyslg/Documents/lyslg_/lyslg/log.h \
- /home/lyslg/Documents/lyslg_/lyslg/env.h
+ /home/lyslg/Documents/lyslg/lyslg/log.h \
+ /home/lyslg/Documents/lyslg/lyslg/env.h

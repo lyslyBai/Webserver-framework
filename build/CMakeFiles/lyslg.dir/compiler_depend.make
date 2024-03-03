@@ -16592,7 +16592,6 @@ CMakeFiles/lyslg.dir/lyslg/mudule.cc.o: ../lyslg/mudule.cc \
   ../lyslg/http/http_session.h \
   ../lyslg/socket_stream.h \
   ../lyslg/stream.h \
-  ../lyslg/bytearray.h \
   ../lyslg/http/http.h \
   ../lyslg/http/servlet.h \
   ../lyslg/mutex.h \

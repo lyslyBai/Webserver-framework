@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -Dlyslg_EXPORTS
 
-CXX_INCLUDES = -I/home/lyslg/Documents/lyslg_/lyslg -I/home/lyslg/Documents/lyslg_/lyslg/http
+CXX_INCLUDES = -I/home/lyslg/Documents/lyslg/lyslg -I/home/lyslg/Documents/lyslg/lyslg/http
 
 CXX_FLAGS =  -rdynamic -O3 -g -std=c++11 -Wall -Werror -Wno-unused-function -Wno-builtin-macro-redefined -pthread -fPIC
 

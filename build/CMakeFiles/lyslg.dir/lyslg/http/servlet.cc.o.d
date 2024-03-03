@@ -1,7 +1,7 @@
 CMakeFiles/lyslg.dir/lyslg/http/servlet.cc.o: \
- /home/lyslg/Documents/lyslg_/lyslg/http/servlet.cc \
+ /home/lyslg/Documents/lyslg/lyslg/http/servlet.cc \
  /usr/include/stdc-predef.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/servlet.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/servlet.h \
  /usr/include/c++/8/memory /usr/include/c++/8/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h \
@@ -141,7 +141,7 @@ CMakeFiles/lyslg.dir/lyslg/http/servlet.cc.o: \
  /usr/include/c++/8/bits/unordered_map.h /usr/include/c++/8/vector \
  /usr/include/c++/8/bits/stl_vector.h \
  /usr/include/c++/8/bits/stl_bvector.h /usr/include/c++/8/bits/vector.tcc \
- /home/lyslg/Documents/lyslg_/lyslg/http/http.h /usr/include/c++/8/map \
+ /home/lyslg/Documents/lyslg/lyslg/http/http.h /usr/include/c++/8/map \
  /usr/include/c++/8/bits/stl_tree.h /usr/include/c++/8/bits/stl_map.h \
  /usr/include/c++/8/bits/stl_multimap.h \
  /usr/include/boost/lexical_cast.hpp /usr/include/boost/config.hpp \
@@ -812,15 +812,15 @@ CMakeFiles/lyslg.dir/lyslg/http/servlet.cc.o: \
  /usr/include/boost/integer.hpp /usr/include/boost/integer_fwd.hpp \
  /usr/include/boost/detail/basic_pointerbuf.hpp \
  /usr/include/c++/8/iostream \
- /home/lyslg/Documents/lyslg_/lyslg/http/http_session.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/../socket_stream.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/../stream.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/../bytearray.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/http_session.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/../socket_stream.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/../stream.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/../bytearray.h \
  /usr/include/x86_64-linux-gnu/sys/uio.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/../socket.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/../address.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/../socket.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/../address.h \
  /usr/include/x86_64-linux-gnu/sys/socket.h \
  /usr/include/x86_64-linux-gnu/bits/socket.h \
  /usr/include/x86_64-linux-gnu/bits/socket_type.h \
@@ -838,7 +838,7 @@ CMakeFiles/lyslg.dir/lyslg/http/servlet.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
  /usr/include/netinet/in.h /usr/include/x86_64-linux-gnu/bits/in.h \
  /usr/include/arpa/inet.h /usr/include/x86_64-linux-gnu/sys/un.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/../noncopyable.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/../noncopyable.h \
  /usr/include/openssl/err.h /usr/include/openssl/e_os2.h \
  /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \
  /usr/include/openssl/opensslv.h /usr/include/openssl/ossl_typ.h \
@@ -866,9 +866,9 @@ CMakeFiles/lyslg.dir/lyslg/http/servlet.cc.o: \
  /usr/include/openssl/cterr.h /usr/include/openssl/sslerr.h \
  /usr/include/openssl/ssl2.h /usr/include/openssl/ssl3.h \
  /usr/include/openssl/tls1.h /usr/include/openssl/dtls1.h \
- /usr/include/openssl/srtp.h /home/lyslg/Documents/lyslg_/lyslg/mutex.h \
+ /usr/include/openssl/srtp.h /home/lyslg/Documents/lyslg/lyslg/mutex.h \
  /usr/include/c++/8/thread /usr/include/c++/8/chrono \
  /usr/include/c++/8/ratio /usr/include/c++/8/bits/parse_numbers.h \
  /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
  /usr/include/c++/8/atomic \
- /home/lyslg/Documents/lyslg_/lyslg/noncopyable.h /usr/include/fnmatch.h
+ /home/lyslg/Documents/lyslg/lyslg/noncopyable.h /usr/include/fnmatch.h

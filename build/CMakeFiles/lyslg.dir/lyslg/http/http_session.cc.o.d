@@ -1,9 +1,9 @@
 CMakeFiles/lyslg.dir/lyslg/http/http_session.cc.o: \
- /home/lyslg/Documents/lyslg_/lyslg/http/http_session.cc \
+ /home/lyslg/Documents/lyslg/lyslg/http/http_session.cc \
  /usr/include/stdc-predef.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/http_session.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/../socket_stream.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/../stream.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/http_session.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/../socket_stream.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/../stream.h \
  /usr/include/c++/8/memory /usr/include/c++/8/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h \
@@ -137,7 +137,7 @@ CMakeFiles/lyslg.dir/lyslg/http/http_session.cc.o: \
  /usr/include/c++/8/bits/atomic_base.h \
  /usr/include/c++/8/bits/atomic_lockfree_defines.h \
  /usr/include/c++/8/backward/auto_ptr.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/../bytearray.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/../bytearray.h \
  /usr/include/unistd.h /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
@@ -152,8 +152,8 @@ CMakeFiles/lyslg.dir/lyslg/http/http_session.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/../socket.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/../address.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/../socket.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/../address.h \
  /usr/include/c++/8/iostream /usr/include/c++/8/ostream \
  /usr/include/c++/8/ios /usr/include/c++/8/bits/ios_base.h \
  /usr/include/c++/8/bits/locale_classes.h \
@@ -190,7 +190,7 @@ CMakeFiles/lyslg.dir/lyslg/http/http_session.cc.o: \
  /usr/include/arpa/inet.h /usr/include/x86_64-linux-gnu/sys/un.h \
  /usr/include/c++/8/map /usr/include/c++/8/bits/stl_tree.h \
  /usr/include/c++/8/bits/stl_map.h /usr/include/c++/8/bits/stl_multimap.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/../noncopyable.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/../noncopyable.h \
  /usr/include/openssl/err.h /usr/include/openssl/e_os2.h \
  /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \
  /usr/include/openssl/opensslv.h /usr/include/c++/8/stdlib.h \
@@ -227,7 +227,7 @@ CMakeFiles/lyslg.dir/lyslg/http/http_session.cc.o: \
  /usr/include/openssl/ssl2.h /usr/include/openssl/ssl3.h \
  /usr/include/openssl/tls1.h /usr/include/openssl/dtls1.h \
  /usr/include/openssl/srtp.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/http.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/http.h \
  /usr/include/boost/lexical_cast.hpp /usr/include/boost/config.hpp \
  /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
@@ -863,7 +863,7 @@ CMakeFiles/lyslg.dir/lyslg/http/http_session.cc.o: \
  /usr/include/boost/math/tools/real_cast.hpp \
  /usr/include/boost/integer.hpp /usr/include/boost/integer_fwd.hpp \
  /usr/include/boost/detail/basic_pointerbuf.hpp \
- /home/lyslg/Documents/lyslg_/lyslg/http/http_parser.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/http11_parser.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/http11_common.h \
- /home/lyslg/Documents/lyslg_/lyslg/http/httpclient_parser.h
+ /home/lyslg/Documents/lyslg/lyslg/http/http_parser.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/http11_parser.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/http11_common.h \
+ /home/lyslg/Documents/lyslg/lyslg/http/httpclient_parser.h

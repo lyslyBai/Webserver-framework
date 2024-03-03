@@ -1,7 +1,7 @@
 CMakeFiles/test_uri.dir/tests/test_uri.cc.o: \
- /home/lyslg/Documents/lyslg_/tests/test_uri.cc \
- /usr/include/stdc-predef.h /home/lyslg/Documents/lyslg_/lyslg/uri.h \
- /usr/include/c++/8/memory /usr/include/c++/8/bits/stl_algobase.h \
+ /home/lyslg/Documents/lyslg/tests/test_uri.cc /usr/include/stdc-predef.h \
+ /home/lyslg/Documents/lyslg/lyslg/uri.h /usr/include/c++/8/memory \
+ /usr/include/c++/8/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -134,7 +134,7 @@ CMakeFiles/test_uri.dir/tests/test_uri.cc.o: \
  /usr/include/c++/8/bits/atomic_base.h \
  /usr/include/c++/8/bits/atomic_lockfree_defines.h \
  /usr/include/c++/8/backward/auto_ptr.h \
- /home/lyslg/Documents/lyslg_/lyslg/address.h /usr/include/c++/8/iostream \
+ /home/lyslg/Documents/lyslg/lyslg/address.h /usr/include/c++/8/iostream \
  /usr/include/c++/8/ostream /usr/include/c++/8/ios \
  /usr/include/c++/8/bits/ios_base.h \
  /usr/include/c++/8/bits/locale_classes.h \
