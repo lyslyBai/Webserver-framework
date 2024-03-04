@@ -1,8 +1,9 @@
 CMakeFiles/lyslg.dir/lyslg/env.cc.o: \
- /home/lyslg/Documents/lyslg/lyslg/env.cc /usr/include/stdc-predef.h \
- /home/lyslg/Documents/lyslg/lyslg/env.h \
- /home/lyslg/Documents/lyslg/lyslg/singleton.h /usr/include/c++/8/memory \
- /usr/include/c++/8/bits/stl_algobase.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/env.cc \
+ /usr/include/stdc-predef.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/env.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/singleton.h \
+ /usr/include/c++/8/memory /usr/include/c++/8/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -135,22 +136,24 @@ CMakeFiles/lyslg.dir/lyslg/env.cc.o: \
  /usr/include/c++/8/bits/atomic_base.h \
  /usr/include/c++/8/bits/atomic_lockfree_defines.h \
  /usr/include/c++/8/backward/auto_ptr.h \
- /home/lyslg/Documents/lyslg/lyslg/thread.h \
- /home/lyslg/Documents/lyslg/lyslg/mutex.h /usr/include/c++/8/thread \
- /usr/include/c++/8/chrono /usr/include/c++/8/ratio \
- /usr/include/c++/8/limits /usr/include/c++/8/ctime \
- /usr/include/c++/8/bits/parse_numbers.h /usr/include/c++/8/functional \
- /usr/include/c++/8/bits/std_function.h /usr/include/semaphore.h \
- /usr/include/x86_64-linux-gnu/bits/semaphore.h /usr/include/c++/8/atomic \
- /home/lyslg/Documents/lyslg/lyslg/noncopyable.h /usr/include/c++/8/map \
- /usr/include/c++/8/bits/stl_tree.h /usr/include/c++/8/bits/stl_map.h \
- /usr/include/c++/8/bits/stl_multimap.h /usr/include/c++/8/vector \
- /usr/include/c++/8/bits/stl_vector.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/thread.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/mutex.h \
+ /usr/include/c++/8/thread /usr/include/c++/8/chrono \
+ /usr/include/c++/8/ratio /usr/include/c++/8/limits \
+ /usr/include/c++/8/ctime /usr/include/c++/8/bits/parse_numbers.h \
+ /usr/include/c++/8/functional /usr/include/c++/8/bits/std_function.h \
+ /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+ /usr/include/c++/8/atomic \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/noncopyable.h \
+ /usr/include/c++/8/map /usr/include/c++/8/bits/stl_tree.h \
+ /usr/include/c++/8/bits/stl_map.h /usr/include/c++/8/bits/stl_multimap.h \
+ /usr/include/c++/8/vector /usr/include/c++/8/bits/stl_vector.h \
  /usr/include/c++/8/bits/stl_bvector.h /usr/include/c++/8/bits/vector.tcc \
- /home/lyslg/Documents/lyslg/lyslg/log.h /usr/include/c++/8/list \
- /usr/include/c++/8/bits/stl_list.h /usr/include/c++/8/bits/list.tcc \
- /usr/include/c++/8/sstream /usr/include/c++/8/istream \
- /usr/include/c++/8/ios /usr/include/c++/8/bits/ios_base.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/log.h \
+ /usr/include/c++/8/list /usr/include/c++/8/bits/stl_list.h \
+ /usr/include/c++/8/bits/list.tcc /usr/include/c++/8/sstream \
+ /usr/include/c++/8/istream /usr/include/c++/8/ios \
+ /usr/include/c++/8/bits/ios_base.h \
  /usr/include/c++/8/bits/locale_classes.h \
  /usr/include/c++/8/bits/locale_classes.tcc \
  /usr/include/c++/8/system_error \
@@ -171,7 +174,7 @@ CMakeFiles/lyslg.dir/lyslg/env.cc.o: \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++io.h \
  /usr/include/c++/8/bits/fstream.tcc /usr/include/c++/8/set \
  /usr/include/c++/8/bits/stl_set.h /usr/include/c++/8/bits/stl_multiset.h \
- /home/lyslg/Documents/lyslg/lyslg/util.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/util.h \
  /usr/include/x86_64-linux-gnu/sys/syscall.h \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
@@ -182,19 +185,29 @@ CMakeFiles/lyslg.dir/lyslg/env.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h /usr/include/string.h \
- /usr/include/strings.h /usr/include/c++/8/iostream \
- /usr/include/c++/8/iomanip /usr/include/c++/8/locale \
- /usr/include/c++/8/bits/locale_facets_nonio.h \
+ /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/util/json_util.h \
+ /usr/include/c++/8/iostream /usr/include/jsoncpp/json/json.h \
+ /usr/include/jsoncpp/json/config.h /usr/include/c++/8/cstddef \
+ /usr/include/jsoncpp/json/allocator.h /usr/include/c++/8/cstring \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/jsoncpp/json/version.h \
+ /usr/include/jsoncpp/json/json_features.h \
+ /usr/include/jsoncpp/json/forwards.h /usr/include/jsoncpp/json/reader.h \
+ /usr/include/jsoncpp/json/value.h /usr/include/c++/8/deque \
+ /usr/include/c++/8/bits/stl_deque.h /usr/include/c++/8/bits/deque.tcc \
+ /usr/include/c++/8/stack /usr/include/c++/8/bits/stl_stack.h \
+ /usr/include/jsoncpp/json/writer.h /usr/include/c++/8/iomanip \
+ /usr/include/c++/8/locale /usr/include/c++/8/bits/locale_facets_nonio.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/time_members.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/8/bits/locale_facets_nonio.tcc \
  /usr/include/c++/8/bits/locale_conv.h \
- /home/lyslg/Documents/lyslg/lyslg/config.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/config.h \
  /usr/include/boost/lexical_cast.hpp /usr/include/boost/config.hpp \
  /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
- /usr/include/boost/config/compiler/gcc.hpp /usr/include/c++/8/cstddef \
+ /usr/include/boost/config/compiler/gcc.hpp \
  /usr/include/boost/config/detail/select_stdlib_config.hpp \
  /usr/include/boost/config/stdlib/libstdcpp3.hpp \
  /usr/include/boost/config/detail/select_platform_config.hpp \
@@ -556,7 +569,6 @@ CMakeFiles/lyslg.dir/lyslg/env.cc.o: \
  /usr/include/boost/move/detail/std_ns_begin.hpp \
  /usr/include/boost/move/detail/std_ns_end.hpp \
  /usr/include/boost/lexical_cast/detail/converter_lexical_streams.hpp \
- /usr/include/c++/8/cstring \
  /usr/include/boost/lexical_cast/detail/lcast_char_constants.hpp \
  /usr/include/boost/lexical_cast/detail/lcast_unsigned_converters.hpp \
  /usr/include/boost/noncopyable.hpp \

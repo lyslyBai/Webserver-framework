@@ -1,7 +1,8 @@
 CMakeFiles/lyslg.dir/lyslg/stream.cc.o: \
- /home/lyslg/Documents/lyslg/lyslg/stream.cc /usr/include/stdc-predef.h \
- /home/lyslg/Documents/lyslg/lyslg/stream.h /usr/include/c++/8/memory \
- /usr/include/c++/8/bits/stl_algobase.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/stream.cc \
+ /usr/include/stdc-predef.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/stream.h \
+ /usr/include/c++/8/memory /usr/include/c++/8/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -134,8 +135,8 @@ CMakeFiles/lyslg.dir/lyslg/stream.cc.o: \
  /usr/include/c++/8/bits/atomic_base.h \
  /usr/include/c++/8/bits/atomic_lockfree_defines.h \
  /usr/include/c++/8/backward/auto_ptr.h \
- /home/lyslg/Documents/lyslg/lyslg/bytearray.h /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/bytearray.h \
+ /usr/include/unistd.h /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \

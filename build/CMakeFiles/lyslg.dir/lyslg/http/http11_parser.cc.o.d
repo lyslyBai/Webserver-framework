@@ -1,8 +1,8 @@
 CMakeFiles/lyslg.dir/lyslg/http/http11_parser.cc.o: \
- /home/lyslg/Documents/lyslg/lyslg/http/http11_parser.cc \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/http/http11_parser.cc \
  /usr/include/stdc-predef.h \
- /home/lyslg/Documents/lyslg/lyslg/http/http11_parser.h \
- /home/lyslg/Documents/lyslg/lyslg/http/http11_common.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/http/http11_parser.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/http/http11_common.h \
  /usr/include/x86_64-linux-gnu/sys/types.h /usr/include/features.h \
  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \

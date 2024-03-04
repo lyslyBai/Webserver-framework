@@ -60,10 +60,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/lyslg/Documents/lyslg
+CMAKE_SOURCE_DIR = /home/lyslg/Documents/chat_room/lyslg
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/lyslg/Documents/lyslg/build
+CMAKE_BINARY_DIR = /home/lyslg/Documents/chat_room/lyslg/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -90,9 +90,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/Documents/lyslg/build/CMakeFiles /home/lyslg/Documents/lyslg/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/Documents/chat_room/lyslg/build/CMakeFiles /home/lyslg/Documents/chat_room/lyslg/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/Documents/lyslg/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/lyslg/Documents/chat_room/lyslg/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1330,6 +1330,30 @@ lyslg/util/hash_util.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/util/hash_util.cc.s
 .PHONY : lyslg/util/hash_util.cc.s
 
+lyslg/util/json_util.o: lyslg/util/json_util.cc.o
+.PHONY : lyslg/util/json_util.o
+
+# target to build an object file
+lyslg/util/json_util.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/util/json_util.cc.o
+.PHONY : lyslg/util/json_util.cc.o
+
+lyslg/util/json_util.i: lyslg/util/json_util.cc.i
+.PHONY : lyslg/util/json_util.i
+
+# target to preprocess a source file
+lyslg/util/json_util.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/util/json_util.cc.i
+.PHONY : lyslg/util/json_util.cc.i
+
+lyslg/util/json_util.s: lyslg/util/json_util.cc.s
+.PHONY : lyslg/util/json_util.s
+
+# target to generate assembly for a file
+lyslg/util/json_util.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lyslg.dir/build.make CMakeFiles/lyslg.dir/lyslg/util/json_util.cc.s
+.PHONY : lyslg/util/json_util.cc.s
+
 test_exe/main.o: test_exe/main.cc.o
 .PHONY : test_exe/main.o
 
@@ -1979,6 +2003,9 @@ help:
 	@echo "... lyslg/util/hash_util.o"
 	@echo "... lyslg/util/hash_util.i"
 	@echo "... lyslg/util/hash_util.s"
+	@echo "... lyslg/util/json_util.o"
+	@echo "... lyslg/util/json_util.i"
+	@echo "... lyslg/util/json_util.s"
 	@echo "... test_exe/main.o"
 	@echo "... test_exe/main.i"
 	@echo "... test_exe/main.s"

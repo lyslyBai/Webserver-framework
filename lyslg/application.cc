@@ -3,10 +3,8 @@
 #include "log.h"
 #include "config.h"
 #include "daemon.h"
-#include "tcp_server.h"
-#include "ws_server.h"
 #include <signal.h>
-
+#include "module.h"
 
 namespace lyslg{
 
@@ -14,7 +12,7 @@ static lyslg::Logger::ptr g_logger = LYSLG_LOG_NAME("system");
 
 static lyslg::ConfigVar<std::string>::ptr g_server_work_path =
     lyslg::Config::Lookup("server.work_path"
-            ,std::string("../server_work")
+            ,std::string("/home/lyslg/Documents/lyslg/server_work")
             , "server work path");
 
 static lyslg::ConfigVar<std::string>::ptr g_server_pid_file =
@@ -54,10 +52,23 @@ bool Application::init(int argc, char** argv) {
     LYSLG_LOG_INFO(g_logger) << "load conf path:" << conf_path;
     lyslg::Config::LoadFromConfDir(conf_path);
 
+    ModuleMgr::GetInstance()->init();
+    std::vector<Module::ptr> modules;
+    ModuleMgr::GetInstance()->listAll(modules);
+
+    for(auto i : modules) {
+        i->onBeforeArgsParse(argc, argv);
+    }
+
     if(is_print_help) {
         lyslg::EnvMgr::GetInstance()->printHelp();
         return false;
     }
+
+    for(auto i : modules) {
+        i->onAfterArgsParse(argc, argv);
+    }
+    modules.clear();
 
     int run_type = 0;
     if(lyslg::EnvMgr::GetInstance()->has("s")) {
@@ -121,20 +132,20 @@ int Application::main(int argc, char** argv) {
 }
 
 int Application::run_fiber() {
-    // std::vector<Module::ptr> modules;
-    // ModuleMgr::GetInstance()->listAll(modules);
-    // bool has_error = false;
-    // for(auto& i : modules) {
-    //     if(!i->onLoad()) {
-    //         LYSLG_LOG_ERROR(g_logger) << "module name="
-    //             << i->getName() << " version=" << i->getVersion()
-    //             << " filename=" << i->getFilename();
-    //         has_error = true;
-    //     }
-    // }
-    // if(has_error) {
-    //     _exit(0);
-    // }
+    std::vector<Module::ptr> modules;
+    ModuleMgr::GetInstance()->listAll(modules);
+    bool has_error = false;
+    for(auto& i : modules) {
+        if(!i->onLoad()) {
+            LYSLG_LOG_ERROR(g_logger) << "module name="
+                << i->getName() << " version=" << i->getVersion()
+                << " filename=" << i->getFilename();
+            has_error = true;
+        }
+    }
+    if(has_error) {
+        _exit(0);
+    }
 
     // lyslg::WorkerMgr::GetInstance()->init();
     // FoxThreadMgr::GetInstance()->init();
@@ -211,17 +222,39 @@ int Application::run_fiber() {
             _exit(0);
         }
         server->setConf(i);
-        server->start();
+        // server->start();
         m_servers[i.type].push_back(server);
         svrs.push_back(server);
     }
 
     
-    // for(auto& i : svrs) {
-    //     i->start();
-    // }
+    for(auto& i : modules) {
+        i->onServerReady();
+    } 
+
+    for(auto& i : svrs) {
+        i->start();
+    }
+
+
+    for(auto& i : modules) {
+        i->onServerUp();
+    }
 
     return 0;
+}
+
+bool Application::getServer(const std::string& type, std::vector<TcpServer::ptr>& svrs) {
+    auto it = m_servers.find(type);
+    if(it == m_servers.end()) {
+        return false;
+    }
+    svrs = it->second;
+    return true;
+}
+
+void Application::listAllServer(std::map<std::string, std::vector<TcpServer::ptr> >& servers) {
+    servers = m_servers;
 }
 
 

@@ -1,9 +1,9 @@
 CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.o: \
- /home/lyslg/Documents/lyslg/lyslg/socket_stream.cc \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/socket_stream.cc \
  /usr/include/stdc-predef.h \
- /home/lyslg/Documents/lyslg/lyslg/socket_stream.h \
- /home/lyslg/Documents/lyslg/lyslg/stream.h /usr/include/c++/8/memory \
- /usr/include/c++/8/bits/stl_algobase.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/socket_stream.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/stream.h \
+ /usr/include/c++/8/memory /usr/include/c++/8/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -136,8 +136,8 @@ CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.o: \
  /usr/include/c++/8/bits/atomic_base.h \
  /usr/include/c++/8/bits/atomic_lockfree_defines.h \
  /usr/include/c++/8/backward/auto_ptr.h \
- /home/lyslg/Documents/lyslg/lyslg/bytearray.h /usr/include/unistd.h \
- /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/bytearray.h \
+ /usr/include/unistd.h /usr/include/x86_64-linux-gnu/sys/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/sysmacros.h \
  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
  /usr/include/x86_64-linux-gnu/bits/environments.h \
@@ -151,10 +151,10 @@ CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
- /home/lyslg/Documents/lyslg/lyslg/socket.h \
- /home/lyslg/Documents/lyslg/lyslg/address.h /usr/include/c++/8/iostream \
- /usr/include/c++/8/ostream /usr/include/c++/8/ios \
- /usr/include/c++/8/bits/ios_base.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/socket.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/address.h \
+ /usr/include/c++/8/iostream /usr/include/c++/8/ostream \
+ /usr/include/c++/8/ios /usr/include/c++/8/bits/ios_base.h \
  /usr/include/c++/8/bits/locale_classes.h \
  /usr/include/c++/8/bits/locale_classes.tcc \
  /usr/include/c++/8/system_error \
@@ -189,7 +189,7 @@ CMakeFiles/lyslg.dir/lyslg/socket_stream.cc.o: \
  /usr/include/arpa/inet.h /usr/include/x86_64-linux-gnu/sys/un.h \
  /usr/include/c++/8/map /usr/include/c++/8/bits/stl_tree.h \
  /usr/include/c++/8/bits/stl_map.h /usr/include/c++/8/bits/stl_multimap.h \
- /home/lyslg/Documents/lyslg/lyslg/noncopyable.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/noncopyable.h \
  /usr/include/openssl/err.h /usr/include/openssl/e_os2.h \
  /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \
  /usr/include/openssl/opensslv.h /usr/include/c++/8/stdlib.h \

@@ -1,8 +1,9 @@
 #ifndef __LYSLG_APPLICATION_H__
 #define __LYSLG_APPLICATION_H__
 
-#include "http/http_server.h"
+#include "http_server.h"
 #include "iomanager.h"
+#include "ws_server.h"
 
 namespace lyslg {
 

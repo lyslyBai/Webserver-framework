@@ -1,7 +1,7 @@
 #ifndef __LYSLG_HTTP_SERVER_H__
 #define __LYSLG_HTTP_SERVER_H__
 
-#include "../tcp_server.h"
+#include "tcp_server.h"
 #include "http_session.h"
 #include "servlet.h"
 

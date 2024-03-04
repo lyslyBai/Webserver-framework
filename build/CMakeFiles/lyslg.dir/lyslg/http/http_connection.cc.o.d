@@ -1,9 +1,9 @@
 CMakeFiles/lyslg.dir/lyslg/http/http_connection.cc.o: \
- /home/lyslg/Documents/lyslg/lyslg/http/http_connection.cc \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/http/http_connection.cc \
  /usr/include/stdc-predef.h \
- /home/lyslg/Documents/lyslg/lyslg/http/http_connection.h \
- /home/lyslg/Documents/lyslg/lyslg/http/http.h /usr/include/c++/8/memory \
- /usr/include/c++/8/bits/stl_algobase.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/http/http_connection.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/http/http.h \
+ /usr/include/c++/8/memory /usr/include/c++/8/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h \
  /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -808,20 +808,22 @@ CMakeFiles/lyslg.dir/lyslg/http/http_connection.cc.o: \
  /usr/include/boost/math/tools/real_cast.hpp \
  /usr/include/boost/integer.hpp /usr/include/boost/integer_fwd.hpp \
  /usr/include/boost/detail/basic_pointerbuf.hpp \
- /usr/include/c++/8/iostream /home/lyslg/Documents/lyslg/lyslg/thread.h \
- /home/lyslg/Documents/lyslg/lyslg/mutex.h /usr/include/c++/8/thread \
- /usr/include/c++/8/chrono /usr/include/c++/8/ratio \
- /usr/include/c++/8/bits/parse_numbers.h /usr/include/semaphore.h \
- /usr/include/x86_64-linux-gnu/bits/semaphore.h /usr/include/c++/8/atomic \
- /home/lyslg/Documents/lyslg/lyslg/noncopyable.h \
- /home/lyslg/Documents/lyslg/lyslg/socket_stream.h \
- /home/lyslg/Documents/lyslg/lyslg/stream.h \
- /home/lyslg/Documents/lyslg/lyslg/bytearray.h \
+ /usr/include/c++/8/iostream \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/thread.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/mutex.h \
+ /usr/include/c++/8/thread /usr/include/c++/8/chrono \
+ /usr/include/c++/8/ratio /usr/include/c++/8/bits/parse_numbers.h \
+ /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+ /usr/include/c++/8/atomic \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/noncopyable.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/socket_stream.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/stream.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/bytearray.h \
  /usr/include/x86_64-linux-gnu/sys/uio.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_iovec.h \
  /usr/include/x86_64-linux-gnu/bits/uio-ext.h \
- /home/lyslg/Documents/lyslg/lyslg/socket.h \
- /home/lyslg/Documents/lyslg/lyslg/address.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/socket.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/address.h \
  /usr/include/x86_64-linux-gnu/sys/socket.h \
  /usr/include/x86_64-linux-gnu/bits/socket.h \
  /usr/include/x86_64-linux-gnu/bits/socket_type.h \
@@ -866,22 +868,34 @@ CMakeFiles/lyslg.dir/lyslg/http/http_connection.cc.o: \
  /usr/include/openssl/cterr.h /usr/include/openssl/sslerr.h \
  /usr/include/openssl/ssl2.h /usr/include/openssl/ssl3.h \
  /usr/include/openssl/tls1.h /usr/include/openssl/dtls1.h \
- /usr/include/openssl/srtp.h /home/lyslg/Documents/lyslg/lyslg/uri.h \
+ /usr/include/openssl/srtp.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/uri.h \
  /usr/include/c++/8/list /usr/include/c++/8/bits/stl_list.h \
  /usr/include/c++/8/bits/list.tcc \
- /home/lyslg/Documents/lyslg/lyslg/http/http_parser.h \
- /home/lyslg/Documents/lyslg/lyslg/http/http11_parser.h \
- /home/lyslg/Documents/lyslg/lyslg/http/http11_common.h \
- /home/lyslg/Documents/lyslg/lyslg/http/httpclient_parser.h \
- /home/lyslg/Documents/lyslg/lyslg/log.h /usr/include/c++/8/fstream \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/http/http_parser.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/http/http11_parser.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/http/http11_common.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/http/httpclient_parser.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/log.h \
+ /usr/include/c++/8/fstream \
  /usr/include/x86_64-linux-gnu/c++/8/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++io.h \
  /usr/include/c++/8/bits/fstream.tcc /usr/include/c++/8/set \
  /usr/include/c++/8/bits/stl_set.h /usr/include/c++/8/bits/stl_multiset.h \
- /home/lyslg/Documents/lyslg/lyslg/singleton.h \
- /home/lyslg/Documents/lyslg/lyslg/util.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/singleton.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/util.h \
  /usr/include/x86_64-linux-gnu/sys/syscall.h \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
  /usr/include/x86_64-linux-gnu/bits/syscall.h \
- /home/lyslg/Documents/lyslg/lyslg/thread.h
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/util/json_util.h \
+ /usr/include/jsoncpp/json/json.h /usr/include/jsoncpp/json/config.h \
+ /usr/include/jsoncpp/json/allocator.h \
+ /usr/include/jsoncpp/json/version.h \
+ /usr/include/jsoncpp/json/json_features.h \
+ /usr/include/jsoncpp/json/forwards.h /usr/include/jsoncpp/json/reader.h \
+ /usr/include/jsoncpp/json/value.h /usr/include/c++/8/deque \
+ /usr/include/c++/8/bits/stl_deque.h /usr/include/c++/8/bits/deque.tcc \
+ /usr/include/c++/8/stack /usr/include/c++/8/bits/stl_stack.h \
+ /usr/include/jsoncpp/json/writer.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/thread.h

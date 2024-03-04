@@ -296,6 +296,50 @@ bool FSUtil::OpenForWrite(std::ofstream& ofs, const std::string& filename
     }
     return ofs.is_open();
 }
+//返回字符串的第一个字符。
+int8_t  TypeUtil::ToChar(const std::string& str) {
+    if(str.empty()) {
+        return 0;
+    }
+    return *str.begin();
+}
+
+// 使用 strtoull 函数将字符串转换为无符号长长整数（unsigned long long），使用 10 进制的基数。
+int64_t TypeUtil::Atoi(const std::string& str) {
+    if(str.empty()) {
+        return 0;
+    }
+    return strtoull(str.c_str(), nullptr, 10);
+}
+//使用 atof 函数将字符串转换为浮点数
+double  TypeUtil::Atof(const std::string& str) {
+    if(str.empty()) {
+        return 0;
+    }
+    return atof(str.c_str());
+}
+
+int8_t  TypeUtil::ToChar(const char* str) {
+    if(str == nullptr) {
+        return 0;
+    }
+    return str[0];
+}
+
+int64_t TypeUtil::Atoi(const char* str) {
+    if(str == nullptr) {
+        return 0;
+    }
+    return strtoull(str, nullptr, 10);
+}
+
+double  TypeUtil::Atof(const char* str) {
+    if(str == nullptr) {
+        return 0;
+    }
+    return atof(str);
+}
+
 
 std::string StringUtil::Format(const char* fmt, ...) {
     va_list ap;

@@ -1,6 +1,7 @@
 CMakeFiles/test_socket.dir/tests/test_socket.cc.o: \
- /home/lyslg/Documents/lyslg/tests/test_socket.cc \
- /usr/include/stdc-predef.h /home/lyslg/Documents/lyslg/lyslg/socket.h \
+ /home/lyslg/Documents/chat_room/lyslg/tests/test_socket.cc \
+ /usr/include/stdc-predef.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/socket.h \
  /usr/include/c++/8/memory /usr/include/c++/8/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/os_defines.h \
@@ -134,9 +135,9 @@ CMakeFiles/test_socket.dir/tests/test_socket.cc.o: \
  /usr/include/c++/8/bits/atomic_base.h \
  /usr/include/c++/8/bits/atomic_lockfree_defines.h \
  /usr/include/c++/8/backward/auto_ptr.h \
- /home/lyslg/Documents/lyslg/lyslg/address.h /usr/include/c++/8/iostream \
- /usr/include/c++/8/ostream /usr/include/c++/8/ios \
- /usr/include/c++/8/bits/ios_base.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/address.h \
+ /usr/include/c++/8/iostream /usr/include/c++/8/ostream \
+ /usr/include/c++/8/ios /usr/include/c++/8/bits/ios_base.h \
  /usr/include/c++/8/bits/locale_classes.h \
  /usr/include/c++/8/bits/locale_classes.tcc \
  /usr/include/c++/8/system_error \
@@ -175,7 +176,7 @@ CMakeFiles/test_socket.dir/tests/test_socket.cc.o: \
  /usr/include/c++/8/bits/stl_multimap.h /usr/include/c++/8/vector \
  /usr/include/c++/8/bits/stl_vector.h \
  /usr/include/c++/8/bits/stl_bvector.h /usr/include/c++/8/bits/vector.tcc \
- /home/lyslg/Documents/lyslg/lyslg/noncopyable.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/noncopyable.h \
  /usr/include/openssl/err.h /usr/include/openssl/e_os2.h \
  /usr/include/x86_64-linux-gnu/openssl/opensslconf.h \
  /usr/include/openssl/opensslv.h /usr/include/c++/8/stdlib.h \
@@ -212,17 +213,18 @@ CMakeFiles/test_socket.dir/tests/test_socket.cc.o: \
  /usr/include/openssl/sslerr.h /usr/include/openssl/ssl2.h \
  /usr/include/openssl/ssl3.h /usr/include/openssl/tls1.h \
  /usr/include/openssl/dtls1.h /usr/include/openssl/srtp.h \
- /home/lyslg/Documents/lyslg/lyslg/lyslg.h \
- /home/lyslg/Documents/lyslg/lyslg/log.h /usr/include/c++/8/list \
- /usr/include/c++/8/bits/stl_list.h /usr/include/c++/8/bits/list.tcc \
- /usr/include/c++/8/sstream /usr/include/c++/8/bits/sstream.tcc \
- /usr/include/c++/8/fstream /usr/include/c++/8/bits/codecvt.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/lyslg.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/log.h \
+ /usr/include/c++/8/list /usr/include/c++/8/bits/stl_list.h \
+ /usr/include/c++/8/bits/list.tcc /usr/include/c++/8/sstream \
+ /usr/include/c++/8/bits/sstream.tcc /usr/include/c++/8/fstream \
+ /usr/include/c++/8/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++io.h \
  /usr/include/c++/8/bits/fstream.tcc /usr/include/c++/8/set \
  /usr/include/c++/8/bits/stl_set.h /usr/include/c++/8/bits/stl_multiset.h \
- /home/lyslg/Documents/lyslg/lyslg/singleton.h \
- /home/lyslg/Documents/lyslg/lyslg/util.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/singleton.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/util.h \
  /usr/include/x86_64-linux-gnu/sys/syscall.h \
  /usr/include/x86_64-linux-gnu/asm/unistd.h \
  /usr/include/x86_64-linux-gnu/asm/unistd_64.h \
@@ -234,18 +236,29 @@ CMakeFiles/test_socket.dir/tests/test_socket.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/confname.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
- /home/lyslg/Documents/lyslg/lyslg/mutex.h /usr/include/c++/8/thread \
- /usr/include/c++/8/chrono /usr/include/c++/8/ratio \
- /usr/include/c++/8/limits /usr/include/c++/8/ctime \
- /usr/include/c++/8/bits/parse_numbers.h /usr/include/c++/8/functional \
- /usr/include/c++/8/bits/std_function.h /usr/include/semaphore.h \
- /usr/include/x86_64-linux-gnu/bits/semaphore.h /usr/include/c++/8/atomic \
- /home/lyslg/Documents/lyslg/lyslg/thread.h \
- /home/lyslg/Documents/lyslg/lyslg/config.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/util/json_util.h \
+ /usr/include/jsoncpp/json/json.h /usr/include/jsoncpp/json/config.h \
+ /usr/include/c++/8/cstddef /usr/include/jsoncpp/json/allocator.h \
+ /usr/include/c++/8/cstring /usr/include/jsoncpp/json/version.h \
+ /usr/include/jsoncpp/json/json_features.h \
+ /usr/include/jsoncpp/json/forwards.h /usr/include/jsoncpp/json/reader.h \
+ /usr/include/jsoncpp/json/value.h /usr/include/c++/8/deque \
+ /usr/include/c++/8/bits/stl_deque.h /usr/include/c++/8/bits/deque.tcc \
+ /usr/include/c++/8/stack /usr/include/c++/8/bits/stl_stack.h \
+ /usr/include/jsoncpp/json/writer.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/mutex.h \
+ /usr/include/c++/8/thread /usr/include/c++/8/chrono \
+ /usr/include/c++/8/ratio /usr/include/c++/8/limits \
+ /usr/include/c++/8/ctime /usr/include/c++/8/bits/parse_numbers.h \
+ /usr/include/c++/8/functional /usr/include/c++/8/bits/std_function.h \
+ /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+ /usr/include/c++/8/atomic \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/thread.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/config.h \
  /usr/include/boost/lexical_cast.hpp /usr/include/boost/config.hpp \
  /usr/include/boost/config/user.hpp \
  /usr/include/boost/config/detail/select_compiler_config.hpp \
- /usr/include/boost/config/compiler/gcc.hpp /usr/include/c++/8/cstddef \
+ /usr/include/boost/config/compiler/gcc.hpp \
  /usr/include/boost/config/detail/select_stdlib_config.hpp \
  /usr/include/boost/config/stdlib/libstdcpp3.hpp \
  /usr/include/boost/config/detail/select_platform_config.hpp \
@@ -599,8 +612,7 @@ CMakeFiles/test_socket.dir/tests/test_socket.cc.o: \
  /usr/include/boost/move/detail/std_ns_begin.hpp \
  /usr/include/boost/move/detail/std_ns_end.hpp \
  /usr/include/boost/lexical_cast/detail/converter_lexical_streams.hpp \
- /usr/include/c++/8/cstring /usr/include/c++/8/locale \
- /usr/include/c++/8/bits/locale_facets_nonio.h \
+ /usr/include/c++/8/locale /usr/include/c++/8/bits/locale_facets_nonio.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/time_members.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/messages_members.h \
  /usr/include/libintl.h /usr/include/c++/8/bits/locale_facets_nonio.tcc \
@@ -915,17 +927,20 @@ CMakeFiles/test_socket.dir/tests/test_socket.cc.o: \
  /usr/local/include/yaml-cpp/node/detail/impl.h \
  /usr/local/include/yaml-cpp/node/parse.h \
  /usr/local/include/yaml-cpp/node/emit.h \
- /home/lyslg/Documents/lyslg/lyslg/macro.h /usr/include/execinfo.h \
- /home/lyslg/Documents/lyslg/lyslg/fiber.h /usr/include/ucontext.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/macro.h \
+ /usr/include/execinfo.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/fiber.h \
+ /usr/include/ucontext.h \
  /usr/include/x86_64-linux-gnu/bits/indirect-return.h \
  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
- /home/lyslg/Documents/lyslg/lyslg/scheduler.h \
- /home/lyslg/Documents/lyslg/lyslg/iomanager.h \
- /home/lyslg/Documents/lyslg/lyslg/timer.h \
- /home/lyslg/Documents/lyslg/lyslg/fd_manager.h \
- /home/lyslg/Documents/lyslg/lyslg/my_endian.h /usr/include/byteswap.h \
- /home/lyslg/Documents/lyslg/lyslg/hook.h /usr/include/fcntl.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/scheduler.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/iomanager.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/timer.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/fd_manager.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/my_endian.h \
+ /usr/include/byteswap.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/hook.h /usr/include/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl.h \
  /usr/include/x86_64-linux-gnu/bits/fcntl-linux.h \
  /usr/include/linux/falloc.h /usr/include/x86_64-linux-gnu/bits/stat.h \
@@ -937,5 +952,5 @@ CMakeFiles/test_socket.dir/tests/test_socket.cc.o: \
  /usr/include/asm-generic/ioctl.h \
  /usr/include/x86_64-linux-gnu/bits/ioctl-types.h \
  /usr/include/x86_64-linux-gnu/sys/ttydefaults.h \
- /home/lyslg/Documents/lyslg/lyslg/socket.h \
- /home/lyslg/Documents/lyslg/lyslg/iomanager.h
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/socket.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/iomanager.h

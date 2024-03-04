@@ -1,13 +1,16 @@
 CMakeFiles/lyslg.dir/lyslg/macro.cc.o: \
- /home/lyslg/Documents/lyslg/lyslg/macro.cc /usr/include/stdc-predef.h \
- /home/lyslg/Documents/lyslg/lyslg/macro.h /usr/include/assert.h \
- /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/macro.cc \
+ /usr/include/stdc-predef.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/macro.h \
+ /usr/include/assert.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h /usr/include/execinfo.h \
- /home/lyslg/Documents/lyslg/lyslg/util.h /usr/include/pthread.h \
- /usr/include/endian.h /usr/include/x86_64-linux-gnu/bits/endian.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/util.h \
+ /usr/include/pthread.h /usr/include/endian.h \
+ /usr/include/x86_64-linux-gnu/bits/endian.h \
  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
  /usr/include/x86_64-linux-gnu/bits/types.h \
  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
@@ -147,4 +150,37 @@ CMakeFiles/lyslg.dir/lyslg/macro.cc.o: \
  /usr/include/c++/8/bits/streambuf_iterator.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/ctype_inline.h \
  /usr/include/c++/8/bits/locale_facets.tcc \
- /usr/include/c++/8/bits/basic_ios.tcc
+ /usr/include/c++/8/bits/basic_ios.tcc \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/util/json_util.h \
+ /usr/include/c++/8/iostream /usr/include/c++/8/ostream \
+ /usr/include/c++/8/bits/ostream.tcc /usr/include/c++/8/istream \
+ /usr/include/c++/8/bits/istream.tcc /usr/include/jsoncpp/json/json.h \
+ /usr/include/jsoncpp/json/config.h /usr/include/c++/8/cstddef \
+ /usr/include/c++/8/memory /usr/include/c++/8/bits/stl_tempbuf.h \
+ /usr/include/c++/8/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/8/ext/concurrence.h \
+ /usr/include/c++/8/bits/uses_allocator.h \
+ /usr/include/c++/8/bits/unique_ptr.h /usr/include/c++/8/utility \
+ /usr/include/c++/8/bits/stl_relops.h /usr/include/c++/8/tuple \
+ /usr/include/c++/8/array /usr/include/c++/8/bits/invoke.h \
+ /usr/include/c++/8/bits/shared_ptr.h \
+ /usr/include/c++/8/bits/shared_ptr_base.h \
+ /usr/include/c++/8/bits/allocated_ptr.h \
+ /usr/include/c++/8/bits/refwrap.h \
+ /usr/include/c++/8/ext/aligned_buffer.h \
+ /usr/include/c++/8/bits/shared_ptr_atomic.h \
+ /usr/include/c++/8/bits/atomic_base.h \
+ /usr/include/c++/8/bits/atomic_lockfree_defines.h \
+ /usr/include/c++/8/backward/auto_ptr.h /usr/include/c++/8/sstream \
+ /usr/include/c++/8/bits/sstream.tcc \
+ /usr/include/jsoncpp/json/allocator.h /usr/include/c++/8/cstring \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/jsoncpp/json/version.h \
+ /usr/include/jsoncpp/json/json_features.h \
+ /usr/include/jsoncpp/json/forwards.h /usr/include/jsoncpp/json/reader.h \
+ /usr/include/jsoncpp/json/value.h /usr/include/c++/8/map \
+ /usr/include/c++/8/bits/stl_tree.h /usr/include/c++/8/bits/stl_map.h \
+ /usr/include/c++/8/bits/stl_multimap.h /usr/include/c++/8/deque \
+ /usr/include/c++/8/bits/stl_deque.h /usr/include/c++/8/bits/deque.tcc \
+ /usr/include/c++/8/stack /usr/include/c++/8/bits/stl_stack.h \
+ /usr/include/jsoncpp/json/writer.h

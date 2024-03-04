@@ -33,14 +33,16 @@ void TcpServer::setConf(const TcpServerConf& v) {
     m_conf.reset(new TcpServerConf(v));
 }
 
-bool TcpServer::bind(lyslg::Address::ptr addr){
+bool TcpServer::bind(lyslg::Address::ptr addr,bool ssl){
     std::vector<Address::ptr> addrs;
     std::vector<Address::ptr> fails;
     addrs.push_back(addr);
-    return bind(addrs,fails);
+    return bind(addrs,fails,ssl);
 }
 bool TcpServer::bind(const std::vector<Address::ptr>& addrs,
-                        std::vector<Address::ptr>& fails){
+                        std::vector<Address::ptr>& fails
+                        ,bool ssl){
+    m_ssl = ssl;
     for(auto& addr : addrs) {
         Socket::ptr sock = Socket::CreateTCP(addr);
         if(!sock->bind(addr)) {
@@ -68,7 +70,10 @@ bool TcpServer::bind(const std::vector<Address::ptr>& addrs,
     }
 
     for(auto& i : m_socks) {
-        LYSLG_LOG_INFO(g_logger) << "server bind success" << *i;
+        LYSLG_LOG_INFO(g_logger) << "type=" << m_type
+            << " name=" << m_name
+            << " ssl=" << m_ssl
+            << " server bind success: " << *i;
     }
     return true;    
 }

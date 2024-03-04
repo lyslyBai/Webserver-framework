@@ -75,6 +75,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/lyslg.dir/lyslg/util.cc.o.d"
   "CMakeFiles/lyslg.dir/lyslg/util/hash_util.cc.o"
   "CMakeFiles/lyslg.dir/lyslg/util/hash_util.cc.o.d"
+  "CMakeFiles/lyslg.dir/lyslg/util/json_util.cc.o"
+  "CMakeFiles/lyslg.dir/lyslg/util/json_util.cc.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

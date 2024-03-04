@@ -121,8 +121,8 @@ public:
                lyslg::IoManager* accept_worker = lyslg::IoManager::GetThis() );
     virtual ~TcpServer();
 
-    virtual bool bind(lyslg::Address::ptr addr);
-    virtual bool bind(const std::vector<Address::ptr>& addrs,std::vector<Address::ptr>& fails);
+    virtual bool bind(lyslg::Address::ptr addr,bool ssl = false);
+    virtual bool bind(const std::vector<Address::ptr>& addrs,std::vector<Address::ptr>& fails,bool ssl= false);
     virtual bool start();
     virtual void stop();
 
@@ -153,6 +153,7 @@ protected:
     std::string m_type = "tcp";
     bool m_isStop;
     TcpServerConf::ptr m_conf;
+    bool m_ssl = false;
 };
 
 

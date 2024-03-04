@@ -114,6 +114,7 @@ void ModuleManager::delAll() {
 void ModuleManager::init() {
     auto path = EnvMgr::GetInstance()->getAbsolutePath(g_module_path->getValue());
     
+    LYSLG_LOG_INFO(g_logger) << "path=" << path;
     std::vector<std::string> files;
     lyslg::FSUtil::ListAllFile(files, path, ".so");
 

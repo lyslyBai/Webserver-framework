@@ -1,7 +1,9 @@
 CMakeFiles/lyslg.dir/lyslg/util.cc.o: \
- /home/lyslg/Documents/lyslg/lyslg/util.cc /usr/include/stdc-predef.h \
- /home/lyslg/Documents/lyslg/lyslg/util.h /usr/include/pthread.h \
- /usr/include/features.h /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/util.cc \
+ /usr/include/stdc-predef.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/util.h \
+ /usr/include/pthread.h /usr/include/features.h \
+ /usr/include/x86_64-linux-gnu/sys/cdefs.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
  /usr/include/x86_64-linux-gnu/bits/long-double.h \
  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
@@ -146,12 +148,12 @@ CMakeFiles/lyslg.dir/lyslg/util.cc.o: \
  /usr/include/c++/8/bits/streambuf_iterator.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/ctype_inline.h \
  /usr/include/c++/8/bits/locale_facets.tcc \
- /usr/include/c++/8/bits/basic_ios.tcc /usr/include/execinfo.h \
- /usr/include/x86_64-linux-gnu/sys/time.h \
- /home/lyslg/Documents/lyslg/lyslg/fiber.h /usr/include/ucontext.h \
- /usr/include/x86_64-linux-gnu/bits/indirect-return.h \
- /usr/include/x86_64-linux-gnu/sys/ucontext.h \
- /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
+ /usr/include/c++/8/bits/basic_ios.tcc \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/util/json_util.h \
+ /usr/include/c++/8/iostream /usr/include/c++/8/ostream \
+ /usr/include/c++/8/bits/ostream.tcc /usr/include/c++/8/istream \
+ /usr/include/c++/8/bits/istream.tcc /usr/include/jsoncpp/json/json.h \
+ /usr/include/jsoncpp/json/config.h /usr/include/c++/8/cstddef \
  /usr/include/c++/8/memory /usr/include/c++/8/bits/stl_tempbuf.h \
  /usr/include/c++/8/bits/stl_raw_storage_iter.h \
  /usr/include/c++/8/ext/concurrence.h \
@@ -167,30 +169,44 @@ CMakeFiles/lyslg.dir/lyslg/util.cc.o: \
  /usr/include/c++/8/bits/shared_ptr_atomic.h \
  /usr/include/c++/8/bits/atomic_base.h \
  /usr/include/c++/8/bits/atomic_lockfree_defines.h \
- /usr/include/c++/8/backward/auto_ptr.h \
- /home/lyslg/Documents/lyslg/lyslg/mutex.h /usr/include/c++/8/thread \
- /usr/include/c++/8/chrono /usr/include/c++/8/ratio \
- /usr/include/c++/8/limits /usr/include/c++/8/ctime \
- /usr/include/c++/8/bits/parse_numbers.h /usr/include/c++/8/functional \
- /usr/include/c++/8/bits/std_function.h /usr/include/semaphore.h \
- /usr/include/x86_64-linux-gnu/bits/semaphore.h /usr/include/c++/8/atomic \
- /home/lyslg/Documents/lyslg/lyslg/noncopyable.h \
- /home/lyslg/Documents/lyslg/lyslg/log.h /usr/include/c++/8/list \
- /usr/include/c++/8/bits/stl_list.h /usr/include/c++/8/bits/list.tcc \
- /usr/include/c++/8/sstream /usr/include/c++/8/istream \
- /usr/include/c++/8/ostream /usr/include/c++/8/bits/ostream.tcc \
- /usr/include/c++/8/bits/istream.tcc /usr/include/c++/8/bits/sstream.tcc \
- /usr/include/c++/8/fstream /usr/include/c++/8/bits/codecvt.h \
+ /usr/include/c++/8/backward/auto_ptr.h /usr/include/c++/8/sstream \
+ /usr/include/c++/8/bits/sstream.tcc \
+ /usr/include/jsoncpp/json/allocator.h /usr/include/c++/8/cstring \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/jsoncpp/json/version.h \
+ /usr/include/jsoncpp/json/json_features.h \
+ /usr/include/jsoncpp/json/forwards.h /usr/include/jsoncpp/json/reader.h \
+ /usr/include/jsoncpp/json/value.h /usr/include/c++/8/map \
+ /usr/include/c++/8/bits/stl_tree.h /usr/include/c++/8/bits/stl_map.h \
+ /usr/include/c++/8/bits/stl_multimap.h /usr/include/c++/8/deque \
+ /usr/include/c++/8/bits/stl_deque.h /usr/include/c++/8/bits/deque.tcc \
+ /usr/include/c++/8/stack /usr/include/c++/8/bits/stl_stack.h \
+ /usr/include/jsoncpp/json/writer.h /usr/include/execinfo.h \
+ /usr/include/x86_64-linux-gnu/sys/time.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/fiber.h \
+ /usr/include/ucontext.h \
+ /usr/include/x86_64-linux-gnu/bits/indirect-return.h \
+ /usr/include/x86_64-linux-gnu/sys/ucontext.h \
+ /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/mutex.h \
+ /usr/include/c++/8/thread /usr/include/c++/8/chrono \
+ /usr/include/c++/8/ratio /usr/include/c++/8/limits \
+ /usr/include/c++/8/ctime /usr/include/c++/8/bits/parse_numbers.h \
+ /usr/include/c++/8/functional /usr/include/c++/8/bits/std_function.h \
+ /usr/include/semaphore.h /usr/include/x86_64-linux-gnu/bits/semaphore.h \
+ /usr/include/c++/8/atomic \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/noncopyable.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/log.h \
+ /usr/include/c++/8/list /usr/include/c++/8/bits/stl_list.h \
+ /usr/include/c++/8/bits/list.tcc /usr/include/c++/8/fstream \
+ /usr/include/c++/8/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/8/bits/c++io.h \
- /usr/include/c++/8/bits/fstream.tcc /usr/include/c++/8/map \
- /usr/include/c++/8/bits/stl_tree.h /usr/include/c++/8/bits/stl_map.h \
- /usr/include/c++/8/bits/stl_multimap.h /usr/include/c++/8/set \
+ /usr/include/c++/8/bits/fstream.tcc /usr/include/c++/8/set \
  /usr/include/c++/8/bits/stl_set.h /usr/include/c++/8/bits/stl_multiset.h \
- /home/lyslg/Documents/lyslg/lyslg/singleton.h \
- /home/lyslg/Documents/lyslg/lyslg/thread.h /usr/include/string.h \
- /usr/include/strings.h /usr/include/dirent.h \
- /usr/include/x86_64-linux-gnu/bits/dirent.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/singleton.h \
+ /home/lyslg/Documents/chat_room/lyslg/lyslg/thread.h \
+ /usr/include/dirent.h /usr/include/x86_64-linux-gnu/bits/dirent.h \
  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
  /usr/include/linux/limits.h /usr/include/x86_64-linux-gnu/sys/stat.h \
