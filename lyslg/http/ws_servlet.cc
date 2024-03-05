@@ -47,11 +47,12 @@ void WSServletDispatch::addServlet(const std::string& uri
                     ,FunctionWSServlet::on_close_cb close_cb) {
     ServletDispatch::addServlet(uri, std::make_shared<FunctionWSServlet>(cb, connect_cb, close_cb));
 }
-
+// 重写通过回调函数增加servlet
 void WSServletDispatch::addGlobServlet(const std::string& uri
                     ,FunctionWSServlet::callback cb
                     ,FunctionWSServlet::on_connect_cb connect_cb
                     ,FunctionWSServlet::on_close_cb close_cb) {
+    // 通过父类的公有成员函数访问父类私有变量，
     ServletDispatch::addGlobServlet(uri, std::make_shared<FunctionWSServlet>(cb, connect_cb, close_cb));
 }
 

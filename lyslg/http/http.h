@@ -302,7 +302,7 @@ public:
     std::ostream& dump(std::ostream& os) const;
     std::string toString() const; 
 
- void init();
+    void init();
     void initParam();
     void initQueryParam();
     void initBodyParam();
@@ -486,6 +486,11 @@ public:
      * @brief 转成字符串
      */
     std::string toString() const;
+
+    void setRedirect(const std::string& uri);
+    void setCookie(const std::string& key, const std::string& val,
+                   time_t expired = 0, const std::string& path = "",
+                   const std::string& domain = "", bool secure = false);
 private:
     /// 响应状态
     HttpStatus m_status;

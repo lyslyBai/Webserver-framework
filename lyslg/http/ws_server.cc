@@ -17,6 +17,7 @@ void WSServer::handleClient(Socket::ptr client) {
     WSSession::ptr session(new WSSession(client));
     do {
         HttpRequest::ptr header = session->handleShake();
+        LYSLG_LOG_INFO(g_logger) << " HttpRequest=" << "/n" << *header;
         if(!header) {
             LYSLG_LOG_DEBUG(g_logger) << "handleShake error";
             break;
@@ -33,6 +34,7 @@ void WSServer::handleClient(Socket::ptr client) {
         }
         while(true) {
             auto msg = session->recvMessage();
+            LYSLG_LOG_INFO(g_logger) << " msg=" << msg << "======";
             if(!msg) {
                 break;
             }

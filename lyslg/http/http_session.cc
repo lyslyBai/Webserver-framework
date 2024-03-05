@@ -1,10 +1,12 @@
 #include "http_session.h"
 #include "http_parser.h"
-
+#include "log.h"
 
 
 namespace lyslg{
 namespace http {
+
+static lyslg::Logger::ptr g_logger = LYSLG_LOG_NAME("system");
 
 HttpSession::HttpSession(Socket::ptr socket, bool owner)
     :SocketStream(socket,owner){

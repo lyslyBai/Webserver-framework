@@ -197,7 +197,10 @@ std::string base64decode(const std::string &src) {
 std::string base64encode(const std::string& data) {
     return base64encode(data.c_str(), data.size());
 }
-
+/*这个函数将输入的二进制数据按照 Base64 编码规则转换为字符串。
+它使用了标准的 Base64 字符表（base64），并且在处理数据时考虑了
+填充（padding）的情况。函数使用了指针和位运算来有效地处理输入数据
+的每个字节，并构建 Base64 编码后的字符串。最终，函数返回一个包含 Base64 编码结果的字符串。*/
 std::string base64encode(const void* data, size_t len) {
     const char* base64 =
         "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";

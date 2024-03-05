@@ -146,12 +146,14 @@ std::ostream& HttpRequest::dump(std::ostream& os) const{
        << "."
        << ((uint32_t)(m_version & 0x0f))
        << "\r\n";
-    os << "connection: " << (m_close ? "close" : "keep-alive") << "\r\n";
+    if(!m_websocket) {
+        os << "connection: " << (m_close ? "close" : "keep-alive") << "\r\n";
+    }
     for(auto& i : m_headers) {
-        if(strcasecmp(i.first.c_str(),"connection") == 0) {
+        if(!m_websocket && strcasecmp(i.first.c_str(), "connection") == 0) {
             continue;
         }
-        os << i.first << ":" << i.second << "\r\n";
+        os << i.first << ": " << i.second << "\r\n";
     }
     if(!m_body.empty()) {
         os << "content-length: " << m_body.size() << "\r\n\r\n"
@@ -255,6 +257,42 @@ void HttpResponse::setHeader(const std::string& key, const std::string& val){
 void HttpResponse::delHeader(const std::string& key){
     m_headers.erase(key);
 }
+
+/*该函数用于设置 HTTP 响应的重定向。
+参数 uri 表示重定向的目标 URI。
+在函数中，m_status 被设置为 HttpStatus::FOUND，这通常对应 HTTP 状态码 302，表示找到了资源，但临时重定向到另一个位置。
+使用 setHeader 函数设置了一个名为 "Location" 的响应头，值为传入的 uri。*/
+void HttpResponse::setRedirect(const std::string& uri) {
+    m_status = HttpStatus::FOUND;
+    setHeader("Location", uri);
+}
+
+/*该函数用于设置 HTTP 响应的 Cookie。
+参数包括 key 和 val，分别表示 Cookie 的键和值。
+expired 表示 Cookie 的过期时间，使用 lyslg::Time2Str 函数将 expired 转换为 GMT 格式的时间字符串，然后作为 "expires" 字段的值添加到 Cookie 中。
+domain 和 path 表示 Cookie 的域和路径，分别通过 ";domain=" 和 ";path=" 添加到 Cookie 字符串中。
+secure 是一个布尔值，表示是否要设置安全标志，如果为 true，则添加 ";secure" 到 Cookie 字符串中。
+使用 std::stringstream 将上述信息拼接成一个字符串，并将其添加到 m_cookies 向量中。*/
+void HttpResponse::setCookie(const std::string& key, const std::string& val,
+                             time_t expired, const std::string& path,
+                             const std::string& domain, bool secure) {
+    std::stringstream ss;
+    ss << key << "=" << val;
+    if(expired > 0) {
+        ss << ";expires=" << lyslg::Time2Str(expired, "%a, %d %b %Y %H:%M:%S") << " GMT";
+    }
+    if(!domain.empty()) {
+        ss << ";domain=" << domain;
+    }
+    if(!path.empty()) {
+        ss << ";path=" << path;
+    }
+    if(secure) {
+        ss << ";secure";
+    }
+    m_cookies.push_back(ss.str());
+}
+
 std::ostream& HttpResponse::dump(std::ostream& os) const{
     os << "HTTP/"
        << ((uint32_t)(m_version >> 4))
@@ -267,12 +305,19 @@ std::ostream& HttpResponse::dump(std::ostream& os) const{
        << "\r\n";
     
     for(auto& i : m_headers) {
-        if(strcasecmp(i.first.c_str(), "connection") == 0) {
+        if(!m_websocket && strcasecmp(i.first.c_str(), "connection") == 0) {
             continue;
         }
-        os << i.first<< ": " << i.second << "\r\n";
+        os << i.first << ": " << i.second << "\r\n";
     }
-    os << "connection: " << (m_close ? "close" : "keep_alive") << "\r\n";
+
+    for(auto& i : m_cookies) {
+        os << "Set-Cookie: " << i << "\r\n";
+    }
+
+    if(!m_websocket) {
+        os << "connection: " << (m_close ? "close" : "keep-alive") << "\r\n";
+    }
 
     if(!m_body.empty()) {
         os << "content-length: " << m_body.size() << "\r\n\r\n"
